@@ -4,7 +4,7 @@
 
 SimpliaDz Web is the separate Angular frontend for the SimpliaDz platform. It is intentionally independent from the .NET backend repository: it has its own Git history, dependency lockfile, build pipeline, and deployment configuration.
 
-The project currently establishes a production-minded frontend foundation. It has an application shell, configuration bootstrap, routing, localization, quality tooling, and smoke tests. It does **not** yet implement login, permission-aware navigation, Organization management, or Inventory workflows. Those features should be added as vertical slices on top of this foundation.
+The project currently establishes a production-minded frontend foundation. It has an application shell, configuration bootstrap, routing, localization, quality tooling, smoke tests, and public authentication pages. Permission-aware navigation beyond the authenticated-route guard, Organization management, and Inventory workflows remain future feature slices.
 
 The backend is a tenant-aware modular monolith. The browser must respect that boundary:
 
@@ -123,7 +123,7 @@ Angular bootstrap
 { "apiBaseUrl": "" }
 ```
 
-Set it to the API origin appropriate to the deployment, for example `http://localhost:5278` for the running local DEV API. Do not put credentials, refresh tokens, connection strings, or tenant data in this file. It is public deployment configuration.
+For local development it is set to `/api`. `proxy.conf.json` forwards that prefix to `http://localhost:5278` and removes the prefix before sending the request. This avoids a browser CORS dependency during local development. A production host must route `/api` to its API origin, or replace this public runtime configuration with an approved API base URL. Do not put credentials, refresh tokens, connection strings, or tenant data in this file. It is public deployment configuration.
 
 Application code reads configuration through the `APP_CONFIG` injection token or `AppConfigService`; it must not hard-code API origins in feature code. This lets the same compiled bundle move between local, test, and production API environments.
 
@@ -148,35 +148,46 @@ The final authenticated parent route will own the application layout and authent
 
 Keep the public landing/login routes small and eagerly accessible. Lazy-load large authenticated areas once they have real screens. Do not add multiple nested lazy boundaries without measuring the resulting navigation cost.
 
-## 6. API and authentication design
+## 6. API and authentication
 
-The project is prepared for API integration but has no endpoint services yet. Add them feature-by-feature under each feature’s `data-access` folder.
+Authentication is the first implemented API slice. Its public pages are lazy-loaded under `/login`, `/forgot-password`, and `/reset-password`; `/app` is protected by `authGuard`. An unauthenticated visitor is redirected to login with a safe `/app` return URL.
+
+| Method | Route                   | Request / response use                                                       |
+| ------ | ----------------------- | ---------------------------------------------------------------------------- |
+| `POST` | `/auth/login`           | `{ email, password }` → access token, refresh token, expiries, email, roles. |
+| `POST` | `/auth/refresh`         | `{ refreshToken }` → rotated token pair.                                     |
+| `POST` | `/auth/logout`          | `{ refreshToken }` → `204 No Content`.                                       |
+| `GET`  | `/auth/me`              | Current user ID, email, roles, and permissions.                              |
+| `POST` | `/auth/forgot-password` | `{ email }` → development-only reset token.                                  |
+| `POST` | `/auth/reset-password`  | `{ email, resetToken, newPassword }` → `204 No Content`.                     |
+
+`AuthSessionService` owns the in-memory access token, refresh token, and current user. Login and refresh use a raw `HttpClient` backed by `HttpBackend` so they cannot recurse through interceptors; after each token response, `/auth/me` loads authoritative roles and permissions.
 
 The intended HTTP structure is:
 
 ```text
 core/api/
-├── api-error.ts                 # Stable UI-facing representation of API failures
+├── api-error.ts                 # Planned: stable UI-facing representation of API failures
 ├── api-url.ts                   # Combines APP_CONFIG.apiBaseUrl with relative paths
 └── interceptors/
     ├── auth.interceptor.ts      # Adds access-token bearer header
     ├── refresh.interceptor.ts   # Coordinates one refresh attempt after an auth failure
-    └── api-error.interceptor.ts # Normalizes error responses for callers
+    └── api-error.interceptor.ts # Planned: normalizes error responses for callers
 ```
 
 Use functional interceptors registered with `provideHttpClient(withInterceptors(...))`. Interceptor ordering must be documented beside the registration. Keep retry rules conservative: do not retry writes by default.
 
-The authentication feature should follow this sequence:
+The implemented authentication flow is:
 
 1. Login calls the backend’s public login endpoint.
-2. Keep the short-lived access token in memory.
+2. Keep the short-lived access and refresh tokens in memory.
 3. Restore identity and effective permissions with the authenticated current-user endpoint.
 4. Add the access token only to requests that target the configured API origin.
-5. Coordinate a single refresh request when an eligible request receives an authentication failure; queued requests await that same refresh operation.
+5. Coordinate a single refresh request when an eligible protected request receives an authentication failure; queued requests await that same refresh operation.
 6. On refresh failure, clear in-memory session state and navigate to login.
 7. Logout always clears local state, even if its server call fails.
 
-The backend currently returns a refresh token in JSON. Store this detail behind the auth/session service. The preferred browser deployment design is ultimately a Secure, HttpOnly, SameSite refresh cookie issued by the API or a BFF; the UI should be able to adopt it without rewriting features.
+The backend currently returns a refresh token in JSON. The frontend deliberately does not put it in local or session storage, so a full browser reload ends the session. The preferred browser deployment design is ultimately a Secure, HttpOnly, SameSite refresh cookie issued by the API or a BFF; the UI can adopt it without rewriting features.
 
 Never send a tenant header. The backend selects the active tenant per API deployment and binds JWTs to it.
 
@@ -283,18 +294,18 @@ For a new Inventory feature such as Brands:
 
 ## 12. Current decisions and intentional deferrals
 
-| Decision                                                        | Status                                                                    |
-| --------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| Standalone Angular, strict TypeScript, Yarn 4                   | Implemented                                                               |
-| Angular Material/CDK and global Material theme                  | Implemented                                                               |
-| Runtime API configuration                                       | Implemented; API URL is deployment-provided                               |
-| English/French/Arabic build-time localization and RTL bootstrap | Implemented                                                               |
-| ESLint, Prettier, Vitest, Playwright, CI                        | Implemented                                                               |
-| Functional auth/API interceptors, guards, session service       | Planned — implement with authentication                                   |
-| Permission-aware layout/navigation                              | Planned — implement with authentication                                   |
-| Organization and Inventory pages                                | Planned — add feature-by-feature                                          |
-| OpenAPI TypeScript generation                                   | Deferred pending a compatible generator and confirmed API contract source |
-| Global state library                                            | Deferred until a demonstrated cross-feature need                          |
-| SSR, PWA, runtime language switching                            | Deferred pending concrete product requirements                            |
+| Decision                                                                                   | Status                                                                    |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------- |
+| Standalone Angular, strict TypeScript, Yarn 4                                              | Implemented                                                               |
+| Angular Material/CDK and global Material theme                                             | Implemented                                                               |
+| Runtime API configuration                                                                  | Implemented; API URL is deployment-provided                               |
+| English/French/Arabic build-time localization and RTL bootstrap                            | Implemented                                                               |
+| ESLint, Prettier, Vitest, Playwright, CI                                                   | Implemented                                                               |
+| Functional auth/refresh interceptors, public auth pages, guards, in-memory session service | Implemented                                                               |
+| Permission-aware layout/navigation                                                         | Planned — use `/auth/me` permissions in the authenticated shell           |
+| Organization and Inventory pages                                                           | Planned — add feature-by-feature                                          |
+| OpenAPI TypeScript generation                                                              | Deferred pending a compatible generator and confirmed API contract source |
+| Global state library                                                                       | Deferred until a demonstrated cross-feature need                          |
+| SSR, PWA, runtime language switching                                                       | Deferred pending concrete product requirements                            |
 
 The goal is a frontend that grows by adding small, cohesive feature slices—not by pre-building an elaborate framework before the product needs it.

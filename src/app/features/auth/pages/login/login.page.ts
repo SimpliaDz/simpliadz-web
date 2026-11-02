@@ -1,0 +1,135 @@
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { ReactiveFormsModule, Validators, NonNullableFormBuilder } from '@angular/forms';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { AuthSessionService } from '../../../../core/auth/auth-session.service';
+
+@Component({
+  selector: 'app-login-page',
+  imports: [
+    MatButtonModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatProgressSpinnerModule,
+    ReactiveFormsModule,
+    RouterLink,
+  ],
+  template: `
+    <main class="auth-page">
+      <mat-card class="auth-card">
+        <mat-card-header>
+          <mat-card-title><h1>Sign in to SimpliaDz</h1></mat-card-title>
+          <mat-card-subtitle>Use your organization account to continue.</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content>
+          <form [formGroup]="form" (ngSubmit)="submit()">
+            <mat-form-field appearance="outline">
+              <mat-label>Email address</mat-label>
+              <input matInput type="email" autocomplete="email" formControlName="email" />
+              @if (form.controls.email.hasError('required')) {
+                <mat-error>Email is required.</mat-error>
+              } @else if (form.controls.email.hasError('email')) {
+                <mat-error>Enter a valid email address.</mat-error>
+              }
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Password</mat-label>
+              <input
+                matInput
+                type="password"
+                autocomplete="current-password"
+                formControlName="password"
+              />
+              @if (form.controls.password.hasError('required')) {
+                <mat-error>Password is required.</mat-error>
+              }
+            </mat-form-field>
+
+            @if (error()) {
+              <p class="auth-error" role="alert">{{ error() }}</p>
+            }
+
+            <button mat-flat-button type="submit" [disabled]="submitting()">
+              @if (submitting()) {
+                <mat-spinner diameter="20" aria-label="Signing in"></mat-spinner>
+              } @else {
+                Sign in
+              }
+            </button>
+          </form>
+        </mat-card-content>
+
+        <mat-card-actions>
+          <a mat-button routerLink="/forgot-password">Forgot your password?</a>
+        </mat-card-actions>
+      </mat-card>
+    </main>
+  `,
+  styles: `
+    .auth-page {
+      display: grid;
+      min-height: calc(100vh - 8rem);
+      place-items: center;
+    }
+    .auth-card {
+      width: min(100%, 28rem);
+    }
+    form {
+      display: grid;
+      gap: 0.5rem;
+      padding-top: 1rem;
+    }
+    mat-form-field {
+      width: 100%;
+    }
+    button {
+      min-height: 2.75rem;
+    }
+    .auth-error {
+      color: var(--mat-sys-error);
+      margin: 0;
+    }
+  `,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+})
+export class LoginPage {
+  private readonly formBuilder = inject(NonNullableFormBuilder);
+  private readonly route = inject(ActivatedRoute);
+  private readonly router = inject(Router);
+  private readonly session = inject(AuthSessionService);
+
+  readonly form = this.formBuilder.group({
+    email: ['', [Validators.required, Validators.email]],
+    password: ['', [Validators.required]],
+  });
+  readonly submitting = signal(false);
+  readonly error = signal<string | null>(null);
+
+  submit(): void {
+    if (this.form.invalid) {
+      this.form.markAllAsTouched();
+      return;
+    }
+
+    this.submitting.set(true);
+    this.error.set(null);
+
+    this.session.login(this.form.getRawValue()).subscribe({
+      next: () => {
+        const returnUrl = this.route.snapshot.queryParamMap.get('returnUrl');
+        void this.router.navigateByUrl(returnUrl?.startsWith('/app') ? returnUrl : '/app');
+      },
+      error: () => {
+        this.error.set('We could not sign you in. Check your email and password, then try again.');
+        this.submitting.set(false);
+      },
+    });
+  }
+}
