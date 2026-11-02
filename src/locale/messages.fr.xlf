@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" target-language="fr" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="app.tagline" datatype="html"><source>Business management</source><target>Gestion d’entreprise</target></trans-unit>
+      <trans-unit id="home.welcome" datatype="html"><source>Welcome to SimpliaDz</source><target>Bienvenue dans SimpliaDz</target></trans-unit>
+      <trans-unit id="home.introduction" datatype="html"><source> The frontend foundation is ready. The next slice will establish authentication. </source><target>Les fondations de l’interface sont prêtes. La prochaine étape mettra en place l’authentification.</target></trans-unit>
+    </body>
+  </file>
+</xliff>

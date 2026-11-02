@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="app.tagline" datatype="html">
+        <source>Business management</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">4,10</context>
+        </context-group>
+        <note priority="1" from="description">A concise product description in the global header</note>
+        <note priority="1" from="meaning">Application tagline</note>
+      </trans-unit>
+      <trans-unit id="home.welcome" datatype="html">
+        <source>Welcome to SimpliaDz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.page.ts</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+        <note priority="1" from="description">Home page heading</note>
+      </trans-unit>
+      <trans-unit id="home.introduction" datatype="html">
+        <source> The frontend foundation is ready. The next slice will establish authentication. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/home/home.page.ts</context>
+          <context context-type="linenumber">8,11</context>
+        </context-group>
+        <note priority="1" from="description">Home page introduction</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

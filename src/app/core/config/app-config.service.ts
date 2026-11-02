@@ -1,0 +1,39 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable, InjectionToken, inject, provideAppInitializer } from '@angular/core';
+import { firstValueFrom } from 'rxjs';
+
+export interface AppConfig {
+  readonly apiBaseUrl: string;
+}
+
+const defaultConfig: AppConfig = { apiBaseUrl: '' };
+
+@Injectable({ providedIn: 'root' })
+export class AppConfigService {
+  private readonly http = inject(HttpClient);
+  private config: AppConfig = defaultConfig;
+
+  get value(): AppConfig {
+    return this.config;
+  }
+
+  async load(): Promise<void> {
+    const loaded = await firstValueFrom(
+      this.http.get<Partial<AppConfig>>('/config/app-config.json'),
+    );
+
+    if (typeof loaded.apiBaseUrl !== 'string') {
+      throw new Error('Runtime configuration must define apiBaseUrl as a string.');
+    }
+
+    this.config = { apiBaseUrl: loaded.apiBaseUrl.replace(/\/$/, '') };
+  }
+}
+
+export const APP_CONFIG = new InjectionToken<AppConfig>('APP_CONFIG', {
+  factory: () => inject(AppConfigService).value,
+});
+
+export function provideAppRuntimeConfig() {
+  return provideAppInitializer(() => inject(AppConfigService).load());
+}

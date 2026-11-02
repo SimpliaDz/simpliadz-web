@@ -16,6 +16,8 @@ yarn install --immutable
 
 This repository pins Yarn in `package.json`; use Yarn rather than npm.
 
+See [the architecture guide](docs/architecture.md) and [the tooling guide](docs/tooling.md) for the project conventions.
+
 ## Development server
 
 To start a local development server, run:
