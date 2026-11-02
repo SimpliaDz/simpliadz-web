@@ -1,0 +1,300 @@
+# SimpliaDz Web — Technical Guide
+
+## 1. Purpose and current scope
+
+SimpliaDz Web is the separate Angular frontend for the SimpliaDz platform. It is intentionally independent from the .NET backend repository: it has its own Git history, dependency lockfile, build pipeline, and deployment configuration.
+
+The project currently establishes a production-minded frontend foundation. It has an application shell, configuration bootstrap, routing, localization, quality tooling, and smoke tests. It does **not** yet implement login, permission-aware navigation, Organization management, or Inventory workflows. Those features should be added as vertical slices on top of this foundation.
+
+The backend is a tenant-aware modular monolith. The browser must respect that boundary:
+
+- An API deployment represents one configured tenant; the browser must not send a tenant-selection header.
+- The authenticated API remains the authority for roles and permissions. The frontend uses permissions to make the interface clearer, never as a substitute for authorization.
+- Inventory keeps products, variants, and stock separate. Products define commercial data; variants are sellable/stockable; stock belongs to a variant at a location.
+
+## 2. Technology choices
+
+| Area                   | Choice                                                 | Reason                                                                             |
+| ---------------------- | ------------------------------------------------------ | ---------------------------------------------------------------------------------- |
+| Framework              | Angular 22 standalone application                      | Angular-native composition without `NgModule` boilerplate.                         |
+| Language               | TypeScript in strict mode                              | Catches unsafe API and UI assumptions early.                                       |
+| Package manager        | Yarn 4, `nodeLinker: node-modules`                     | Locked, reproducible installs with broad editor/tool compatibility.                |
+| UI primitives          | Angular Material and CDK                               | Accessible, maintained controls and overlays; avoid adding competing UI libraries. |
+| Styling                | SCSS plus Material design tokens                       | Product-specific styling without a second CSS framework.                           |
+| HTTP                   | Angular `HttpClient` and functional interceptors       | One Angular-native request pipeline for authorization, retry, and errors.          |
+| State                  | Signals for local state, feature facades for workflows | Small and explicit; a global state package is not justified yet.                   |
+| Forms                  | Typed Reactive Forms                                   | Stable choice for business forms and cross-field validation.                       |
+| Unit/component tests   | Vitest plus Angular testing utilities                  | Generated Angular test stack, already running.                                     |
+| Browser tests          | Playwright with Chromium                               | Real browser smoke and end-to-end coverage.                                        |
+| Localization           | Angular built-in compile-time i18n                     | Extractable, reviewable translation catalogues for English, French, and Arabic.    |
+| Continuous integration | GitHub Actions                                         | Installs, lints, tests, and builds every locale on pushes and pull requests.       |
+
+Avoid adding Axios, an alternate router, a second component library, a generic HTTP wrapper, or NgRx by default. Each would duplicate platform capabilities and increase maintenance. Revisit global state only when a real cross-feature synchronization problem appears.
+
+## 3. Directory structure and ownership
+
+```text
+src/
+├── app/
+│   ├── core/                    # Singleton cross-cutting application infrastructure
+│   │   ├── config/              # Runtime deployment configuration
+│   │   ├── i18n/                # Locale and text-direction bootstrap
+│   │   ├── api/                 # Future HTTP API primitives/interceptors
+│   │   ├── auth/                # Future session, guards, and permission support
+│   │   └── layout/              # Future authenticated shell/navigation
+│   ├── features/                # Business features, loaded by route
+│   │   └── home/                # Current minimal landing route
+│   ├── shared/                  # Reusable UI/utilities with no feature ownership
+│   ├── app.config.ts            # Root providers
+│   ├── app.routes.ts            # Root route table
+│   └── app.ts                   # Root application shell
+├── locale/                      # English source + French/Arabic XLIFF catalogues
+├── index.html
+├── main.ts
+└── styles.scss                  # Global Material theme and global CSS
+
+public/
+└── config/app-config.json       # Deployment-time API configuration
+
+e2e/                             # Playwright browser tests
+docs/                            # Architectural and contributor documentation
+.github/workflows/ci.yml         # CI definition
+```
+
+The dependency direction is deliberately one-way:
+
+```text
+core  ───────────────────────────────► shared
+  ▲                                      ▲
+  │                                      │
+features ───────────────────────────────┘
+```
+
+More precisely:
+
+- `core` may be used throughout the app but must never import a feature.
+- `shared` contains generic presentation or utility code only. It cannot know about products, permissions, or a specific backend module.
+- A feature owns its pages, feature-specific UI, API services, models, and state/facade.
+- Presentational components accept input and emit events. Pages/facades orchestrate workflows.
+
+Do not create empty `domain`, `application`, `infrastructure`, or `contracts` folders for every frontend feature. Use a small feature shape only when it has a real need:
+
+```text
+features/inventory/brands/
+├── data-access/     # Brand API service, DTO mapping, feature facade/state
+├── pages/           # Routed list/edit pages
+├── ui/              # Brand-specific table/form components
+└── models/          # UI-specific models where API DTOs are not enough
+```
+
+## 4. Application startup and runtime configuration
+
+`src/main.ts` bootstraps the standalone root component using `appConfig`.
+
+`app.config.ts` provides:
+
+1. Global browser error listeners.
+2. `HttpClient` for all API access.
+3. Async Angular Material animations.
+4. `AppConfigService`, which loads runtime configuration before first render.
+5. `LocaleBootstrapService`, which applies the document language and text direction.
+6. Angular Router with top-of-page scrolling on navigation.
+
+The startup flow is:
+
+```text
+Browser loads index.html
+        │
+        ▼
+Angular bootstrap
+        │
+        ├── GET /config/app-config.json
+        │       └── validates and normalizes apiBaseUrl
+        │
+        └── applies lang + dir to <html>
+                │
+                ▼
+           renders routed application
+```
+
+`public/config/app-config.json` is copied as a static asset. Its initial value is deliberately empty:
+
+```json
+{ "apiBaseUrl": "" }
+```
+
+Set it to the API origin appropriate to the deployment, for example `http://localhost:5278` for the running local DEV API. Do not put credentials, refresh tokens, connection strings, or tenant data in this file. It is public deployment configuration.
+
+Application code reads configuration through the `APP_CONFIG` injection token or `AppConfigService`; it must not hard-code API origins in feature code. This lets the same compiled bundle move between local, test, and production API environments.
+
+## 5. Routing and feature loading
+
+The root route table lives in `src/app/app.routes.ts`. The current home route is lazy-loaded. Future feature areas should use route-level lazy loading:
+
+```text
+/login
+/app
+/app/organization
+/app/inventory/products
+/app/inventory/categories
+/app/inventory/brands
+/app/inventory/attributes
+/app/inventory/variants
+/app/inventory/locations
+/app/inventory/price-lists
+```
+
+The final authenticated parent route will own the application layout and authentication guard. Its children will be lazy feature routes. Route metadata should carry the permissions needed to view a page, while API calls remain secured by backend policies.
+
+Keep the public landing/login routes small and eagerly accessible. Lazy-load large authenticated areas once they have real screens. Do not add multiple nested lazy boundaries without measuring the resulting navigation cost.
+
+## 6. API and authentication design
+
+The project is prepared for API integration but has no endpoint services yet. Add them feature-by-feature under each feature’s `data-access` folder.
+
+The intended HTTP structure is:
+
+```text
+core/api/
+├── api-error.ts                 # Stable UI-facing representation of API failures
+├── api-url.ts                   # Combines APP_CONFIG.apiBaseUrl with relative paths
+└── interceptors/
+    ├── auth.interceptor.ts      # Adds access-token bearer header
+    ├── refresh.interceptor.ts   # Coordinates one refresh attempt after an auth failure
+    └── api-error.interceptor.ts # Normalizes error responses for callers
+```
+
+Use functional interceptors registered with `provideHttpClient(withInterceptors(...))`. Interceptor ordering must be documented beside the registration. Keep retry rules conservative: do not retry writes by default.
+
+The authentication feature should follow this sequence:
+
+1. Login calls the backend’s public login endpoint.
+2. Keep the short-lived access token in memory.
+3. Restore identity and effective permissions with the authenticated current-user endpoint.
+4. Add the access token only to requests that target the configured API origin.
+5. Coordinate a single refresh request when an eligible request receives an authentication failure; queued requests await that same refresh operation.
+6. On refresh failure, clear in-memory session state and navigate to login.
+7. Logout always clears local state, even if its server call fails.
+
+The backend currently returns a refresh token in JSON. Store this detail behind the auth/session service. The preferred browser deployment design is ultimately a Secure, HttpOnly, SameSite refresh cookie issued by the API or a BFF; the UI should be able to adopt it without rewriting features.
+
+Never send a tenant header. The backend selects the active tenant per API deployment and binds JWTs to it.
+
+## 7. State, forms, and UI conventions
+
+Use the smallest state mechanism that makes a feature understandable:
+
+- Component-only transient state: private signals in the component.
+- One-page async state: a feature facade/service holding signals such as `isLoading`, `error`, and `items`.
+- Shared state inside a business feature: one feature facade provided at the feature route level.
+- Cross-feature global state: propose it explicitly with an example before adding a store library.
+
+Use `computed` signals for derived values and keep side effects narrow. HTTP requests remain `HttpClient` observables at the data-access boundary; convert them to promises/signals only where it improves the page or facade API.
+
+Business forms use typed Reactive Forms. Server errors must be mapped into visible form or page errors; do not expose raw HTTP error objects in templates. Client validation improves feedback but never replaces the backend’s FluentValidation/domain validation.
+
+Use Angular Material/CDK controls before introducing a third-party control. Build small reusable wrappers in `shared/ui` only after repeated, stable patterns emerge.
+
+## 8. Localization and RTL
+
+English (`en-US`) is the source locale. The source catalogue is `src/locale/messages.xlf`. French and Arabic translations live in `messages.fr.xlf` and `messages.ar.xlf`.
+
+Angular produces separate optimized outputs for:
+
+```text
+dist/simpliadz-web/browser/
+├── en-US/
+├── fr/
+└── ar/
+```
+
+When adding user-visible template text:
+
+1. Mark it with Angular’s `i18n` attribute and a stable custom ID where appropriate.
+2. Run `yarn i18n:extract`.
+3. Review the updated English source catalogue.
+4. Update the French and Arabic `target` values.
+5. Run `yarn build` to validate every localized output.
+
+Do not translate product identifiers, permission keys, API field names, or backend error codes. Translate user-facing labels, descriptions, empty states, confirmations, and actionable error messages.
+
+Arabic is a right-to-left language. `LocaleBootstrapService` sets `dir="rtl"` for the Arabic build. Use logical CSS properties for layout-sensitive CSS:
+
+```scss
+// Preferred: automatically correct in both LTR and RTL
+padding-inline: 1rem;
+margin-inline-start: 0.5rem;
+border-inline-start: 1px solid var(--mat-sys-outline);
+
+// Avoid unless direction is intentionally fixed
+padding-left: 1rem;
+margin-right: 0.5rem;
+```
+
+## 9. Testing and quality gates
+
+Run these commands locally before opening a pull request:
+
+```bash
+yarn install --immutable
+yarn lint
+yarn test --watch=false
+yarn build
+yarn e2e
+```
+
+`yarn build` validates English, French, and Arabic output. `yarn e2e` starts the local Angular development server and runs the Playwright Chromium smoke test. Playwright browser binaries are installed with `yarn playwright install`.
+
+Test responsibility is layered:
+
+| Test type    | Use for                                                                                                                                  |
+| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Unit         | Pure mapping, state, permissions, validation helpers, and URL creation.                                                                  |
+| Service/HTTP | Request method/URL/body, API response mapping, and error normalization via Angular HTTP testing utilities.                               |
+| Component    | Form behavior, visible permissions, emitted events, accessibility semantics, and localized text.                                         |
+| E2E          | Login/session behavior, protected navigation, a small number of critical CRUD workflows, and a smoke check for the deployed application. |
+
+Do not write a browser test for every component. Use E2E tests for cross-browser, integration-critical behavior; keep the majority of logic covered by fast unit and component tests.
+
+GitHub Actions in `.github/workflows/ci.yml` repeats install, lint, tests, and build on pushes and pull requests. It is the required quality gate; local pre-commit automation is optional convenience, not the source of truth.
+
+## 10. Git and dependency rules
+
+- Use Yarn only. `yarn.lock` is committed; `package-lock.json` must never be added.
+- Use `yarn install --immutable` in CI and on a clean checkout to catch lockfile drift.
+- Keep `node_modules`, Angular caches, Playwright reports, and test results untracked.
+- Keep commits focused: tooling, a single feature slice, tests, and documentation updates should be reviewable as a coherent change.
+- Do not commit API keys, token values, tenant secrets, or production runtime configuration.
+
+## 11. Adding a new feature: recommended recipe
+
+For a new Inventory feature such as Brands:
+
+1. Confirm the backend contract and permissions from backend documentation and Swagger before creating types or routes.
+2. Add a lazy feature route under the authenticated application route.
+3. Create the feature folders only as needed: `data-access`, `pages`, `ui`, `models`.
+4. Put backend DTOs and HTTP calls in `data-access`; do not call `HttpClient` from a display component.
+5. Create a facade when pages need shared loading/error/data state.
+6. Build typed forms for create/edit operations.
+7. Check the current user’s permissions for navigation and action visibility; rely on the API for real enforcement.
+8. Add unit/service/component tests and one E2E test only when the workflow is critical.
+9. Mark new UI copy for localization, refresh XLIFF files, and verify the Arabic layout.
+10. Update this guide if the feature introduces a new cross-cutting pattern.
+
+## 12. Current decisions and intentional deferrals
+
+| Decision                                                        | Status                                                                    |
+| --------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| Standalone Angular, strict TypeScript, Yarn 4                   | Implemented                                                               |
+| Angular Material/CDK and global Material theme                  | Implemented                                                               |
+| Runtime API configuration                                       | Implemented; API URL is deployment-provided                               |
+| English/French/Arabic build-time localization and RTL bootstrap | Implemented                                                               |
+| ESLint, Prettier, Vitest, Playwright, CI                        | Implemented                                                               |
+| Functional auth/API interceptors, guards, session service       | Planned — implement with authentication                                   |
+| Permission-aware layout/navigation                              | Planned — implement with authentication                                   |
+| Organization and Inventory pages                                | Planned — add feature-by-feature                                          |
+| OpenAPI TypeScript generation                                   | Deferred pending a compatible generator and confirmed API contract source |
+| Global state library                                            | Deferred until a demonstrated cross-feature need                          |
+| SSR, PWA, runtime language switching                            | Deferred pending concrete product requirements                            |
+
+The goal is a frontend that grows by adding small, cohesive feature slices—not by pre-building an elaborate framework before the product needs it.

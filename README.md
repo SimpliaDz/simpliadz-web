@@ -16,7 +16,7 @@ yarn install --immutable
 
 This repository pins Yarn in `package.json`; use Yarn rather than npm.
 
-See [the architecture guide](docs/architecture.md) and [the tooling guide](docs/tooling.md) for the project conventions.
+Read the [technical guide](docs/TECHNICAL_GUIDE.md) for the complete architecture and contributor reference. The shorter [architecture guide](docs/architecture.md) and [tooling guide](docs/tooling.md) are quick operational summaries.
 
 ## Development server
 
