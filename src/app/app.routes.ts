@@ -339,6 +339,45 @@ export const routes: Routes = [
           import('./features/sales/sales/pages/sale-detail.page').then((m) => m.SaleDetailPage),
       },
 
+      // Accounting and workforce
+      {
+        path: 'accounting/expenses',
+        title: $localize`:@@title.expenses:Expenses | SimpliaDz`,
+        ...permissioned(['expenses.view', 'expense-categories.view']),
+        loadComponent: () =>
+          import('./features/accounting/expenses/pages/expenses.page').then((m) => m.ExpensesPage),
+      },
+      {
+        path: 'accounting/expense-categories',
+        title: $localize`:@@title.expenseCategories:Expense Categories | SimpliaDz`,
+        ...permissioned(['expense-categories.view']),
+        loadComponent: () =>
+          import('./features/accounting/expenses/pages/expense-categories.page').then(
+            (m) => m.ExpenseCategoriesPage,
+          ),
+      },
+      {
+        path: 'workforce/clock',
+        title: $localize`:@@title.myTime:My Time | SimpliaDz`,
+
+        loadComponent: () =>
+          import('./features/workforce/pages/my-time.page').then((m) => m.MyTimePage),
+      },
+      {
+        path: 'workforce/sessions',
+        title: $localize`:@@title.workSessions:Work Sessions | SimpliaDz`,
+        ...permissioned(['work-sessions.view']),
+        loadComponent: () =>
+          import('./features/workforce/pages/work-sessions.page').then((m) => m.WorkSessionsPage),
+      },
+      {
+        path: 'workforce/report',
+        title: $localize`:@@title.hoursReport:Hours Report | SimpliaDz`,
+        ...permissioned(['work-sessions.report']),
+        loadComponent: () =>
+          import('./features/workforce/pages/hours-report.page').then((m) => m.HoursReportPage),
+      },
+
       // Administration
       {
         path: 'administration/users',

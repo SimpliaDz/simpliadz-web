@@ -38,6 +38,11 @@
       <trans-unit id="title.cashSession" datatype="html"><source>Cash Session | SimpliaDz</source><target>Session de caisse | SimpliaDz</target></trans-unit>
       <trans-unit id="title.sales" datatype="html"><source>Sales | SimpliaDz</source><target>Ventes | SimpliaDz</target></trans-unit>
       <trans-unit id="title.sale" datatype="html"><source>Sale | SimpliaDz</source><target>Vente | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.expenses" datatype="html"><source>Expenses | SimpliaDz</source><target>Dépenses | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.expenseCategories" datatype="html"><source>Expense Categories | SimpliaDz</source><target>Catégories de dépenses | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.myTime" datatype="html"><source>My Time | SimpliaDz</source><target>Mes heures | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.workSessions" datatype="html"><source>Work Sessions | SimpliaDz</source><target>Sessions de travail | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.hoursReport" datatype="html"><source>Hours Report | SimpliaDz</source><target>Rapport d’heures | SimpliaDz</target></trans-unit>
       <trans-unit id="title.users" datatype="html"><source>Users | SimpliaDz</source><target>Utilisateurs | SimpliaDz</target></trans-unit>
       <trans-unit id="title.newUser" datatype="html"><source>New user | SimpliaDz</source><target>Nouvel utilisateur | SimpliaDz</target></trans-unit>
       <trans-unit id="title.user" datatype="html"><source>User | SimpliaDz</source><target>Utilisateur | SimpliaDz</target></trans-unit>
@@ -74,6 +79,13 @@
       <trans-unit id="nav.section.purchasing" datatype="html"><source>Purchasing</source><target>Achats</target></trans-unit>
       <trans-unit id="nav.suppliers" datatype="html"><source>Suppliers</source><target>Fournisseurs</target></trans-unit>
       <trans-unit id="nav.orders" datatype="html"><source>Purchase orders</source><target>Commandes d’achat</target></trans-unit>
+      <trans-unit id="nav.section.accounting" datatype="html"><source>Accounting</source><target>Comptabilité</target></trans-unit>
+      <trans-unit id="nav.expenses" datatype="html"><source>Expenses</source><target>Dépenses</target></trans-unit>
+      <trans-unit id="nav.expenseCategories" datatype="html"><source>Expense categories</source><target>Catégories de dépenses</target></trans-unit>
+      <trans-unit id="nav.section.workforce" datatype="html"><source>Workforce</source><target>Personnel</target></trans-unit>
+      <trans-unit id="nav.myTime" datatype="html"><source>My time</source><target>Mes heures</target></trans-unit>
+      <trans-unit id="nav.workSessions" datatype="html"><source>Work sessions</source><target>Sessions de travail</target></trans-unit>
+      <trans-unit id="nav.hoursReport" datatype="html"><source>Hours report</source><target>Rapport d’heures</target></trans-unit>
       <trans-unit id="nav.section.business" datatype="html"><source>Business</source><target>Entreprise</target></trans-unit>
       <trans-unit id="nav.organization" datatype="html"><source>Organization</source><target>Organisation</target></trans-unit>
       <trans-unit id="nav.section.administration" datatype="html"><source>Administration</source><target>Administration</target></trans-unit>
@@ -96,8 +108,57 @@
       <trans-unit id="validation.passwordMismatch" datatype="html"><source> The passwords do not match. </source><target>Les mots de passe ne correspondent pas.</target></trans-unit>
       <trans-unit id="account.security.submit" datatype="html"><source>Change password</source><target>Modifier le mot de passe</target></trans-unit>
       <trans-unit id="account.security.failed" datatype="html"><source>We could not change your password. Check your current password and try again.</source><target>Impossible de modifier votre mot de passe. Vérifiez votre mot de passe actuel et réessayez.</target></trans-unit>
+      <trans-unit id="expenseCategories.subtitle" datatype="html"><source>Groups for expenses, such as rent, utilities or transport.</source><target>Regroupements de dépenses, comme le loyer, les services publics ou les transports.</target></trans-unit>
+      <trans-unit id="expenseCategories.create" datatype="html"><source>New category</source><target>Nouvelle catégorie</target></trans-unit>
+      <trans-unit id="common.retry" datatype="html"><source>Try again</source><target>Réessayer</target></trans-unit>
+      <trans-unit id="common.name" datatype="html"><source>Name</source><target>Nom</target></trans-unit>
+      <trans-unit id="common.status" datatype="html"><source>Status</source><target>Statut</target></trans-unit>
+      <trans-unit id="common.actions" datatype="html"><source>Actions</source><target>Actions</target></trans-unit>
+      <trans-unit id="expenseCategories.heading" datatype="html"><source>Expense categories</source><target>Catégories de dépenses</target></trans-unit>
+      <trans-unit id="expenses.backToList" datatype="html"><source>All expenses</source><target>Toutes les dépenses</target></trans-unit>
+      <trans-unit id="expenseCategories.loadFailed" datatype="html"><source>We could not load categories</source><target>Impossible de charger les catégories</target></trans-unit>
+      <trans-unit id="expenseCategories.empty.title" datatype="html"><source>No categories yet</source><target>Aucune catégorie pour le moment</target></trans-unit>
+      <trans-unit id="expenseCategories.empty.message" datatype="html"><source>Create a category so expenses can be grouped.</source><target>Créez une catégorie pour regrouper les dépenses.</target></trans-unit>
+      <trans-unit id="common.active" datatype="html"><source>Active</source><target>Actif</target></trans-unit>
+      <trans-unit id="common.inactive" datatype="html"><source>Inactive</source><target>Inactif</target></trans-unit>
+      <trans-unit id="common.edit" datatype="html"><source>Edit</source><target>Modifier</target></trans-unit>
+      <trans-unit id="common.deactivate" datatype="html"><source>Deactivate</source><target>Désactiver</target></trans-unit>
+      <trans-unit id="expenseCategories.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="expenseCategories.saved" datatype="html"><source>Category saved.</source><target>Catégorie enregistrée.</target></trans-unit>
+      <trans-unit id="expenseCategories.deactivate.title" datatype="html"><source>Deactivate category?</source><target>Désactiver la catégorie ?</target></trans-unit>
+      <trans-unit id="expenseCategories.deactivate.message" datatype="html"><source>Existing expenses keep this category. It can no longer be used for new expenses. Categories cannot be reactivated.</source><target>Les dépenses existantes gardent cette catégorie. Elle ne pourra plus servir pour de nouvelles dépenses. Une catégorie ne peut pas être réactivée.</target></trans-unit>
+      <trans-unit id="expenseCategories.deactivated" datatype="html"><source>Category deactivated.</source><target>Catégorie désactivée.</target></trans-unit>
+      <trans-unit id="expenseCategories.deactivateFailed" datatype="html"><source>The category could not be deactivated.</source><target>La catégorie n’a pas pu être désactivée.</target></trans-unit>
+      <trans-unit id="expenses.subtitle" datatype="html"><source>Money spent to run the business. Expenses are corrected by editing, never deleted.</source><target>Les dépenses de fonctionnement de l’entreprise. Une dépense se corrige en la modifiant, jamais en la supprimant.</target></trans-unit>
+      <trans-unit id="expenses.categories" datatype="html"><source>Categories</source><target>Catégories</target></trans-unit>
+      <trans-unit id="expenses.create" datatype="html"><source>New expense</source><target>Nouvelle dépense</target></trans-unit>
+      <trans-unit id="expenses.from" datatype="html"><source>From</source><target>Du</target></trans-unit>
+      <trans-unit id="expenses.to" datatype="html"><source>To</source><target>Au</target></trans-unit>
+      <trans-unit id="expenses.field.category" datatype="html"><source>Category</source><target>Catégorie</target></trans-unit>
+      <trans-unit id="common.all" datatype="html"><source>All</source><target>Tous</target></trans-unit>
+      <trans-unit id="common.apply" datatype="html"><source>Apply</source><target>Appliquer</target></trans-unit>
+      <trans-unit id="expenses.pageTotal" datatype="html"><source>Total on this page</source><target>Total de cette page</target></trans-unit>
+      <trans-unit id="expenses.field.date" datatype="html"><source>Date</source><target>Date</target></trans-unit>
+      <trans-unit id="expenses.field.description" datatype="html"><source>Description</source><target>Description</target></trans-unit>
+      <trans-unit id="expenses.field.amount" datatype="html"><source>Amount</source><target>Montant</target></trans-unit>
+      <trans-unit id="expenses.heading" datatype="html"><source>Expenses</source><target>Dépenses</target></trans-unit>
+      <trans-unit id="expenses.loadFailed" datatype="html"><source>We could not load expenses</source><target>Impossible de charger les dépenses</target></trans-unit>
+      <trans-unit id="expenses.empty.title" datatype="html"><source>No expenses match</source><target>Aucune dépense ne correspond</target></trans-unit>
+      <trans-unit id="expenses.empty.message" datatype="html"><source>Record an expense to keep track of running costs.</source><target>Enregistrez une dépense pour suivre les coûts de fonctionnement.</target></trans-unit>
+      <trans-unit id="expenses.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="expenses.saved" datatype="html"><source>Expense saved.</source><target>Dépense enregistrée.</target></trans-unit>
+      <trans-unit id="expenseCategories.field.name" datatype="html"><source>Category name</source><target>Nom de la catégorie</target></trans-unit>
+      <trans-unit id="common.cancel" datatype="html"><source>Cancel</source><target>Annuler</target></trans-unit>
       <trans-unit id="common.save" datatype="html"><source>Save</source><target>Enregistrer</target></trans-unit>
-      <trans-unit id="common.retry" datatype="html"><source> Try again </source><target>Réessayer</target></trans-unit>
+      <trans-unit id="expenseCategories.dialog.create" datatype="html"><source>New category</source><target>Nouvelle catégorie</target></trans-unit>
+      <trans-unit id="expenseCategories.dialog.edit" datatype="html"><source>Edit category</source><target>Modifier la catégorie</target></trans-unit>
+      <trans-unit id="expenseCategories.saveFailed" datatype="html"><source>The category could not be saved.</source><target>La catégorie n’a pas pu être enregistrée.</target></trans-unit>
+      <trans-unit id="expenses.field.location" datatype="html"><source>Location (optional)</source><target>Emplacement (facultatif)</target></trans-unit>
+      <trans-unit id="common.none" datatype="html"><source>None</source><target>Aucun</target></trans-unit>
+      <trans-unit id="validation.positive" datatype="html"><source>Enter an amount above zero.</source><target>Saisissez au moins 1.</target></trans-unit>
+      <trans-unit id="expenses.dialog.create" datatype="html"><source>New expense</source><target>Nouvelle dépense</target></trans-unit>
+      <trans-unit id="expenses.dialog.edit" datatype="html"><source>Edit expense</source><target>Modifier la dépense</target></trans-unit>
+      <trans-unit id="expenses.saveFailed" datatype="html"><source>The expense could not be saved.</source><target>La dépense n’a pas pu être enregistrée.</target></trans-unit>
       <trans-unit id="roles.readOnly" datatype="html"><source> You can view this role but not change it. </source><target>Vous pouvez consulter ce rôle sans le modifier.</target></trans-unit>
       <trans-unit id="roles.detail.heading" datatype="html"><source>Role</source><target>Rôle</target></trans-unit>
       <trans-unit id="roles.detail.subtitle" datatype="html"><source>Tick the permissions this role grants, then save.</source><target>Cochez les autorisations accordées par ce rôle, puis enregistrez.</target></trans-unit>
@@ -110,8 +171,6 @@
       <trans-unit id="roles.subtitle" datatype="html"><source>Roles bundle permissions. A user gets every permission of every role they hold.</source><target>Les rôles regroupent des autorisations. Un utilisateur reçoit toutes les autorisations de ses rôles.</target></trans-unit>
       <trans-unit id="roles.field.name" datatype="html"><source>Role name</source><target>Nom du rôle</target></trans-unit>
       <trans-unit id="roles.create" datatype="html"><source>Create role</source><target>Créer le rôle</target></trans-unit>
-      <trans-unit id="common.name" datatype="html"><source>Name</source><target>Nom</target></trans-unit>
-      <trans-unit id="common.actions" datatype="html"><source>Actions</source><target>Actions</target></trans-unit>
       <trans-unit id="roles.permissions" datatype="html"><source>Permissions</source><target>Autorisations</target></trans-unit>
       <trans-unit id="roles.heading" datatype="html"><source>Roles</source><target>Rôles</target></trans-unit>
       <trans-unit id="roles.loadFailed" datatype="html"><source>We could not load roles</source><target>Impossible de charger les rôles</target></trans-unit>
@@ -127,7 +186,6 @@
       <trans-unit id="users.password" datatype="html"><source>Temporary password</source><target>Mot de passe temporaire</target></trans-unit>
       <trans-unit id="users.passwordHint" datatype="html"><source>At least 8 characters with upper and lower case letters, a digit and a symbol.</source><target>Au moins 8 caractères, avec majuscules, minuscules, un chiffre et un symbole.</target></trans-unit>
       <trans-unit id="users.roles" datatype="html"><source>Roles</source><target>Rôles</target></trans-unit>
-      <trans-unit id="common.cancel" datatype="html"><source>Cancel</source><target>Annuler</target></trans-unit>
       <trans-unit id="common.create" datatype="html"><source>Create</source><target>Créer</target></trans-unit>
       <trans-unit id="users.create.heading" datatype="html"><source>New user</source><target>Nouvel utilisateur</target></trans-unit>
       <trans-unit id="users.backToList" datatype="html"><source>All users</source><target>Tous les utilisateurs</target></trans-unit>
@@ -135,15 +193,12 @@
       <trans-unit id="users.create.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
       <trans-unit id="users.created" datatype="html"><source>User created.</source><target>Utilisateur créé.</target></trans-unit>
       <trans-unit id="users.saveFailed" datatype="html"><source>We could not create the user.</source><target>Impossible de créer l’utilisateur.</target></trans-unit>
-      <trans-unit id="common.deactivate" datatype="html"><source>Deactivate</source><target>Désactiver</target></trans-unit>
       <trans-unit id="common.activate" datatype="html"><source>Activate</source><target>Activer</target></trans-unit>
       <trans-unit id="users.noRoles" datatype="html"><source>No roles</source><target>Aucun rôle</target></trans-unit>
       <trans-unit id="users.effectivePermissions" datatype="html"><source>Effective permissions</source><target>Autorisations effectives</target></trans-unit>
       <trans-unit id="users.noPermissions" datatype="html"><source>This user has no permissions.</source><target>Cet utilisateur n’a aucune autorisation.</target></trans-unit>
       <trans-unit id="users.emailConfirmed" datatype="html"><source>Email confirmed</source><target>E-mail confirmé</target></trans-unit>
       <trans-unit id="users.detail.loadFailed" datatype="html"><source>We could not load this user</source><target>Impossible de charger cet utilisateur</target></trans-unit>
-      <trans-unit id="common.active" datatype="html"><source>Active</source><target>Actif</target></trans-unit>
-      <trans-unit id="common.inactive" datatype="html"><source>Inactive</source><target>Inactif</target></trans-unit>
       <trans-unit id="common.yes" datatype="html"><source>Yes</source><target>Oui</target></trans-unit>
       <trans-unit id="common.no" datatype="html"><source>No</source><target>Non</target></trans-unit>
       <trans-unit id="users.detail.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
@@ -160,7 +215,6 @@
       <trans-unit id="common.search" datatype="html"><source>Search</source><target>Rechercher</target></trans-unit>
       <trans-unit id="common.showInactive" datatype="html"><source> Show inactive </source><target>Afficher les éléments inactifs</target></trans-unit>
       <trans-unit id="users.name" datatype="html"><source>Name</source><target>Nom</target></trans-unit>
-      <trans-unit id="common.status" datatype="html"><source>Status</source><target>Statut</target></trans-unit>
       <trans-unit id="users.heading" datatype="html"><source>Users</source><target>Utilisateurs</target></trans-unit>
       <trans-unit id="users.loadFailed" datatype="html"><source>We could not load users</source><target>Impossible de charger les utilisateurs</target></trans-unit>
       <trans-unit id="users.empty.title" datatype="html"><source>No users match</source><target>Aucun utilisateur ne correspond</target></trans-unit>
@@ -203,7 +257,6 @@
       <trans-unit id="brands.loadFailed" datatype="html"><source>We could not load brands</source><target>Impossible de charger les marques</target></trans-unit>
       <trans-unit id="brands.empty.title" datatype="html"><source>No brands yet</source><target>Aucune marque pour le moment</target></trans-unit>
       <trans-unit id="brands.empty.message" datatype="html"><source>Add the brands you sell so products can be grouped by brand.</source><target>Ajoutez les marques que vous vendez pour regrouper vos produits.</target></trans-unit>
-      <trans-unit id="common.edit" datatype="html"><source>Edit</source><target>Modifier</target></trans-unit>
       <trans-unit id="brands.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
       <trans-unit id="brands.deactivate.title" datatype="html"><source>Deactivate brand?</source><target>Désactiver la marque ?</target></trans-unit>
       <trans-unit id="brands.deactivate.message" datatype="html"><source>Products keep this brand, but it can no longer be chosen for new products. Brands cannot be reactivated.</source><target>Les produits gardent cette marque, mais elle ne pourra plus être choisie pour de nouveaux produits. Une marque ne peut pas être réactivée.</target></trans-unit>
@@ -252,7 +305,6 @@
       <trans-unit id="products.deactivateFailed" datatype="html"><source>The product could not be deactivated.</source><target>Impossible de désactiver le produit.</target></trans-unit>
       <trans-unit id="products.field.name" datatype="html"><source>Product name</source><target>Nom du produit</target></trans-unit>
       <trans-unit id="products.field.codeHint" datatype="html"><source>Optional. Stored in upper case and must be unique.</source><target>Facultatif. Enregistré en majuscules et doit être unique.</target></trans-unit>
-      <trans-unit id="common.none" datatype="html"><source>None</source><target>Aucun</target></trans-unit>
       <trans-unit id="products.field.description" datatype="html"><source>Description</source><target>Description</target></trans-unit>
       <trans-unit id="products.form.loadFailed" datatype="html"><source>We could not load the product form</source><target>Impossible de charger le formulaire produit</target></trans-unit>
       <trans-unit id="products.form.editHeading" datatype="html"><source>Edit product</source><target>Modifier le produit</target></trans-unit>
@@ -265,8 +317,6 @@
       <trans-unit id="products.subtitle" datatype="html"><source>Products describe what you sell. Stock and prices belong to their variants.</source><target>Les produits décrivent ce que vous vendez. Le stock et les prix appartiennent aux variantes.</target></trans-unit>
       <trans-unit id="products.create" datatype="html"><source>New product</source><target>Nouveau produit</target></trans-unit>
       <trans-unit id="products.search" datatype="html"><source>Search products</source><target>Rechercher des produits</target></trans-unit>
-      <trans-unit id="common.all" datatype="html"><source>All</source><target>Tous</target></trans-unit>
-      <trans-unit id="common.apply" datatype="html"><source>Apply</source><target>Appliquer</target></trans-unit>
       <trans-unit id="products.lookup" datatype="html"><source>Find a variant by SKU or barcode</source><target>Trouver une variante par SKU ou code-barres</target></trans-unit>
       <trans-unit id="products.lookup.action" datatype="html"><source> Find variant </source><target>Trouver la variante</target></trans-unit>
       <trans-unit id="products.variantCount" datatype="html"><source>Variants</source><target>Variantes</target></trans-unit>
@@ -484,7 +534,6 @@
       <trans-unit id="transfers.noLines" datatype="html"><source>No lines yet. Add the products to move.</source><target>Aucune ligne pour le moment. Ajoutez les produits à déplacer.</target></trans-unit>
       <trans-unit id="transfers.quantity" datatype="html"><source>Quantity</source><target>Quantité</target></trans-unit>
       <trans-unit id="transfers.addLine" datatype="html"><source>Add a line</source><target>Ajouter une ligne</target></trans-unit>
-      <trans-unit id="validation.positive" datatype="html"><source>Enter at least 1.</source><target>Saisissez au moins 1.</target></trans-unit>
       <trans-unit id="transfers.addLine.action" datatype="html"><source> Add line </source><target>Ajouter la ligne</target></trans-unit>
       <trans-unit id="transfers.details" datatype="html"><source>Details</source><target>Détails</target></trans-unit>
       <trans-unit id="transfers.source" datatype="html"><source>From</source><target>De</target></trans-unit>
@@ -564,8 +613,8 @@
       <trans-unit id="organization.saved" datatype="html"><source>Organization saved.</source><target>Organisation enregistrée.</target></trans-unit>
       <trans-unit id="organization.saveFailed" datatype="html"><source>We could not save the organization.</source><target>Impossible d’enregistrer l’organisation.</target></trans-unit>
       <trans-unit id="organization.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
-      <trans-unit id="orders.cancel" datatype="html"><source>Cancel order</source><target>Annuler la commande</target></trans-unit>
-      <trans-unit id="orders.place" datatype="html"><source>Place order</source><target>Passer la commande</target></trans-unit>
+      <trans-unit id="orders.cancel" datatype="html"><source> Cancel order </source><target>Annuler la commande</target></trans-unit>
+      <trans-unit id="orders.place" datatype="html"><source> Place order </source><target>Passer la commande</target></trans-unit>
       <trans-unit id="orders.lines" datatype="html"><source>Lines</source><target>Lignes</target></trans-unit>
       <trans-unit id="orders.noLines" datatype="html"><source>No lines yet. Add the products you are buying.</source><target>Aucune ligne pour le moment. Ajoutez les produits à acheter.</target></trans-unit>
       <trans-unit id="orders.ordered" datatype="html"><source>Ordered</source><target>Commandé</target></trans-unit>
@@ -575,13 +624,13 @@
       <trans-unit id="orders.total" datatype="html"><source>Total</source><target>Total</target></trans-unit>
       <trans-unit id="orders.addLine" datatype="html"><source>Add a line</source><target>Ajouter une ligne</target></trans-unit>
       <trans-unit id="orders.orderedQty" datatype="html"><source>Quantity</source><target>Quantité</target></trans-unit>
-      <trans-unit id="orders.addLine.action" datatype="html"><source>Add line</source><target>Ajouter la ligne</target></trans-unit>
+      <trans-unit id="orders.addLine.action" datatype="html"><source> Add line </source><target>Ajouter la ligne</target></trans-unit>
       <trans-unit id="orders.receive" datatype="html"><source>Receive goods</source><target>Réception de marchandises</target></trans-unit>
       <trans-unit id="orders.outstanding" datatype="html"><source>Still expected</source><target>Reste attendu</target></trans-unit>
       <trans-unit id="orders.receiveNow" datatype="html"><source>Receive now</source><target>Recevoir maintenant</target></trans-unit>
       <trans-unit id="orders.fullyReceived" datatype="html"><source>Complete</source><target>Complet</target></trans-unit>
       <trans-unit id="orders.receive.action" datatype="html"><source> Record receipt </source><target>Enregistrer la réception</target></trans-unit>
-      <trans-unit id="orders.receive.hint" datatype="html"><source>A receipt adds stock to the destination location and is recorded in the audit trail.</source><target>Une réception ajoute du stock à l’emplacement de destination et est consignée dans le journal d’audit.</target></trans-unit>
+      <trans-unit id="orders.receive.hint" datatype="html"><source> A receipt adds stock to the destination location and is recorded in the audit trail. </source><target>Une réception ajoute du stock à l’emplacement de destination et est consignée dans le journal d’audit.</target></trans-unit>
       <trans-unit id="orders.receiveDraft" datatype="html"><source>Place the order before receiving goods.</source><target>Passez la commande avant de réceptionner la marchandise.</target></trans-unit>
       <trans-unit id="orders.receiveClosed" datatype="html"><source>Nothing is outstanding on this order.</source><target>Rien n’est en attente sur cette commande.</target></trans-unit>
       <trans-unit id="orders.receipts" datatype="html"><source>Receipts</source><target>Réceptions</target></trans-unit>
@@ -664,17 +713,17 @@
       <trans-unit id="sessions.expected" datatype="html"><source>Expected cash</source><target>Espèces attendues</target></trans-unit>
       <trans-unit id="sessions.counted" datatype="html"><source>Counted cash</source><target>Espèces comptées</target></trans-unit>
       <trans-unit id="sessions.difference" datatype="html"><source>Difference</source><target>Écart</target></trans-unit>
-      <trans-unit id="sessions.noMovements" datatype="html"><source>No cash has been added or removed outside sales.</source><target>Aucune entrée ou sortie d’espèces hors ventes.</target></trans-unit>
+      <trans-unit id="sessions.noMovements" datatype="html"><source> No cash has been added or removed outside sales. </source><target>Aucune entrée ou sortie d’espèces hors ventes.</target></trans-unit>
       <trans-unit id="sessions.amount" datatype="html"><source>Amount</source><target>Montant</target></trans-unit>
       <trans-unit id="sessions.addMovement" datatype="html"><source>Add or remove cash</source><target>Ajouter ou retirer des espèces</target></trans-unit>
       <trans-unit id="sessions.amountHint" datatype="html"><source>Negative to take cash out, for example a bank drop.</source><target>Négatif pour retirer de l’argent, par exemple un dépôt en banque.</target></trans-unit>
       <trans-unit id="sessions.reason" datatype="html"><source>Reason</source><target>Motif</target></trans-unit>
-      <trans-unit id="sessions.addMovement.action" datatype="html"><source>Record movement</source><target>Enregistrer le mouvement</target></trans-unit>
+      <trans-unit id="sessions.addMovement.action" datatype="html"><source> Record movement </source><target>Enregistrer le mouvement</target></trans-unit>
       <trans-unit id="sessions.close" datatype="html"><source>Close the session</source><target>Clôturer la session</target></trans-unit>
       <trans-unit id="sessions.countedCash" datatype="html"><source>Counted cash</source><target>Espèces comptées</target></trans-unit>
       <trans-unit id="sessions.closeHint" datatype="html"><source>Count the drawer. The difference against expected cash is recorded.</source><target>Comptez le tiroir. L’écart avec les espèces attendues est enregistré.</target></trans-unit>
-      <trans-unit id="sessions.close.action" datatype="html"><source>Close session</source><target>Clôturer la session</target></trans-unit>
-      <trans-unit id="sessions.auditNotice" datatype="html"><source>Closing a session is recorded in the audit trail.</source><target>L’ouverture d’une session est consignée dans le journal d’audit.</target></trans-unit>
+      <trans-unit id="sessions.close.action" datatype="html"><source> Close session </source><target>Clôturer la session</target></trans-unit>
+      <trans-unit id="sessions.auditNotice" datatype="html"><source> Closing a session is recorded in the audit trail. </source><target>L’ouverture d’une session est consignée dans le journal d’audit.</target></trans-unit>
       <trans-unit id="sessions.detail.loadFailed" datatype="html"><source>We could not load this session</source><target>Impossible de charger cette session</target></trans-unit>
       <trans-unit id="sessions.status.open" datatype="html"><source>Open</source><target>Ouverte</target></trans-unit>
       <trans-unit id="sessions.status.closed" datatype="html"><source>Closed</source><target>Clôturée</target></trans-unit>
@@ -720,25 +769,25 @@
       <trans-unit id="customers.dialog.create" datatype="html"><source>New customer</source><target>Nouveau client</target></trans-unit>
       <trans-unit id="customers.dialog.edit" datatype="html"><source>Edit customer</source><target>Modifier le client</target></trans-unit>
       <trans-unit id="customers.saveFailed" datatype="html"><source>We could not save the customer.</source><target>Le client n’a pas pu être enregistré.</target></trans-unit>
-      <trans-unit id="sales.cancel" datatype="html"><source>Cancel sale</source><target>Annuler la vente</target></trans-unit>
-      <trans-unit id="sales.complete" datatype="html"><source>Complete sale</source><target>Finaliser la vente</target></trans-unit>
+      <trans-unit id="sales.cancel" datatype="html"><source> Cancel sale </source><target>Annuler la vente</target></trans-unit>
+      <trans-unit id="sales.complete" datatype="html"><source> Complete sale </source><target>Finaliser la vente</target></trans-unit>
       <trans-unit id="sales.summary" datatype="html"><source>Totals</source><target>Totaux</target></trans-unit>
       <trans-unit id="sales.subtotal" datatype="html"><source>Subtotal</source><target>Sous-total</target></trans-unit>
       <trans-unit id="sales.discount" datatype="html"><source>Discount</source><target>Remise</target></trans-unit>
-      <trans-unit id="sales.discount.edit" datatype="html"><source>Change</source><target>Modifier</target></trans-unit>
+      <trans-unit id="sales.discount.edit" datatype="html"><source> Change </source><target>Modifier</target></trans-unit>
       <trans-unit id="sales.total" datatype="html"><source>Total</source><target>Total</target></trans-unit>
       <trans-unit id="sales.paid" datatype="html"><source>Paid</source><target>Réglé</target></trans-unit>
       <trans-unit id="sales.balance" datatype="html"><source>Balance due</source><target>Reste à payer</target></trans-unit>
       <trans-unit id="sales.add" datatype="html"><source>Add products</source><target>Ajouter des produits</target></trans-unit>
       <trans-unit id="sales.scan" datatype="html"><source>Scan or type a barcode or SKU</source><target>Scannez ou saisissez un code-barres ou un SKU</target></trans-unit>
       <trans-unit id="sales.quantity" datatype="html"><source>Quantity</source><target>Quantité</target></trans-unit>
-      <trans-unit id="sales.add.action" datatype="html"><source>Add to sale</source><target>Ajouter à la vente</target></trans-unit>
+      <trans-unit id="sales.add.action" datatype="html"><source> Add to sale </source><target>Ajouter à la vente</target></trans-unit>
       <trans-unit id="sales.searchProducts" datatype="html"><source>Search by product name</source><target>Rechercher par nom de produit</target></trans-unit>
       <trans-unit id="sales.price" datatype="html"><source>Price</source><target>Prix</target></trans-unit>
       <trans-unit id="sales.lines" datatype="html"><source>Lines</source><target>Lignes</target></trans-unit>
       <trans-unit id="sales.noLines" datatype="html"><source>No products yet.</source><target>Aucun produit pour le moment.</target></trans-unit>
       <trans-unit id="sales.lineTotal" datatype="html"><source>Line total</source><target>Total de ligne</target></trans-unit>
-      <trans-unit id="sales.discount.line" datatype="html"><source>Discount</source><target>Remise</target></trans-unit>
+      <trans-unit id="sales.discount.line" datatype="html"><source> Discount </source><target>Remise</target></trans-unit>
       <trans-unit id="sales.payments" datatype="html"><source>Payments</source><target>Règlements</target></trans-unit>
       <trans-unit id="sales.noPayments" datatype="html"><source>No payments recorded.</source><target>Aucun règlement enregistré.</target></trans-unit>
       <trans-unit id="sales.payment.amount" datatype="html"><source>Amount</source><target>Montant</target></trans-unit>
@@ -748,15 +797,15 @@
       <trans-unit id="sales.method.transfer" datatype="html"><source>Bank transfer</source><target>Virement</target></trans-unit>
       <trans-unit id="sales.method.other" datatype="html"><source>Other</source><target>Autre</target></trans-unit>
       <trans-unit id="sales.payment.session" datatype="html"><source>Cash session</source><target>Session de caisse</target></trans-unit>
-      <trans-unit id="sales.payment.record" datatype="html"><source>Record payment</source><target>Enregistrer le règlement</target></trans-unit>
+      <trans-unit id="sales.payment.record" datatype="html"><source> Record payment </source><target>Enregistrer le règlement</target></trans-unit>
       <trans-unit id="sales.returns" datatype="html"><source>Returns</source><target>Retours</target></trans-unit>
       <trans-unit id="sales.noReturns" datatype="html"><source>No returns.</source><target>Aucun retour.</target></trans-unit>
       <trans-unit id="sales.returns.reason" datatype="html"><source>Reason</source><target>Motif</target></trans-unit>
-      <trans-unit id="sales.returns.available" datatype="html"><source>Can return</source><target>Restant retournable</target></trans-unit>
-      <trans-unit id="sales.returns.quantity" datatype="html"><source>Return now</source><target>À retourner</target></trans-unit>
-      <trans-unit id="sales.returns.restock" datatype="html"><source>Put back in stock</source><target>Remettre en stock</target></trans-unit>
-      <trans-unit id="sales.returns.record" datatype="html"><source>Record return</source><target>Enregistrer le retour</target></trans-unit>
-      <trans-unit id="sales.returns.hint" datatype="html"><source>A return does not change the amount paid and creates no refund payment.</source><target>Un retour ne modifie pas le montant réglé et ne crée aucun remboursement.</target></trans-unit>
+      <trans-unit id="sales.returns.available" datatype="html"><source> Can return </source><target>Restant retournable</target></trans-unit>
+      <trans-unit id="sales.returns.quantity" datatype="html"><source> Return now </source><target>À retourner</target></trans-unit>
+      <trans-unit id="sales.returns.restock" datatype="html"><source> Put back in stock </source><target>Remettre en stock</target></trans-unit>
+      <trans-unit id="sales.returns.record" datatype="html"><source> Record return </source><target>Enregistrer le retour</target></trans-unit>
+      <trans-unit id="sales.returns.hint" datatype="html"><source> A return does not change the amount paid and creates no refund payment. </source><target>Un retour ne modifie pas le montant réglé et ne crée aucun remboursement.</target></trans-unit>
       <trans-unit id="sales.detail.loadFailed" datatype="html"><source>We could not load this sale</source><target>Impossible de charger cette vente</target></trans-unit>
       <trans-unit id="sales.draftTitle" datatype="html"><source>Draft sale</source><target>Vente en brouillon</target></trans-unit>
       <trans-unit id="sales.backToList" datatype="html"><source>All sales</source><target>Toutes les ventes</target></trans-unit>
@@ -804,6 +853,57 @@
       <trans-unit id="sales.field.customer" datatype="html"><source>Customer (optional)</source><target>Client (facultatif)</target></trans-unit>
       <trans-unit id="sales.start" datatype="html"><source>Start sale</source><target>Démarrer la vente</target></trans-unit>
       <trans-unit id="sales.createFailed" datatype="html"><source>The sale could not be started.</source><target>La vente n’a pas pu être démarrée.</target></trans-unit>
+      <trans-unit id="report.subtitle" datatype="html"><source>Hours worked per day, for closed sessions. Days are split at local midnight in the organization&apos;s time zone.</source><target>Heures travaillées par jour, pour les sessions clôturées. Les journées sont découpées à minuit local, dans le fuseau horaire de l’organisation.</target></trans-unit>
+      <trans-unit id="time.person" datatype="html"><source>Person</source><target>Personne</target></trans-unit>
+      <trans-unit id="report.run" datatype="html"><source>Run report</source><target>Générer le rapport</target></trans-unit>
+      <trans-unit id="report.total" datatype="html"><source>Total</source><target>Total</target></trans-unit>
+      <trans-unit id="report.date" datatype="html"><source>Date</source><target>Date</target></trans-unit>
+      <trans-unit id="time.hours" datatype="html"><source>Hours</source><target>Heures</target></trans-unit>
+      <trans-unit id="report.prompt" datatype="html"><source>Choose a date range and run the report.</source><target>Choisissez une période puis générez le rapport.</target></trans-unit>
+      <trans-unit id="report.heading" datatype="html"><source>Hours report</source><target>Rapport d’heures</target></trans-unit>
+      <trans-unit id="report.failed" datatype="html"><source>The report could not be run</source><target>Le rapport n’a pas pu être généré</target></trans-unit>
+      <trans-unit id="report.empty.title" datatype="html"><source>No hours in this range</source><target>Aucune heure sur cette période</target></trans-unit>
+      <trans-unit id="report.empty.message" datatype="html"><source>Closed sessions in the range will appear here.</source><target>Les sessions clôturées de la période apparaîtront ici.</target></trans-unit>
+      <trans-unit id="report.dates" datatype="html"><source>Choose both dates.</source><target>Choisissez les deux dates.</target></trans-unit>
+      <trans-unit id="report.failedHint" datatype="html"><source>Check the dates. A range is limited to 366 days.</source><target>Vérifiez les dates. Une période est limitée à 366 jours.</target></trans-unit>
+      <trans-unit id="time.subtitle" datatype="html"><source>Clock in when you start work and out when you finish. You can only close your own session.</source><target>Pointez à l’arrivée et au départ. Vous ne pouvez clôturer que vos propres sessions.</target></trans-unit>
+      <trans-unit id="time.now" datatype="html"><source>Right now</source><target>Maintenant</target></trans-unit>
+      <trans-unit id="time.clockedInAt" datatype="html"><source>Clocked in at</source><target>Pointé à</target></trans-unit>
+      <trans-unit id="time.clockOut" datatype="html"><source>Clock out</source><target>Pointer le départ</target></trans-unit>
+      <trans-unit id="time.notClockedIn" datatype="html"><source>You are not clocked in.</source><target>Vous n’êtes pas pointé.</target></trans-unit>
+      <trans-unit id="time.clockIn" datatype="html"><source>Clock in</source><target>Pointer l’arrivée</target></trans-unit>
+      <trans-unit id="time.recent" datatype="html"><source>Recent sessions</source><target>Sessions récentes</target></trans-unit>
+      <trans-unit id="time.total" datatype="html"><source>Total in this list</source><target>Total dans cette liste</target></trans-unit>
+      <trans-unit id="time.in" datatype="html"><source>In</source><target>Arrivée</target></trans-unit>
+      <trans-unit id="time.out" datatype="html"><source>Out</source><target>Départ</target></trans-unit>
+      <trans-unit id="time.heading" datatype="html"><source>My time</source><target>Mes heures</target></trans-unit>
+      <trans-unit id="time.loadFailed" datatype="html"><source>We could not load your sessions</source><target>Impossible de charger vos sessions</target></trans-unit>
+      <trans-unit id="time.empty.title" datatype="html"><source>No sessions yet</source><target>Aucune session pour le moment</target></trans-unit>
+      <trans-unit id="time.empty.message" datatype="html"><source>Clock in to start recording your hours.</source><target>Pointez à l’arrivée pour commencer à enregistrer vos heures.</target></trans-unit>
+      <trans-unit id="time.open" datatype="html"><source>Open</source><target>En cours</target></trans-unit>
+      <trans-unit id="time.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="time.clockedIn" datatype="html"><source>Clocked in.</source><target>Pointage d’arrivée enregistré.</target></trans-unit>
+      <trans-unit id="time.clockInFailed" datatype="html"><source>You could not clock in.</source><target>Vous n’avez pas pu pointer à l’arrivée.</target></trans-unit>
+      <trans-unit id="time.clockedOut" datatype="html"><source>Clocked out.</source><target>Pointage de départ enregistré.</target></trans-unit>
+      <trans-unit id="time.clockOutFailed" datatype="html"><source>You could not clock out.</source><target>Vous n’avez pas pu pointer au départ.</target></trans-unit>
+      <trans-unit id="workSessions.subtitle" datatype="html"><source>Everyone&apos;s clock-in and clock-out times. Corrections keep the earlier values in the history.</source><target>Heures d’arrivée et de départ de tout le monde. Les corrections conservent les valeurs précédentes dans l’historique.</target></trans-unit>
+      <trans-unit id="time.report.link" datatype="html"><source>Hours report</source><target>Rapport d’heures</target></trans-unit>
+      <trans-unit id="workSessions.heading" datatype="html"><source>Work sessions</source><target>Sessions de travail</target></trans-unit>
+      <trans-unit id="workSessions.loadFailed" datatype="html"><source>We could not load work sessions</source><target>Impossible de charger les sessions de travail</target></trans-unit>
+      <trans-unit id="workSessions.empty.title" datatype="html"><source>No sessions match</source><target>Aucune session ne correspond</target></trans-unit>
+      <trans-unit id="workSessions.empty.message" datatype="html"><source>Try a different date range or person.</source><target>Essayez une autre période ou une autre personne.</target></trans-unit>
+      <trans-unit id="workSessions.correct.action" datatype="html"><source>Correct session</source><target>Corriger la session</target></trans-unit>
+      <trans-unit id="workSessions.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="workSessions.correct.saved" datatype="html"><source>Session corrected.</source><target>Session corrigée.</target></trans-unit>
+      <trans-unit id="time.correct.title" datatype="html"><source>Correct this session</source><target>Corriger cette session</target></trans-unit>
+      <trans-unit id="time.correct.hint" datatype="html"><source>Every correction keeps the previous times in the history below.</source><target>Chaque correction conserve les heures précédentes dans l’historique ci-dessous.</target></trans-unit>
+      <trans-unit id="time.outHint" datatype="html"><source>Leave empty to keep the session open.</source><target>Laissez vide pour garder la session ouverte.</target></trans-unit>
+      <trans-unit id="time.correct.reason" datatype="html"><source>Reason</source><target>Motif</target></trans-unit>
+      <trans-unit id="time.correct.history" datatype="html"><source>History</source><target>Historique</target></trans-unit>
+      <trans-unit id="time.correct.when" datatype="html"><source>Corrected</source><target>Corrigée le</target></trans-unit>
+      <trans-unit id="time.correct.before" datatype="html"><source>Before</source><target>Avant</target></trans-unit>
+      <trans-unit id="time.correct.order" datatype="html"><source>The clock-out time must be after the clock-in time.</source><target>L’heure de départ doit être postérieure à l’heure d’arrivée.</target></trans-unit>
+      <trans-unit id="time.correct.failed" datatype="html"><source>The session could not be corrected.</source><target>La session n’a pas pu être corrigée.</target></trans-unit>
       <trans-unit id="pager.label" datatype="html"><source>Pagination</source><target>Pagination</target></trans-unit>
       <trans-unit id="pager.previous" datatype="html"><source>Previous</source><target>Précédent</target></trans-unit>
       <trans-unit id="pager.page" datatype="html"><source>Page</source><target>Page</target></trans-unit>

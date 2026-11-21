@@ -155,6 +155,46 @@ export const navigationSections: readonly NavigationSection[] = [
     ],
   },
   {
+    title: $localize`:@@nav.section.accounting:Accounting`,
+    items: [
+      {
+        label: $localize`:@@nav.expenses:Expenses`,
+        icon: 'receipt',
+        path: '/app/accounting/expenses',
+        permissions: ['expenses.view', 'expense-categories.view'],
+      },
+      {
+        label: $localize`:@@nav.expenseCategories:Expense categories`,
+        icon: 'category',
+        path: '/app/accounting/expense-categories',
+        permissions: ['expense-categories.view'],
+      },
+    ],
+  },
+  {
+    title: $localize`:@@nav.section.workforce:Workforce`,
+    items: [
+      {
+        label: $localize`:@@nav.myTime:My time`,
+        icon: 'schedule',
+        path: '/app/workforce/clock',
+        permissions: [],
+      },
+      {
+        label: $localize`:@@nav.workSessions:Work sessions`,
+        icon: 'event_available',
+        path: '/app/workforce/sessions',
+        permissions: ['work-sessions.view'],
+      },
+      {
+        label: $localize`:@@nav.hoursReport:Hours report`,
+        icon: 'summarize',
+        path: '/app/workforce/report',
+        permissions: ['work-sessions.report'],
+      },
+    ],
+  },
+  {
     title: $localize`:@@nav.section.business:Business`,
     items: [
       {
