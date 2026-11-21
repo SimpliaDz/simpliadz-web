@@ -106,6 +106,18 @@ export const navigationSections: readonly NavigationSection[] = [
         path: '/app/inventory/warnings',
         permissions: ['inventory-warnings.view'],
       },
+      {
+        label: $localize`:@@nav.documents:Documents`,
+        icon: 'description',
+        path: '/app/inventory/documents',
+        permissions: ['inventory-documents.view'],
+      },
+      {
+        label: $localize`:@@nav.labels:Barcode labels`,
+        icon: 'qr_code_2',
+        path: '/app/inventory/labels',
+        permissions: ['barcode-labels.view'],
+      },
     ],
   },
   {

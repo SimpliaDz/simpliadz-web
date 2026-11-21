@@ -43,6 +43,8 @@
       <trans-unit id="title.myTime" datatype="html"><source>My Time | SimpliaDz</source><target>وقتي | SimpliaDz</target></trans-unit>
       <trans-unit id="title.workSessions" datatype="html"><source>Work Sessions | SimpliaDz</source><target>جلسات العمل | SimpliaDz</target></trans-unit>
       <trans-unit id="title.hoursReport" datatype="html"><source>Hours Report | SimpliaDz</source><target>تقرير الساعات | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.documents" datatype="html"><source>Inventory documents | SimpliaDz</source><target>مستندات المخزون | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.labels" datatype="html"><source>Barcode labels | SimpliaDz</source><target>ملصقات الباركود | SimpliaDz</target></trans-unit>
       <trans-unit id="title.users" datatype="html"><source>Users | SimpliaDz</source><target>المستخدمون | SimpliaDz</target></trans-unit>
       <trans-unit id="title.newUser" datatype="html"><source>New user | SimpliaDz</source><target>مستخدم جديد | SimpliaDz</target></trans-unit>
       <trans-unit id="title.user" datatype="html"><source>User | SimpliaDz</source><target>المستخدم | SimpliaDz</target></trans-unit>
@@ -71,6 +73,8 @@
       <trans-unit id="nav.transfers" datatype="html"><source>Transfers</source><target>التحويلات</target></trans-unit>
       <trans-unit id="nav.counts" datatype="html"><source>Stock counts</source><target>الجرد</target></trans-unit>
       <trans-unit id="nav.warnings" datatype="html"><source>Warnings</source><target>التنبيهات</target></trans-unit>
+      <trans-unit id="nav.documents" datatype="html"><source>Documents</source><target>المستندات</target></trans-unit>
+      <trans-unit id="nav.labels" datatype="html"><source>Barcode labels</source><target>ملصقات الباركود</target></trans-unit>
       <trans-unit id="nav.section.sales" datatype="html"><source>Sales</source><target>المبيعات</target></trans-unit>
       <trans-unit id="nav.salesList" datatype="html"><source>Sales</source><target>المبيعات</target></trans-unit>
       <trans-unit id="nav.customers" datatype="html"><source>Customers</source><target>العملاء</target></trans-unit>
@@ -110,7 +114,7 @@
       <trans-unit id="account.security.failed" datatype="html"><source>We could not change your password. Check your current password and try again.</source><target>تعذّر تغيير كلمة المرور. تحقّق من كلمة المرور الحالية وأعد المحاولة.</target></trans-unit>
       <trans-unit id="expenseCategories.subtitle" datatype="html"><source>Groups for expenses, such as rent, utilities or transport.</source><target>مجموعات للمصروفات، مثل الإيجار أو المرافق أو النقل.</target></trans-unit>
       <trans-unit id="expenseCategories.create" datatype="html"><source>New category</source><target>فئة جديدة</target></trans-unit>
-      <trans-unit id="common.retry" datatype="html"><source>Try again</source><target>إعادة المحاولة</target></trans-unit>
+      <trans-unit id="common.retry" datatype="html"><source> Try again </source><target>إعادة المحاولة</target></trans-unit>
       <trans-unit id="common.name" datatype="html"><source>Name</source><target>الاسم</target></trans-unit>
       <trans-unit id="common.status" datatype="html"><source>Status</source><target>الحالة</target></trans-unit>
       <trans-unit id="common.actions" datatype="html"><source>Actions</source><target>الإجراءات</target></trans-unit>
@@ -139,7 +143,7 @@
       <trans-unit id="common.apply" datatype="html"><source>Apply</source><target>تطبيق</target></trans-unit>
       <trans-unit id="expenses.pageTotal" datatype="html"><source>Total on this page</source><target>إجمالي هذه الصفحة</target></trans-unit>
       <trans-unit id="expenses.field.date" datatype="html"><source>Date</source><target>التاريخ</target></trans-unit>
-      <trans-unit id="expenses.field.description" datatype="html"><source>Description</source><target>الوصف</target></trans-unit>
+      <trans-unit id="expenses.field.description" datatype="html"><source> Description </source><target>الوصف</target></trans-unit>
       <trans-unit id="expenses.field.amount" datatype="html"><source>Amount</source><target>المبلغ</target></trans-unit>
       <trans-unit id="expenses.heading" datatype="html"><source>Expenses</source><target>المصروفات</target></trans-unit>
       <trans-unit id="expenses.loadFailed" datatype="html"><source>We could not load expenses</source><target>تعذّر تحميل المصروفات</target></trans-unit>
@@ -384,6 +388,8 @@
       <trans-unit id="status.notFound.body" datatype="html"><source>The page you are looking for does not exist or has moved.</source><target>الصفحة التي تبحث عنها غير موجودة أو تم نقلها.</target></trans-unit>
       <trans-unit id="counts.cancel" datatype="html"><source> Cancel count </source><target>إلغاء الجرد</target></trans-unit>
       <trans-unit id="counts.complete" datatype="html"><source> Complete count </source><target>إنجاز الجرد</target></trans-unit>
+      <trans-unit id="counts.print.sheet" datatype="html"><source>Print count sheet</source><target>طباعة ورقة الجرد</target></trans-unit>
+      <trans-unit id="counts.print.differences" datatype="html"><source>Print differences</source><target>طباعة الفروقات</target></trans-unit>
       <trans-unit id="counts.auditNotice" datatype="html"><source> Completing a count writes the differences as adjustments and is recorded in the audit trail. </source><target>إنجاز الجرد يحوّل الفروقات إلى تسويات، وتُسجَّل في سجل التدقيق.</target></trans-unit>
       <trans-unit id="stock.column.product" datatype="html"><source>Product</source><target>المنتج</target></trans-unit>
       <trans-unit id="counts.expected" datatype="html"><source>Expected</source><target>المتوقع</target></trans-unit>
@@ -399,6 +405,9 @@
       <trans-unit id="counts.match" datatype="html"><source>Matches</source><target>مطابق</target></trans-unit>
       <trans-unit id="counts.backToList" datatype="html"><source>All counts</source><target>كل عمليات الجرد</target></trans-unit>
       <trans-unit id="counts.detail.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
+      <trans-unit id="counts.noTemplate" datatype="html"><source>Create an active template of this type under Inventory documents first.</source><target>أنشئ أولًا قالبًا نشطًا من هذا النوع في مستندات المخزون.</target></trans-unit>
+      <trans-unit id="counts.popup" datatype="html"><source>Allow pop-ups for this site to open the document.</source><target>اسمح بالنوافذ المنبثقة لهذا الموقع لفتح المستند.</target></trans-unit>
+      <trans-unit id="counts.printFailed" datatype="html"><source>The document could not be created.</source><target>تعذّر إنشاء المستند.</target></trans-unit>
       <trans-unit id="counts.lineFailed" datatype="html"><source>The product could not be added.</source><target>تعذّرت إضافة المنتج.</target></trans-unit>
       <trans-unit id="counts.quantityInvalid" datatype="html"><source>Enter a whole number of zero or more.</source><target>أدخل عددًا صحيحًا يساوي صفرًا أو أكبر.</target></trans-unit>
       <trans-unit id="counts.countFailed" datatype="html"><source>The count could not be saved.</source><target>تعذّر حفظ العد.</target></trans-unit>
@@ -425,6 +434,78 @@
       <trans-unit id="counts.dialog.title" datatype="html"><source>Start a stock count</source><target>بدء جرد للمخزون</target></trans-unit>
       <trans-unit id="counts.dialog.hint" datatype="html"><source> The count records today&apos;s balances at the location as expected quantities. Enter what you find, then complete the count. </source><target>يسجّل الجرد الأرصدة الحالية للموقع ككميات متوقعة. أدخل ما تجده ثم أنجز الجرد.</target></trans-unit>
       <trans-unit id="counts.saveFailed" datatype="html"><source>The count could not be started.</source><target>تعذّر بدء الجرد.</target></trans-unit>
+      <trans-unit id="documents.subtitle" datatype="html"><source>Printable stock lists and count documents. Templates decide the columns and paper.</source><target>قوائم مخزون ومستندات جرد قابلة للطباعة. القوالب تحدد الأعمدة والورق.</target></trans-unit>
+      <trans-unit id="documents.create" datatype="html"><source>New template</source><target>قالب جديد</target></trans-unit>
+      <trans-unit id="documents.print.stockList" datatype="html"><source>Print a stock list</source><target>طباعة قائمة مخزون</target></trans-unit>
+      <trans-unit id="documents.template" datatype="html"><source>Template</source><target>القالب</target></trans-unit>
+      <trans-unit id="documents.includeZero" datatype="html"><source>Include zero stock</source><target>تضمين المخزون الصفري</target></trans-unit>
+      <trans-unit id="documents.print.action" datatype="html"><source>Open for printing</source><target>فتح للطباعة</target></trans-unit>
+      <trans-unit id="documents.limit" datatype="html"><source>A stock list is limited to 5,000 rows.</source><target>قائمة المخزون محدودة بـ 5000 صف.</target></trans-unit>
+      <trans-unit id="documents.noPrint" datatype="html"><source>You need the print permission to open documents.</source><target>تحتاج صلاحية الطباعة لفتح المستندات.</target></trans-unit>
+      <trans-unit id="documents.templates" datatype="html"><source>Templates</source><target>القوالب</target></trans-unit>
+      <trans-unit id="documents.field.type" datatype="html"><source>Document type</source><target>نوع المستند</target></trans-unit>
+      <trans-unit id="documents.paperHeader" datatype="html"><source>Paper</source><target>الورق</target></trans-unit>
+      <trans-unit id="documents.heading" datatype="html"><source>Inventory documents</source><target>مستندات المخزون</target></trans-unit>
+      <trans-unit id="documents.loadFailed" datatype="html"><source>We could not load document templates</source><target>تعذّر تحميل قوالب المستندات</target></trans-unit>
+      <trans-unit id="documents.empty.title" datatype="html"><source>No templates yet</source><target>لا توجد قوالب بعد</target></trans-unit>
+      <trans-unit id="documents.empty.message" datatype="html"><source>Create a template to choose columns and paper for printed stock lists.</source><target>أنشئ قالبًا لاختيار الأعمدة والورق للقوائم المطبوعة.</target></trans-unit>
+      <trans-unit id="documents.landscape" datatype="html"><source>landscape</source><target>أفقي</target></trans-unit>
+      <trans-unit id="documents.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
+      <trans-unit id="documents.popup" datatype="html"><source>Allow pop-ups for this site to open the document.</source><target>اسمح بالنوافذ المنبثقة لهذا الموقع لفتح المستند.</target></trans-unit>
+      <trans-unit id="documents.printFailed" datatype="html"><source>The document could not be created.</source><target>تعذّر إنشاء المستند.</target></trans-unit>
+      <trans-unit id="documents.saved" datatype="html"><source>Template saved.</source><target>تم حفظ القالب.</target></trans-unit>
+      <trans-unit id="documents.deactivate.title" datatype="html"><source>Deactivate template?</source><target>تعطيل القالب؟</target></trans-unit>
+      <trans-unit id="documents.deactivate.message" datatype="html"><source>The template can no longer be used for printing. Templates cannot be reactivated.</source><target>لن يمكن استخدام القالب للطباعة. لا يمكن إعادة تفعيل القوالب.</target></trans-unit>
+      <trans-unit id="documents.deactivateFailed" datatype="html"><source>The template could not be deactivated.</source><target>تعذّر تعطيل القالب.</target></trans-unit>
+      <trans-unit id="documents.type.countSheet" datatype="html"><source>Count sheet</source><target>ورقة الجرد</target></trans-unit>
+      <trans-unit id="documents.type.differences" datatype="html"><source>Count differences</source><target>فروقات الجرد</target></trans-unit>
+      <trans-unit id="documents.type.stockList" datatype="html"><source>Stock list</source><target>قائمة المخزون</target></trans-unit>
+      <trans-unit id="documents.field.name" datatype="html"><source>Template name</source><target>اسم القالب</target></trans-unit>
+      <trans-unit id="documents.field.title" datatype="html"><source>Title</source><target>العنوان</target></trans-unit>
+      <trans-unit id="documents.field.columns" datatype="html"><source>Columns</source><target>الأعمدة</target></trans-unit>
+      <trans-unit id="documents.columnsRequired" datatype="html"><source>Choose at least one column.</source><target>اختر عمودًا واحدًا على الأقل.</target></trans-unit>
+      <trans-unit id="documents.field.paper" datatype="html"><source>Paper size</source><target>حجم الورق</target></trans-unit>
+      <trans-unit id="documents.field.landscape" datatype="html"><source>Landscape</source><target>أفقي</target></trans-unit>
+      <trans-unit id="documents.field.footer" datatype="html"><source>Footer text</source><target>نص التذييل</target></trans-unit>
+      <trans-unit id="documents.dialog.create" datatype="html"><source>New document template</source><target>قالب مستند جديد</target></trans-unit>
+      <trans-unit id="documents.dialog.edit" datatype="html"><source>Edit document template</source><target>تعديل قالب المستند</target></trans-unit>
+      <trans-unit id="documents.saveFailed" datatype="html"><source>The document template could not be saved.</source><target>تعذّر حفظ قالب المستند.</target></trans-unit>
+      <trans-unit id="labels.subtitle" datatype="html"><source>Barcode labels for shelf and product tags. Variants must have a barcode to print.</source><target>ملصقات باركود للرفوف والمنتجات. يجب أن يكون للمتغير باركود حتى يُطبع.</target></trans-unit>
+      <trans-unit id="labels.create" datatype="html"><source>New label template</source><target>قالب ملصق جديد</target></trans-unit>
+      <trans-unit id="labels.print.title" datatype="html"><source>Print labels</source><target>طباعة الملصقات</target></trans-unit>
+      <trans-unit id="labels.template" datatype="html"><source>Label template</source><target>قالب الملصق</target></trans-unit>
+      <trans-unit id="labels.copies" datatype="html"><source>Labels</source><target>عدد الملصقات</target></trans-unit>
+      <trans-unit id="labels.addLine" datatype="html"><source>Add to print list</source><target>إضافة إلى القائمة</target></trans-unit>
+      <trans-unit id="common.remove" datatype="html"><source>Remove</source><target>إزالة</target></trans-unit>
+      <trans-unit id="labels.print.action" datatype="html"><source>Open for printing</source><target>فتح للطباعة</target></trans-unit>
+      <trans-unit id="labels.limit" datatype="html"><source>A print run is limited to 500 labels in total.</source><target>الطباعة محدودة بـ 500 ملصق في المجموع.</target></trans-unit>
+      <trans-unit id="labels.noPrint" datatype="html"><source>You need the print permission to print labels.</source><target>تحتاج صلاحية الطباعة لطباعة الملصقات.</target></trans-unit>
+      <trans-unit id="labels.noTemplate" datatype="html"><source>Create an active label template before printing.</source><target>أنشئ قالب ملصق نشطًا قبل الطباعة.</target></trans-unit>
+      <trans-unit id="labels.templates" datatype="html"><source>Templates</source><target>القوالب</target></trans-unit>
+      <trans-unit id="labels.size" datatype="html"><source>Label size</source><target>حجم الملصق</target></trans-unit>
+      <trans-unit id="labels.page" datatype="html"><source>Page</source><target>الصفحة</target></trans-unit>
+      <trans-unit id="labels.heading" datatype="html"><source>Barcode labels</source><target>ملصقات الباركود</target></trans-unit>
+      <trans-unit id="labels.loadFailed" datatype="html"><source>We could not load label templates</source><target>تعذّر تحميل قوالب الملصقات</target></trans-unit>
+      <trans-unit id="labels.empty.title" datatype="html"><source>No label templates</source><target>لا توجد قوالب ملصقات</target></trans-unit>
+      <trans-unit id="labels.empty.message" datatype="html"><source>Create a template that matches your label sheet or printer.</source><target>أنشئ قالبًا يطابق ورقة الملصقات أو الطابعة لديك.</target></trans-unit>
+      <trans-unit id="labels.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
+      <trans-unit id="labels.quantity" datatype="html"><source>Enter at least one label.</source><target>أدخل ملصقًا واحدًا على الأقل.</target></trans-unit>
+      <trans-unit id="labels.popup" datatype="html"><source>Allow pop-ups for this site to open the labels.</source><target>اسمح بالنوافذ المنبثقة لهذا الموقع لفتح الملصقات.</target></trans-unit>
+      <trans-unit id="labels.printFailed" datatype="html"><source>The labels could not be created.</source><target>تعذّر إنشاء الملصقات.</target></trans-unit>
+      <trans-unit id="labels.saved" datatype="html"><source>Label template saved.</source><target>تم حفظ قالب الملصق.</target></trans-unit>
+      <trans-unit id="labels.field.name" datatype="html"><source>Template name</source><target>اسم القالب</target></trans-unit>
+      <trans-unit id="labels.field.pageWidth" datatype="html"><source>Page width (mm)</source><target>عرض الصفحة (مم)</target></trans-unit>
+      <trans-unit id="labels.field.pageHeight" datatype="html"><source>Page height (mm)</source><target>ارتفاع الصفحة (مم)</target></trans-unit>
+      <trans-unit id="labels.field.labelWidth" datatype="html"><source>Label width (mm)</source><target>عرض الملصق (مم)</target></trans-unit>
+      <trans-unit id="labels.field.labelHeight" datatype="html"><source>Label height (mm)</source><target>ارتفاع الملصق (مم)</target></trans-unit>
+      <trans-unit id="labels.field.margin" datatype="html"><source>Page margin (mm)</source><target>هامش الصفحة (مم)</target></trans-unit>
+      <trans-unit id="labels.field.gap" datatype="html"><source>Gap between labels (mm)</source><target>المسافة بين الملصقات (مم)</target></trans-unit>
+      <trans-unit id="labels.field.showName" datatype="html"><source>Show product name</source><target>إظهار اسم المنتج</target></trans-unit>
+      <trans-unit id="labels.field.showSku" datatype="html"><source>Show SKU</source><target>إظهار SKU</target></trans-unit>
+      <trans-unit id="labels.dialog.create" datatype="html"><source>New label template</source><target>قالب ملصق جديد</target></trans-unit>
+      <trans-unit id="labels.dialog.edit" datatype="html"><source>Edit label template</source><target>تعديل قالب الملصق</target></trans-unit>
+      <trans-unit id="labels.rangeError" datatype="html"><source>One of the sizes is outside the allowed range. Check the millimetre limits.</source><target>أحد الأبعاد خارج الحدود المسموحة. تحقّق من حدود المليمترات.</target></trans-unit>
+      <trans-unit id="labels.saveFailed" datatype="html"><source>The label template could not be saved.</source><target>تعذّر حفظ قالب الملصق.</target></trans-unit>
       <trans-unit id="locations.name" datatype="html"><source>Name</source><target>الاسم</target></trans-unit>
       <trans-unit id="locations.code" datatype="html"><source>Code</source><target>الرمز</target></trans-unit>
       <trans-unit id="locations.codeHint" datatype="html"><source>Optional. Stored in upper case and must be unique.</source><target>اختياري. يُحفظ بالأحرف الكبيرة ويجب أن يكون فريدًا.</target></trans-unit>
@@ -855,7 +936,7 @@
       <trans-unit id="sales.createFailed" datatype="html"><source>The sale could not be started.</source><target>تعذّر بدء عملية البيع.</target></trans-unit>
       <trans-unit id="report.subtitle" datatype="html"><source>Hours worked per day, for closed sessions. Days are split at local midnight in the organization&apos;s time zone.</source><target>الساعات المعمولة لكل يوم، للجلسات المغلقة. تُقسَم الأيام عند منتصف الليل المحلي في المنطقة الزمنية للمؤسسة.</target></trans-unit>
       <trans-unit id="time.person" datatype="html"><source>Person</source><target>الشخص</target></trans-unit>
-      <trans-unit id="report.run" datatype="html"><source>Run report</source><target>تشغيل التقرير</target></trans-unit>
+      <trans-unit id="report.run" datatype="html"><source> Run report </source><target>تشغيل التقرير</target></trans-unit>
       <trans-unit id="report.total" datatype="html"><source>Total</source><target>الإجمالي</target></trans-unit>
       <trans-unit id="report.date" datatype="html"><source>Date</source><target>التاريخ</target></trans-unit>
       <trans-unit id="time.hours" datatype="html"><source>Hours</source><target>الساعات</target></trans-unit>
@@ -896,7 +977,7 @@
       <trans-unit id="workSessions.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
       <trans-unit id="workSessions.correct.saved" datatype="html"><source>Session corrected.</source><target>تم تصحيح الجلسة.</target></trans-unit>
       <trans-unit id="time.correct.title" datatype="html"><source>Correct this session</source><target>تصحيح هذه الجلسة</target></trans-unit>
-      <trans-unit id="time.correct.hint" datatype="html"><source>Every correction keeps the previous times in the history below.</source><target>يحتفظ كل تصحيح بالأوقات السابقة في السجل أدناه.</target></trans-unit>
+      <trans-unit id="time.correct.hint" datatype="html"><source> Every correction keeps the previous times in the history below. </source><target>يحتفظ كل تصحيح بالأوقات السابقة في السجل أدناه.</target></trans-unit>
       <trans-unit id="time.outHint" datatype="html"><source>Leave empty to keep the session open.</source><target>اتركه فارغًا لإبقاء الجلسة مفتوحة.</target></trans-unit>
       <trans-unit id="time.correct.reason" datatype="html"><source>Reason</source><target>السبب</target></trans-unit>
       <trans-unit id="time.correct.history" datatype="html"><source>History</source><target>السجل</target></trans-unit>

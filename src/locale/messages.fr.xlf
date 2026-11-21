@@ -43,6 +43,8 @@
       <trans-unit id="title.myTime" datatype="html"><source>My Time | SimpliaDz</source><target>Mes heures | SimpliaDz</target></trans-unit>
       <trans-unit id="title.workSessions" datatype="html"><source>Work Sessions | SimpliaDz</source><target>Sessions de travail | SimpliaDz</target></trans-unit>
       <trans-unit id="title.hoursReport" datatype="html"><source>Hours Report | SimpliaDz</source><target>Rapport d’heures | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.documents" datatype="html"><source>Inventory documents | SimpliaDz</source><target>Documents d’inventaire | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.labels" datatype="html"><source>Barcode labels | SimpliaDz</source><target>Étiquettes code-barres | SimpliaDz</target></trans-unit>
       <trans-unit id="title.users" datatype="html"><source>Users | SimpliaDz</source><target>Utilisateurs | SimpliaDz</target></trans-unit>
       <trans-unit id="title.newUser" datatype="html"><source>New user | SimpliaDz</source><target>Nouvel utilisateur | SimpliaDz</target></trans-unit>
       <trans-unit id="title.user" datatype="html"><source>User | SimpliaDz</source><target>Utilisateur | SimpliaDz</target></trans-unit>
@@ -71,6 +73,8 @@
       <trans-unit id="nav.transfers" datatype="html"><source>Transfers</source><target>Transferts</target></trans-unit>
       <trans-unit id="nav.counts" datatype="html"><source>Stock counts</source><target>Inventaires</target></trans-unit>
       <trans-unit id="nav.warnings" datatype="html"><source>Warnings</source><target>Alertes</target></trans-unit>
+      <trans-unit id="nav.documents" datatype="html"><source>Documents</source><target>Documents</target></trans-unit>
+      <trans-unit id="nav.labels" datatype="html"><source>Barcode labels</source><target>Étiquettes code-barres</target></trans-unit>
       <trans-unit id="nav.section.sales" datatype="html"><source>Sales</source><target>Ventes</target></trans-unit>
       <trans-unit id="nav.salesList" datatype="html"><source>Sales</source><target>Ventes</target></trans-unit>
       <trans-unit id="nav.customers" datatype="html"><source>Customers</source><target>Clients</target></trans-unit>
@@ -110,7 +114,7 @@
       <trans-unit id="account.security.failed" datatype="html"><source>We could not change your password. Check your current password and try again.</source><target>Impossible de modifier votre mot de passe. Vérifiez votre mot de passe actuel et réessayez.</target></trans-unit>
       <trans-unit id="expenseCategories.subtitle" datatype="html"><source>Groups for expenses, such as rent, utilities or transport.</source><target>Regroupements de dépenses, comme le loyer, les services publics ou les transports.</target></trans-unit>
       <trans-unit id="expenseCategories.create" datatype="html"><source>New category</source><target>Nouvelle catégorie</target></trans-unit>
-      <trans-unit id="common.retry" datatype="html"><source>Try again</source><target>Réessayer</target></trans-unit>
+      <trans-unit id="common.retry" datatype="html"><source> Try again </source><target>Réessayer</target></trans-unit>
       <trans-unit id="common.name" datatype="html"><source>Name</source><target>Nom</target></trans-unit>
       <trans-unit id="common.status" datatype="html"><source>Status</source><target>Statut</target></trans-unit>
       <trans-unit id="common.actions" datatype="html"><source>Actions</source><target>Actions</target></trans-unit>
@@ -139,7 +143,7 @@
       <trans-unit id="common.apply" datatype="html"><source>Apply</source><target>Appliquer</target></trans-unit>
       <trans-unit id="expenses.pageTotal" datatype="html"><source>Total on this page</source><target>Total de cette page</target></trans-unit>
       <trans-unit id="expenses.field.date" datatype="html"><source>Date</source><target>Date</target></trans-unit>
-      <trans-unit id="expenses.field.description" datatype="html"><source>Description</source><target>Description</target></trans-unit>
+      <trans-unit id="expenses.field.description" datatype="html"><source> Description </source><target>Description</target></trans-unit>
       <trans-unit id="expenses.field.amount" datatype="html"><source>Amount</source><target>Montant</target></trans-unit>
       <trans-unit id="expenses.heading" datatype="html"><source>Expenses</source><target>Dépenses</target></trans-unit>
       <trans-unit id="expenses.loadFailed" datatype="html"><source>We could not load expenses</source><target>Impossible de charger les dépenses</target></trans-unit>
@@ -384,6 +388,8 @@
       <trans-unit id="status.notFound.body" datatype="html"><source>The page you are looking for does not exist or has moved.</source><target>La page demandée n’existe pas ou a été déplacée.</target></trans-unit>
       <trans-unit id="counts.cancel" datatype="html"><source> Cancel count </source><target>Annuler l’inventaire</target></trans-unit>
       <trans-unit id="counts.complete" datatype="html"><source> Complete count </source><target>Finaliser l’inventaire</target></trans-unit>
+      <trans-unit id="counts.print.sheet" datatype="html"><source>Print count sheet</source><target>Imprimer la feuille de comptage</target></trans-unit>
+      <trans-unit id="counts.print.differences" datatype="html"><source>Print differences</source><target>Imprimer les écarts</target></trans-unit>
       <trans-unit id="counts.auditNotice" datatype="html"><source> Completing a count writes the differences as adjustments and is recorded in the audit trail. </source><target>Finaliser un inventaire crée les écarts sous forme d’ajustements, consignés dans le journal d’audit.</target></trans-unit>
       <trans-unit id="stock.column.product" datatype="html"><source>Product</source><target>Produit</target></trans-unit>
       <trans-unit id="counts.expected" datatype="html"><source>Expected</source><target>Attendu</target></trans-unit>
@@ -399,6 +405,9 @@
       <trans-unit id="counts.match" datatype="html"><source>Matches</source><target>Conforme</target></trans-unit>
       <trans-unit id="counts.backToList" datatype="html"><source>All counts</source><target>Tous les inventaires</target></trans-unit>
       <trans-unit id="counts.detail.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="counts.noTemplate" datatype="html"><source>Create an active template of this type under Inventory documents first.</source><target>Créez d’abord un modèle actif de ce type dans Documents d’inventaire.</target></trans-unit>
+      <trans-unit id="counts.popup" datatype="html"><source>Allow pop-ups for this site to open the document.</source><target>Autorisez les fenêtres surgissantes pour ce site afin d’ouvrir le document.</target></trans-unit>
+      <trans-unit id="counts.printFailed" datatype="html"><source>The document could not be created.</source><target>Le document n’a pas pu être créé.</target></trans-unit>
       <trans-unit id="counts.lineFailed" datatype="html"><source>The product could not be added.</source><target>Le produit n’a pas pu être ajouté.</target></trans-unit>
       <trans-unit id="counts.quantityInvalid" datatype="html"><source>Enter a whole number of zero or more.</source><target>Saisissez un nombre entier égal ou supérieur à zéro.</target></trans-unit>
       <trans-unit id="counts.countFailed" datatype="html"><source>The count could not be saved.</source><target>Le comptage n’a pas pu être enregistré.</target></trans-unit>
@@ -425,6 +434,78 @@
       <trans-unit id="counts.dialog.title" datatype="html"><source>Start a stock count</source><target>Démarrer un inventaire</target></trans-unit>
       <trans-unit id="counts.dialog.hint" datatype="html"><source> The count records today&apos;s balances at the location as expected quantities. Enter what you find, then complete the count. </source><target>L’inventaire enregistre les stocks actuels de l’emplacement comme quantités attendues. Saisissez ce que vous trouvez, puis finalisez.</target></trans-unit>
       <trans-unit id="counts.saveFailed" datatype="html"><source>The count could not be started.</source><target>L’inventaire n’a pas pu démarrer.</target></trans-unit>
+      <trans-unit id="documents.subtitle" datatype="html"><source>Printable stock lists and count documents. Templates decide the columns and paper.</source><target>Listes de stock et documents de comptage imprimables. Les modèles déterminent les colonnes et le papier.</target></trans-unit>
+      <trans-unit id="documents.create" datatype="html"><source>New template</source><target>Nouveau modèle</target></trans-unit>
+      <trans-unit id="documents.print.stockList" datatype="html"><source>Print a stock list</source><target>Imprimer une liste de stock</target></trans-unit>
+      <trans-unit id="documents.template" datatype="html"><source>Template</source><target>Modèle</target></trans-unit>
+      <trans-unit id="documents.includeZero" datatype="html"><source>Include zero stock</source><target>Inclure les stocks nuls</target></trans-unit>
+      <trans-unit id="documents.print.action" datatype="html"><source>Open for printing</source><target>Ouvrir pour impression</target></trans-unit>
+      <trans-unit id="documents.limit" datatype="html"><source>A stock list is limited to 5,000 rows.</source><target>Une liste de stock est limitée à 5 000 lignes.</target></trans-unit>
+      <trans-unit id="documents.noPrint" datatype="html"><source>You need the print permission to open documents.</source><target>Vous avez besoin de l’autorisation d’impression pour ouvrir des documents.</target></trans-unit>
+      <trans-unit id="documents.templates" datatype="html"><source>Templates</source><target>Modèles</target></trans-unit>
+      <trans-unit id="documents.field.type" datatype="html"><source>Document type</source><target>Type de document</target></trans-unit>
+      <trans-unit id="documents.paperHeader" datatype="html"><source>Paper</source><target>Papier</target></trans-unit>
+      <trans-unit id="documents.heading" datatype="html"><source>Inventory documents</source><target>Documents d’inventaire</target></trans-unit>
+      <trans-unit id="documents.loadFailed" datatype="html"><source>We could not load document templates</source><target>Impossible de charger les modèles de documents</target></trans-unit>
+      <trans-unit id="documents.empty.title" datatype="html"><source>No templates yet</source><target>Aucun modèle pour le moment</target></trans-unit>
+      <trans-unit id="documents.empty.message" datatype="html"><source>Create a template to choose columns and paper for printed stock lists.</source><target>Créez un modèle pour choisir les colonnes et le papier des listes imprimées.</target></trans-unit>
+      <trans-unit id="documents.landscape" datatype="html"><source>landscape</source><target>paysage</target></trans-unit>
+      <trans-unit id="documents.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="documents.popup" datatype="html"><source>Allow pop-ups for this site to open the document.</source><target>Autorisez les fenêtres surgissantes pour ce site afin d’ouvrir le document.</target></trans-unit>
+      <trans-unit id="documents.printFailed" datatype="html"><source>The document could not be created.</source><target>Le document n’a pas pu être créé.</target></trans-unit>
+      <trans-unit id="documents.saved" datatype="html"><source>Template saved.</source><target>Modèle enregistré.</target></trans-unit>
+      <trans-unit id="documents.deactivate.title" datatype="html"><source>Deactivate template?</source><target>Désactiver le modèle ?</target></trans-unit>
+      <trans-unit id="documents.deactivate.message" datatype="html"><source>The template can no longer be used for printing. Templates cannot be reactivated.</source><target>Le modèle ne pourra plus servir à l’impression. Un modèle ne peut pas être réactivé.</target></trans-unit>
+      <trans-unit id="documents.deactivateFailed" datatype="html"><source>The template could not be deactivated.</source><target>Le modèle n’a pas pu être désactivé.</target></trans-unit>
+      <trans-unit id="documents.type.countSheet" datatype="html"><source>Count sheet</source><target>Feuille de comptage</target></trans-unit>
+      <trans-unit id="documents.type.differences" datatype="html"><source>Count differences</source><target>Écarts de comptage</target></trans-unit>
+      <trans-unit id="documents.type.stockList" datatype="html"><source>Stock list</source><target>Liste de stock</target></trans-unit>
+      <trans-unit id="documents.field.name" datatype="html"><source>Template name</source><target>Nom du modèle</target></trans-unit>
+      <trans-unit id="documents.field.title" datatype="html"><source>Title</source><target>Titre</target></trans-unit>
+      <trans-unit id="documents.field.columns" datatype="html"><source>Columns</source><target>Colonnes</target></trans-unit>
+      <trans-unit id="documents.columnsRequired" datatype="html"><source>Choose at least one column.</source><target>Choisissez au moins une colonne.</target></trans-unit>
+      <trans-unit id="documents.field.paper" datatype="html"><source>Paper size</source><target>Format papier</target></trans-unit>
+      <trans-unit id="documents.field.landscape" datatype="html"><source>Landscape</source><target>Paysage</target></trans-unit>
+      <trans-unit id="documents.field.footer" datatype="html"><source>Footer text</source><target>Texte de pied de page</target></trans-unit>
+      <trans-unit id="documents.dialog.create" datatype="html"><source>New document template</source><target>Nouveau modèle de document</target></trans-unit>
+      <trans-unit id="documents.dialog.edit" datatype="html"><source>Edit document template</source><target>Modifier le modèle de document</target></trans-unit>
+      <trans-unit id="documents.saveFailed" datatype="html"><source>The document template could not be saved.</source><target>Le modèle de document n’a pas pu être enregistré.</target></trans-unit>
+      <trans-unit id="labels.subtitle" datatype="html"><source>Barcode labels for shelf and product tags. Variants must have a barcode to print.</source><target>Étiquettes code-barres pour rayons et produits. Les variantes doivent avoir un code-barres pour être imprimées.</target></trans-unit>
+      <trans-unit id="labels.create" datatype="html"><source>New label template</source><target>Nouveau modèle d’étiquette</target></trans-unit>
+      <trans-unit id="labels.print.title" datatype="html"><source>Print labels</source><target>Imprimer des étiquettes</target></trans-unit>
+      <trans-unit id="labels.template" datatype="html"><source>Label template</source><target>Modèle d’étiquette</target></trans-unit>
+      <trans-unit id="labels.copies" datatype="html"><source>Labels</source><target>Étiquettes</target></trans-unit>
+      <trans-unit id="labels.addLine" datatype="html"><source>Add to print list</source><target>Ajouter à la liste</target></trans-unit>
+      <trans-unit id="common.remove" datatype="html"><source>Remove</source><target>Retirer</target></trans-unit>
+      <trans-unit id="labels.print.action" datatype="html"><source>Open for printing</source><target>Ouvrir pour impression</target></trans-unit>
+      <trans-unit id="labels.limit" datatype="html"><source>A print run is limited to 500 labels in total.</source><target>Une impression est limitée à 500 étiquettes au total.</target></trans-unit>
+      <trans-unit id="labels.noPrint" datatype="html"><source>You need the print permission to print labels.</source><target>Vous avez besoin de l’autorisation d’impression pour imprimer des étiquettes.</target></trans-unit>
+      <trans-unit id="labels.noTemplate" datatype="html"><source>Create an active label template before printing.</source><target>Créez un modèle d’étiquette actif avant d’imprimer.</target></trans-unit>
+      <trans-unit id="labels.templates" datatype="html"><source>Templates</source><target>Modèles</target></trans-unit>
+      <trans-unit id="labels.size" datatype="html"><source>Label size</source><target>Taille d’étiquette</target></trans-unit>
+      <trans-unit id="labels.page" datatype="html"><source>Page</source><target>Page</target></trans-unit>
+      <trans-unit id="labels.heading" datatype="html"><source>Barcode labels</source><target>Étiquettes code-barres</target></trans-unit>
+      <trans-unit id="labels.loadFailed" datatype="html"><source>We could not load label templates</source><target>Impossible de charger les modèles d’étiquettes</target></trans-unit>
+      <trans-unit id="labels.empty.title" datatype="html"><source>No label templates</source><target>Aucun modèle d’étiquette</target></trans-unit>
+      <trans-unit id="labels.empty.message" datatype="html"><source>Create a template that matches your label sheet or printer.</source><target>Créez un modèle qui correspond à votre planche d’étiquettes ou à votre imprimante.</target></trans-unit>
+      <trans-unit id="labels.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="labels.quantity" datatype="html"><source>Enter at least one label.</source><target>Saisissez au moins une étiquette.</target></trans-unit>
+      <trans-unit id="labels.popup" datatype="html"><source>Allow pop-ups for this site to open the labels.</source><target>Autorisez les fenêtres surgissantes pour ce site afin d’ouvrir les étiquettes.</target></trans-unit>
+      <trans-unit id="labels.printFailed" datatype="html"><source>The labels could not be created.</source><target>Les étiquettes n’ont pas pu être créées.</target></trans-unit>
+      <trans-unit id="labels.saved" datatype="html"><source>Label template saved.</source><target>Modèle d’étiquette enregistré.</target></trans-unit>
+      <trans-unit id="labels.field.name" datatype="html"><source>Template name</source><target>Nom du modèle</target></trans-unit>
+      <trans-unit id="labels.field.pageWidth" datatype="html"><source>Page width (mm)</source><target>Largeur de page (mm)</target></trans-unit>
+      <trans-unit id="labels.field.pageHeight" datatype="html"><source>Page height (mm)</source><target>Hauteur de page (mm)</target></trans-unit>
+      <trans-unit id="labels.field.labelWidth" datatype="html"><source>Label width (mm)</source><target>Largeur d’étiquette (mm)</target></trans-unit>
+      <trans-unit id="labels.field.labelHeight" datatype="html"><source>Label height (mm)</source><target>Hauteur d’étiquette (mm)</target></trans-unit>
+      <trans-unit id="labels.field.margin" datatype="html"><source>Page margin (mm)</source><target>Marge de page (mm)</target></trans-unit>
+      <trans-unit id="labels.field.gap" datatype="html"><source>Gap between labels (mm)</source><target>Espace entre étiquettes (mm)</target></trans-unit>
+      <trans-unit id="labels.field.showName" datatype="html"><source>Show product name</source><target>Afficher le nom du produit</target></trans-unit>
+      <trans-unit id="labels.field.showSku" datatype="html"><source>Show SKU</source><target>Afficher le SKU</target></trans-unit>
+      <trans-unit id="labels.dialog.create" datatype="html"><source>New label template</source><target>Nouveau modèle d’étiquette</target></trans-unit>
+      <trans-unit id="labels.dialog.edit" datatype="html"><source>Edit label template</source><target>Modifier le modèle d’étiquette</target></trans-unit>
+      <trans-unit id="labels.rangeError" datatype="html"><source>One of the sizes is outside the allowed range. Check the millimetre limits.</source><target>L’une des dimensions est hors des limites autorisées. Vérifiez les limites en millimètres.</target></trans-unit>
+      <trans-unit id="labels.saveFailed" datatype="html"><source>The label template could not be saved.</source><target>Le modèle d’étiquette n’a pas pu être enregistré.</target></trans-unit>
       <trans-unit id="locations.name" datatype="html"><source>Name</source><target>Nom</target></trans-unit>
       <trans-unit id="locations.code" datatype="html"><source>Code</source><target>Code</target></trans-unit>
       <trans-unit id="locations.codeHint" datatype="html"><source>Optional. Stored in upper case and must be unique.</source><target>Facultatif. Enregistré en majuscules et doit être unique.</target></trans-unit>
@@ -855,7 +936,7 @@
       <trans-unit id="sales.createFailed" datatype="html"><source>The sale could not be started.</source><target>La vente n’a pas pu être démarrée.</target></trans-unit>
       <trans-unit id="report.subtitle" datatype="html"><source>Hours worked per day, for closed sessions. Days are split at local midnight in the organization&apos;s time zone.</source><target>Heures travaillées par jour, pour les sessions clôturées. Les journées sont découpées à minuit local, dans le fuseau horaire de l’organisation.</target></trans-unit>
       <trans-unit id="time.person" datatype="html"><source>Person</source><target>Personne</target></trans-unit>
-      <trans-unit id="report.run" datatype="html"><source>Run report</source><target>Générer le rapport</target></trans-unit>
+      <trans-unit id="report.run" datatype="html"><source> Run report </source><target>Générer le rapport</target></trans-unit>
       <trans-unit id="report.total" datatype="html"><source>Total</source><target>Total</target></trans-unit>
       <trans-unit id="report.date" datatype="html"><source>Date</source><target>Date</target></trans-unit>
       <trans-unit id="time.hours" datatype="html"><source>Hours</source><target>Heures</target></trans-unit>
@@ -896,7 +977,7 @@
       <trans-unit id="workSessions.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
       <trans-unit id="workSessions.correct.saved" datatype="html"><source>Session corrected.</source><target>Session corrigée.</target></trans-unit>
       <trans-unit id="time.correct.title" datatype="html"><source>Correct this session</source><target>Corriger cette session</target></trans-unit>
-      <trans-unit id="time.correct.hint" datatype="html"><source>Every correction keeps the previous times in the history below.</source><target>Chaque correction conserve les heures précédentes dans l’historique ci-dessous.</target></trans-unit>
+      <trans-unit id="time.correct.hint" datatype="html"><source> Every correction keeps the previous times in the history below. </source><target>Chaque correction conserve les heures précédentes dans l’historique ci-dessous.</target></trans-unit>
       <trans-unit id="time.outHint" datatype="html"><source>Leave empty to keep the session open.</source><target>Laissez vide pour garder la session ouverte.</target></trans-unit>
       <trans-unit id="time.correct.reason" datatype="html"><source>Reason</source><target>Motif</target></trans-unit>
       <trans-unit id="time.correct.history" datatype="html"><source>History</source><target>Historique</target></trans-unit>

@@ -378,6 +378,24 @@ export const routes: Routes = [
           import('./features/workforce/pages/hours-report.page').then((m) => m.HoursReportPage),
       },
 
+      // Inventory documents and labels
+      {
+        path: 'inventory/documents',
+        title: $localize`:@@title.documents:Inventory documents | SimpliaDz`,
+        ...permissioned(['inventory-documents.view']),
+        loadComponent: () =>
+          import('./features/inventory/documents/pages/documents.page').then(
+            (m) => m.DocumentsPage,
+          ),
+      },
+      {
+        path: 'inventory/labels',
+        title: $localize`:@@title.labels:Barcode labels | SimpliaDz`,
+        ...permissioned(['barcode-labels.view']),
+        loadComponent: () =>
+          import('./features/inventory/labels/pages/labels.page').then((m) => m.LabelsPage),
+      },
+
       // Administration
       {
         path: 'administration/users',

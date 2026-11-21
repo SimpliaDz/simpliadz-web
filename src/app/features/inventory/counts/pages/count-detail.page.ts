@@ -8,7 +8,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
-import { forkJoin } from 'rxjs';
+import { Observable, forkJoin } from 'rxjs';
 import { describeApiError } from '../../../../core/api/api-error-message';
 import { AuthSessionService } from '../../../../core/auth/auth-session.service';
 import { numberOrNull } from '../../../../shared/forms/form-values';
@@ -26,6 +26,15 @@ import {
   InventoryCount,
   InventoryCountLine,
 } from '../data-access/counts-api.service';
+import {
+  DocumentTemplate,
+  DocumentsApiService,
+  documentTypeFromNumber,
+} from '../../documents/data-access/documents-api.service';
+import {
+  openDocumentWindow,
+  writeDocumentWindow,
+} from '../../../../shared/documents/html-document-window';
 
 @Component({
   selector: 'app-count-detail-page',
@@ -81,6 +90,29 @@ import {
           </button>
         }
       </app-page-header>
+
+      @if (canPrint()) {
+        <div class="form-actions">
+          <button
+            mat-stroked-button
+            type="button"
+            (click)="printCountSheet(current)"
+            i18n="@@counts.print.sheet"
+          >
+            Print count sheet
+          </button>
+          @if (current.status === 'Completed') {
+            <button
+              mat-stroked-button
+              type="button"
+              (click)="printDifferences(current)"
+              i18n="@@counts.print.differences"
+            >
+              Print differences
+            </button>
+          }
+        </div>
+      }
 
       <p class="form-hint" i18n="@@counts.auditNotice">
         Completing a count writes the differences as adjustments and is recorded in the audit trail.
@@ -184,6 +216,7 @@ import {
 })
 export class CountDetailPage {
   private readonly api = inject(CountsApiService);
+  private readonly documents = inject(DocumentsApiService);
   private readonly locationsApi = inject(LocationsApiService);
   private readonly catalogue = inject(VariantCatalogueService);
   private readonly activatedRoute = inject(ActivatedRoute);
@@ -207,6 +240,8 @@ export class CountDetailPage {
   readonly count = signal<InventoryCount | null>(null);
   readonly locations = signal<Location[]>([]);
   readonly variants = signal<VariantOption[]>([]);
+  readonly documentTemplates = signal<DocumentTemplate[]>([]);
+  readonly canPrint = computed(() => this.session.hasPermission('inventory-documents.print'));
   readonly loading = signal(true);
   readonly loadError = signal<string | null>(null);
   readonly busy = signal(false);
@@ -229,8 +264,10 @@ export class CountDetailPage {
       count: this.api.get(this.countId),
       locations: this.locationsApi.list(),
       variants: this.catalogue.options(),
+      documentTemplates: this.documents.templates(),
     }).subscribe({
-      next: ({ count, locations, variants }) => {
+      next: ({ count, locations, variants, documentTemplates }) => {
+        this.documentTemplates.set(documentTemplates);
         this.count.set(count);
         this.locations.set(locations);
         this.variants.set(variants);
@@ -243,6 +280,57 @@ export class CountDetailPage {
           describeApiError(
             error,
             $localize`:@@counts.detail.loadFailedHint:Try again in a moment.`,
+          ),
+        );
+      },
+    });
+  }
+
+  printCountSheet(current: InventoryCount): void {
+    this.print(this.templateFor('CountSheet'), (templateId) =>
+      this.documents.countSheetHtml(current.id, templateId),
+    );
+  }
+
+  printDifferences(current: InventoryCount): void {
+    this.print(this.templateFor('CountDifferences'), (templateId) =>
+      this.documents.differenceHtml(current.id, templateId),
+    );
+  }
+
+  private templateFor(type: 'CountSheet' | 'CountDifferences'): DocumentTemplate | null {
+    return (
+      this.documentTemplates().find(
+        (template) => template.isActive && documentTypeFromNumber[template.type] === type,
+      ) ?? null
+    );
+  }
+
+  private print(
+    template: DocumentTemplate | null,
+    load: (templateId: string) => Observable<string>,
+  ): void {
+    if (!template) {
+      this.actionError.set(
+        $localize`:@@counts.noTemplate:Create an active template of this type under Inventory documents first.`,
+      );
+      return;
+    }
+    const win = openDocumentWindow();
+    load(template.id).subscribe({
+      next: (html) => {
+        if (!writeDocumentWindow(win, html)) {
+          this.actionError.set(
+            $localize`:@@counts.popup:Allow pop-ups for this site to open the document.`,
+          );
+        }
+      },
+      error: (error: unknown) => {
+        win?.close();
+        this.actionError.set(
+          describeApiError(
+            error,
+            $localize`:@@counts.printFailed:The document could not be created.`,
           ),
         );
       },

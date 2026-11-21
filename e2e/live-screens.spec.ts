@@ -30,6 +30,8 @@ const screens: { path: string; heading: string }[] = [
   { path: '/app/workforce/clock', heading: 'My time' },
   { path: '/app/workforce/sessions', heading: 'Work sessions' },
   { path: '/app/workforce/report', heading: 'Hours report' },
+  { path: '/app/inventory/documents', heading: 'Inventory documents' },
+  { path: '/app/inventory/labels', heading: 'Barcode labels' },
   { path: '/app/administration/users', heading: 'Users' },
   { path: '/app/administration/roles', heading: 'Roles' },
 ];
