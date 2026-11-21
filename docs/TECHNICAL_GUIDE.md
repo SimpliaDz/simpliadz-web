@@ -134,28 +134,42 @@ The root route table lives in `src/app/app.routes.ts`. Two layouts are lazy-load
 - `PublicLayoutComponent` (`core/layout/public-layout.component.ts`) wraps `/login`, `/forgot-password` and `/reset-password`, with a brand header and the theme toggle.
 - `ShellLayoutComponent` (`core/layout/shell-layout.component.ts`) wraps everything under `/app`, behind `authGuard`. It has a toolbar (navigation toggle, theme toggle, user menu with sign-out) and a sidebar built from `core/layout/navigation.ts`.
 
-Implemented routes, grouped by feature ownership. Each route declares the permissions it needs in `data.permissions` and passes through `permissionGuard` after `authGuard`:
+Implemented routes, grouped by feature ownership. Each route declares the permissions it needs in `data.permissions` and passes through `permissionGuard` after `authGuard`. The sidebar uses the same permission lists, so a screen is only offered when it can be opened.
 
 ```text
 Public        /login  /forgot-password  /reset-password
 Overview      /app/dashboard
-Business      /app/organization                      organization.view
-Catalogue     /app/catalogue/products                products.view
-              /app/catalogue/products/new            products.create
-              /app/catalogue/products/:id            products.view
-              /app/catalogue/products/:id/edit       products.edit
-              /app/catalogue/products/:id/variants/new   variants.create
-              /app/catalogue/variants/:id            variants.view
-              /app/catalogue/brands                  brands.view
-              /app/catalogue/categories              categories.view
-              /app/catalogue/attributes[/:id]        attributes.view
-Inventory     /app/inventory/locations[/new|/:id/edit]   locations.view / .create / .edit
-              /app/inventory/price-lists             price-lists.view
-Admin         /app/administration/users[/new|/:id]   users.view / users.create
-              /app/administration/roles[/:id]        roles.view
-Account       /app/account/security                  (any signed-in user)
-Status        /app/forbidden   /app/**  (not found)
+Business      /app/organization                                   organization.view
+Catalogue     /app/catalogue/products[/new|/:id|/:id/edit]        products.*
+              /app/catalogue/products/:id/variants/new            variants.create
+              /app/catalogue/variants/:id                         variants.view
+              /app/catalogue/brands | categories | attributes[/:id]
+Inventory     /app/inventory/locations[/new|/:id/edit]            locations.*
+              /app/inventory/price-lists                          price-lists.view
+              /app/inventory/stock | stock/movements | stock/policies   stock.view
+              /app/inventory/transfers[/:id]                      stock.view
+              /app/inventory/counts[/:id]                         stock.view
+              /app/inventory/warnings                             inventory-warnings.view
+              /app/inventory/documents                            inventory-documents.view
+              /app/inventory/labels                               barcode-labels.view
+Purchasing    /app/purchasing/suppliers                           suppliers.view
+              /app/purchasing/orders[/:id]                        purchase-orders.view
+Sales         /app/sales/sales[/:id]                              sales.view
+              /app/sales/customers                                customers.view
+              /app/sales/cash/registers                           cash-registers.view
+              /app/sales/cash/sessions[/:id]                      cash-sessions.view
+Accounting    /app/accounting/expenses                            expenses.view + expense-categories.view
+              /app/accounting/expense-categories                  expense-categories.view
+Workforce     /app/workforce/clock                                (any signed-in user)
+              /app/workforce/sessions                             work-sessions.view
+              /app/workforce/report                               work-sessions.report
+Admin         /app/administration/users[/new|/:id]                users.view / users.create
+              /app/administration/roles[/:id]                     roles.view
+Account       /app/account/security                               (any signed-in user)
+Status        /app/forbidden   /app/** (not found)
 ```
+
+Reports (dashboard figures, sales summary, product performance, inventory and low-stock reports) and the audit log are not built yet.
 
 Feature folders follow the recipe in section 12: `data-access/` owns HTTP and DTOs, `pages/` orchestrates, `ui/` holds dialogs. Cross-feature imports are limited to the same business module (for example products reading brands from catalogue).
 
@@ -319,23 +333,23 @@ For a new Inventory feature such as Brands:
 
 ## 13. Current decisions and intentional deferrals
 
-| Decision                                                                          | Status                                                                                  |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| Standalone Angular, strict TypeScript, Yarn 4                                     | Implemented                                                                             |
-| Angular Material/CDK and global Material theme                                    | Implemented                                                                             |
-| Persisted light/dark theme toggle using Material color schemes                    | Implemented                                                                             |
-| Runtime API configuration                                                         | Implemented; API URL is deployment-provided                                             |
-| English/French/Arabic build-time localization and RTL bootstrap                   | Implemented                                                                             |
-| ESLint, Prettier, Vitest, Playwright, CI                                          | Implemented                                                                             |
-| Functional auth/refresh interceptors, public auth pages, guards, session restore  | Implemented                                                                             |
-| Authenticated shell: toolbar, permission-filtered sidebar, user menu, sign-out    | Implemented                                                                             |
-| Change password, dashboard overview, forbidden and not-found pages                | Implemented                                                                             |
-| Permission guard and `*appHasPermission` directive (UX only)                      | Implemented                                                                             |
-| API capability matrix                                                             | Implemented — see `docs/api-capability-matrix.md`                                       |
-| Organization, catalogue, inventory and administration screens (see routes above)  | Implemented — list, create, edit and deactivate where the API allows                    |
-| Stock, purchasing, sales, cash, expenses, reports, audit and worked hours screens | Deferred — endpoints exist; screens not built yet (see `docs/api-capability-matrix.md`) |
-| OpenAPI TypeScript generation                                                     | Deferred pending a compatible generator and confirmed API contract source               |
-| Global state library                                                              | Deferred until a demonstrated cross-feature need                                        |
-| SSR, PWA, runtime language switching                                              | Deferred pending concrete product requirements                                          |
+| Decision                                                                             | Status                                                                    |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------- |
+| Standalone Angular, strict TypeScript, Yarn 4                                        | Implemented                                                               |
+| Angular Material/CDK and global Material theme                                       | Implemented                                                               |
+| Persisted light/dark theme toggle using Material color schemes                       | Implemented                                                               |
+| Runtime API configuration                                                            | Implemented; API URL is deployment-provided                               |
+| English/French/Arabic build-time localization and RTL bootstrap                      | Implemented                                                               |
+| ESLint, Prettier, Vitest, Playwright, CI                                             | Implemented                                                               |
+| Functional auth/refresh interceptors, public auth pages, guards, session restore     | Implemented                                                               |
+| Authenticated shell: toolbar, permission-filtered sidebar, user menu, sign-out       | Implemented                                                               |
+| Change password, dashboard overview, forbidden and not-found pages                   | Implemented                                                               |
+| Permission guard and `*appHasPermission` directive (UX only)                         | Implemented                                                               |
+| API capability matrix                                                                | Implemented — see `docs/api-capability-matrix.md`                         |
+| Organization, catalogue, inventory and administration screens (see routes above)     | Implemented — list, create, edit and deactivate where the API allows      |
+| Reports (dashboard figures, sales, products, inventory, low stock) and the audit log | Deferred — endpoints exist; screens not built yet                         |
+| OpenAPI TypeScript generation                                                        | Deferred pending a compatible generator and confirmed API contract source |
+| Global state library                                                                 | Deferred until a demonstrated cross-feature need                          |
+| SSR, PWA, runtime language switching                                                 | Deferred pending concrete product requirements                            |
 
 The goal is a frontend that grows by adding small, cohesive feature slices—not by pre-building an elaborate framework before the product needs it.
