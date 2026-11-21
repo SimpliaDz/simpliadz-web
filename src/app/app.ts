@@ -1,16 +1,10 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { RouterLink, RouterOutlet } from '@angular/router';
-import { ThemeService } from './core/theme/theme.service';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
-  imports: [MatButtonModule, MatIconModule, RouterLink, RouterOutlet],
+  imports: [RouterOutlet],
   selector: 'app-root',
-  styleUrl: './app.scss',
-  templateUrl: './app.html',
+  template: '<router-outlet />',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class App {
-  readonly theme = inject(ThemeService);
-}
+export class App {}

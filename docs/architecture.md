@@ -25,6 +25,18 @@ Each feature may contain `data-access`, `pages`, `ui`, and `models` folders when
 
 Implemented API modules map to Identity, Organization, and Inventory features. Inventory is organized around products, variants, categories, brands, attributes, locations, and price lists. A product never owns stock quantity; variants are stockable and quantities are location-aware.
 
+## Shell and template adaptation
+
+The authenticated experience follows the Sneat template's layout language, rebuilt with Angular Material (no Bootstrap, jQuery or second UI library):
+
+- Sidebar: 260px (16.25rem) docked from 1200px up, an overlay below that. The active item has a tinted background and a trailing 4px indicator, written with logical properties so it flips in Arabic.
+- Toolbar: sticky, with the navigation toggle, theme toggle and a user menu. The menu shows the signed-in email and roles, links to security, and signs out.
+- Content: centred, 72rem maximum width, with page headers using the Material headline type scale.
+- Colours, radii and elevation come from Material system tokens, so light and dark themes stay aligned. Sneat's free edition has no dark theme, so dark values are Material's own.
+- Icons: Material Symbols (already loaded), not the template's Boxicons. The Sneat free edition is MIT-licensed; its copyright notice must be kept in any copied assets.
+
+Not carried over from the template: demo illustrations, third-party brand logos, upsell buttons, and jQuery/ApexCharts widgets.
+
 ## Runtime configuration
 
 `public/config/app-config.json` is fetched before the application is rendered. It supplies the API base URL, allowing one compiled frontend build to be deployed against different API environments. It is deployment configuration, not a place for secrets or tenant selection.

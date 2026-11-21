@@ -18,6 +18,13 @@ Use `yarn install --immutable` after cloning. Never generate or commit `package-
 | `yarn i18n:extract`       | Rebuild the English source translation catalogue after changing marked UI copy. |
 | `yarn e2e`                | Run Playwright tests after browsers are installed.                              |
 
+End-to-end tests are split by dependency:
+
+- `e2e/shell.spec.ts` mocks `/api/auth/*` with `page.route`, so it is deterministic and needs no backend.
+- `e2e/smoke.spec.ts` and `e2e/live-auth.spec.ts` need the API at `http://localhost:5278` and exercise the browser-facing `/api` path through the dev proxy. `live-auth` uses the local dev admin seeded by the migrator.
+
+CI runs lint, unit tests and the build only; it does not run e2e because the live tests need the backend.
+
 Install Playwright browsers only when end-to-end tests are introduced:
 
 ```bash

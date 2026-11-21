@@ -129,22 +129,25 @@ Application code reads configuration through `AppConfigService`; it must not har
 
 ## 5. Routing and feature loading
 
-The root route table lives in `src/app/app.routes.ts`. The current home route is lazy-loaded. Future feature areas should use route-level lazy loading:
+The root route table lives in `src/app/app.routes.ts`. Two layouts are lazy-loaded:
+
+- `PublicLayoutComponent` (`core/layout/public-layout.component.ts`) wraps `/login`, `/forgot-password` and `/reset-password`, with a brand header and the theme toggle.
+- `ShellLayoutComponent` (`core/layout/shell-layout.component.ts`) wraps everything under `/app`, behind `authGuard`. It has a toolbar (navigation toggle, theme toggle, user menu with sign-out) and a sidebar built from `core/layout/navigation.ts`.
+
+Implemented routes today:
 
 ```text
-/login
-/app
-/app/organization
-/app/inventory/products
-/app/inventory/categories
-/app/inventory/brands
-/app/inventory/attributes
-/app/inventory/variants
-/app/inventory/locations
-/app/inventory/price-lists
+/login  /forgot-password  /reset-password          (public)
+/app                                                → redirects to /app/dashboard
+/app/dashboard                                      (signed-in overview)
+/app/account/security                               (change password)
+/app/forbidden                                      (access denied)
+/app/**                                             (not found)
 ```
 
-The final authenticated parent route will own the application layout and authentication guard. Its children will be lazy feature routes. Route metadata should carry the permissions needed to view a page, while API calls remain secured by backend policies.
+Planned feature routes will be added as their screens are built, for example `/app/organization`, `/app/inventory/products`, and `/app/inventory/brands`. Route metadata carries the permissions a page needs in `data.permissions`; `permissionGuard` checks them after `authGuard`. Permission checks are UX only; the API enforces every request.
+
+The sidebar lists an entry only when its screen exists and its permissions are held. Add navigation entries in the same change that adds the route.
 
 Keep the public landing/login routes small and eagerly accessible. Lazy-load large authenticated areas once they have real screens. Do not add multiple nested lazy boundaries without measuring the resulting navigation cost.
 
@@ -161,33 +164,35 @@ Authentication is the first implemented API slice. Its public pages are lazy-loa
 | `POST` | `/auth/forgot-password` | `{ email }` → development-only reset token.                                  |
 | `POST` | `/auth/reset-password`  | `{ email, resetToken, newPassword }` → `204 No Content`.                     |
 
-`AuthSessionService` owns the in-memory access token, refresh token, and current user. Login and refresh use a raw `HttpClient` backed by `HttpBackend` so they cannot recurse through interceptors; after each token response, `/auth/me` loads authoritative roles and permissions.
+`AuthSessionService` owns the access token (memory only), the current user, and the refresh token. Login and refresh use a raw `HttpClient` backed by `HttpBackend` so they cannot recurse through interceptors; after each token response, `/auth/me` loads authoritative roles and permissions. It exposes `hasPermission` and `hasAllPermissions` for UX checks.
 
-The intended HTTP structure is:
+The HTTP structure is:
 
 ```text
 core/api/
-├── api-error.ts                 # Planned: stable UI-facing representation of API failures
-├── api-url.ts                   # Combines APP_CONFIG.apiBaseUrl with relative paths
+├── api-error.ts                 # toApiError(): normalizes both backend error shapes for forms and alerts
+├── api-url.service.ts           # Combines runtime apiBaseUrl with relative paths
 └── interceptors/
     ├── auth.interceptor.ts      # Adds access-token bearer header
-    ├── refresh.interceptor.ts   # Coordinates one refresh attempt after an auth failure
-    └── api-error.interceptor.ts # Planned: normalizes error responses for callers
+    └── refresh.interceptor.ts   # One refresh attempt after a 401; on failure clears the session and goes to login
 ```
 
-Use functional interceptors registered with `provideHttpClient(withInterceptors(...))`. Interceptor ordering must be documented beside the registration. Keep retry rules conservative: do not retry writes by default.
+Functional interceptors are registered in `app.config.ts` as `withInterceptors([authInterceptor, refreshInterceptor])`; that order is commented beside the registration. Keep retry rules conservative: do not retry writes by default.
+
+`toApiError` understands both shapes the backend returns: the global handler's `{ error, message, errors: [{ propertyName, errorMessage }] }` and the problem-style `{ title, errors: { Key: [msg] } }`. Field keys come back lower-camel-cased so they match Reactive Form control names.
 
 The implemented authentication flow is:
 
-1. Login calls the backend’s public login endpoint.
-2. Keep the short-lived access and refresh tokens in memory.
-3. Restore identity and effective permissions with the authenticated current-user endpoint.
+1. Login calls the backend’s public login endpoint. If loading `/auth/me` then fails, the half-established session is cleared.
+2. The access token stays in memory. The refresh token is kept in `sessionStorage` under `simpliadz.refreshToken`, so a reload can restore the session.
+3. `authGuard` calls `restore()`, which refreshes once from the stored refresh token when no access token is in memory. A failed restore signs the user out.
 4. Add the access token only to requests that target the configured API origin.
-5. Coordinate a single refresh request when an eligible protected request receives an authentication failure; queued requests await that same refresh operation.
-6. On refresh failure, clear in-memory session state and navigate to login.
-7. Logout always clears local state, even if its server call fails.
+5. Coordinate a single refresh request when an eligible protected request receives a 401; concurrent requests share that refresh.
+6. On refresh failure, clear session state and navigate to `/login?returnUrl=…`.
+7. Logout always clears local state, even if its server call fails, and revokes the refresh token on the server.
+8. Changing the password revokes every session on the backend, so the UI clears local state and asks the user to sign in again.
 
-The backend currently returns a refresh token in JSON. The frontend deliberately does not put it in local or session storage, so a full browser reload ends the session. The preferred browser deployment design is ultimately a Secure, HttpOnly, SameSite refresh cookie issued by the API or a BFF; the UI can adopt it without rewriting features.
+Storage trade-off: `sessionStorage` survives a reload but is readable by any script running in the page, and it is cleared when the tab closes. It was chosen over `localStorage` (which would persist across tabs and restarts) and over in-memory-only (which logs users out on every reload). The preferred long-term design remains a Secure, HttpOnly, SameSite refresh cookie issued by the API or a BFF; the UI can adopt it without rewriting features.
 
 Never send a tenant header. The backend selects the active tenant per API deployment and binds JWTs to it.
 
@@ -300,19 +305,22 @@ For a new Inventory feature such as Brands:
 
 ## 13. Current decisions and intentional deferrals
 
-| Decision                                                                                   | Status                                                                    |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------- |
-| Standalone Angular, strict TypeScript, Yarn 4                                              | Implemented                                                               |
-| Angular Material/CDK and global Material theme                                             | Implemented                                                               |
-| Persisted light/dark theme toggle using Material color schemes                             | Implemented                                                               |
-| Runtime API configuration                                                                  | Implemented; API URL is deployment-provided                               |
-| English/French/Arabic build-time localization and RTL bootstrap                            | Implemented                                                               |
-| ESLint, Prettier, Vitest, Playwright, CI                                                   | Implemented                                                               |
-| Functional auth/refresh interceptors, public auth pages, guards, in-memory session service | Implemented                                                               |
-| Permission-aware layout/navigation                                                         | Planned — use `/auth/me` permissions in the authenticated shell           |
-| Organization and Inventory pages                                                           | Planned — add feature-by-feature                                          |
-| OpenAPI TypeScript generation                                                              | Deferred pending a compatible generator and confirmed API contract source |
-| Global state library                                                                       | Deferred until a demonstrated cross-feature need                          |
-| SSR, PWA, runtime language switching                                                       | Deferred pending concrete product requirements                            |
+| Decision                                                                         | Status                                                                    |
+| -------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| Standalone Angular, strict TypeScript, Yarn 4                                    | Implemented                                                               |
+| Angular Material/CDK and global Material theme                                   | Implemented                                                               |
+| Persisted light/dark theme toggle using Material color schemes                   | Implemented                                                               |
+| Runtime API configuration                                                        | Implemented; API URL is deployment-provided                               |
+| English/French/Arabic build-time localization and RTL bootstrap                  | Implemented                                                               |
+| ESLint, Prettier, Vitest, Playwright, CI                                         | Implemented                                                               |
+| Functional auth/refresh interceptors, public auth pages, guards, session restore | Implemented                                                               |
+| Authenticated shell: toolbar, permission-filtered sidebar, user menu, sign-out   | Implemented                                                               |
+| Change password, dashboard overview, forbidden and not-found pages               | Implemented                                                               |
+| Permission guard and `*appHasPermission` directive (UX only)                     | Implemented                                                               |
+| API capability matrix                                                            | Implemented — see `docs/api-capability-matrix.md`                         |
+| Organization and Inventory pages                                                 | Planned — add feature-by-feature                                          |
+| OpenAPI TypeScript generation                                                    | Deferred pending a compatible generator and confirmed API contract source |
+| Global state library                                                             | Deferred until a demonstrated cross-feature need                          |
+| SSR, PWA, runtime language switching                                             | Deferred pending concrete product requirements                            |
 
 The goal is a frontend that grows by adding small, cohesive feature slices—not by pre-building an elaborate framework before the product needs it.

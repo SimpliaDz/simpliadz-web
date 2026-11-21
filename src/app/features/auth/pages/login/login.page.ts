@@ -28,6 +28,12 @@ import { AuthSessionService } from '../../../../core/auth/auth-session.service';
         </mat-card-header>
 
         <mat-card-content>
+          @if (passwordChanged) {
+            <p class="auth-notice" role="status" i18n="@@auth.login.passwordChanged">
+              Your password was changed. Sign in again to continue.
+            </p>
+          }
+
           <form [formGroup]="form" (ngSubmit)="submit()">
             <mat-form-field appearance="outline">
               <mat-label>Email address</mat-label>
@@ -96,6 +102,10 @@ import { AuthSessionService } from '../../../../core/auth/auth-session.service';
       color: var(--mat-sys-error);
       margin: 0;
     }
+    .auth-notice {
+      margin: 0;
+      color: var(--mat-sys-primary);
+    }
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
@@ -111,6 +121,7 @@ export class LoginPage {
   });
   readonly submitting = signal(false);
   readonly error = signal<string | null>(null);
+  readonly passwordChanged = this.route.snapshot.queryParamMap.get('reason') === 'password-changed';
 
   submit(): void {
     if (this.form.invalid) {

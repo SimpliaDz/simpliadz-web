@@ -2,9 +2,45 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en-US" target-language="fr" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="title.signIn" datatype="html"><source>Sign in | SimpliaDz</source><target>Connexion | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.forgotPassword" datatype="html"><source>Reset password | SimpliaDz</source><target>Réinitialiser le mot de passe | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.resetPassword" datatype="html"><source>Choose a password | SimpliaDz</source><target>Choisir un mot de passe | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.dashboard" datatype="html"><source>Dashboard | SimpliaDz</source><target>Tableau de bord | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.accountSecurity" datatype="html"><source>Security | SimpliaDz</source><target>Sécurité | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.forbidden" datatype="html"><source>Access denied | SimpliaDz</source><target>Accès refusé | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.notFound" datatype="html"><source>Page not found | SimpliaDz</source><target>Page introuvable | SimpliaDz</target></trans-unit>
+      <trans-unit id="nav.section.overview" datatype="html"><source>Overview</source><target>Vue d’ensemble</target></trans-unit>
+      <trans-unit id="nav.dashboard" datatype="html"><source>Dashboard</source><target>Tableau de bord</target></trans-unit>
+      <trans-unit id="nav.section.account" datatype="html"><source>Account</source><target>Compte</target></trans-unit>
+      <trans-unit id="nav.accountSecurity" datatype="html"><source>Security</source><target>Sécurité</target></trans-unit>
       <trans-unit id="app.tagline" datatype="html"><source>Business management</source><target>Gestion d’entreprise</target></trans-unit>
-      <trans-unit id="home.welcome" datatype="html"><source>Welcome to SimpliaDz</source><target>Bienvenue dans SimpliaDz</target></trans-unit>
-      <trans-unit id="home.introduction" datatype="html"><source> The frontend foundation is ready. The next slice will establish authentication. </source><target>Les fondations de l’interface sont prêtes. La prochaine étape mettra en place l’authentification.</target></trans-unit>
+      <trans-unit id="shell.toggleNavigation" datatype="html"><source>Toggle navigation</source><target>Afficher ou masquer la navigation</target></trans-unit>
+      <trans-unit id="shell.userMenu" datatype="html"><source>Open user menu</source><target>Ouvrir le menu utilisateur</target></trans-unit>
+      <trans-unit id="shell.signOut" datatype="html"><source>Sign out</source><target>Se déconnecter</target></trans-unit>
+      <trans-unit id="shell.mainNavigation" datatype="html"><source>Main</source><target>Principale</target></trans-unit>
+      <trans-unit id="account.security.heading" datatype="html"><source>Security</source><target>Sécurité</target></trans-unit>
+      <trans-unit id="account.security.subtitle" datatype="html"><source> Change your password. You will be signed out on every device and must sign in again. </source><target>Modifiez votre mot de passe. Vous serez déconnecté sur tous vos appareils et devrez vous reconnecter.</target></trans-unit>
+      <trans-unit id="account.security.currentPassword" datatype="html"><source>Current password</source><target>Mot de passe actuel</target></trans-unit>
+      <trans-unit id="validation.required" datatype="html"><source>This field is required.</source><target>Ce champ est obligatoire.</target></trans-unit>
+      <trans-unit id="account.security.newPassword" datatype="html"><source>New password</source><target>Nouveau mot de passe</target></trans-unit>
+      <trans-unit id="validation.passwordMinLength" datatype="html"><source>Use at least 8 characters.</source><target>Utilisez au moins 8 caractères.</target></trans-unit>
+      <trans-unit id="account.security.confirmPassword" datatype="html"><source>Confirm new password</source><target>Confirmer le nouveau mot de passe</target></trans-unit>
+      <trans-unit id="validation.passwordMismatch" datatype="html"><source> The passwords do not match. </source><target>Les mots de passe ne correspondent pas.</target></trans-unit>
+      <trans-unit id="account.security.submit" datatype="html"><source>Change password</source><target>Modifier le mot de passe</target></trans-unit>
+      <trans-unit id="account.security.failed" datatype="html"><source>We could not change your password. Check your current password and try again.</source><target>Impossible de modifier votre mot de passe. Vérifiez votre mot de passe actuel et réessayez.</target></trans-unit>
+      <trans-unit id="auth.login.passwordChanged" datatype="html"><source> Your password was changed. Sign in again to continue. </source><target>Votre mot de passe a été modifié. Reconnectez-vous pour continuer.</target></trans-unit>
+      <trans-unit id="dashboard.heading" datatype="html"><source>Welcome back</source><target>Bon retour</target></trans-unit>
+      <trans-unit id="dashboard.roles.title" datatype="html"><source>Your roles</source><target>Vos rôles</target></trans-unit>
+      <trans-unit id="dashboard.roles.empty" datatype="html"><source>No roles are assigned to your account.</source><target>Aucun rôle n’est attribué à votre compte.</target></trans-unit>
+      <trans-unit id="dashboard.permissions.title" datatype="html"><source>Permissions</source><target>Autorisations</target></trans-unit>
+      <trans-unit id="dashboard.permissions.help" datatype="html"><source> Permissions granted to your account. Screens you cannot use are hidden from the menu. </source><target>Autorisations accordées à votre compte. Les écrans auxquels vous n’avez pas accès sont masqués dans le menu.</target></trans-unit>
+      <trans-unit id="status.forbidden.heading" datatype="html"><source>You do not have access to this page</source><target>Vous n’avez pas accès à cette page</target></trans-unit>
+      <trans-unit id="status.forbidden.body" datatype="html"><source> Ask an administrator if you need access. Your menu shows the screens available to you. </source><target>Demandez à un administrateur si vous avez besoin d’un accès. Le menu affiche les écrans auxquels vous avez accès.</target></trans-unit>
+      <trans-unit id="status.backToDashboard" datatype="html"><source>Back to dashboard</source><target>Retour au tableau de bord</target></trans-unit>
+      <trans-unit id="status.notFound.heading" datatype="html"><source>Page not found</source><target>Page introuvable</target></trans-unit>
+      <trans-unit id="status.notFound.body" datatype="html"><source>The page you are looking for does not exist or has moved.</source><target>La page demandée n’existe pas ou a été déplacée.</target></trans-unit>
+      <trans-unit id="theme.switchToLight" datatype="html"><source>Switch to light theme</source><target>Passer au thème clair</target></trans-unit>
+      <trans-unit id="theme.switchToDark" datatype="html"><source>Switch to dark theme</source><target>Passer au thème sombre</target></trans-unit>
     </body>
   </file>
 </xliff>

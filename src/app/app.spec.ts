@@ -10,16 +10,9 @@ describe('App', () => {
     }).compileComponents();
   });
 
-  it('should create the app', () => {
+  it('creates the root component with a router outlet', () => {
     const fixture = TestBed.createComponent(App);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
-
-  it('should render the application brand', async () => {
-    const fixture = TestBed.createComponent(App);
-    await fixture.whenStable();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.app-shell__brand')?.textContent).toContain('SimpliaDz');
+    fixture.detectChanges();
+    expect(fixture.nativeElement.querySelector('router-outlet')).toBeTruthy();
   });
 });

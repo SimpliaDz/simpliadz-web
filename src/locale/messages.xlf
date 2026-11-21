@@ -2,30 +2,299 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="title.signIn" datatype="html">
+        <source>Sign in | SimpliaDz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="title.forgotPassword" datatype="html">
+        <source>Reset password | SimpliaDz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="title.resetPassword" datatype="html">
+        <source>Choose a password | SimpliaDz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="title.dashboard" datatype="html">
+        <source>Dashboard | SimpliaDz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="title.accountSecurity" datatype="html">
+        <source>Security | SimpliaDz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="title.forbidden" datatype="html">
+        <source>Access denied | SimpliaDz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="title.notFound" datatype="html">
+        <source>Page not found | SimpliaDz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.section.overview" datatype="html">
+        <source>Overview</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/layout/navigation.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.dashboard" datatype="html">
+        <source>Dashboard</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/layout/navigation.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.section.account" datatype="html">
+        <source>Account</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/layout/navigation.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.accountSecurity" datatype="html">
+        <source>Security</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/layout/navigation.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/layout/shell-layout.component.ts</context>
+          <context context-type="linenumber">72,74</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="app.tagline" datatype="html">
         <source>Business management</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/app.html</context>
-          <context context-type="linenumber">4,10</context>
+          <context context-type="sourcefile">src/app/core/layout/public-layout.component.ts</context>
+          <context context-type="linenumber">13,19</context>
         </context-group>
         <note priority="1" from="description">A concise product description in the global header</note>
         <note priority="1" from="meaning">Application tagline</note>
       </trans-unit>
-      <trans-unit id="home.welcome" datatype="html">
-        <source>Welcome to SimpliaDz</source>
+      <trans-unit id="shell.toggleNavigation" datatype="html">
+        <source>Toggle navigation</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/home/home.page.ts</context>
-          <context context-type="linenumber">6,7</context>
+          <context context-type="sourcefile">src/app/core/layout/shell-layout.component.ts</context>
+          <context context-type="linenumber">41,44</context>
         </context-group>
-        <note priority="1" from="description">Home page heading</note>
+        <note priority="1" from="description">Toggle navigation</note>
       </trans-unit>
-      <trans-unit id="home.introduction" datatype="html">
-        <source> The frontend foundation is ready. The next slice will establish authentication. </source>
+      <trans-unit id="shell.userMenu" datatype="html">
+        <source>Open user menu</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/home/home.page.ts</context>
-          <context context-type="linenumber">8,11</context>
+          <context context-type="sourcefile">src/app/core/layout/shell-layout.component.ts</context>
+          <context context-type="linenumber">55,57</context>
         </context-group>
-        <note priority="1" from="description">Home page introduction</note>
+        <note priority="1" from="description">Open user menu</note>
+      </trans-unit>
+      <trans-unit id="shell.signOut" datatype="html">
+        <source>Sign out</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/layout/shell-layout.component.ts</context>
+          <context context-type="linenumber">76,78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="shell.mainNavigation" datatype="html">
+        <source>Main</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/layout/shell-layout.component.ts</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+        <note priority="1" from="description">Main navigation</note>
+      </trans-unit>
+      <trans-unit id="account.security.heading" datatype="html">
+        <source>Security</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/pages/security.page.ts</context>
+          <context context-type="linenumber">31,32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.security.subtitle" datatype="html">
+        <source> Change your password. You will be signed out on every device and must sign in again. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/pages/security.page.ts</context>
+          <context context-type="linenumber">33,37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.security.currentPassword" datatype="html">
+        <source>Current password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/pages/security.page.ts</context>
+          <context context-type="linenumber">41,42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="validation.required" datatype="html">
+        <source>This field is required.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/pages/security.page.ts</context>
+          <context context-type="linenumber">44,46</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/pages/security.page.ts</context>
+          <context context-type="linenumber">52,53</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/pages/security.page.ts</context>
+          <context context-type="linenumber">62,64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.security.newPassword" datatype="html">
+        <source>New password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/pages/security.page.ts</context>
+          <context context-type="linenumber">49,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="validation.passwordMinLength" datatype="html">
+        <source>Use at least 8 characters.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/pages/security.page.ts</context>
+          <context context-type="linenumber">54,56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.security.confirmPassword" datatype="html">
+        <source>Confirm new password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/pages/security.page.ts</context>
+          <context context-type="linenumber">59,60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="validation.passwordMismatch" datatype="html">
+        <source> The passwords do not match. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/pages/security.page.ts</context>
+          <context context-type="linenumber">68,70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.security.submit" datatype="html">
+        <source>Change password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/pages/security.page.ts</context>
+          <context context-type="linenumber">78,80</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.security.failed" datatype="html">
+        <source>We could not change your password. Check your current password and try again.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/pages/security.page.ts</context>
+          <context context-type="linenumber">158</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="auth.login.passwordChanged" datatype="html">
+        <source> Your password was changed. Sign in again to continue. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/auth/pages/login/login.page.ts</context>
+          <context context-type="linenumber">33,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboard.heading" datatype="html">
+        <source>Welcome back</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/dashboard/pages/dashboard.page.ts</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboard.roles.title" datatype="html">
+        <source>Your roles</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/dashboard/pages/dashboard.page.ts</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboard.roles.empty" datatype="html">
+        <source>No roles are assigned to your account.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/dashboard/pages/dashboard.page.ts</context>
+          <context context-type="linenumber">29,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboard.permissions.title" datatype="html">
+        <source>Permissions</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/dashboard/pages/dashboard.page.ts</context>
+          <context context-type="linenumber">37,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboard.permissions.help" datatype="html">
+        <source> Permissions granted to your account. Screens you cannot use are hidden from the menu. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/dashboard/pages/dashboard.page.ts</context>
+          <context context-type="linenumber">42,44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="status.forbidden.heading" datatype="html">
+        <source>You do not have access to this page</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/errors/pages/forbidden.page.ts</context>
+          <context context-type="linenumber">12,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="status.forbidden.body" datatype="html">
+        <source> Ask an administrator if you need access. Your menu shows the screens available to you. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/errors/pages/forbidden.page.ts</context>
+          <context context-type="linenumber">14,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="status.backToDashboard" datatype="html">
+        <source>Back to dashboard</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/errors/pages/forbidden.page.ts</context>
+          <context context-type="linenumber">16,20</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/errors/pages/not-found.page.ts</context>
+          <context context-type="linenumber">14,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="status.notFound.heading" datatype="html">
+        <source>Page not found</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/errors/pages/not-found.page.ts</context>
+          <context context-type="linenumber">12,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="status.notFound.body" datatype="html">
+        <source>The page you are looking for does not exist or has moved.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/errors/pages/not-found.page.ts</context>
+          <context context-type="linenumber">13,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="theme.switchToLight" datatype="html">
+        <source>Switch to light theme</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/ui/theme-toggle/theme-toggle.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="theme.switchToDark" datatype="html">
+        <source>Switch to dark theme</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/ui/theme-toggle/theme-toggle.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
       </trans-unit>
     </body>
   </file>

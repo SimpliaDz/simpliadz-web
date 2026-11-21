@@ -2,9 +2,45 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en-US" target-language="ar" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="title.signIn" datatype="html"><source>Sign in | SimpliaDz</source><target>تسجيل الدخول | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.forgotPassword" datatype="html"><source>Reset password | SimpliaDz</source><target>إعادة تعيين كلمة المرور | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.resetPassword" datatype="html"><source>Choose a password | SimpliaDz</source><target>اختيار كلمة مرور | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.dashboard" datatype="html"><source>Dashboard | SimpliaDz</source><target>لوحة التحكم | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.accountSecurity" datatype="html"><source>Security | SimpliaDz</source><target>الأمان | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.forbidden" datatype="html"><source>Access denied | SimpliaDz</source><target>الوصول مرفوض | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.notFound" datatype="html"><source>Page not found | SimpliaDz</source><target>الصفحة غير موجودة | SimpliaDz</target></trans-unit>
+      <trans-unit id="nav.section.overview" datatype="html"><source>Overview</source><target>نظرة عامة</target></trans-unit>
+      <trans-unit id="nav.dashboard" datatype="html"><source>Dashboard</source><target>لوحة التحكم</target></trans-unit>
+      <trans-unit id="nav.section.account" datatype="html"><source>Account</source><target>الحساب</target></trans-unit>
+      <trans-unit id="nav.accountSecurity" datatype="html"><source>Security</source><target>الأمان</target></trans-unit>
       <trans-unit id="app.tagline" datatype="html"><source>Business management</source><target>إدارة الأعمال</target></trans-unit>
-      <trans-unit id="home.welcome" datatype="html"><source>Welcome to SimpliaDz</source><target>مرحبًا بك في SimpliaDz</target></trans-unit>
-      <trans-unit id="home.introduction" datatype="html"><source> The frontend foundation is ready. The next slice will establish authentication. </source><target>الأساس الأمامي جاهز. ستنشئ الخطوة التالية المصادقة.</target></trans-unit>
+      <trans-unit id="shell.toggleNavigation" datatype="html"><source>Toggle navigation</source><target>تبديل التنقل</target></trans-unit>
+      <trans-unit id="shell.userMenu" datatype="html"><source>Open user menu</source><target>فتح قائمة المستخدم</target></trans-unit>
+      <trans-unit id="shell.signOut" datatype="html"><source>Sign out</source><target>تسجيل الخروج</target></trans-unit>
+      <trans-unit id="shell.mainNavigation" datatype="html"><source>Main</source><target>الرئيسية</target></trans-unit>
+      <trans-unit id="account.security.heading" datatype="html"><source>Security</source><target>الأمان</target></trans-unit>
+      <trans-unit id="account.security.subtitle" datatype="html"><source> Change your password. You will be signed out on every device and must sign in again. </source><target>غيّر كلمة المرور. سيتم تسجيل خروجك من جميع الأجهزة ويجب عليك تسجيل الدخول مجددًا.</target></trans-unit>
+      <trans-unit id="account.security.currentPassword" datatype="html"><source>Current password</source><target>كلمة المرور الحالية</target></trans-unit>
+      <trans-unit id="validation.required" datatype="html"><source>This field is required.</source><target>هذا الحقل مطلوب.</target></trans-unit>
+      <trans-unit id="account.security.newPassword" datatype="html"><source>New password</source><target>كلمة المرور الجديدة</target></trans-unit>
+      <trans-unit id="validation.passwordMinLength" datatype="html"><source>Use at least 8 characters.</source><target>استخدم 8 أحرف على الأقل.</target></trans-unit>
+      <trans-unit id="account.security.confirmPassword" datatype="html"><source>Confirm new password</source><target>تأكيد كلمة المرور الجديدة</target></trans-unit>
+      <trans-unit id="validation.passwordMismatch" datatype="html"><source> The passwords do not match. </source><target>كلمتا المرور غير متطابقتين.</target></trans-unit>
+      <trans-unit id="account.security.submit" datatype="html"><source>Change password</source><target>تغيير كلمة المرور</target></trans-unit>
+      <trans-unit id="account.security.failed" datatype="html"><source>We could not change your password. Check your current password and try again.</source><target>تعذّر تغيير كلمة المرور. تحقّق من كلمة المرور الحالية وأعد المحاولة.</target></trans-unit>
+      <trans-unit id="auth.login.passwordChanged" datatype="html"><source> Your password was changed. Sign in again to continue. </source><target>تم تغيير كلمة المرور. سجّل الدخول مجددًا للمتابعة.</target></trans-unit>
+      <trans-unit id="dashboard.heading" datatype="html"><source>Welcome back</source><target>مرحبًا بعودتك</target></trans-unit>
+      <trans-unit id="dashboard.roles.title" datatype="html"><source>Your roles</source><target>أدوارك</target></trans-unit>
+      <trans-unit id="dashboard.roles.empty" datatype="html"><source>No roles are assigned to your account.</source><target>لم يتم تعيين أي أدوار لحسابك.</target></trans-unit>
+      <trans-unit id="dashboard.permissions.title" datatype="html"><source>Permissions</source><target>الصلاحيات</target></trans-unit>
+      <trans-unit id="dashboard.permissions.help" datatype="html"><source> Permissions granted to your account. Screens you cannot use are hidden from the menu. </source><target>الصلاحيات الممنوحة لحسابك. تُخفى الشاشات غير المتاحة لك من القائمة.</target></trans-unit>
+      <trans-unit id="status.forbidden.heading" datatype="html"><source>You do not have access to this page</source><target>ليست لديك صلاحية الوصول إلى هذه الصفحة</target></trans-unit>
+      <trans-unit id="status.forbidden.body" datatype="html"><source> Ask an administrator if you need access. Your menu shows the screens available to you. </source><target>اطلب من المسؤول صلاحية الوصول إن احتجتها. تعرض القائمة الشاشات المتاحة لك.</target></trans-unit>
+      <trans-unit id="status.backToDashboard" datatype="html"><source>Back to dashboard</source><target>العودة إلى لوحة التحكم</target></trans-unit>
+      <trans-unit id="status.notFound.heading" datatype="html"><source>Page not found</source><target>الصفحة غير موجودة</target></trans-unit>
+      <trans-unit id="status.notFound.body" datatype="html"><source>The page you are looking for does not exist or has moved.</source><target>الصفحة التي تبحث عنها غير موجودة أو تم نقلها.</target></trans-unit>
+      <trans-unit id="theme.switchToLight" datatype="html"><source>Switch to light theme</source><target>التبديل إلى السمة الفاتحة</target></trans-unit>
+      <trans-unit id="theme.switchToDark" datatype="html"><source>Switch to dark theme</source><target>التبديل إلى السمة الداكنة</target></trans-unit>
     </body>
   </file>
 </xliff>
