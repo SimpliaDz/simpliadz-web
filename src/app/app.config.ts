@@ -1,7 +1,13 @@
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
-import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
+import {
+  ApplicationConfig,
+  inject,
+  provideBrowserGlobalErrorListeners,
+  provideAppInitializer,
+} from '@angular/core';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideRouter, withInMemoryScrolling } from '@angular/router';
+import { MatIconRegistry } from '@angular/material/icon';
 import { provideAppRuntimeConfig } from './core/config/app-config.service';
 import { provideLocaleBootstrap } from './core/i18n/locale-bootstrap.service';
 import { authInterceptor } from './core/api/interceptors/auth.interceptor';
@@ -12,8 +18,14 @@ import { routes } from './app.routes';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
+    // Order matters: authInterceptor attaches the bearer token first, then refreshInterceptor
+    // handles a 401 by refreshing and replaying the request.
     provideHttpClient(withInterceptors([authInterceptor, refreshInterceptor])),
     provideAnimationsAsync(),
+    // mat-icon ligatures use the Material Symbols font loaded in index.html.
+    provideAppInitializer(() => {
+      inject(MatIconRegistry).setDefaultFontSetClass('material-symbols-outlined');
+    }),
     provideAppRuntimeConfig(),
     provideLocaleBootstrap(),
     provideTheme(),

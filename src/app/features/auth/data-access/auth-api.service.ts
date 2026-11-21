@@ -25,4 +25,11 @@ export class AuthApiService {
       newPassword,
     });
   }
+
+  changePassword(currentPassword: string, newPassword: string): Observable<void> {
+    return this.http.post<void>(this.apiUrl.path('/auth/change-password'), {
+      currentPassword,
+      newPassword,
+    });
+  }
 }
