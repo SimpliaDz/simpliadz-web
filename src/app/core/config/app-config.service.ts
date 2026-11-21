@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable, InjectionToken, inject, provideAppInitializer } from '@angular/core';
+import { Injectable, inject, provideAppInitializer } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
 
 export interface AppConfig {
@@ -29,10 +29,6 @@ export class AppConfigService {
     this.config = { apiBaseUrl: loaded.apiBaseUrl.replace(/\/$/, '') };
   }
 }
-
-export const APP_CONFIG = new InjectionToken<AppConfig>('APP_CONFIG', {
-  factory: () => inject(AppConfigService).value,
-});
 
 export function provideAppRuntimeConfig() {
   return provideAppInitializer(() => inject(AppConfigService).load());

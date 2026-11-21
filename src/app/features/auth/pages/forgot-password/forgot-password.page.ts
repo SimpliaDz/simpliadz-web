@@ -21,7 +21,7 @@ import { AuthApiService } from '../../data-access/auth-api.service';
     <main class="auth-page">
       <mat-card class="auth-card">
         <mat-card-header>
-          <mat-card-title>Reset your password</mat-card-title>
+          <mat-card-title><h1>Reset your password</h1></mat-card-title>
           <mat-card-subtitle>Enter your email address to begin.</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>

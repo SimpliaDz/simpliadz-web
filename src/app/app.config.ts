@@ -6,6 +6,7 @@ import { provideAppRuntimeConfig } from './core/config/app-config.service';
 import { provideLocaleBootstrap } from './core/i18n/locale-bootstrap.service';
 import { authInterceptor } from './core/api/interceptors/auth.interceptor';
 import { refreshInterceptor } from './core/api/interceptors/refresh.interceptor';
+import { provideTheme } from './core/theme/theme.service';
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
@@ -15,6 +16,7 @@ export const appConfig: ApplicationConfig = {
     provideAnimationsAsync(),
     provideAppRuntimeConfig(),
     provideLocaleBootstrap(),
+    provideTheme(),
     provideRouter(routes, withInMemoryScrolling({ scrollPositionRestoration: 'top' })),
   ],
 };

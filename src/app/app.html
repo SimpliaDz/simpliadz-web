@@ -6,6 +6,15 @@
       i18n="Application tagline|A concise product description in the global header@@app.tagline"
       >Business management</span
     >
+    <span class="app-shell__spacer"></span>
+    <button
+      mat-icon-button
+      type="button"
+      (click)="theme.toggle()"
+      [attr.aria-label]="theme.isDark() ? 'Switch to light theme' : 'Switch to dark theme'"
+    >
+      <mat-icon>{{ theme.isDark() ? 'light_mode' : 'dark_mode' }}</mat-icon>
+    </button>
   </header>
 
   <section class="app-shell__content">

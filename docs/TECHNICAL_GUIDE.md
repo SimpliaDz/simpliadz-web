@@ -125,7 +125,7 @@ Angular bootstrap
 
 For local development it is set to `/api`. `proxy.conf.json` forwards that prefix to `http://localhost:5278` and removes the prefix before sending the request. This avoids a browser CORS dependency during local development. A production host must route `/api` to its API origin, or replace this public runtime configuration with an approved API base URL. Do not put credentials, refresh tokens, connection strings, or tenant data in this file. It is public deployment configuration.
 
-Application code reads configuration through the `APP_CONFIG` injection token or `AppConfigService`; it must not hard-code API origins in feature code. This lets the same compiled bundle move between local, test, and production API environments.
+Application code reads configuration through `AppConfigService`; it must not hard-code API origins in feature code. Consumers that build request URLs must read the current `value` when making the request, rather than capturing the pre-bootstrap default configuration. This lets the same compiled bundle move between local, test, and production API environments.
 
 ## 5. Routing and feature loading
 
@@ -242,7 +242,13 @@ padding-left: 1rem;
 margin-right: 0.5rem;
 ```
 
-## 9. Testing and quality gates
+## 9. Light and dark theme
+
+Angular Material provides the color tokens used by both the application shell and Material controls. `ThemeService` selects a `light` or `dark` color scheme by setting `data-theme` on the root HTML element; the global CSS changes `color-scheme` accordingly. A header icon button toggles the theme and stores the user choice in local storage under `simpliadz.theme`.
+
+Use Material system tokens such as `--mat-sys-surface`, `--mat-sys-on-surface`, and `--mat-sys-outline-variant` for application-level colors. Do not add per-component `.dark` selectors or hard-coded light colors unless a visual exception is intentionally documented. This keeps custom UI aligned with Material controls in both themes.
+
+## 10. Testing and quality gates
 
 Run these commands locally before opening a pull request:
 
@@ -269,7 +275,7 @@ Do not write a browser test for every component. Use E2E tests for cross-browser
 
 GitHub Actions in `.github/workflows/ci.yml` repeats install, lint, tests, and build on pushes and pull requests. It is the required quality gate; local pre-commit automation is optional convenience, not the source of truth.
 
-## 10. Git and dependency rules
+## 11. Git and dependency rules
 
 - Use Yarn only. `yarn.lock` is committed; `package-lock.json` must never be added.
 - Use `yarn install --immutable` in CI and on a clean checkout to catch lockfile drift.
@@ -277,7 +283,7 @@ GitHub Actions in `.github/workflows/ci.yml` repeats install, lint, tests, and b
 - Keep commits focused: tooling, a single feature slice, tests, and documentation updates should be reviewable as a coherent change.
 - Do not commit API keys, token values, tenant secrets, or production runtime configuration.
 
-## 11. Adding a new feature: recommended recipe
+## 12. Adding a new feature: recommended recipe
 
 For a new Inventory feature such as Brands:
 
@@ -292,12 +298,13 @@ For a new Inventory feature such as Brands:
 9. Mark new UI copy for localization, refresh XLIFF files, and verify the Arabic layout.
 10. Update this guide if the feature introduces a new cross-cutting pattern.
 
-## 12. Current decisions and intentional deferrals
+## 13. Current decisions and intentional deferrals
 
 | Decision                                                                                   | Status                                                                    |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------- |
 | Standalone Angular, strict TypeScript, Yarn 4                                              | Implemented                                                               |
 | Angular Material/CDK and global Material theme                                             | Implemented                                                               |
+| Persisted light/dark theme toggle using Material color schemes                             | Implemented                                                               |
 | Runtime API configuration                                                                  | Implemented; API URL is deployment-provided                               |
 | English/French/Arabic build-time localization and RTL bootstrap                            | Implemented                                                               |
 | ESLint, Prettier, Vitest, Playwright, CI                                                   | Implemented                                                               |

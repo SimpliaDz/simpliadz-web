@@ -1,15 +1,16 @@
 import { Injectable, inject } from '@angular/core';
-import { APP_CONFIG } from '../config/app-config.service';
+import { AppConfigService } from '../config/app-config.service';
 
 @Injectable({ providedIn: 'root' })
 export class ApiUrlService {
-  private readonly config = inject(APP_CONFIG);
+  private readonly config = inject(AppConfigService);
 
   path(path: string): string {
-    return `${this.config.apiBaseUrl}/${path.replace(/^\//, '')}`;
+    return `${this.config.value.apiBaseUrl}/${path.replace(/^\//, '')}`;
   }
 
   isApiUrl(url: string): boolean {
-    return url === this.config.apiBaseUrl || url.startsWith(`${this.config.apiBaseUrl}/`);
+    const { apiBaseUrl } = this.config.value;
+    return apiBaseUrl.length > 0 && (url === apiBaseUrl || url.startsWith(`${apiBaseUrl}/`));
   }
 }

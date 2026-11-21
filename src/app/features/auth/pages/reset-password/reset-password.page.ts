@@ -21,7 +21,7 @@ import { AuthApiService } from '../../data-access/auth-api.service';
     <main class="auth-page">
       <mat-card class="auth-card">
         <mat-card-header>
-          <mat-card-title>Choose a new password</mat-card-title>
+          <mat-card-title><h1>Choose a new password</h1></mat-card-title>
           <mat-card-subtitle
             >Use the reset token from your password reset request.</mat-card-subtitle
           >
