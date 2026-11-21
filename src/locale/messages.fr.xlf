@@ -6,11 +6,48 @@
       <trans-unit id="title.forgotPassword" datatype="html"><source>Reset password | SimpliaDz</source><target>Réinitialiser le mot de passe | SimpliaDz</target></trans-unit>
       <trans-unit id="title.resetPassword" datatype="html"><source>Choose a password | SimpliaDz</source><target>Choisir un mot de passe | SimpliaDz</target></trans-unit>
       <trans-unit id="title.dashboard" datatype="html"><source>Dashboard | SimpliaDz</source><target>Tableau de bord | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.organization" datatype="html"><source>Organization | SimpliaDz</source><target>Organisation | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.brands" datatype="html"><source>Brands | SimpliaDz</source><target>Marques | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.categories" datatype="html"><source>Categories | SimpliaDz</source><target>Catégories | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.attributes" datatype="html"><source>Attributes | SimpliaDz</source><target>Attributs | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.attribute" datatype="html"><source>Attribute | SimpliaDz</source><target>Attribut | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.products" datatype="html"><source>Products | SimpliaDz</source><target>Produits | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.newProduct" datatype="html"><source>New product | SimpliaDz</source><target>Nouveau produit | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.product" datatype="html"><source>Product | SimpliaDz</source><target>Produit | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.editProduct" datatype="html"><source>Edit product | SimpliaDz</source><target>Modifier le produit | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.newVariant" datatype="html"><source>New variant | SimpliaDz</source><target>Nouvelle variante | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.variant" datatype="html"><source>Variant | SimpliaDz</source><target>Variante | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.locations" datatype="html"><source>Locations | SimpliaDz</source><target>Emplacements | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.newLocation" datatype="html"><source>New location | SimpliaDz</source><target>Nouvel emplacement | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.editLocation" datatype="html"><source>Edit location | SimpliaDz</source><target>Modifier l’emplacement | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.priceLists" datatype="html"><source>Price lists | SimpliaDz</source><target>Listes de prix | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.users" datatype="html"><source>Users | SimpliaDz</source><target>Utilisateurs | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.newUser" datatype="html"><source>New user | SimpliaDz</source><target>Nouvel utilisateur | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.user" datatype="html"><source>User | SimpliaDz</source><target>Utilisateur | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.roles" datatype="html"><source>Roles | SimpliaDz</source><target>Rôles | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.role" datatype="html"><source>Role | SimpliaDz</source><target>Rôle | SimpliaDz</target></trans-unit>
       <trans-unit id="title.accountSecurity" datatype="html"><source>Security | SimpliaDz</source><target>Sécurité | SimpliaDz</target></trans-unit>
       <trans-unit id="title.forbidden" datatype="html"><source>Access denied | SimpliaDz</source><target>Accès refusé | SimpliaDz</target></trans-unit>
       <trans-unit id="title.notFound" datatype="html"><source>Page not found | SimpliaDz</source><target>Page introuvable | SimpliaDz</target></trans-unit>
+      <trans-unit id="error.network" datatype="html"><source>We could not reach the server. Check your connection and try again.</source><target>Impossible de joindre le serveur. Vérifiez votre connexion et réessayez.</target></trans-unit>
+      <trans-unit id="error.sessionExpired" datatype="html"><source>Your session has ended. Sign in again to continue.</source><target>Votre session a pris fin. Reconnectez-vous pour continuer.</target></trans-unit>
+      <trans-unit id="error.forbidden" datatype="html"><source>You do not have permission to do this.</source><target>Vous n’avez pas l’autorisation de faire cela.</target></trans-unit>
+      <trans-unit id="error.notFound" datatype="html"><source>The requested item could not be found.</source><target>L’élément demandé est introuvable.</target></trans-unit>
       <trans-unit id="nav.section.overview" datatype="html"><source>Overview</source><target>Vue d’ensemble</target></trans-unit>
       <trans-unit id="nav.dashboard" datatype="html"><source>Dashboard</source><target>Tableau de bord</target></trans-unit>
+      <trans-unit id="nav.section.catalogue" datatype="html"><source>Catalogue</source><target>Catalogue</target></trans-unit>
+      <trans-unit id="nav.products" datatype="html"><source>Products</source><target>Produits</target></trans-unit>
+      <trans-unit id="nav.brands" datatype="html"><source>Brands</source><target>Marques</target></trans-unit>
+      <trans-unit id="nav.categories" datatype="html"><source>Categories</source><target>Catégories</target></trans-unit>
+      <trans-unit id="nav.attributes" datatype="html"><source>Attributes</source><target>Attributs</target></trans-unit>
+      <trans-unit id="nav.section.inventory" datatype="html"><source>Inventory</source><target>Stock</target></trans-unit>
+      <trans-unit id="nav.locations" datatype="html"><source>Locations</source><target>Emplacements</target></trans-unit>
+      <trans-unit id="nav.priceLists" datatype="html"><source>Price lists</source><target>Listes de prix</target></trans-unit>
+      <trans-unit id="nav.section.business" datatype="html"><source>Business</source><target>Entreprise</target></trans-unit>
+      <trans-unit id="nav.organization" datatype="html"><source>Organization</source><target>Organisation</target></trans-unit>
+      <trans-unit id="nav.section.administration" datatype="html"><source>Administration</source><target>Administration</target></trans-unit>
+      <trans-unit id="nav.users" datatype="html"><source>Users</source><target>Utilisateurs</target></trans-unit>
+      <trans-unit id="nav.roles" datatype="html"><source>Roles</source><target>Rôles</target></trans-unit>
       <trans-unit id="nav.section.account" datatype="html"><source>Account</source><target>Compte</target></trans-unit>
       <trans-unit id="nav.accountSecurity" datatype="html"><source>Security</source><target>Sécurité</target></trans-unit>
       <trans-unit id="app.tagline" datatype="html"><source>Business management</source><target>Gestion d’entreprise</target></trans-unit>
@@ -28,10 +65,235 @@
       <trans-unit id="validation.passwordMismatch" datatype="html"><source> The passwords do not match. </source><target>Les mots de passe ne correspondent pas.</target></trans-unit>
       <trans-unit id="account.security.submit" datatype="html"><source>Change password</source><target>Modifier le mot de passe</target></trans-unit>
       <trans-unit id="account.security.failed" datatype="html"><source>We could not change your password. Check your current password and try again.</source><target>Impossible de modifier votre mot de passe. Vérifiez votre mot de passe actuel et réessayez.</target></trans-unit>
+      <trans-unit id="common.save" datatype="html"><source>Save</source><target>Enregistrer</target></trans-unit>
+      <trans-unit id="common.retry" datatype="html"><source>Try again</source><target>Réessayer</target></trans-unit>
+      <trans-unit id="roles.readOnly" datatype="html"><source>You can view this role but not change it.</source><target>Vous pouvez consulter ce rôle sans le modifier.</target></trans-unit>
+      <trans-unit id="roles.detail.heading" datatype="html"><source>Role</source><target>Rôle</target></trans-unit>
+      <trans-unit id="roles.detail.subtitle" datatype="html"><source>Tick the permissions this role grants, then save.</source><target>Cochez les autorisations accordées par ce rôle, puis enregistrez.</target></trans-unit>
+      <trans-unit id="roles.backToList" datatype="html"><source>All roles</source><target>Tous les rôles</target></trans-unit>
+      <trans-unit id="roles.detail.loadFailed" datatype="html"><source>We could not load this role</source><target>Impossible de charger ce rôle</target></trans-unit>
+      <trans-unit id="roles.detail.noPermissions" datatype="html"><source>No permissions are defined yet</source><target>Aucune autorisation n’est encore définie</target></trans-unit>
+      <trans-unit id="roles.detail.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="roles.saved" datatype="html"><source>Permissions saved.</source><target>Autorisations enregistrées.</target></trans-unit>
+      <trans-unit id="roles.permissionsFailed" datatype="html"><source>We could not save the permissions.</source><target>Impossible d’enregistrer les autorisations.</target></trans-unit>
+      <trans-unit id="roles.subtitle" datatype="html"><source>Roles bundle permissions. A user gets every permission of every role they hold.</source><target>Les rôles regroupent des autorisations. Un utilisateur reçoit toutes les autorisations de ses rôles.</target></trans-unit>
+      <trans-unit id="roles.field.name" datatype="html"><source>Role name</source><target>Nom du rôle</target></trans-unit>
+      <trans-unit id="roles.create" datatype="html"><source>Create role</source><target>Créer le rôle</target></trans-unit>
+      <trans-unit id="common.name" datatype="html"><source>Name</source><target>Nom</target></trans-unit>
+      <trans-unit id="common.actions" datatype="html"><source>Actions</source><target>Actions</target></trans-unit>
+      <trans-unit id="roles.permissions" datatype="html"><source>Permissions</source><target>Autorisations</target></trans-unit>
+      <trans-unit id="roles.heading" datatype="html"><source>Roles</source><target>Rôles</target></trans-unit>
+      <trans-unit id="roles.loadFailed" datatype="html"><source>We could not load roles</source><target>Impossible de charger les rôles</target></trans-unit>
+      <trans-unit id="roles.empty.title" datatype="html"><source>No roles yet</source><target>Aucun rôle pour le moment</target></trans-unit>
+      <trans-unit id="roles.empty.message" datatype="html"><source>Create a role, then choose the permissions it grants.</source><target>Créez un rôle, puis choisissez les autorisations qu’il accorde.</target></trans-unit>
+      <trans-unit id="roles.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="roles.saveFailed" datatype="html"><source>We could not create the role.</source><target>Impossible de créer le rôle.</target></trans-unit>
+      <trans-unit id="users.create.subtitle" datatype="html"><source>The user signs in with this email and password. Share the password securely.</source><target>L’utilisateur se connecte avec cet e-mail et ce mot de passe. Transmettez-le de façon sécurisée.</target></trans-unit>
+      <trans-unit id="users.firstName" datatype="html"><source>First name</source><target>Prénom</target></trans-unit>
+      <trans-unit id="users.lastName" datatype="html"><source>Last name</source><target>Nom</target></trans-unit>
+      <trans-unit id="users.email" datatype="html"><source>Email</source><target>E-mail</target></trans-unit>
+      <trans-unit id="validation.email" datatype="html"><source>Enter a valid email address.</source><target>Saisissez une adresse e-mail valide.</target></trans-unit>
+      <trans-unit id="users.password" datatype="html"><source>Temporary password</source><target>Mot de passe temporaire</target></trans-unit>
+      <trans-unit id="users.passwordHint" datatype="html"><source>At least 8 characters with upper and lower case letters, a digit and a symbol.</source><target>Au moins 8 caractères, avec majuscules, minuscules, un chiffre et un symbole.</target></trans-unit>
+      <trans-unit id="users.roles" datatype="html"><source>Roles</source><target>Rôles</target></trans-unit>
+      <trans-unit id="common.cancel" datatype="html"><source>Cancel</source><target>Annuler</target></trans-unit>
+      <trans-unit id="common.create" datatype="html"><source>Create</source><target>Créer</target></trans-unit>
+      <trans-unit id="users.create.heading" datatype="html"><source>New user</source><target>Nouvel utilisateur</target></trans-unit>
+      <trans-unit id="users.backToList" datatype="html"><source>All users</source><target>Tous les utilisateurs</target></trans-unit>
+      <trans-unit id="users.create.loadFailed" datatype="html"><source>We could not load the roles</source><target>Impossible de charger les rôles</target></trans-unit>
+      <trans-unit id="users.create.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="users.created" datatype="html"><source>User created.</source><target>Utilisateur créé.</target></trans-unit>
+      <trans-unit id="users.saveFailed" datatype="html"><source>We could not create the user.</source><target>Impossible de créer l’utilisateur.</target></trans-unit>
+      <trans-unit id="common.deactivate" datatype="html"><source>Deactivate</source><target>Désactiver</target></trans-unit>
+      <trans-unit id="common.activate" datatype="html"><source>Activate</source><target>Activer</target></trans-unit>
+      <trans-unit id="users.noRoles" datatype="html"><source>No roles</source><target>Aucun rôle</target></trans-unit>
+      <trans-unit id="users.effectivePermissions" datatype="html"><source>Effective permissions</source><target>Autorisations effectives</target></trans-unit>
+      <trans-unit id="users.noPermissions" datatype="html"><source>This user has no permissions.</source><target>Cet utilisateur n’a aucune autorisation.</target></trans-unit>
+      <trans-unit id="users.emailConfirmed" datatype="html"><source>Email confirmed</source><target>E-mail confirmé</target></trans-unit>
+      <trans-unit id="users.detail.loadFailed" datatype="html"><source>We could not load this user</source><target>Impossible de charger cet utilisateur</target></trans-unit>
+      <trans-unit id="common.active" datatype="html"><source>Active</source><target>Actif</target></trans-unit>
+      <trans-unit id="common.inactive" datatype="html"><source>Inactive</source><target>Inactif</target></trans-unit>
+      <trans-unit id="common.yes" datatype="html"><source>Yes</source><target>Oui</target></trans-unit>
+      <trans-unit id="common.no" datatype="html"><source>No</source><target>Non</target></trans-unit>
+      <trans-unit id="users.detail.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="users.rolesUnchanged" datatype="html"><source>No role changes to save.</source><target>Aucune modification de rôle à enregistrer.</target></trans-unit>
+      <trans-unit id="users.rolesSaved" datatype="html"><source>Roles saved.</source><target>Rôles enregistrés.</target></trans-unit>
+      <trans-unit id="users.rolesFailed" datatype="html"><source>We could not save the roles.</source><target>Impossible d’enregistrer les rôles.</target></trans-unit>
+      <trans-unit id="users.deactivate.title" datatype="html"><source>Deactivate user?</source><target>Désactiver l’utilisateur ?</target></trans-unit>
+      <trans-unit id="users.deactivate.message" datatype="html"><source>The user is signed out everywhere and cannot sign in until reactivated. This change is recorded in the audit trail.</source><target>L’utilisateur est déconnecté partout et ne peut plus se connecter avant d’être réactivé. Cette modification est consignée dans le journal d’audit.</target></trans-unit>
+      <trans-unit id="users.activated" datatype="html"><source>User activated.</source><target>Utilisateur activé.</target></trans-unit>
+      <trans-unit id="users.deactivated" datatype="html"><source>User deactivated.</source><target>Utilisateur désactivé.</target></trans-unit>
+      <trans-unit id="users.statusFailed" datatype="html"><source>The user status could not be changed.</source><target>Impossible de modifier le statut de l’utilisateur.</target></trans-unit>
+      <trans-unit id="users.subtitle" datatype="html"><source>People who sign in to this organization. Access comes from their roles.</source><target>Les personnes qui se connectent à cette organisation. Les accès viennent de leurs rôles.</target></trans-unit>
+      <trans-unit id="users.create" datatype="html"><source>New user</source><target>Nouvel utilisateur</target></trans-unit>
+      <trans-unit id="common.search" datatype="html"><source>Search</source><target>Rechercher</target></trans-unit>
+      <trans-unit id="common.showInactive" datatype="html"><source> Show inactive </source><target>Afficher les éléments inactifs</target></trans-unit>
+      <trans-unit id="users.name" datatype="html"><source>Name</source><target>Nom</target></trans-unit>
+      <trans-unit id="common.status" datatype="html"><source>Status</source><target>Statut</target></trans-unit>
+      <trans-unit id="users.heading" datatype="html"><source>Users</source><target>Utilisateurs</target></trans-unit>
+      <trans-unit id="users.loadFailed" datatype="html"><source>We could not load users</source><target>Impossible de charger les utilisateurs</target></trans-unit>
+      <trans-unit id="users.empty.title" datatype="html"><source>No users match</source><target>Aucun utilisateur ne correspond</target></trans-unit>
+      <trans-unit id="users.empty.message" datatype="html"><source>Try another search, or add a user.</source><target>Essayez une autre recherche ou ajoutez un utilisateur.</target></trans-unit>
+      <trans-unit id="users.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
       <trans-unit id="auth.login.passwordChanged" datatype="html"><source> Your password was changed. Sign in again to continue. </source><target>Votre mot de passe a été modifié. Reconnectez-vous pour continuer.</target></trans-unit>
+      <trans-unit id="attributes.detail.note" datatype="html"><source>Attribute names are fixed after creation.</source><target>Le nom d’un attribut ne peut plus être modifié après sa création.</target></trans-unit>
+      <trans-unit id="attributes.values" datatype="html"><source>Values</source><target>Valeurs</target></trans-unit>
+      <trans-unit id="attributes.noValuesHint" datatype="html"><source>No values yet. Add the first value below.</source><target>Aucune valeur pour le moment. Ajoutez la première ci-dessous.</target></trans-unit>
+      <trans-unit id="attributes.value.field" datatype="html"><source>Value</source><target>Valeur</target></trans-unit>
+      <trans-unit id="attributes.displayOrder" datatype="html"><source>Display order</source><target>Ordre d’affichage</target></trans-unit>
+      <trans-unit id="attributes.addValue" datatype="html"><source>Add a value</source><target>Ajouter une valeur</target></trans-unit>
+      <trans-unit id="validation.nonNegative" datatype="html"><source>Use zero or a positive number.</source><target>Saisissez zéro ou un nombre positif.</target></trans-unit>
+      <trans-unit id="common.add" datatype="html"><source>Add value</source><target>Ajouter</target></trans-unit>
+      <trans-unit id="attributes.detail.heading" datatype="html"><source>Attribute</source><target>Attribut</target></trans-unit>
+      <trans-unit id="attributes.detail.loadFailed" datatype="html"><source>We could not load this attribute</source><target>Impossible de charger cet attribut</target></trans-unit>
+      <trans-unit id="attributes.backToList" datatype="html"><source>All attributes</source><target>Tous les attributs</target></trans-unit>
+      <trans-unit id="attributes.detail.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="attributes.orderSaved" datatype="html"><source>Display order saved.</source><target>Ordre d’affichage enregistré.</target></trans-unit>
+      <trans-unit id="attributes.orderFailed" datatype="html"><source>The display order could not be saved.</source><target>Impossible d’enregistrer l’ordre d’affichage.</target></trans-unit>
+      <trans-unit id="attributes.valueFailed" datatype="html"><source>We could not add the value.</source><target>Impossible d’ajouter la valeur.</target></trans-unit>
+      <trans-unit id="attributes.subtitle" datatype="html"><source>Attributes such as color or size define the options a variant can take.</source><target>Les attributs, comme la couleur ou la taille, définissent les options possibles d’une variante.</target></trans-unit>
+      <trans-unit id="attributes.create" datatype="html"><source>New attribute</source><target>Nouvel attribut</target></trans-unit>
+      <trans-unit id="common.viewDetails" datatype="html"><source>View</source><target>Voir</target></trans-unit>
+      <trans-unit id="attributes.heading" datatype="html"><source>Attributes</source><target>Attributs</target></trans-unit>
+      <trans-unit id="attributes.loadFailed" datatype="html"><source>We could not load attributes</source><target>Impossible de charger les attributs</target></trans-unit>
+      <trans-unit id="attributes.empty.title" datatype="html"><source>No attributes yet</source><target>Aucun attribut pour le moment</target></trans-unit>
+      <trans-unit id="attributes.empty.message" datatype="html"><source>Create an attribute such as Color, then add its values.</source><target>Créez un attribut comme Couleur, puis ajoutez ses valeurs.</target></trans-unit>
+      <trans-unit id="attributes.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="attributes.noValues" datatype="html"><source>No values yet</source><target>Aucune valeur pour le moment</target></trans-unit>
+      <trans-unit id="attributes.saved" datatype="html"><source>Attribute created.</source><target>Attribut créé.</target></trans-unit>
+      <trans-unit id="attributes.dialog.create" datatype="html"><source>New attribute</source><target>Nouvel attribut</target></trans-unit>
+      <trans-unit id="attributes.field.name" datatype="html"><source>Attribute name</source><target>Nom de l’attribut</target></trans-unit>
+      <trans-unit id="attributes.field.nameHint" datatype="html"><source>For example Color or Size. The name cannot be changed later.</source><target>Par exemple Couleur ou Taille. Le nom ne pourra plus être modifié.</target></trans-unit>
+      <trans-unit id="attributes.saveFailed" datatype="html"><source>We could not create the attribute.</source><target>Impossible de créer l’attribut.</target></trans-unit>
+      <trans-unit id="brands.subtitle" datatype="html"><source>Brands group products and appear on product records.</source><target>Les marques regroupent les produits et apparaissent sur leur fiche.</target></trans-unit>
+      <trans-unit id="brands.create" datatype="html"><source>New brand</source><target>Nouvelle marque</target></trans-unit>
+      <trans-unit id="common.updated" datatype="html"><source>Updated</source><target>Mis à jour</target></trans-unit>
+      <trans-unit id="brands.heading" datatype="html"><source>Brands</source><target>Marques</target></trans-unit>
+      <trans-unit id="brands.loadFailed" datatype="html"><source>We could not load brands</source><target>Impossible de charger les marques</target></trans-unit>
+      <trans-unit id="brands.empty.title" datatype="html"><source>No brands yet</source><target>Aucune marque pour le moment</target></trans-unit>
+      <trans-unit id="brands.empty.message" datatype="html"><source>Add the brands you sell so products can be grouped by brand.</source><target>Ajoutez les marques que vous vendez pour regrouper vos produits.</target></trans-unit>
+      <trans-unit id="common.edit" datatype="html"><source>Edit</source><target>Modifier</target></trans-unit>
+      <trans-unit id="brands.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="brands.deactivate.title" datatype="html"><source>Deactivate brand?</source><target>Désactiver la marque ?</target></trans-unit>
+      <trans-unit id="brands.deactivate.message" datatype="html"><source>Products keep this brand, but it can no longer be chosen for new products. Brands cannot be reactivated.</source><target>Les produits gardent cette marque, mais elle ne pourra plus être choisie pour de nouveaux produits. Une marque ne peut pas être réactivée.</target></trans-unit>
+      <trans-unit id="brands.deactivated" datatype="html"><source>Brand deactivated.</source><target>Marque désactivée.</target></trans-unit>
+      <trans-unit id="brands.deactivateFailed" datatype="html"><source>The brand could not be deactivated.</source><target>Impossible de désactiver la marque.</target></trans-unit>
+      <trans-unit id="brands.saved" datatype="html"><source>Brand saved.</source><target>Marque enregistrée.</target></trans-unit>
+      <trans-unit id="brands.field.name" datatype="html"><source>Brand name</source><target>Nom de la marque</target></trans-unit>
+      <trans-unit id="brands.dialog.create" datatype="html"><source>New brand</source><target>Nouvelle marque</target></trans-unit>
+      <trans-unit id="brands.dialog.edit" datatype="html"><source>Edit brand</source><target>Modifier la marque</target></trans-unit>
+      <trans-unit id="brands.saveFailed" datatype="html"><source>We could not save the brand.</source><target>Impossible d’enregistrer la marque.</target></trans-unit>
+      <trans-unit id="categories.subtitle" datatype="html"><source>Group products into a tree. Products can sit under any category.</source><target>Organisez les produits en arborescence. Un produit peut être placé sous n’importe quelle catégorie.</target></trans-unit>
+      <trans-unit id="categories.create" datatype="html"><source>New category</source><target>Nouvelle catégorie</target></trans-unit>
+      <trans-unit id="categories.heading" datatype="html"><source>Categories</source><target>Catégories</target></trans-unit>
+      <trans-unit id="categories.loadFailed" datatype="html"><source>We could not load categories</source><target>Impossible de charger les catégories</target></trans-unit>
+      <trans-unit id="categories.empty.title" datatype="html"><source>No categories yet</source><target>Aucune catégorie pour le moment</target></trans-unit>
+      <trans-unit id="categories.empty.message" datatype="html"><source>Create a top-level category, then nest subcategories under it.</source><target>Créez une catégorie de premier niveau, puis ajoutez des sous-catégories.</target></trans-unit>
+      <trans-unit id="categories.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="categories.deactivate.title" datatype="html"><source>Deactivate category?</source><target>Désactiver la catégorie ?</target></trans-unit>
+      <trans-unit id="categories.deactivate.message" datatype="html"><source>Subcategories and products keep their links. The category can no longer be chosen for new products.</source><target>Les sous-catégories et les produits gardent leurs liens. La catégorie ne pourra plus être choisie pour de nouveaux produits.</target></trans-unit>
+      <trans-unit id="categories.deactivated" datatype="html"><source>Category deactivated.</source><target>Catégorie désactivée.</target></trans-unit>
+      <trans-unit id="categories.deactivateFailed" datatype="html"><source>The category could not be deactivated.</source><target>Impossible de désactiver la catégorie.</target></trans-unit>
+      <trans-unit id="categories.saved" datatype="html"><source>Category saved.</source><target>Catégorie enregistrée.</target></trans-unit>
+      <trans-unit id="categories.field.name" datatype="html"><source>Category name</source><target>Nom de la catégorie</target></trans-unit>
+      <trans-unit id="categories.field.parent" datatype="html"><source>Parent category</source><target>Catégorie parente</target></trans-unit>
+      <trans-unit id="categories.parent.root" datatype="html"><source>Top level</source><target>Premier niveau</target></trans-unit>
+      <trans-unit id="categories.dialog.create" datatype="html"><source>New category</source><target>Nouvelle catégorie</target></trans-unit>
+      <trans-unit id="categories.dialog.edit" datatype="html"><source>Edit category</source><target>Modifier la catégorie</target></trans-unit>
+      <trans-unit id="categories.saveFailed" datatype="html"><source>We could not save the category.</source><target>Impossible d’enregistrer la catégorie.</target></trans-unit>
+      <trans-unit id="products.details" datatype="html"><source>Details</source><target>Détails</target></trans-unit>
+      <trans-unit id="products.code" datatype="html"><source>Code</source><target>Code</target></trans-unit>
+      <trans-unit id="products.field.brand" datatype="html"><source>Brand</source><target>Marque</target></trans-unit>
+      <trans-unit id="products.field.category" datatype="html"><source>Category</source><target>Catégorie</target></trans-unit>
+      <trans-unit id="products.variants" datatype="html"><source>Variants</source><target>Variantes</target></trans-unit>
+      <trans-unit id="products.variants.create" datatype="html"><source>Add variant</source><target>Ajouter une variante</target></trans-unit>
+      <trans-unit id="variants.sku" datatype="html"><source>SKU</source><target>SKU</target></trans-unit>
+      <trans-unit id="variants.barcode" datatype="html"><source>Barcode</source><target>Code-barres</target></trans-unit>
+      <trans-unit id="variants.retailPrice" datatype="html"><source>Retail price</source><target>Prix de détail</target></trans-unit>
+      <trans-unit id="products.detail.loadFailed" datatype="html"><source>We could not load this product</source><target>Impossible de charger ce produit</target></trans-unit>
+      <trans-unit id="products.noVariants.title" datatype="html"><source>No variants yet</source><target>Aucune variante pour le moment</target></trans-unit>
+      <trans-unit id="products.noVariants.message" datatype="html"><source>A variant is the sellable and stockable form of a product, for example a size and color. Add the first one.</source><target>Une variante est la forme vendable et stockable d’un produit, par exemple une taille et une couleur. Ajoutez la première.</target></trans-unit>
+      <trans-unit id="products.backToList" datatype="html"><source>All products</source><target>Tous les produits</target></trans-unit>
+      <trans-unit id="products.detail.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="products.deactivate.title" datatype="html"><source>Deactivate product?</source><target>Désactiver le produit ?</target></trans-unit>
+      <trans-unit id="products.deactivate.message" datatype="html"><source>Its variants stay as they are, but the product is hidden from new work. Products cannot be reactivated.</source><target>Ses variantes restent en place, mais le produit n’apparaît plus dans les nouveaux travaux. Un produit ne peut pas être réactivé.</target></trans-unit>
+      <trans-unit id="products.deactivated" datatype="html"><source>Product deactivated.</source><target>Produit désactivé.</target></trans-unit>
+      <trans-unit id="products.deactivateFailed" datatype="html"><source>The product could not be deactivated.</source><target>Impossible de désactiver le produit.</target></trans-unit>
+      <trans-unit id="products.field.name" datatype="html"><source>Product name</source><target>Nom du produit</target></trans-unit>
+      <trans-unit id="products.field.codeHint" datatype="html"><source>Optional. Stored in upper case and must be unique.</source><target>Facultatif. Enregistré en majuscules et doit être unique.</target></trans-unit>
+      <trans-unit id="common.none" datatype="html"><source>None</source><target>Aucun</target></trans-unit>
+      <trans-unit id="products.field.description" datatype="html"><source>Description</source><target>Description</target></trans-unit>
+      <trans-unit id="products.form.loadFailed" datatype="html"><source>We could not load the product form</source><target>Impossible de charger le formulaire produit</target></trans-unit>
+      <trans-unit id="products.form.editHeading" datatype="html"><source>Edit product</source><target>Modifier le produit</target></trans-unit>
+      <trans-unit id="products.form.createHeading" datatype="html"><source>New product</source><target>Nouveau produit</target></trans-unit>
+      <trans-unit id="products.form.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="products.saved" datatype="html"><source>Product saved.</source><target>Produit enregistré.</target></trans-unit>
+      <trans-unit id="products.created" datatype="html"><source>Product created.</source><target>Produit créé.</target></trans-unit>
+      <trans-unit id="products.saveFailed" datatype="html"><source>We could not save the product.</source><target>Impossible d’enregistrer le produit.</target></trans-unit>
+      <trans-unit id="common.inactiveSuffix" datatype="html"><source>(inactive)</source><target>(inactif)</target></trans-unit>
+      <trans-unit id="products.subtitle" datatype="html"><source>Products describe what you sell. Stock and prices belong to their variants.</source><target>Les produits décrivent ce que vous vendez. Le stock et les prix appartiennent aux variantes.</target></trans-unit>
+      <trans-unit id="products.create" datatype="html"><source>New product</source><target>Nouveau produit</target></trans-unit>
+      <trans-unit id="products.search" datatype="html"><source>Search products</source><target>Rechercher des produits</target></trans-unit>
+      <trans-unit id="common.all" datatype="html"><source>All</source><target>Tous</target></trans-unit>
+      <trans-unit id="common.apply" datatype="html"><source>Apply</source><target>Appliquer</target></trans-unit>
+      <trans-unit id="products.lookup" datatype="html"><source>Find a variant by SKU or barcode</source><target>Trouver une variante par SKU ou code-barres</target></trans-unit>
+      <trans-unit id="products.lookup.action" datatype="html"><source>Find variant</source><target>Trouver la variante</target></trans-unit>
+      <trans-unit id="products.variantCount" datatype="html"><source>Variants</source><target>Variantes</target></trans-unit>
+      <trans-unit id="products.heading" datatype="html"><source>Products</source><target>Produits</target></trans-unit>
+      <trans-unit id="products.loadFailed" datatype="html"><source>We could not load products</source><target>Impossible de charger les produits</target></trans-unit>
+      <trans-unit id="products.empty.title" datatype="html"><source>No products match</source><target>Aucun produit ne correspond</target></trans-unit>
+      <trans-unit id="products.empty.message" datatype="html"><source>Try another search, or add your first product.</source><target>Essayez une autre recherche ou ajoutez votre premier produit.</target></trans-unit>
+      <trans-unit id="products.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="products.lookupFailed" datatype="html"><source>The lookup failed.</source><target>La recherche a échoué.</target></trans-unit>
+      <trans-unit id="products.lookupNotFound" datatype="html"><source>No variant has that SKU or barcode.</source><target>Aucune variante ne correspond à ce SKU ou code-barres.</target></trans-unit>
+      <trans-unit id="variants.create.goToAttributes" datatype="html"><source>Go to attributes</source><target>Aller aux attributs</target></trans-unit>
+      <trans-unit id="variants.section.identity" datatype="html"><source>Identity and prices</source><target>Identité et prix</target></trans-unit>
+      <trans-unit id="variants.barcodeHint" datatype="html"><source>Optional. You can generate one later.</source><target>Facultatif. Vous pourrez en générer un plus tard.</target></trans-unit>
+      <trans-unit id="variants.wholesalePrice" datatype="html"><source>Wholesale price</source><target>Prix de gros</target></trans-unit>
+      <trans-unit id="variants.legacyPriceHint" datatype="html"><source>Legacy field. Selling uses price lists.</source><target>Champ historique. La vente utilise les listes de prix.</target></trans-unit>
+      <trans-unit id="variants.section.attributes" datatype="html"><source>Attribute values</source><target>Valeurs d’attributs</target></trans-unit>
+      <trans-unit id="variants.attributesHint" datatype="html"><source>Choose one value per attribute. A variant needs at least one value.</source><target>Choisissez une valeur par attribut. Une variante a besoin d’au moins une valeur.</target></trans-unit>
+      <trans-unit id="variants.create.heading" datatype="html"><source>New variant</source><target>Nouvelle variante</target></trans-unit>
+      <trans-unit id="variants.create.loadFailed" datatype="html"><source>We could not load the variant form</source><target>Impossible de charger le formulaire de variante</target></trans-unit>
+      <trans-unit id="variants.create.noAttributes.title" datatype="html"><source>Add attributes first</source><target>Ajoutez d’abord des attributs</target></trans-unit>
+      <trans-unit id="variants.create.noAttributes.message" datatype="html"><source>Variants are described by attribute values such as color or size. Create an attribute with values, then come back.</source><target>Les variantes se décrivent par des valeurs d’attributs, comme la couleur ou la taille. Créez un attribut avec ses valeurs, puis revenez.</target></trans-unit>
+      <trans-unit id="variants.create.backToProduct" datatype="html"><source>Back to product</source><target>Retour au produit</target></trans-unit>
+      <trans-unit id="variants.create.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="variants.create.needAttribute" datatype="html"><source>Choose at least one attribute value.</source><target>Choisissez au moins une valeur d’attribut.</target></trans-unit>
+      <trans-unit id="variants.created" datatype="html"><source>Variant created.</source><target>Variante créée.</target></trans-unit>
+      <trans-unit id="variants.saveFailed" datatype="html"><source>We could not create the variant.</source><target>Impossible de créer la variante.</target></trans-unit>
+      <trans-unit id="variants.attributes" datatype="html"><source>Attributes</source><target>Attributs</target></trans-unit>
+      <trans-unit id="variants.noAttributes" datatype="html"><source>No attribute values.</source><target>Aucune valeur d’attribut.</target></trans-unit>
+      <trans-unit id="variants.generateBarcode" datatype="html"><source>Generate barcode</source><target>Générer un code-barres</target></trans-unit>
+      <trans-unit id="variants.section.identifiers" datatype="html"><source>Identifiers</source><target>Identifiants</target></trans-unit>
+      <trans-unit id="variants.auditNotice" datatype="html"><source>Changes to SKU and barcode are recorded in the audit trail.</source><target>Les modifications du SKU et du code-barres sont consignées dans le journal d’audit.</target></trans-unit>
+      <trans-unit id="variants.section.prices" datatype="html"><source>Prices by price list</source><target>Prix par liste de prix</target></trans-unit>
+      <trans-unit id="priceLists.name" datatype="html"><source>Price list</source><target>Liste de prix</target></trans-unit>
+      <trans-unit id="priceLists.currency" datatype="html"><source>Currency</source><target>Devise</target></trans-unit>
+      <trans-unit id="priceLists.price" datatype="html"><source>Price</source><target>Prix</target></trans-unit>
+      <trans-unit id="priceLists.notPriced" datatype="html"><source>Not priced</source><target>Sans prix</target></trans-unit>
+      <trans-unit id="priceLists.newPrice" datatype="html"><source>New price</source><target>Nouveau prix</target></trans-unit>
+      <trans-unit id="variants.detail.loadFailed" datatype="html"><source>We could not load this variant</source><target>Impossible de charger cette variante</target></trans-unit>
+      <trans-unit id="variants.noBarcode" datatype="html"><source>No barcode yet</source><target>Aucun code-barres pour le moment</target></trans-unit>
+      <trans-unit id="priceLists.savePrice" datatype="html"><source>Save price for</source><target>Enregistrer le prix pour</target></trans-unit>
+      <trans-unit id="variants.noLists.title" datatype="html"><source>No price lists</source><target>Aucune liste de prix</target></trans-unit>
+      <trans-unit id="variants.noLists.message" datatype="html"><source>Create a price list before setting prices for this variant.</source><target>Créez une liste de prix avant de fixer les prix de cette variante.</target></trans-unit>
+      <trans-unit id="variants.backToProducts" datatype="html"><source>All products</source><target>Tous les produits</target></trans-unit>
+      <trans-unit id="variants.detail.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="variants.identifiersSaved" datatype="html"><source>Identifiers saved.</source><target>Identifiants enregistrés.</target></trans-unit>
+      <trans-unit id="variants.identifiersFailed" datatype="html"><source>We could not save the identifiers.</source><target>Impossible d’enregistrer les identifiants.</target></trans-unit>
+      <trans-unit id="variants.barcodeGenerated" datatype="html"><source>Barcode generated.</source><target>Code-barres généré.</target></trans-unit>
+      <trans-unit id="variants.barcodeFailed" datatype="html"><source>The barcode could not be generated.</source><target>Impossible de générer le code-barres.</target></trans-unit>
+      <trans-unit id="priceLists.invalid" datatype="html"><source>Enter a price of zero or more.</source><target>Saisissez un prix égal ou supérieur à zéro.</target></trans-unit>
+      <trans-unit id="priceLists.saved" datatype="html"><source>Price saved.</source><target>Prix enregistré.</target></trans-unit>
+      <trans-unit id="priceLists.saveFailed" datatype="html"><source>The price could not be saved.</source><target>Impossible d’enregistrer le prix.</target></trans-unit>
+      <trans-unit id="variants.deactivate.title" datatype="html"><source>Deactivate variant?</source><target>Désactiver la variante ?</target></trans-unit>
+      <trans-unit id="variants.deactivate.message" datatype="html"><source>A deactivated variant cannot be sold or stocked. Variants cannot be reactivated.</source><target>Une variante désactivée ne peut plus être vendue ni stockée. Une variante ne peut pas être réactivée.</target></trans-unit>
+      <trans-unit id="variants.deactivated" datatype="html"><source>Variant deactivated.</source><target>Variante désactivée.</target></trans-unit>
+      <trans-unit id="variants.deactivateFailed" datatype="html"><source>The variant could not be deactivated.</source><target>Impossible de désactiver la variante.</target></trans-unit>
       <trans-unit id="dashboard.heading" datatype="html"><source>Welcome back</source><target>Bon retour</target></trans-unit>
       <trans-unit id="dashboard.roles.title" datatype="html"><source>Your roles</source><target>Vos rôles</target></trans-unit>
-      <trans-unit id="dashboard.roles.empty" datatype="html"><source>No roles are assigned to your account.</source><target>Aucun rôle n’est attribué à votre compte.</target></trans-unit>
+      <trans-unit id="dashboard.roles.empty" datatype="html"><source> No roles are assigned to your account. </source><target>Aucun rôle n’est attribué à votre compte.</target></trans-unit>
       <trans-unit id="dashboard.permissions.title" datatype="html"><source>Permissions</source><target>Autorisations</target></trans-unit>
       <trans-unit id="dashboard.permissions.help" datatype="html"><source> Permissions granted to your account. Screens you cannot use are hidden from the menu. </source><target>Autorisations accordées à votre compte. Les écrans auxquels vous n’avez pas accès sont masqués dans le menu.</target></trans-unit>
       <trans-unit id="status.forbidden.heading" datatype="html"><source>You do not have access to this page</source><target>Vous n’avez pas accès à cette page</target></trans-unit>
@@ -39,6 +301,64 @@
       <trans-unit id="status.backToDashboard" datatype="html"><source>Back to dashboard</source><target>Retour au tableau de bord</target></trans-unit>
       <trans-unit id="status.notFound.heading" datatype="html"><source>Page not found</source><target>Page introuvable</target></trans-unit>
       <trans-unit id="status.notFound.body" datatype="html"><source>The page you are looking for does not exist or has moved.</source><target>La page demandée n’existe pas ou a été déplacée.</target></trans-unit>
+      <trans-unit id="locations.name" datatype="html"><source>Name</source><target>Nom</target></trans-unit>
+      <trans-unit id="locations.code" datatype="html"><source>Code</source><target>Code</target></trans-unit>
+      <trans-unit id="locations.codeHint" datatype="html"><source>Optional. Stored in upper case and must be unique.</source><target>Facultatif. Enregistré en majuscules et doit être unique.</target></trans-unit>
+      <trans-unit id="locations.type" datatype="html"><source>Type</source><target>Type</target></trans-unit>
+      <trans-unit id="locations.type.store" datatype="html"><source>Store</source><target>Magasin</target></trans-unit>
+      <trans-unit id="locations.type.warehouse" datatype="html"><source>Warehouse</source><target>Entrepôt</target></trans-unit>
+      <trans-unit id="locations.phone" datatype="html"><source>Phone</source><target>Téléphone</target></trans-unit>
+      <trans-unit id="locations.address" datatype="html"><source>Address</source><target>Adresse</target></trans-unit>
+      <trans-unit id="locations.form.editHeading" datatype="html"><source>Edit location</source><target>Modifier l’emplacement</target></trans-unit>
+      <trans-unit id="locations.form.createHeading" datatype="html"><source>New location</source><target>Nouvel emplacement</target></trans-unit>
+      <trans-unit id="locations.backToList" datatype="html"><source>All locations</source><target>Tous les emplacements</target></trans-unit>
+      <trans-unit id="locations.form.loadFailed" datatype="html"><source>We could not load this location</source><target>Impossible de charger cet emplacement</target></trans-unit>
+      <trans-unit id="locations.form.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="locations.saved" datatype="html"><source>Location saved.</source><target>Emplacement enregistré.</target></trans-unit>
+      <trans-unit id="locations.saveFailed" datatype="html"><source>We could not save the location.</source><target>Impossible d’enregistrer l’emplacement.</target></trans-unit>
+      <trans-unit id="locations.subtitle" datatype="html"><source>Stores sell stock; warehouses hold it. Stock is tracked per location.</source><target>Les magasins vendent du stock, les entrepôts le conservent. Le stock est suivi par emplacement.</target></trans-unit>
+      <trans-unit id="locations.create" datatype="html"><source>New location</source><target>Nouvel emplacement</target></trans-unit>
+      <trans-unit id="locations.heading" datatype="html"><source>Locations</source><target>Emplacements</target></trans-unit>
+      <trans-unit id="locations.loadFailed" datatype="html"><source>We could not load locations</source><target>Impossible de charger les emplacements</target></trans-unit>
+      <trans-unit id="locations.empty.title" datatype="html"><source>No locations yet</source><target>Aucun emplacement pour le moment</target></trans-unit>
+      <trans-unit id="locations.empty.message" datatype="html"><source>Add the store or warehouse where stock is kept and sold.</source><target>Ajoutez le magasin ou l’entrepôt où le stock est conservé et vendu.</target></trans-unit>
+      <trans-unit id="locations.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="locations.deactivate.title" datatype="html"><source>Deactivate location?</source><target>Désactiver l’emplacement ?</target></trans-unit>
+      <trans-unit id="locations.deactivate.message" datatype="html"><source>Stock history is kept. The location can no longer be used for new stock or sales. Locations cannot be reactivated.</source><target>L’historique du stock est conservé. L’emplacement ne peut plus servir pour de nouveaux stocks ou ventes. Un emplacement ne peut pas être réactivé.</target></trans-unit>
+      <trans-unit id="locations.deactivated" datatype="html"><source>Location deactivated.</source><target>Emplacement désactivé.</target></trans-unit>
+      <trans-unit id="locations.deactivateFailed" datatype="html"><source>The location could not be deactivated.</source><target>Impossible de désactiver l’emplacement.</target></trans-unit>
+      <trans-unit id="priceLists.subtitle" datatype="html"><source>Price lists hold the selling price of each variant. Prices are set per variant from its detail page.</source><target>Les listes de prix contiennent le prix de vente de chaque variante. Les prix se fixent par variante, depuis sa fiche.</target></trans-unit>
+      <trans-unit id="priceLists.create" datatype="html"><source>New price list</source><target>Nouvelle liste de prix</target></trans-unit>
+      <trans-unit id="priceLists.type" datatype="html"><source>Type</source><target>Type</target></trans-unit>
+      <trans-unit id="priceLists.heading" datatype="html"><source>Price lists</source><target>Listes de prix</target></trans-unit>
+      <trans-unit id="priceLists.loadFailed" datatype="html"><source>We could not load price lists</source><target>Impossible de charger les listes de prix</target></trans-unit>
+      <trans-unit id="priceLists.empty.title" datatype="html"><source>No price lists yet</source><target>Aucune liste de prix pour le moment</target></trans-unit>
+      <trans-unit id="priceLists.empty.message" datatype="html"><source>Create a price list such as Retail or Wholesale, then price your variants.</source><target>Créez une liste comme Détail ou Gros, puis fixez les prix de vos variantes.</target></trans-unit>
+      <trans-unit id="priceLists.type.retail" datatype="html"><source>Retail</source><target>Détail</target></trans-unit>
+      <trans-unit id="priceLists.type.wholesale" datatype="html"><source>Wholesale</source><target>Gros</target></trans-unit>
+      <trans-unit id="priceLists.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="priceLists.created" datatype="html"><source>Price list created.</source><target>Liste de prix créée.</target></trans-unit>
+      <trans-unit id="priceLists.dialog.create" datatype="html"><source>New price list</source><target>Nouvelle liste de prix</target></trans-unit>
+      <trans-unit id="priceLists.currencyHint" datatype="html"><source>Three letters, for example DZD.</source><target>Trois lettres, par exemple DZD.</target></trans-unit>
+      <trans-unit id="validation.currency" datatype="html"><source>Use three letters.</source><target>Utilisez trois lettres.</target></trans-unit>
+      <trans-unit id="organization.subtitle" datatype="html"><source>Business identity, contact details, and regional settings.</source><target>Identité de l’entreprise, coordonnées et paramètres régionaux.</target></trans-unit>
+      <trans-unit id="organization.notConfigured" datatype="html"><source> Your organization has not been set up yet. Save the profile to create it. </source><target>Votre organisation n’est pas encore configurée. Enregistrez le profil pour la créer.</target></trans-unit>
+      <trans-unit id="organization.field.name" datatype="html"><source>Name</source><target>Nom</target></trans-unit>
+      <trans-unit id="organization.field.legalName" datatype="html"><source>Legal name</source><target>Raison sociale</target></trans-unit>
+      <trans-unit id="organization.field.email" datatype="html"><source>Email</source><target>E-mail</target></trans-unit>
+      <trans-unit id="organization.field.phone" datatype="html"><source>Phone</source><target>Téléphone</target></trans-unit>
+      <trans-unit id="organization.field.address" datatype="html"><source>Address</source><target>Adresse</target></trans-unit>
+      <trans-unit id="organization.field.currency" datatype="html"><source>Currency code</source><target>Code devise</target></trans-unit>
+      <trans-unit id="organization.field.currencyHint" datatype="html"><source>Three letters, for example DZD.</source><target>Trois lettres, par exemple DZD.</target></trans-unit>
+      <trans-unit id="organization.field.language" datatype="html"><source>Default language</source><target>Langue par défaut</target></trans-unit>
+      <trans-unit id="organization.field.timeZone" datatype="html"><source>Time zone</source><target>Fuseau horaire</target></trans-unit>
+      <trans-unit id="organization.field.timeZoneHint" datatype="html"><source>An IANA name. Leave blank to keep the current value.</source><target>Un nom IANA. Laissez vide pour conserver la valeur actuelle.</target></trans-unit>
+      <trans-unit id="organization.field.active" datatype="html"><source> Organization is active </source><target>L’organisation est active</target></trans-unit>
+      <trans-unit id="organization.heading" datatype="html"><source>Organization</source><target>Organisation</target></trans-unit>
+      <trans-unit id="organization.loadFailed" datatype="html"><source>We could not load the organization</source><target>Impossible de charger l’organisation</target></trans-unit>
+      <trans-unit id="organization.saved" datatype="html"><source>Organization saved.</source><target>Organisation enregistrée.</target></trans-unit>
+      <trans-unit id="organization.saveFailed" datatype="html"><source>We could not save the organization.</source><target>Impossible d’enregistrer l’organisation.</target></trans-unit>
+      <trans-unit id="organization.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
       <trans-unit id="theme.switchToLight" datatype="html"><source>Switch to light theme</source><target>Passer au thème clair</target></trans-unit>
       <trans-unit id="theme.switchToDark" datatype="html"><source>Switch to dark theme</source><target>Passer au thème sombre</target></trans-unit>
     </body>

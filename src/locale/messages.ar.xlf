@@ -6,11 +6,48 @@
       <trans-unit id="title.forgotPassword" datatype="html"><source>Reset password | SimpliaDz</source><target>إعادة تعيين كلمة المرور | SimpliaDz</target></trans-unit>
       <trans-unit id="title.resetPassword" datatype="html"><source>Choose a password | SimpliaDz</source><target>اختيار كلمة مرور | SimpliaDz</target></trans-unit>
       <trans-unit id="title.dashboard" datatype="html"><source>Dashboard | SimpliaDz</source><target>لوحة التحكم | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.organization" datatype="html"><source>Organization | SimpliaDz</source><target>المؤسسة | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.brands" datatype="html"><source>Brands | SimpliaDz</source><target>العلامات التجارية | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.categories" datatype="html"><source>Categories | SimpliaDz</source><target>الفئات | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.attributes" datatype="html"><source>Attributes | SimpliaDz</source><target>الخصائص | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.attribute" datatype="html"><source>Attribute | SimpliaDz</source><target>الخاصية | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.products" datatype="html"><source>Products | SimpliaDz</source><target>المنتجات | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.newProduct" datatype="html"><source>New product | SimpliaDz</source><target>منتج جديد | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.product" datatype="html"><source>Product | SimpliaDz</source><target>المنتج | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.editProduct" datatype="html"><source>Edit product | SimpliaDz</source><target>تعديل المنتج | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.newVariant" datatype="html"><source>New variant | SimpliaDz</source><target>متغير جديد | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.variant" datatype="html"><source>Variant | SimpliaDz</source><target>المتغير | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.locations" datatype="html"><source>Locations | SimpliaDz</source><target>المواقع | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.newLocation" datatype="html"><source>New location | SimpliaDz</source><target>موقع جديد | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.editLocation" datatype="html"><source>Edit location | SimpliaDz</source><target>تعديل الموقع | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.priceLists" datatype="html"><source>Price lists | SimpliaDz</source><target>قوائم الأسعار | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.users" datatype="html"><source>Users | SimpliaDz</source><target>المستخدمون | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.newUser" datatype="html"><source>New user | SimpliaDz</source><target>مستخدم جديد | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.user" datatype="html"><source>User | SimpliaDz</source><target>المستخدم | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.roles" datatype="html"><source>Roles | SimpliaDz</source><target>الأدوار | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.role" datatype="html"><source>Role | SimpliaDz</source><target>الدور | SimpliaDz</target></trans-unit>
       <trans-unit id="title.accountSecurity" datatype="html"><source>Security | SimpliaDz</source><target>الأمان | SimpliaDz</target></trans-unit>
       <trans-unit id="title.forbidden" datatype="html"><source>Access denied | SimpliaDz</source><target>الوصول مرفوض | SimpliaDz</target></trans-unit>
       <trans-unit id="title.notFound" datatype="html"><source>Page not found | SimpliaDz</source><target>الصفحة غير موجودة | SimpliaDz</target></trans-unit>
+      <trans-unit id="error.network" datatype="html"><source>We could not reach the server. Check your connection and try again.</source><target>تعذّر الوصول إلى الخادم. تحقّق من اتصالك وأعد المحاولة.</target></trans-unit>
+      <trans-unit id="error.sessionExpired" datatype="html"><source>Your session has ended. Sign in again to continue.</source><target>انتهت جلستك. سجّل الدخول مجددًا للمتابعة.</target></trans-unit>
+      <trans-unit id="error.forbidden" datatype="html"><source>You do not have permission to do this.</source><target>ليست لديك صلاحية للقيام بهذا.</target></trans-unit>
+      <trans-unit id="error.notFound" datatype="html"><source>The requested item could not be found.</source><target>العنصر المطلوب غير موجود.</target></trans-unit>
       <trans-unit id="nav.section.overview" datatype="html"><source>Overview</source><target>نظرة عامة</target></trans-unit>
       <trans-unit id="nav.dashboard" datatype="html"><source>Dashboard</source><target>لوحة التحكم</target></trans-unit>
+      <trans-unit id="nav.section.catalogue" datatype="html"><source>Catalogue</source><target>الكتالوج</target></trans-unit>
+      <trans-unit id="nav.products" datatype="html"><source>Products</source><target>المنتجات</target></trans-unit>
+      <trans-unit id="nav.brands" datatype="html"><source>Brands</source><target>العلامات التجارية</target></trans-unit>
+      <trans-unit id="nav.categories" datatype="html"><source>Categories</source><target>الفئات</target></trans-unit>
+      <trans-unit id="nav.attributes" datatype="html"><source>Attributes</source><target>الخصائص</target></trans-unit>
+      <trans-unit id="nav.section.inventory" datatype="html"><source>Inventory</source><target>المخزون</target></trans-unit>
+      <trans-unit id="nav.locations" datatype="html"><source>Locations</source><target>المواقع</target></trans-unit>
+      <trans-unit id="nav.priceLists" datatype="html"><source>Price lists</source><target>قوائم الأسعار</target></trans-unit>
+      <trans-unit id="nav.section.business" datatype="html"><source>Business</source><target>المؤسسة</target></trans-unit>
+      <trans-unit id="nav.organization" datatype="html"><source>Organization</source><target>المؤسسة</target></trans-unit>
+      <trans-unit id="nav.section.administration" datatype="html"><source>Administration</source><target>الإدارة</target></trans-unit>
+      <trans-unit id="nav.users" datatype="html"><source>Users</source><target>المستخدمون</target></trans-unit>
+      <trans-unit id="nav.roles" datatype="html"><source>Roles</source><target>الأدوار</target></trans-unit>
       <trans-unit id="nav.section.account" datatype="html"><source>Account</source><target>الحساب</target></trans-unit>
       <trans-unit id="nav.accountSecurity" datatype="html"><source>Security</source><target>الأمان</target></trans-unit>
       <trans-unit id="app.tagline" datatype="html"><source>Business management</source><target>إدارة الأعمال</target></trans-unit>
@@ -28,10 +65,235 @@
       <trans-unit id="validation.passwordMismatch" datatype="html"><source> The passwords do not match. </source><target>كلمتا المرور غير متطابقتين.</target></trans-unit>
       <trans-unit id="account.security.submit" datatype="html"><source>Change password</source><target>تغيير كلمة المرور</target></trans-unit>
       <trans-unit id="account.security.failed" datatype="html"><source>We could not change your password. Check your current password and try again.</source><target>تعذّر تغيير كلمة المرور. تحقّق من كلمة المرور الحالية وأعد المحاولة.</target></trans-unit>
+      <trans-unit id="common.save" datatype="html"><source>Save</source><target>حفظ</target></trans-unit>
+      <trans-unit id="common.retry" datatype="html"><source>Try again</source><target>إعادة المحاولة</target></trans-unit>
+      <trans-unit id="roles.readOnly" datatype="html"><source>You can view this role but not change it.</source><target>يمكنك عرض هذا الدور دون تعديله.</target></trans-unit>
+      <trans-unit id="roles.detail.heading" datatype="html"><source>Role</source><target>الدور</target></trans-unit>
+      <trans-unit id="roles.detail.subtitle" datatype="html"><source>Tick the permissions this role grants, then save.</source><target>حدّد الصلاحيات التي يمنحها هذا الدور ثم احفظ.</target></trans-unit>
+      <trans-unit id="roles.backToList" datatype="html"><source>All roles</source><target>كل الأدوار</target></trans-unit>
+      <trans-unit id="roles.detail.loadFailed" datatype="html"><source>We could not load this role</source><target>تعذّر تحميل هذا الدور</target></trans-unit>
+      <trans-unit id="roles.detail.noPermissions" datatype="html"><source>No permissions are defined yet</source><target>لم تُحدَّد أي صلاحيات بعد</target></trans-unit>
+      <trans-unit id="roles.detail.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
+      <trans-unit id="roles.saved" datatype="html"><source>Permissions saved.</source><target>تم حفظ الصلاحيات.</target></trans-unit>
+      <trans-unit id="roles.permissionsFailed" datatype="html"><source>We could not save the permissions.</source><target>تعذّر حفظ الصلاحيات.</target></trans-unit>
+      <trans-unit id="roles.subtitle" datatype="html"><source>Roles bundle permissions. A user gets every permission of every role they hold.</source><target>تجمع الأدوار صلاحيات. يحصل المستخدم على كل صلاحيات أدواره.</target></trans-unit>
+      <trans-unit id="roles.field.name" datatype="html"><source>Role name</source><target>اسم الدور</target></trans-unit>
+      <trans-unit id="roles.create" datatype="html"><source>Create role</source><target>إنشاء الدور</target></trans-unit>
+      <trans-unit id="common.name" datatype="html"><source>Name</source><target>الاسم</target></trans-unit>
+      <trans-unit id="common.actions" datatype="html"><source>Actions</source><target>الإجراءات</target></trans-unit>
+      <trans-unit id="roles.permissions" datatype="html"><source>Permissions</source><target>الصلاحيات</target></trans-unit>
+      <trans-unit id="roles.heading" datatype="html"><source>Roles</source><target>الأدوار</target></trans-unit>
+      <trans-unit id="roles.loadFailed" datatype="html"><source>We could not load roles</source><target>تعذّر تحميل الأدوار</target></trans-unit>
+      <trans-unit id="roles.empty.title" datatype="html"><source>No roles yet</source><target>لا توجد أدوار بعد</target></trans-unit>
+      <trans-unit id="roles.empty.message" datatype="html"><source>Create a role, then choose the permissions it grants.</source><target>أنشئ دورًا ثم اختر الصلاحيات التي يمنحها.</target></trans-unit>
+      <trans-unit id="roles.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
+      <trans-unit id="roles.saveFailed" datatype="html"><source>We could not create the role.</source><target>تعذّر إنشاء الدور.</target></trans-unit>
+      <trans-unit id="users.create.subtitle" datatype="html"><source>The user signs in with this email and password. Share the password securely.</source><target>يسجّل المستخدم الدخول بهذا البريد وكلمة المرور. شاركها بطريقة آمنة.</target></trans-unit>
+      <trans-unit id="users.firstName" datatype="html"><source>First name</source><target>الاسم الأول</target></trans-unit>
+      <trans-unit id="users.lastName" datatype="html"><source>Last name</source><target>اسم العائلة</target></trans-unit>
+      <trans-unit id="users.email" datatype="html"><source>Email</source><target>البريد الإلكتروني</target></trans-unit>
+      <trans-unit id="validation.email" datatype="html"><source>Enter a valid email address.</source><target>أدخل بريدًا إلكترونيًا صالحًا.</target></trans-unit>
+      <trans-unit id="users.password" datatype="html"><source>Temporary password</source><target>كلمة مرور مؤقتة</target></trans-unit>
+      <trans-unit id="users.passwordHint" datatype="html"><source>At least 8 characters with upper and lower case letters, a digit and a symbol.</source><target>8 أحرف على الأقل، مع حروف كبيرة وصغيرة ورقم ورمز.</target></trans-unit>
+      <trans-unit id="users.roles" datatype="html"><source>Roles</source><target>الأدوار</target></trans-unit>
+      <trans-unit id="common.cancel" datatype="html"><source>Cancel</source><target>إلغاء</target></trans-unit>
+      <trans-unit id="common.create" datatype="html"><source>Create</source><target>إنشاء</target></trans-unit>
+      <trans-unit id="users.create.heading" datatype="html"><source>New user</source><target>مستخدم جديد</target></trans-unit>
+      <trans-unit id="users.backToList" datatype="html"><source>All users</source><target>كل المستخدمين</target></trans-unit>
+      <trans-unit id="users.create.loadFailed" datatype="html"><source>We could not load the roles</source><target>تعذّر تحميل الأدوار</target></trans-unit>
+      <trans-unit id="users.create.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
+      <trans-unit id="users.created" datatype="html"><source>User created.</source><target>تم إنشاء المستخدم.</target></trans-unit>
+      <trans-unit id="users.saveFailed" datatype="html"><source>We could not create the user.</source><target>تعذّر إنشاء المستخدم.</target></trans-unit>
+      <trans-unit id="common.deactivate" datatype="html"><source>Deactivate</source><target>تعطيل</target></trans-unit>
+      <trans-unit id="common.activate" datatype="html"><source>Activate</source><target>تفعيل</target></trans-unit>
+      <trans-unit id="users.noRoles" datatype="html"><source>No roles</source><target>بلا أدوار</target></trans-unit>
+      <trans-unit id="users.effectivePermissions" datatype="html"><source>Effective permissions</source><target>الصلاحيات الفعلية</target></trans-unit>
+      <trans-unit id="users.noPermissions" datatype="html"><source>This user has no permissions.</source><target>ليست لهذا المستخدم أي صلاحيات.</target></trans-unit>
+      <trans-unit id="users.emailConfirmed" datatype="html"><source>Email confirmed</source><target>تم تأكيد البريد</target></trans-unit>
+      <trans-unit id="users.detail.loadFailed" datatype="html"><source>We could not load this user</source><target>تعذّر تحميل هذا المستخدم</target></trans-unit>
+      <trans-unit id="common.active" datatype="html"><source>Active</source><target>نشط</target></trans-unit>
+      <trans-unit id="common.inactive" datatype="html"><source>Inactive</source><target>غير نشط</target></trans-unit>
+      <trans-unit id="common.yes" datatype="html"><source>Yes</source><target>نعم</target></trans-unit>
+      <trans-unit id="common.no" datatype="html"><source>No</source><target>لا</target></trans-unit>
+      <trans-unit id="users.detail.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
+      <trans-unit id="users.rolesUnchanged" datatype="html"><source>No role changes to save.</source><target>لا توجد تغييرات في الأدوار للحفظ.</target></trans-unit>
+      <trans-unit id="users.rolesSaved" datatype="html"><source>Roles saved.</source><target>تم حفظ الأدوار.</target></trans-unit>
+      <trans-unit id="users.rolesFailed" datatype="html"><source>We could not save the roles.</source><target>تعذّر حفظ الأدوار.</target></trans-unit>
+      <trans-unit id="users.deactivate.title" datatype="html"><source>Deactivate user?</source><target>تعطيل المستخدم؟</target></trans-unit>
+      <trans-unit id="users.deactivate.message" datatype="html"><source>The user is signed out everywhere and cannot sign in until reactivated. This change is recorded in the audit trail.</source><target>سيتم تسجيل خروج المستخدم من كل مكان ولن يتمكن من الدخول حتى يُعاد تفعيله. يُسجَّل هذا التغيير في سجل التدقيق.</target></trans-unit>
+      <trans-unit id="users.activated" datatype="html"><source>User activated.</source><target>تم تفعيل المستخدم.</target></trans-unit>
+      <trans-unit id="users.deactivated" datatype="html"><source>User deactivated.</source><target>تم تعطيل المستخدم.</target></trans-unit>
+      <trans-unit id="users.statusFailed" datatype="html"><source>The user status could not be changed.</source><target>تعذّر تغيير حالة المستخدم.</target></trans-unit>
+      <trans-unit id="users.subtitle" datatype="html"><source>People who sign in to this organization. Access comes from their roles.</source><target>الأشخاص الذين يسجّلون الدخول إلى هذه المؤسسة. تأتي الصلاحيات من أدوارهم.</target></trans-unit>
+      <trans-unit id="users.create" datatype="html"><source>New user</source><target>مستخدم جديد</target></trans-unit>
+      <trans-unit id="common.search" datatype="html"><source>Search</source><target>بحث</target></trans-unit>
+      <trans-unit id="common.showInactive" datatype="html"><source> Show inactive </source><target>إظهار غير النشط</target></trans-unit>
+      <trans-unit id="users.name" datatype="html"><source>Name</source><target>الاسم</target></trans-unit>
+      <trans-unit id="common.status" datatype="html"><source>Status</source><target>الحالة</target></trans-unit>
+      <trans-unit id="users.heading" datatype="html"><source>Users</source><target>المستخدمون</target></trans-unit>
+      <trans-unit id="users.loadFailed" datatype="html"><source>We could not load users</source><target>تعذّر تحميل المستخدمين</target></trans-unit>
+      <trans-unit id="users.empty.title" datatype="html"><source>No users match</source><target>لا يوجد مستخدمون مطابقون</target></trans-unit>
+      <trans-unit id="users.empty.message" datatype="html"><source>Try another search, or add a user.</source><target>جرّب بحثًا آخر أو أضف مستخدمًا.</target></trans-unit>
+      <trans-unit id="users.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
       <trans-unit id="auth.login.passwordChanged" datatype="html"><source> Your password was changed. Sign in again to continue. </source><target>تم تغيير كلمة المرور. سجّل الدخول مجددًا للمتابعة.</target></trans-unit>
+      <trans-unit id="attributes.detail.note" datatype="html"><source>Attribute names are fixed after creation.</source><target>لا يمكن تغيير اسم الخاصية بعد إنشائها.</target></trans-unit>
+      <trans-unit id="attributes.values" datatype="html"><source>Values</source><target>القيم</target></trans-unit>
+      <trans-unit id="attributes.noValuesHint" datatype="html"><source>No values yet. Add the first value below.</source><target>لا توجد قيم بعد. أضف الأولى أدناه.</target></trans-unit>
+      <trans-unit id="attributes.value.field" datatype="html"><source>Value</source><target>القيمة</target></trans-unit>
+      <trans-unit id="attributes.displayOrder" datatype="html"><source>Display order</source><target>ترتيب العرض</target></trans-unit>
+      <trans-unit id="attributes.addValue" datatype="html"><source>Add a value</source><target>إضافة قيمة</target></trans-unit>
+      <trans-unit id="validation.nonNegative" datatype="html"><source>Use zero or a positive number.</source><target>أدخل صفرًا أو رقمًا موجبًا.</target></trans-unit>
+      <trans-unit id="common.add" datatype="html"><source>Add value</source><target>إضافة</target></trans-unit>
+      <trans-unit id="attributes.detail.heading" datatype="html"><source>Attribute</source><target>الخاصية</target></trans-unit>
+      <trans-unit id="attributes.detail.loadFailed" datatype="html"><source>We could not load this attribute</source><target>تعذّر تحميل هذه الخاصية</target></trans-unit>
+      <trans-unit id="attributes.backToList" datatype="html"><source>All attributes</source><target>كل الخصائص</target></trans-unit>
+      <trans-unit id="attributes.detail.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
+      <trans-unit id="attributes.orderSaved" datatype="html"><source>Display order saved.</source><target>تم حفظ ترتيب العرض.</target></trans-unit>
+      <trans-unit id="attributes.orderFailed" datatype="html"><source>The display order could not be saved.</source><target>تعذّر حفظ ترتيب العرض.</target></trans-unit>
+      <trans-unit id="attributes.valueFailed" datatype="html"><source>We could not add the value.</source><target>تعذّرت إضافة القيمة.</target></trans-unit>
+      <trans-unit id="attributes.subtitle" datatype="html"><source>Attributes such as color or size define the options a variant can take.</source><target>الخصائص، مثل اللون أو المقاس، تحدد الخيارات المتاحة للمتغير.</target></trans-unit>
+      <trans-unit id="attributes.create" datatype="html"><source>New attribute</source><target>خاصية جديدة</target></trans-unit>
+      <trans-unit id="common.viewDetails" datatype="html"><source>View</source><target>عرض</target></trans-unit>
+      <trans-unit id="attributes.heading" datatype="html"><source>Attributes</source><target>الخصائص</target></trans-unit>
+      <trans-unit id="attributes.loadFailed" datatype="html"><source>We could not load attributes</source><target>تعذّر تحميل الخصائص</target></trans-unit>
+      <trans-unit id="attributes.empty.title" datatype="html"><source>No attributes yet</source><target>لا توجد خصائص بعد</target></trans-unit>
+      <trans-unit id="attributes.empty.message" datatype="html"><source>Create an attribute such as Color, then add its values.</source><target>أنشئ خاصية مثل اللون ثم أضف قيمها.</target></trans-unit>
+      <trans-unit id="attributes.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
+      <trans-unit id="attributes.noValues" datatype="html"><source>No values yet</source><target>لا توجد قيم بعد</target></trans-unit>
+      <trans-unit id="attributes.saved" datatype="html"><source>Attribute created.</source><target>تم إنشاء الخاصية.</target></trans-unit>
+      <trans-unit id="attributes.dialog.create" datatype="html"><source>New attribute</source><target>خاصية جديدة</target></trans-unit>
+      <trans-unit id="attributes.field.name" datatype="html"><source>Attribute name</source><target>اسم الخاصية</target></trans-unit>
+      <trans-unit id="attributes.field.nameHint" datatype="html"><source>For example Color or Size. The name cannot be changed later.</source><target>مثل اللون أو المقاس. لا يمكن تغيير الاسم لاحقًا.</target></trans-unit>
+      <trans-unit id="attributes.saveFailed" datatype="html"><source>We could not create the attribute.</source><target>تعذّر إنشاء الخاصية.</target></trans-unit>
+      <trans-unit id="brands.subtitle" datatype="html"><source>Brands group products and appear on product records.</source><target>تجمع العلامات التجارية المنتجات وتظهر في بطاقة كل منتج.</target></trans-unit>
+      <trans-unit id="brands.create" datatype="html"><source>New brand</source><target>علامة تجارية جديدة</target></trans-unit>
+      <trans-unit id="common.updated" datatype="html"><source>Updated</source><target>آخر تحديث</target></trans-unit>
+      <trans-unit id="brands.heading" datatype="html"><source>Brands</source><target>العلامات التجارية</target></trans-unit>
+      <trans-unit id="brands.loadFailed" datatype="html"><source>We could not load brands</source><target>تعذّر تحميل العلامات التجارية</target></trans-unit>
+      <trans-unit id="brands.empty.title" datatype="html"><source>No brands yet</source><target>لا توجد علامات تجارية بعد</target></trans-unit>
+      <trans-unit id="brands.empty.message" datatype="html"><source>Add the brands you sell so products can be grouped by brand.</source><target>أضف العلامات التي تبيعها لتجميع منتجاتك حسبها.</target></trans-unit>
+      <trans-unit id="common.edit" datatype="html"><source>Edit</source><target>تعديل</target></trans-unit>
+      <trans-unit id="brands.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
+      <trans-unit id="brands.deactivate.title" datatype="html"><source>Deactivate brand?</source><target>تعطيل العلامة التجارية؟</target></trans-unit>
+      <trans-unit id="brands.deactivate.message" datatype="html"><source>Products keep this brand, but it can no longer be chosen for new products. Brands cannot be reactivated.</source><target>ستحتفظ المنتجات بهذه العلامة، لكن لن يمكن اختيارها لمنتجات جديدة. لا يمكن إعادة تفعيل العلامات التجارية.</target></trans-unit>
+      <trans-unit id="brands.deactivated" datatype="html"><source>Brand deactivated.</source><target>تم تعطيل العلامة التجارية.</target></trans-unit>
+      <trans-unit id="brands.deactivateFailed" datatype="html"><source>The brand could not be deactivated.</source><target>تعذّر تعطيل العلامة التجارية.</target></trans-unit>
+      <trans-unit id="brands.saved" datatype="html"><source>Brand saved.</source><target>تم حفظ العلامة التجارية.</target></trans-unit>
+      <trans-unit id="brands.field.name" datatype="html"><source>Brand name</source><target>اسم العلامة التجارية</target></trans-unit>
+      <trans-unit id="brands.dialog.create" datatype="html"><source>New brand</source><target>علامة تجارية جديدة</target></trans-unit>
+      <trans-unit id="brands.dialog.edit" datatype="html"><source>Edit brand</source><target>تعديل العلامة التجارية</target></trans-unit>
+      <trans-unit id="brands.saveFailed" datatype="html"><source>We could not save the brand.</source><target>تعذّر حفظ العلامة التجارية.</target></trans-unit>
+      <trans-unit id="categories.subtitle" datatype="html"><source>Group products into a tree. Products can sit under any category.</source><target>نظّم المنتجات في شجرة. يمكن وضع أي منتج تحت أي فئة.</target></trans-unit>
+      <trans-unit id="categories.create" datatype="html"><source>New category</source><target>فئة جديدة</target></trans-unit>
+      <trans-unit id="categories.heading" datatype="html"><source>Categories</source><target>الفئات</target></trans-unit>
+      <trans-unit id="categories.loadFailed" datatype="html"><source>We could not load categories</source><target>تعذّر تحميل الفئات</target></trans-unit>
+      <trans-unit id="categories.empty.title" datatype="html"><source>No categories yet</source><target>لا توجد فئات بعد</target></trans-unit>
+      <trans-unit id="categories.empty.message" datatype="html"><source>Create a top-level category, then nest subcategories under it.</source><target>أنشئ فئة رئيسية ثم أضف تحتها فئات فرعية.</target></trans-unit>
+      <trans-unit id="categories.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
+      <trans-unit id="categories.deactivate.title" datatype="html"><source>Deactivate category?</source><target>تعطيل الفئة؟</target></trans-unit>
+      <trans-unit id="categories.deactivate.message" datatype="html"><source>Subcategories and products keep their links. The category can no longer be chosen for new products.</source><target>تحتفظ الفئات الفرعية والمنتجات بروابطها. لن يمكن اختيار الفئة لمنتجات جديدة.</target></trans-unit>
+      <trans-unit id="categories.deactivated" datatype="html"><source>Category deactivated.</source><target>تم تعطيل الفئة.</target></trans-unit>
+      <trans-unit id="categories.deactivateFailed" datatype="html"><source>The category could not be deactivated.</source><target>تعذّر تعطيل الفئة.</target></trans-unit>
+      <trans-unit id="categories.saved" datatype="html"><source>Category saved.</source><target>تم حفظ الفئة.</target></trans-unit>
+      <trans-unit id="categories.field.name" datatype="html"><source>Category name</source><target>اسم الفئة</target></trans-unit>
+      <trans-unit id="categories.field.parent" datatype="html"><source>Parent category</source><target>الفئة الأب</target></trans-unit>
+      <trans-unit id="categories.parent.root" datatype="html"><source>Top level</source><target>المستوى الأول</target></trans-unit>
+      <trans-unit id="categories.dialog.create" datatype="html"><source>New category</source><target>فئة جديدة</target></trans-unit>
+      <trans-unit id="categories.dialog.edit" datatype="html"><source>Edit category</source><target>تعديل الفئة</target></trans-unit>
+      <trans-unit id="categories.saveFailed" datatype="html"><source>We could not save the category.</source><target>تعذّر حفظ الفئة.</target></trans-unit>
+      <trans-unit id="products.details" datatype="html"><source>Details</source><target>التفاصيل</target></trans-unit>
+      <trans-unit id="products.code" datatype="html"><source>Code</source><target>الرمز</target></trans-unit>
+      <trans-unit id="products.field.brand" datatype="html"><source>Brand</source><target>العلامة التجارية</target></trans-unit>
+      <trans-unit id="products.field.category" datatype="html"><source>Category</source><target>الفئة</target></trans-unit>
+      <trans-unit id="products.variants" datatype="html"><source>Variants</source><target>المتغيرات</target></trans-unit>
+      <trans-unit id="products.variants.create" datatype="html"><source>Add variant</source><target>إضافة متغير</target></trans-unit>
+      <trans-unit id="variants.sku" datatype="html"><source>SKU</source><target>SKU</target></trans-unit>
+      <trans-unit id="variants.barcode" datatype="html"><source>Barcode</source><target>الباركود</target></trans-unit>
+      <trans-unit id="variants.retailPrice" datatype="html"><source>Retail price</source><target>سعر التجزئة</target></trans-unit>
+      <trans-unit id="products.detail.loadFailed" datatype="html"><source>We could not load this product</source><target>تعذّر تحميل هذا المنتج</target></trans-unit>
+      <trans-unit id="products.noVariants.title" datatype="html"><source>No variants yet</source><target>لا توجد متغيرات بعد</target></trans-unit>
+      <trans-unit id="products.noVariants.message" datatype="html"><source>A variant is the sellable and stockable form of a product, for example a size and color. Add the first one.</source><target>المتغير هو الشكل القابل للبيع والتخزين للمنتج، مثل مقاس ولون محددين. أضف الأول.</target></trans-unit>
+      <trans-unit id="products.backToList" datatype="html"><source>All products</source><target>كل المنتجات</target></trans-unit>
+      <trans-unit id="products.detail.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
+      <trans-unit id="products.deactivate.title" datatype="html"><source>Deactivate product?</source><target>تعطيل المنتج؟</target></trans-unit>
+      <trans-unit id="products.deactivate.message" datatype="html"><source>Its variants stay as they are, but the product is hidden from new work. Products cannot be reactivated.</source><target>ستبقى متغيراته كما هي، لكن المنتج لن يظهر في الأعمال الجديدة. لا يمكن إعادة تفعيل المنتجات.</target></trans-unit>
+      <trans-unit id="products.deactivated" datatype="html"><source>Product deactivated.</source><target>تم تعطيل المنتج.</target></trans-unit>
+      <trans-unit id="products.deactivateFailed" datatype="html"><source>The product could not be deactivated.</source><target>تعذّر تعطيل المنتج.</target></trans-unit>
+      <trans-unit id="products.field.name" datatype="html"><source>Product name</source><target>اسم المنتج</target></trans-unit>
+      <trans-unit id="products.field.codeHint" datatype="html"><source>Optional. Stored in upper case and must be unique.</source><target>اختياري. يُحفظ بالأحرف الكبيرة ويجب أن يكون فريدًا.</target></trans-unit>
+      <trans-unit id="common.none" datatype="html"><source>None</source><target>لا شيء</target></trans-unit>
+      <trans-unit id="products.field.description" datatype="html"><source>Description</source><target>الوصف</target></trans-unit>
+      <trans-unit id="products.form.loadFailed" datatype="html"><source>We could not load the product form</source><target>تعذّر تحميل نموذج المنتج</target></trans-unit>
+      <trans-unit id="products.form.editHeading" datatype="html"><source>Edit product</source><target>تعديل المنتج</target></trans-unit>
+      <trans-unit id="products.form.createHeading" datatype="html"><source>New product</source><target>منتج جديد</target></trans-unit>
+      <trans-unit id="products.form.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
+      <trans-unit id="products.saved" datatype="html"><source>Product saved.</source><target>تم حفظ المنتج.</target></trans-unit>
+      <trans-unit id="products.created" datatype="html"><source>Product created.</source><target>تم إنشاء المنتج.</target></trans-unit>
+      <trans-unit id="products.saveFailed" datatype="html"><source>We could not save the product.</source><target>تعذّر حفظ المنتج.</target></trans-unit>
+      <trans-unit id="common.inactiveSuffix" datatype="html"><source>(inactive)</source><target>(غير نشط)</target></trans-unit>
+      <trans-unit id="products.subtitle" datatype="html"><source>Products describe what you sell. Stock and prices belong to their variants.</source><target>تصف المنتجات ما تبيعه. المخزون والأسعار تخص المتغيرات.</target></trans-unit>
+      <trans-unit id="products.create" datatype="html"><source>New product</source><target>منتج جديد</target></trans-unit>
+      <trans-unit id="products.search" datatype="html"><source>Search products</source><target>البحث عن المنتجات</target></trans-unit>
+      <trans-unit id="common.all" datatype="html"><source>All</source><target>الكل</target></trans-unit>
+      <trans-unit id="common.apply" datatype="html"><source>Apply</source><target>تطبيق</target></trans-unit>
+      <trans-unit id="products.lookup" datatype="html"><source>Find a variant by SKU or barcode</source><target>ابحث عن متغير بالـ SKU أو الباركود</target></trans-unit>
+      <trans-unit id="products.lookup.action" datatype="html"><source>Find variant</source><target>بحث عن المتغير</target></trans-unit>
+      <trans-unit id="products.variantCount" datatype="html"><source>Variants</source><target>المتغيرات</target></trans-unit>
+      <trans-unit id="products.heading" datatype="html"><source>Products</source><target>المنتجات</target></trans-unit>
+      <trans-unit id="products.loadFailed" datatype="html"><source>We could not load products</source><target>تعذّر تحميل المنتجات</target></trans-unit>
+      <trans-unit id="products.empty.title" datatype="html"><source>No products match</source><target>لا توجد منتجات مطابقة</target></trans-unit>
+      <trans-unit id="products.empty.message" datatype="html"><source>Try another search, or add your first product.</source><target>جرّب بحثًا آخر أو أضف أول منتج.</target></trans-unit>
+      <trans-unit id="products.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
+      <trans-unit id="products.lookupFailed" datatype="html"><source>The lookup failed.</source><target>فشل البحث.</target></trans-unit>
+      <trans-unit id="products.lookupNotFound" datatype="html"><source>No variant has that SKU or barcode.</source><target>لا يوجد متغير بهذا الـ SKU أو الباركود.</target></trans-unit>
+      <trans-unit id="variants.create.goToAttributes" datatype="html"><source>Go to attributes</source><target>الانتقال إلى الخصائص</target></trans-unit>
+      <trans-unit id="variants.section.identity" datatype="html"><source>Identity and prices</source><target>الهوية والأسعار</target></trans-unit>
+      <trans-unit id="variants.barcodeHint" datatype="html"><source>Optional. You can generate one later.</source><target>اختياري. يمكنك توليده لاحقًا.</target></trans-unit>
+      <trans-unit id="variants.wholesalePrice" datatype="html"><source>Wholesale price</source><target>سعر الجملة</target></trans-unit>
+      <trans-unit id="variants.legacyPriceHint" datatype="html"><source>Legacy field. Selling uses price lists.</source><target>حقل قديم. البيع يستخدم قوائم الأسعار.</target></trans-unit>
+      <trans-unit id="variants.section.attributes" datatype="html"><source>Attribute values</source><target>قيم الخصائص</target></trans-unit>
+      <trans-unit id="variants.attributesHint" datatype="html"><source>Choose one value per attribute. A variant needs at least one value.</source><target>اختر قيمة واحدة لكل خاصية. يحتاج المتغير إلى قيمة واحدة على الأقل.</target></trans-unit>
+      <trans-unit id="variants.create.heading" datatype="html"><source>New variant</source><target>متغير جديد</target></trans-unit>
+      <trans-unit id="variants.create.loadFailed" datatype="html"><source>We could not load the variant form</source><target>تعذّر تحميل نموذج المتغير</target></trans-unit>
+      <trans-unit id="variants.create.noAttributes.title" datatype="html"><source>Add attributes first</source><target>أضف الخصائص أولًا</target></trans-unit>
+      <trans-unit id="variants.create.noAttributes.message" datatype="html"><source>Variants are described by attribute values such as color or size. Create an attribute with values, then come back.</source><target>تُوصف المتغيرات بقيم خصائص مثل اللون أو المقاس. أنشئ خاصية مع قيمها ثم عُد.</target></trans-unit>
+      <trans-unit id="variants.create.backToProduct" datatype="html"><source>Back to product</source><target>العودة إلى المنتج</target></trans-unit>
+      <trans-unit id="variants.create.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
+      <trans-unit id="variants.create.needAttribute" datatype="html"><source>Choose at least one attribute value.</source><target>اختر قيمة خاصية واحدة على الأقل.</target></trans-unit>
+      <trans-unit id="variants.created" datatype="html"><source>Variant created.</source><target>تم إنشاء المتغير.</target></trans-unit>
+      <trans-unit id="variants.saveFailed" datatype="html"><source>We could not create the variant.</source><target>تعذّر إنشاء المتغير.</target></trans-unit>
+      <trans-unit id="variants.attributes" datatype="html"><source>Attributes</source><target>الخصائص</target></trans-unit>
+      <trans-unit id="variants.noAttributes" datatype="html"><source>No attribute values.</source><target>لا توجد قيم خصائص.</target></trans-unit>
+      <trans-unit id="variants.generateBarcode" datatype="html"><source>Generate barcode</source><target>توليد باركود</target></trans-unit>
+      <trans-unit id="variants.section.identifiers" datatype="html"><source>Identifiers</source><target>المعرّفات</target></trans-unit>
+      <trans-unit id="variants.auditNotice" datatype="html"><source>Changes to SKU and barcode are recorded in the audit trail.</source><target>تُسجَّل تغييرات الـ SKU والباركود في سجل التدقيق.</target></trans-unit>
+      <trans-unit id="variants.section.prices" datatype="html"><source>Prices by price list</source><target>الأسعار حسب قائمة الأسعار</target></trans-unit>
+      <trans-unit id="priceLists.name" datatype="html"><source>Price list</source><target>قائمة الأسعار</target></trans-unit>
+      <trans-unit id="priceLists.currency" datatype="html"><source>Currency</source><target>العملة</target></trans-unit>
+      <trans-unit id="priceLists.price" datatype="html"><source>Price</source><target>السعر</target></trans-unit>
+      <trans-unit id="priceLists.notPriced" datatype="html"><source>Not priced</source><target>بلا سعر</target></trans-unit>
+      <trans-unit id="priceLists.newPrice" datatype="html"><source>New price</source><target>السعر الجديد</target></trans-unit>
+      <trans-unit id="variants.detail.loadFailed" datatype="html"><source>We could not load this variant</source><target>تعذّر تحميل هذا المتغير</target></trans-unit>
+      <trans-unit id="variants.noBarcode" datatype="html"><source>No barcode yet</source><target>لا يوجد باركود بعد</target></trans-unit>
+      <trans-unit id="priceLists.savePrice" datatype="html"><source>Save price for</source><target>حفظ السعر لـ</target></trans-unit>
+      <trans-unit id="variants.noLists.title" datatype="html"><source>No price lists</source><target>لا توجد قوائم أسعار</target></trans-unit>
+      <trans-unit id="variants.noLists.message" datatype="html"><source>Create a price list before setting prices for this variant.</source><target>أنشئ قائمة أسعار قبل تحديد أسعار هذا المتغير.</target></trans-unit>
+      <trans-unit id="variants.backToProducts" datatype="html"><source>All products</source><target>كل المنتجات</target></trans-unit>
+      <trans-unit id="variants.detail.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
+      <trans-unit id="variants.identifiersSaved" datatype="html"><source>Identifiers saved.</source><target>تم حفظ المعرّفات.</target></trans-unit>
+      <trans-unit id="variants.identifiersFailed" datatype="html"><source>We could not save the identifiers.</source><target>تعذّر حفظ المعرّفات.</target></trans-unit>
+      <trans-unit id="variants.barcodeGenerated" datatype="html"><source>Barcode generated.</source><target>تم توليد الباركود.</target></trans-unit>
+      <trans-unit id="variants.barcodeFailed" datatype="html"><source>The barcode could not be generated.</source><target>تعذّر توليد الباركود.</target></trans-unit>
+      <trans-unit id="priceLists.invalid" datatype="html"><source>Enter a price of zero or more.</source><target>أدخل سعرًا يساوي صفرًا أو أكبر.</target></trans-unit>
+      <trans-unit id="priceLists.saved" datatype="html"><source>Price saved.</source><target>تم حفظ السعر.</target></trans-unit>
+      <trans-unit id="priceLists.saveFailed" datatype="html"><source>The price could not be saved.</source><target>تعذّر حفظ السعر.</target></trans-unit>
+      <trans-unit id="variants.deactivate.title" datatype="html"><source>Deactivate variant?</source><target>تعطيل المتغير؟</target></trans-unit>
+      <trans-unit id="variants.deactivate.message" datatype="html"><source>A deactivated variant cannot be sold or stocked. Variants cannot be reactivated.</source><target>لا يمكن بيع المتغير المعطّل أو تخزينه. لا يمكن إعادة تفعيل المتغيرات.</target></trans-unit>
+      <trans-unit id="variants.deactivated" datatype="html"><source>Variant deactivated.</source><target>تم تعطيل المتغير.</target></trans-unit>
+      <trans-unit id="variants.deactivateFailed" datatype="html"><source>The variant could not be deactivated.</source><target>تعذّر تعطيل المتغير.</target></trans-unit>
       <trans-unit id="dashboard.heading" datatype="html"><source>Welcome back</source><target>مرحبًا بعودتك</target></trans-unit>
       <trans-unit id="dashboard.roles.title" datatype="html"><source>Your roles</source><target>أدوارك</target></trans-unit>
-      <trans-unit id="dashboard.roles.empty" datatype="html"><source>No roles are assigned to your account.</source><target>لم يتم تعيين أي أدوار لحسابك.</target></trans-unit>
+      <trans-unit id="dashboard.roles.empty" datatype="html"><source> No roles are assigned to your account. </source><target>لم يتم تعيين أي أدوار لحسابك.</target></trans-unit>
       <trans-unit id="dashboard.permissions.title" datatype="html"><source>Permissions</source><target>الصلاحيات</target></trans-unit>
       <trans-unit id="dashboard.permissions.help" datatype="html"><source> Permissions granted to your account. Screens you cannot use are hidden from the menu. </source><target>الصلاحيات الممنوحة لحسابك. تُخفى الشاشات غير المتاحة لك من القائمة.</target></trans-unit>
       <trans-unit id="status.forbidden.heading" datatype="html"><source>You do not have access to this page</source><target>ليست لديك صلاحية الوصول إلى هذه الصفحة</target></trans-unit>
@@ -39,6 +301,64 @@
       <trans-unit id="status.backToDashboard" datatype="html"><source>Back to dashboard</source><target>العودة إلى لوحة التحكم</target></trans-unit>
       <trans-unit id="status.notFound.heading" datatype="html"><source>Page not found</source><target>الصفحة غير موجودة</target></trans-unit>
       <trans-unit id="status.notFound.body" datatype="html"><source>The page you are looking for does not exist or has moved.</source><target>الصفحة التي تبحث عنها غير موجودة أو تم نقلها.</target></trans-unit>
+      <trans-unit id="locations.name" datatype="html"><source>Name</source><target>الاسم</target></trans-unit>
+      <trans-unit id="locations.code" datatype="html"><source>Code</source><target>الرمز</target></trans-unit>
+      <trans-unit id="locations.codeHint" datatype="html"><source>Optional. Stored in upper case and must be unique.</source><target>اختياري. يُحفظ بالأحرف الكبيرة ويجب أن يكون فريدًا.</target></trans-unit>
+      <trans-unit id="locations.type" datatype="html"><source>Type</source><target>النوع</target></trans-unit>
+      <trans-unit id="locations.type.store" datatype="html"><source>Store</source><target>متجر</target></trans-unit>
+      <trans-unit id="locations.type.warehouse" datatype="html"><source>Warehouse</source><target>مستودع</target></trans-unit>
+      <trans-unit id="locations.phone" datatype="html"><source>Phone</source><target>الهاتف</target></trans-unit>
+      <trans-unit id="locations.address" datatype="html"><source>Address</source><target>العنوان</target></trans-unit>
+      <trans-unit id="locations.form.editHeading" datatype="html"><source>Edit location</source><target>تعديل الموقع</target></trans-unit>
+      <trans-unit id="locations.form.createHeading" datatype="html"><source>New location</source><target>موقع جديد</target></trans-unit>
+      <trans-unit id="locations.backToList" datatype="html"><source>All locations</source><target>كل المواقع</target></trans-unit>
+      <trans-unit id="locations.form.loadFailed" datatype="html"><source>We could not load this location</source><target>تعذّر تحميل هذا الموقع</target></trans-unit>
+      <trans-unit id="locations.form.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
+      <trans-unit id="locations.saved" datatype="html"><source>Location saved.</source><target>تم حفظ الموقع.</target></trans-unit>
+      <trans-unit id="locations.saveFailed" datatype="html"><source>We could not save the location.</source><target>تعذّر حفظ الموقع.</target></trans-unit>
+      <trans-unit id="locations.subtitle" datatype="html"><source>Stores sell stock; warehouses hold it. Stock is tracked per location.</source><target>المتاجر تبيع المخزون والمستودعات تحفظه. يُتتبَّع المخزون حسب الموقع.</target></trans-unit>
+      <trans-unit id="locations.create" datatype="html"><source>New location</source><target>موقع جديد</target></trans-unit>
+      <trans-unit id="locations.heading" datatype="html"><source>Locations</source><target>المواقع</target></trans-unit>
+      <trans-unit id="locations.loadFailed" datatype="html"><source>We could not load locations</source><target>تعذّر تحميل المواقع</target></trans-unit>
+      <trans-unit id="locations.empty.title" datatype="html"><source>No locations yet</source><target>لا توجد مواقع بعد</target></trans-unit>
+      <trans-unit id="locations.empty.message" datatype="html"><source>Add the store or warehouse where stock is kept and sold.</source><target>أضف المتجر أو المستودع الذي يُحفظ فيه المخزون ويُباع منه.</target></trans-unit>
+      <trans-unit id="locations.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
+      <trans-unit id="locations.deactivate.title" datatype="html"><source>Deactivate location?</source><target>تعطيل الموقع؟</target></trans-unit>
+      <trans-unit id="locations.deactivate.message" datatype="html"><source>Stock history is kept. The location can no longer be used for new stock or sales. Locations cannot be reactivated.</source><target>يُحتفظ بسجل المخزون. لن يمكن استخدام الموقع لمخزون أو مبيعات جديدة. لا يمكن إعادة تفعيل المواقع.</target></trans-unit>
+      <trans-unit id="locations.deactivated" datatype="html"><source>Location deactivated.</source><target>تم تعطيل الموقع.</target></trans-unit>
+      <trans-unit id="locations.deactivateFailed" datatype="html"><source>The location could not be deactivated.</source><target>تعذّر تعطيل الموقع.</target></trans-unit>
+      <trans-unit id="priceLists.subtitle" datatype="html"><source>Price lists hold the selling price of each variant. Prices are set per variant from its detail page.</source><target>تحتفظ قوائم الأسعار بسعر البيع لكل متغير. تُحدَّد الأسعار لكل متغير من صفحته.</target></trans-unit>
+      <trans-unit id="priceLists.create" datatype="html"><source>New price list</source><target>قائمة أسعار جديدة</target></trans-unit>
+      <trans-unit id="priceLists.type" datatype="html"><source>Type</source><target>النوع</target></trans-unit>
+      <trans-unit id="priceLists.heading" datatype="html"><source>Price lists</source><target>قوائم الأسعار</target></trans-unit>
+      <trans-unit id="priceLists.loadFailed" datatype="html"><source>We could not load price lists</source><target>تعذّر تحميل قوائم الأسعار</target></trans-unit>
+      <trans-unit id="priceLists.empty.title" datatype="html"><source>No price lists yet</source><target>لا توجد قوائم أسعار بعد</target></trans-unit>
+      <trans-unit id="priceLists.empty.message" datatype="html"><source>Create a price list such as Retail or Wholesale, then price your variants.</source><target>أنشئ قائمة مثل التجزئة أو الجملة ثم حدّد أسعار متغيراتك.</target></trans-unit>
+      <trans-unit id="priceLists.type.retail" datatype="html"><source>Retail</source><target>تجزئة</target></trans-unit>
+      <trans-unit id="priceLists.type.wholesale" datatype="html"><source>Wholesale</source><target>جملة</target></trans-unit>
+      <trans-unit id="priceLists.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
+      <trans-unit id="priceLists.created" datatype="html"><source>Price list created.</source><target>تم إنشاء قائمة الأسعار.</target></trans-unit>
+      <trans-unit id="priceLists.dialog.create" datatype="html"><source>New price list</source><target>قائمة أسعار جديدة</target></trans-unit>
+      <trans-unit id="priceLists.currencyHint" datatype="html"><source>Three letters, for example DZD.</source><target>ثلاثة أحرف، مثل DZD.</target></trans-unit>
+      <trans-unit id="validation.currency" datatype="html"><source>Use three letters.</source><target>استخدم ثلاثة أحرف.</target></trans-unit>
+      <trans-unit id="organization.subtitle" datatype="html"><source>Business identity, contact details, and regional settings.</source><target>هوية المؤسسة وبيانات الاتصال والإعدادات الإقليمية.</target></trans-unit>
+      <trans-unit id="organization.notConfigured" datatype="html"><source> Your organization has not been set up yet. Save the profile to create it. </source><target>لم تُعدّ مؤسستك بعد. احفظ الملف لإنشائها.</target></trans-unit>
+      <trans-unit id="organization.field.name" datatype="html"><source>Name</source><target>الاسم</target></trans-unit>
+      <trans-unit id="organization.field.legalName" datatype="html"><source>Legal name</source><target>الاسم القانوني</target></trans-unit>
+      <trans-unit id="organization.field.email" datatype="html"><source>Email</source><target>البريد الإلكتروني</target></trans-unit>
+      <trans-unit id="organization.field.phone" datatype="html"><source>Phone</source><target>الهاتف</target></trans-unit>
+      <trans-unit id="organization.field.address" datatype="html"><source>Address</source><target>العنوان</target></trans-unit>
+      <trans-unit id="organization.field.currency" datatype="html"><source>Currency code</source><target>رمز العملة</target></trans-unit>
+      <trans-unit id="organization.field.currencyHint" datatype="html"><source>Three letters, for example DZD.</source><target>ثلاثة أحرف، مثل DZD.</target></trans-unit>
+      <trans-unit id="organization.field.language" datatype="html"><source>Default language</source><target>اللغة الافتراضية</target></trans-unit>
+      <trans-unit id="organization.field.timeZone" datatype="html"><source>Time zone</source><target>المنطقة الزمنية</target></trans-unit>
+      <trans-unit id="organization.field.timeZoneHint" datatype="html"><source>An IANA name. Leave blank to keep the current value.</source><target>اسم IANA. اتركه فارغًا للإبقاء على القيمة الحالية.</target></trans-unit>
+      <trans-unit id="organization.field.active" datatype="html"><source> Organization is active </source><target>المؤسسة نشطة</target></trans-unit>
+      <trans-unit id="organization.heading" datatype="html"><source>Organization</source><target>المؤسسة</target></trans-unit>
+      <trans-unit id="organization.loadFailed" datatype="html"><source>We could not load the organization</source><target>تعذّر تحميل المؤسسة</target></trans-unit>
+      <trans-unit id="organization.saved" datatype="html"><source>Organization saved.</source><target>تم حفظ المؤسسة.</target></trans-unit>
+      <trans-unit id="organization.saveFailed" datatype="html"><source>We could not save the organization.</source><target>تعذّر حفظ المؤسسة.</target></trans-unit>
+      <trans-unit id="organization.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
       <trans-unit id="theme.switchToLight" datatype="html"><source>Switch to light theme</source><target>التبديل إلى السمة الفاتحة</target></trans-unit>
       <trans-unit id="theme.switchToDark" datatype="html"><source>Switch to dark theme</source><target>التبديل إلى السمة الداكنة</target></trans-unit>
     </body>

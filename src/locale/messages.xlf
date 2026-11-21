@@ -6,49 +6,217 @@
         <source>Sign in | SimpliaDz</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
-          <context context-type="linenumber">14</context>
+          <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.forgotPassword" datatype="html">
         <source>Reset password | SimpliaDz</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
-          <context context-type="linenumber">21</context>
+          <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.resetPassword" datatype="html">
         <source>Choose a password | SimpliaDz</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
-          <context context-type="linenumber">30</context>
+          <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.dashboard" datatype="html">
         <source>Dashboard | SimpliaDz</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
-          <context context-type="linenumber">48</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="title.organization" datatype="html">
+        <source>Organization | SimpliaDz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="title.brands" datatype="html">
+        <source>Brands | SimpliaDz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="title.categories" datatype="html">
+        <source>Categories | SimpliaDz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="title.attributes" datatype="html">
+        <source>Attributes | SimpliaDz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="title.attribute" datatype="html">
+        <source>Attribute | SimpliaDz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">93</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="title.products" datatype="html">
+        <source>Products | SimpliaDz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">102</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="title.newProduct" datatype="html">
+        <source>New product | SimpliaDz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">109</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="title.product" datatype="html">
+        <source>Product | SimpliaDz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">118</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="title.editProduct" datatype="html">
+        <source>Edit product | SimpliaDz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">127</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="title.newVariant" datatype="html">
+        <source>New variant | SimpliaDz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">136</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="title.variant" datatype="html">
+        <source>Variant | SimpliaDz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">145</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="title.locations" datatype="html">
+        <source>Locations | SimpliaDz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">156</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="title.newLocation" datatype="html">
+        <source>New location | SimpliaDz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">163</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="title.editLocation" datatype="html">
+        <source>Edit location | SimpliaDz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">172</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="title.priceLists" datatype="html">
+        <source>Price lists | SimpliaDz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">181</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="title.users" datatype="html">
+        <source>Users | SimpliaDz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">192</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="title.newUser" datatype="html">
+        <source>New user | SimpliaDz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">199</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="title.user" datatype="html">
+        <source>User | SimpliaDz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">208</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="title.roles" datatype="html">
+        <source>Roles | SimpliaDz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">217</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="title.role" datatype="html">
+        <source>Role | SimpliaDz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">224</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.accountSecurity" datatype="html">
         <source>Security | SimpliaDz</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
-          <context context-type="linenumber">54</context>
+          <context context-type="linenumber">235</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.forbidden" datatype="html">
         <source>Access denied | SimpliaDz</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
-          <context context-type="linenumber">60</context>
+          <context context-type="linenumber">241</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.notFound" datatype="html">
         <source>Page not found | SimpliaDz</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
-          <context context-type="linenumber">66</context>
+          <context context-type="linenumber">247</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error.network" datatype="html">
+        <source>We could not reach the server. Check your connection and try again.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/api/api-error-message.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error.sessionExpired" datatype="html">
+        <source>Your session has ended. Sign in again to continue.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/api/api-error-message.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error.forbidden" datatype="html">
+        <source>You do not have permission to do this.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/api/api-error-message.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error.notFound" datatype="html">
+        <source>The requested item could not be found.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/api/api-error-message.ts</context>
+          <context context-type="linenumber">18</context>
         </context-group>
       </trans-unit>
       <trans-unit id="nav.section.overview" datatype="html">
@@ -65,18 +233,109 @@
           <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="nav.section.catalogue" datatype="html">
+        <source>Catalogue</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/layout/navigation.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.products" datatype="html">
+        <source>Products</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/layout/navigation.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.brands" datatype="html">
+        <source>Brands</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/layout/navigation.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.categories" datatype="html">
+        <source>Categories</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/layout/navigation.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.attributes" datatype="html">
+        <source>Attributes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/layout/navigation.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.section.inventory" datatype="html">
+        <source>Inventory</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/layout/navigation.ts</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.locations" datatype="html">
+        <source>Locations</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/layout/navigation.ts</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.priceLists" datatype="html">
+        <source>Price lists</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/layout/navigation.ts</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.section.business" datatype="html">
+        <source>Business</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/layout/navigation.ts</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.organization" datatype="html">
+        <source>Organization</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/layout/navigation.ts</context>
+          <context context-type="linenumber">79</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.section.administration" datatype="html">
+        <source>Administration</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/layout/navigation.ts</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.users" datatype="html">
+        <source>Users</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/layout/navigation.ts</context>
+          <context context-type="linenumber">90</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.roles" datatype="html">
+        <source>Roles</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/layout/navigation.ts</context>
+          <context context-type="linenumber">96</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="nav.section.account" datatype="html">
         <source>Account</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/layout/navigation.ts</context>
-          <context context-type="linenumber">30</context>
+          <context context-type="linenumber">104</context>
         </context-group>
       </trans-unit>
       <trans-unit id="nav.accountSecurity" datatype="html">
         <source>Security</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/layout/navigation.ts</context>
-          <context context-type="linenumber">33</context>
+          <context context-type="linenumber">107</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/layout/shell-layout.component.ts</context>
@@ -87,7 +346,7 @@
         <source>Business management</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/layout/public-layout.component.ts</context>
-          <context context-type="linenumber">13,19</context>
+          <context context-type="linenumber">15,21</context>
         </context-group>
         <note priority="1" from="description">A concise product description in the global header</note>
         <note priority="1" from="meaning">Application tagline</note>
@@ -127,78 +386,1016 @@
         <source>Security</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/account/pages/security.page.ts</context>
-          <context context-type="linenumber">31,32</context>
+          <context context-type="linenumber">38,39</context>
         </context-group>
       </trans-unit>
       <trans-unit id="account.security.subtitle" datatype="html">
         <source> Change your password. You will be signed out on every device and must sign in again. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/account/pages/security.page.ts</context>
-          <context context-type="linenumber">33,37</context>
+          <context context-type="linenumber">40,44</context>
         </context-group>
       </trans-unit>
       <trans-unit id="account.security.currentPassword" datatype="html">
         <source>Current password</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/account/pages/security.page.ts</context>
-          <context context-type="linenumber">41,42</context>
+          <context context-type="linenumber">48,50</context>
         </context-group>
       </trans-unit>
       <trans-unit id="validation.required" datatype="html">
         <source>This field is required.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/account/pages/security.page.ts</context>
-          <context context-type="linenumber">44,46</context>
+          <context context-type="linenumber">56,58</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/account/pages/security.page.ts</context>
-          <context context-type="linenumber">52,53</context>
+          <context context-type="linenumber">69,70</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/account/pages/security.page.ts</context>
+          <context context-type="linenumber">86,88</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/roles/pages/roles.page.ts</context>
+          <context context-type="linenumber">43,45</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-create.page.ts</context>
+          <context context-type="linenumber">51,53</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-create.page.ts</context>
+          <context context-type="linenumber">58,60</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-create.page.ts</context>
+          <context context-type="linenumber">65,66</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-create.page.ts</context>
+          <context context-type="linenumber">75,76</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attribute-detail.page.ts</context>
+          <context context-type="linenumber">96,98</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/ui/attribute-dialog.component.ts</context>
+          <context context-type="linenumber">22,24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/brands/ui/brand-dialog.component.ts</context>
+          <context context-type="linenumber">25,27</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/categories/ui/category-dialog.component.ts</context>
+          <context context-type="linenumber">35,37</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-form.page.ts</context>
+          <context context-type="linenumber">70,72</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-create.page.ts</context>
+          <context context-type="linenumber">53,55</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-create.page.ts</context>
+          <context context-type="linenumber">65,66</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">110,112</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/location-form.page.ts</context>
+          <context context-type="linenumber">45,47</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/location-form.page.ts</context>
           <context context-type="linenumber">62,64</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/price-lists/ui/price-list-dialog.component.ts</context>
+          <context context-type="linenumber">23,25</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/organization/pages/organization.page.ts</context>
+          <context context-type="linenumber">57,59</context>
         </context-group>
       </trans-unit>
       <trans-unit id="account.security.newPassword" datatype="html">
         <source>New password</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/account/pages/security.page.ts</context>
-          <context context-type="linenumber">49,50</context>
+          <context context-type="linenumber">61,63</context>
         </context-group>
       </trans-unit>
       <trans-unit id="validation.passwordMinLength" datatype="html">
         <source>Use at least 8 characters.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/account/pages/security.page.ts</context>
-          <context context-type="linenumber">54,56</context>
+          <context context-type="linenumber">72,75</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-create.page.ts</context>
+          <context context-type="linenumber">77,79</context>
         </context-group>
       </trans-unit>
       <trans-unit id="account.security.confirmPassword" datatype="html">
         <source>Confirm new password</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/account/pages/security.page.ts</context>
-          <context context-type="linenumber">59,60</context>
+          <context context-type="linenumber">78,80</context>
         </context-group>
       </trans-unit>
       <trans-unit id="validation.passwordMismatch" datatype="html">
         <source> The passwords do not match. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/account/pages/security.page.ts</context>
-          <context context-type="linenumber">68,70</context>
+          <context context-type="linenumber">92,94</context>
         </context-group>
       </trans-unit>
       <trans-unit id="account.security.submit" datatype="html">
         <source>Change password</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/account/pages/security.page.ts</context>
-          <context context-type="linenumber">78,80</context>
+          <context context-type="linenumber">102,104</context>
         </context-group>
       </trans-unit>
       <trans-unit id="account.security.failed" datatype="html">
         <source>We could not change your password. Check your current password and try again.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/account/pages/security.page.ts</context>
-          <context context-type="linenumber">158</context>
+          <context context-type="linenumber">182</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="common.save" datatype="html">
+        <source>Save</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/roles/pages/role-detail.page.ts</context>
+          <context context-type="linenumber">36,38</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-detail.page.ts</context>
+          <context context-type="linenumber">85,86</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attribute-detail.page.ts</context>
+          <context context-type="linenumber">80,81</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/brands/ui/brand-dialog.component.ts</context>
+          <context context-type="linenumber">35,37</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/categories/ui/category-dialog.component.ts</context>
+          <context context-type="linenumber">55,57</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-form.page.ts</context>
+          <context context-type="linenumber">113,114</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">124,125</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">170,171</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/location-form.page.ts</context>
+          <context context-type="linenumber">84,85</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/organization/pages/organization.page.ts</context>
+          <context context-type="linenumber">118,119</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="common.retry" datatype="html">
+        <source>Try again</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/roles/pages/role-detail.page.ts</context>
+          <context context-type="linenumber">45,46</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/roles/pages/roles.page.ts</context>
+          <context context-type="linenumber">60,61</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-create.page.ts</context>
+          <context context-type="linenumber">42,43</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-detail.page.ts</context>
+          <context context-type="linenumber">40,41</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/users.page.ts</context>
+          <context context-type="linenumber">61,62</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attribute-detail.page.ts</context>
+          <context context-type="linenumber">46,47</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attributes.page.ts</context>
+          <context context-type="linenumber">44,45</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/brands/pages/brands.page.ts</context>
+          <context context-type="linenumber">65,66</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/categories/pages/categories.page.ts</context>
+          <context context-type="linenumber">60,61</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-detail.page.ts</context>
+          <context context-type="linenumber">54,55</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-form.page.ts</context>
+          <context context-type="linenumber">61,62</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/products.page.ts</context>
+          <context context-type="linenumber">81,82</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-create.page.ts</context>
+          <context context-type="linenumber">39,40</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">52,53</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/location-form.page.ts</context>
+          <context context-type="linenumber">36,37</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/locations.page.ts</context>
+          <context context-type="linenumber">45,46</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/price-lists/pages/price-lists.page.ts</context>
+          <context context-type="linenumber">44,45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="roles.readOnly" datatype="html">
+        <source>You can view this role but not change it.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/roles/pages/role-detail.page.ts</context>
+          <context context-type="linenumber">49,51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="roles.detail.heading" datatype="html">
+        <source>Role</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/roles/pages/role-detail.page.ts</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="roles.detail.subtitle" datatype="html">
+        <source>Tick the permissions this role grants, then save.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/roles/pages/role-detail.page.ts</context>
+          <context context-type="linenumber">104</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="roles.backToList" datatype="html">
+        <source>All roles</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/roles/pages/role-detail.page.ts</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="roles.detail.loadFailed" datatype="html">
+        <source>We could not load this role</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/roles/pages/role-detail.page.ts</context>
+          <context context-type="linenumber">106</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="roles.detail.noPermissions" datatype="html">
+        <source>No permissions are defined yet</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/roles/pages/role-detail.page.ts</context>
+          <context context-type="linenumber">107</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="roles.detail.loadFailedHint" datatype="html">
+        <source>Try again in a moment.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/roles/pages/role-detail.page.ts</context>
+          <context context-type="linenumber">155</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="roles.saved" datatype="html">
+        <source>Permissions saved.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/roles/pages/role-detail.page.ts</context>
+          <context context-type="linenumber">182</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="roles.permissionsFailed" datatype="html">
+        <source>We could not save the permissions.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/roles/pages/role-detail.page.ts</context>
+          <context context-type="linenumber">187</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="roles.subtitle" datatype="html">
+        <source>Roles bundle permissions. A user gets every permission of every role they hold.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/roles/pages/roles.page.ts</context>
+          <context context-type="linenumber">33,34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="roles.field.name" datatype="html">
+        <source>Role name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/roles/pages/roles.page.ts</context>
+          <context context-type="linenumber">40,41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="roles.create" datatype="html">
+        <source>Create role</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/roles/pages/roles.page.ts</context>
+          <context context-type="linenumber">48,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="common.name" datatype="html">
+        <source>Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/roles/pages/roles.page.ts</context>
+          <context context-type="linenumber">68,69</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attributes.page.ts</context>
+          <context context-type="linenumber">52,53</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/brands/pages/brands.page.ts</context>
+          <context context-type="linenumber">79,80</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/categories/pages/categories.page.ts</context>
+          <context context-type="linenumber">70,71</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/products.page.ts</context>
+          <context context-type="linenumber">91,92</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/locations.page.ts</context>
+          <context context-type="linenumber">55,56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="common.actions" datatype="html">
+        <source>Actions</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/roles/pages/roles.page.ts</context>
+          <context context-type="linenumber">72,73</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attributes.page.ts</context>
+          <context context-type="linenumber">62,63</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/brands/pages/brands.page.ts</context>
+          <context context-type="linenumber">96,97</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/categories/pages/categories.page.ts</context>
+          <context context-type="linenumber">89,90</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/products.page.ts</context>
+          <context context-type="linenumber">114,115</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">162,163</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/locations.page.ts</context>
+          <context context-type="linenumber">78,79</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="roles.permissions" datatype="html">
+        <source>Permissions</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/roles/pages/roles.page.ts</context>
+          <context context-type="linenumber">75,77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="roles.heading" datatype="html">
+        <source>Roles</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/roles/pages/roles.page.ts</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="roles.loadFailed" datatype="html">
+        <source>We could not load roles</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/roles/pages/roles.page.ts</context>
+          <context context-type="linenumber">93</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="roles.empty.title" datatype="html">
+        <source>No roles yet</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/roles/pages/roles.page.ts</context>
+          <context context-type="linenumber">94</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="roles.empty.message" datatype="html">
+        <source>Create a role, then choose the permissions it grants.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/roles/pages/roles.page.ts</context>
+          <context context-type="linenumber">95</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="roles.loadFailedHint" datatype="html">
+        <source>Try again in a moment.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/roles/pages/roles.page.ts</context>
+          <context context-type="linenumber">123</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="roles.saveFailed" datatype="html">
+        <source>We could not create the role.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/roles/pages/roles.page.ts</context>
+          <context context-type="linenumber">143</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.create.subtitle" datatype="html">
+        <source>The user signs in with this email and password. Share the password securely.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-create.page.ts</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.firstName" datatype="html">
+        <source>First name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-create.page.ts</context>
+          <context context-type="linenumber">48,49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.lastName" datatype="html">
+        <source>Last name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-create.page.ts</context>
+          <context context-type="linenumber">55,56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.email" datatype="html">
+        <source>Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-create.page.ts</context>
+          <context context-type="linenumber">62,63</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-detail.page.ts</context>
+          <context context-type="linenumber">120,121</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/users.page.ts</context>
+          <context context-type="linenumber">69,70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="validation.email" datatype="html">
+        <source>Enter a valid email address.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-create.page.ts</context>
+          <context context-type="linenumber">67,69</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/organization/pages/organization.page.ts</context>
+          <context context-type="linenumber">70,72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.password" datatype="html">
+        <source>Temporary password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-create.page.ts</context>
+          <context context-type="linenumber">71,72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.passwordHint" datatype="html">
+        <source>At least 8 characters with upper and lower case letters, a digit and a symbol.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-create.page.ts</context>
+          <context context-type="linenumber">73,74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.roles" datatype="html">
+        <source>Roles</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-create.page.ts</context>
+          <context context-type="linenumber">81,82</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-detail.page.ts</context>
+          <context context-type="linenumber">70,71</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-detail.page.ts</context>
+          <context context-type="linenumber">76,77</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/users.page.ts</context>
+          <context context-type="linenumber">79,80</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="common.cancel" datatype="html">
+        <source>Cancel</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-create.page.ts</context>
+          <context context-type="linenumber">95,96</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/ui/attribute-dialog.component.ts</context>
+          <context context-type="linenumber">30,31</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/brands/ui/brand-dialog.component.ts</context>
+          <context context-type="linenumber">33,34</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/categories/ui/category-dialog.component.ts</context>
+          <context context-type="linenumber">53,54</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-form.page.ts</context>
+          <context context-type="linenumber">111,112</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-create.page.ts</context>
+          <context context-type="linenumber">100,101</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/location-form.page.ts</context>
+          <context context-type="linenumber">82,83</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/price-lists/ui/price-list-dialog.component.ts</context>
+          <context context-type="linenumber">47,48</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/ui/confirm-dialog/confirm-dialog.component.ts</context>
+          <context context-type="linenumber">21,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="common.create" datatype="html">
+        <source>Create</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-create.page.ts</context>
+          <context context-type="linenumber">97,99</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/ui/attribute-dialog.component.ts</context>
+          <context context-type="linenumber">32,34</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-create.page.ts</context>
+          <context context-type="linenumber">102,104</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/price-lists/ui/price-list-dialog.component.ts</context>
+          <context context-type="linenumber">49,51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.create.heading" datatype="html">
+        <source>New user</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-create.page.ts</context>
+          <context context-type="linenumber">112</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.backToList" datatype="html">
+        <source>All users</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-create.page.ts</context>
+          <context context-type="linenumber">113</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-detail.page.ts</context>
+          <context context-type="linenumber">144</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.create.loadFailed" datatype="html">
+        <source>We could not load the roles</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-create.page.ts</context>
+          <context context-type="linenumber">114</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.create.loadFailedHint" datatype="html">
+        <source>Try again in a moment.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-create.page.ts</context>
+          <context context-type="linenumber">144</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.created" datatype="html">
+        <source>User created.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-create.page.ts</context>
+          <context context-type="linenumber">169</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.saveFailed" datatype="html">
+        <source>We could not create the user.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-create.page.ts</context>
+          <context context-type="linenumber">174</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="common.deactivate" datatype="html">
+        <source>Deactivate</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-detail.page.ts</context>
+          <context context-type="linenumber">52,54</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-detail.page.ts</context>
+          <context context-type="linenumber">223</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/brands/pages/brands.page.ts</context>
+          <context context-type="linenumber">131</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/brands/pages/brands.page.ts</context>
+          <context context-type="linenumber">181</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/categories/pages/categories.page.ts</context>
+          <context context-type="linenumber">124</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/categories/pages/categories.page.ts</context>
+          <context context-type="linenumber">164</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-detail.page.ts</context>
+          <context context-type="linenumber">65,67</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-detail.page.ts</context>
+          <context context-type="linenumber">211</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">63,65</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">351</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/locations.page.ts</context>
+          <context context-type="linenumber">112</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/locations.page.ts</context>
+          <context context-type="linenumber">147</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="common.activate" datatype="html">
+        <source>Activate</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-detail.page.ts</context>
+          <context context-type="linenumber">57,59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.noRoles" datatype="html">
+        <source>No roles</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-detail.page.ts</context>
+          <context context-type="linenumber">94,96</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/users.page.ts</context>
+          <context context-type="linenumber">110</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.effectivePermissions" datatype="html">
+        <source>Effective permissions</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-detail.page.ts</context>
+          <context context-type="linenumber">103,104</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.noPermissions" datatype="html">
+        <source>This user has no permissions.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-detail.page.ts</context>
+          <context context-type="linenumber">113,115</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.emailConfirmed" datatype="html">
+        <source>Email confirmed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-detail.page.ts</context>
+          <context context-type="linenumber">122,123</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.detail.loadFailed" datatype="html">
+        <source>We could not load this user</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-detail.page.ts</context>
+          <context context-type="linenumber">139</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="common.active" datatype="html">
+        <source>Active</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-detail.page.ts</context>
+          <context context-type="linenumber">140</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/users.page.ts</context>
+          <context context-type="linenumber">108</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/brands/pages/brands.page.ts</context>
+          <context context-type="linenumber">128</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/categories/pages/categories.page.ts</context>
+          <context context-type="linenumber">121</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-detail.page.ts</context>
+          <context context-type="linenumber">169</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/products.page.ts</context>
+          <context context-type="linenumber">62,63</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/products.page.ts</context>
+          <context context-type="linenumber">140</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">207</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/locations.page.ts</context>
+          <context context-type="linenumber">109</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/price-lists/pages/price-lists.page.ts</context>
+          <context context-type="linenumber">91</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="common.inactive" datatype="html">
+        <source>Inactive</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-detail.page.ts</context>
+          <context context-type="linenumber">141</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/users.page.ts</context>
+          <context context-type="linenumber">109</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/brands/pages/brands.page.ts</context>
+          <context context-type="linenumber">129</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/categories/pages/categories.page.ts</context>
+          <context context-type="linenumber">122</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-detail.page.ts</context>
+          <context context-type="linenumber">170</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/products.page.ts</context>
+          <context context-type="linenumber">63,64</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/products.page.ts</context>
+          <context context-type="linenumber">141</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">208</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/locations.page.ts</context>
+          <context context-type="linenumber">110</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/price-lists/pages/price-lists.page.ts</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="common.yes" datatype="html">
+        <source>Yes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-detail.page.ts</context>
+          <context context-type="linenumber">142</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="common.no" datatype="html">
+        <source>No</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-detail.page.ts</context>
+          <context context-type="linenumber">143</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.detail.loadFailedHint" datatype="html">
+        <source>Try again in a moment.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-detail.page.ts</context>
+          <context context-type="linenumber">181</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.rolesUnchanged" datatype="html">
+        <source>No role changes to save.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-detail.page.ts</context>
+          <context context-type="linenumber">193</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.rolesSaved" datatype="html">
+        <source>Roles saved.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-detail.page.ts</context>
+          <context context-type="linenumber">207</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.rolesFailed" datatype="html">
+        <source>We could not save the roles.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-detail.page.ts</context>
+          <context context-type="linenumber">212</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.deactivate.title" datatype="html">
+        <source>Deactivate user?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-detail.page.ts</context>
+          <context context-type="linenumber">221</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.deactivate.message" datatype="html">
+        <source>The user is signed out everywhere and cannot sign in until reactivated. This change is recorded in the audit trail.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-detail.page.ts</context>
+          <context context-type="linenumber">222</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.activated" datatype="html">
+        <source>User activated.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-detail.page.ts</context>
+          <context context-type="linenumber">245</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.deactivated" datatype="html">
+        <source>User deactivated.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-detail.page.ts</context>
+          <context context-type="linenumber">246</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.statusFailed" datatype="html">
+        <source>The user status could not be changed.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/user-detail.page.ts</context>
+          <context context-type="linenumber">254</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.subtitle" datatype="html">
+        <source>People who sign in to this organization. Access comes from their roles.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/users.page.ts</context>
+          <context context-type="linenumber">38,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.create" datatype="html">
+        <source>New user</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/users.page.ts</context>
+          <context context-type="linenumber">43,45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="common.search" datatype="html">
+        <source>Search</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/users.page.ts</context>
+          <context context-type="linenumber">49,50</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/brands/pages/brands.page.ts</context>
+          <context context-type="linenumber">53,54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="common.showInactive" datatype="html">
+        <source> Show inactive </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/users.page.ts</context>
+          <context context-type="linenumber">53,55</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/brands/pages/brands.page.ts</context>
+          <context context-type="linenumber">57,59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.name" datatype="html">
+        <source>Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/users.page.ts</context>
+          <context context-type="linenumber">75,76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="common.status" datatype="html">
+        <source>Status</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/users.page.ts</context>
+          <context context-type="linenumber">85,86</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/brands/pages/brands.page.ts</context>
+          <context context-type="linenumber">83,84</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/categories/pages/categories.page.ts</context>
+          <context context-type="linenumber">76,77</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-detail.page.ts</context>
+          <context context-type="linenumber">77,79</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-detail.page.ts</context>
+          <context context-type="linenumber">126,127</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/products.page.ts</context>
+          <context context-type="linenumber">59,60</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/products.page.ts</context>
+          <context context-type="linenumber">105,106</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/locations.page.ts</context>
+          <context context-type="linenumber">69,70</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/price-lists/pages/price-lists.page.ts</context>
+          <context context-type="linenumber">66,67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.heading" datatype="html">
+        <source>Users</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/users.page.ts</context>
+          <context context-type="linenumber">104</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.loadFailed" datatype="html">
+        <source>We could not load users</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/users.page.ts</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.empty.title" datatype="html">
+        <source>No users match</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/users.page.ts</context>
+          <context context-type="linenumber">106</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.empty.message" datatype="html">
+        <source>Try another search, or add a user.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/users.page.ts</context>
+          <context context-type="linenumber">107</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users.loadFailedHint" datatype="html">
+        <source>Try again in a moment.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/administration/users/pages/users.page.ts</context>
+          <context context-type="linenumber">143</context>
         </context-group>
       </trans-unit>
       <trans-unit id="auth.login.passwordChanged" datatype="html">
@@ -206,6 +1403,1231 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/auth/pages/login/login.page.ts</context>
           <context context-type="linenumber">33,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="attributes.detail.note" datatype="html">
+        <source>Attribute names are fixed after creation.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attribute-detail.page.ts</context>
+          <context context-type="linenumber">39,42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="attributes.values" datatype="html">
+        <source>Values</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attribute-detail.page.ts</context>
+          <context context-type="linenumber">49,51</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attributes.page.ts</context>
+          <context context-type="linenumber">56,57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="attributes.noValuesHint" datatype="html">
+        <source>No values yet. Add the first value below.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attribute-detail.page.ts</context>
+          <context context-type="linenumber">52,54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="attributes.value.field" datatype="html">
+        <source>Value</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attribute-detail.page.ts</context>
+          <context context-type="linenumber">57,58</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attribute-detail.page.ts</context>
+          <context context-type="linenumber">93,94</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="attributes.displayOrder" datatype="html">
+        <source>Display order</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attribute-detail.page.ts</context>
+          <context context-type="linenumber">61,62</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attribute-detail.page.ts</context>
+          <context context-type="linenumber">64,66</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attribute-detail.page.ts</context>
+          <context context-type="linenumber">100,101</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="attributes.addValue" datatype="html">
+        <source>Add a value</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attribute-detail.page.ts</context>
+          <context context-type="linenumber">90,91</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="validation.nonNegative" datatype="html">
+        <source>Use zero or a positive number.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attribute-detail.page.ts</context>
+          <context context-type="linenumber">103,105</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attribute-detail.page.ts</context>
+          <context context-type="linenumber">185</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-create.page.ts</context>
+          <context context-type="linenumber">67,69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="common.add" datatype="html">
+        <source>Add value</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attribute-detail.page.ts</context>
+          <context context-type="linenumber">111,112</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="attributes.detail.heading" datatype="html">
+        <source>Attribute</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attribute-detail.page.ts</context>
+          <context context-type="linenumber">128</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="attributes.detail.loadFailed" datatype="html">
+        <source>We could not load this attribute</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attribute-detail.page.ts</context>
+          <context context-type="linenumber">129</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="attributes.backToList" datatype="html">
+        <source>All attributes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attribute-detail.page.ts</context>
+          <context context-type="linenumber">130</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="attributes.detail.loadFailedHint" datatype="html">
+        <source>Try again in a moment.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attribute-detail.page.ts</context>
+          <context context-type="linenumber">166</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="attributes.orderSaved" datatype="html">
+        <source>Display order saved.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attribute-detail.page.ts</context>
+          <context context-type="linenumber">190</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="attributes.orderFailed" datatype="html">
+        <source>The display order could not be saved.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attribute-detail.page.ts</context>
+          <context context-type="linenumber">194</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="attributes.valueFailed" datatype="html">
+        <source>We could not add the value.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attribute-detail.page.ts</context>
+          <context context-type="linenumber">214</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="attributes.subtitle" datatype="html">
+        <source>Attributes such as color or size define the options a variant can take.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attributes.page.ts</context>
+          <context context-type="linenumber">31,32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="attributes.create" datatype="html">
+        <source>New attribute</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attributes.page.ts</context>
+          <context context-type="linenumber">36,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="common.viewDetails" datatype="html">
+        <source>View</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attributes.page.ts</context>
+          <context context-type="linenumber">65,67</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/products.page.ts</context>
+          <context context-type="linenumber">117,119</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="attributes.heading" datatype="html">
+        <source>Attributes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attributes.page.ts</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="attributes.loadFailed" datatype="html">
+        <source>We could not load attributes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attributes.page.ts</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="attributes.empty.title" datatype="html">
+        <source>No attributes yet</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attributes.page.ts</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="attributes.empty.message" datatype="html">
+        <source>Create an attribute such as Color, then add its values.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attributes.page.ts</context>
+          <context context-type="linenumber">85</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="attributes.loadFailedHint" datatype="html">
+        <source>Try again in a moment.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attributes.page.ts</context>
+          <context context-type="linenumber">106</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="attributes.noValues" datatype="html">
+        <source>No values yet</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attributes.page.ts</context>
+          <context context-type="linenumber">113</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="attributes.saved" datatype="html">
+        <source>Attribute created.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/pages/attributes.page.ts</context>
+          <context context-type="linenumber">123</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="attributes.dialog.create" datatype="html">
+        <source>New attribute</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/ui/attribute-dialog.component.ts</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="attributes.field.name" datatype="html">
+        <source>Attribute name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/ui/attribute-dialog.component.ts</context>
+          <context context-type="linenumber">18,19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="attributes.field.nameHint" datatype="html">
+        <source>For example Color or Size. The name cannot be changed later.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/ui/attribute-dialog.component.ts</context>
+          <context context-type="linenumber">20,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="attributes.saveFailed" datatype="html">
+        <source>We could not create the attribute.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/attributes/ui/attribute-dialog.component.ts</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="brands.subtitle" datatype="html">
+        <source>Brands group products and appear on product records.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/brands/pages/brands.page.ts</context>
+          <context context-type="linenumber">42,43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="brands.create" datatype="html">
+        <source>New brand</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/brands/pages/brands.page.ts</context>
+          <context context-type="linenumber">47,49</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/brands/pages/brands.page.ts</context>
+          <context context-type="linenumber">73,74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="common.updated" datatype="html">
+        <source>Updated</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/brands/pages/brands.page.ts</context>
+          <context context-type="linenumber">92,93</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/categories/pages/categories.page.ts</context>
+          <context context-type="linenumber">85,86</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="brands.heading" datatype="html">
+        <source>Brands</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/brands/pages/brands.page.ts</context>
+          <context context-type="linenumber">124</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="brands.loadFailed" datatype="html">
+        <source>We could not load brands</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/brands/pages/brands.page.ts</context>
+          <context context-type="linenumber">125</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="brands.empty.title" datatype="html">
+        <source>No brands yet</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/brands/pages/brands.page.ts</context>
+          <context context-type="linenumber">126</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="brands.empty.message" datatype="html">
+        <source>Add the brands you sell so products can be grouped by brand.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/brands/pages/brands.page.ts</context>
+          <context context-type="linenumber">127</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="common.edit" datatype="html">
+        <source>Edit</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/brands/pages/brands.page.ts</context>
+          <context context-type="linenumber">130</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/categories/pages/categories.page.ts</context>
+          <context context-type="linenumber">123</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-detail.page.ts</context>
+          <context context-type="linenumber">60,62</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/locations.page.ts</context>
+          <context context-type="linenumber">111</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="brands.loadFailedHint" datatype="html">
+        <source>Try again in a moment.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/brands/pages/brands.page.ts</context>
+          <context context-type="linenumber">163</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="brands.deactivate.title" datatype="html">
+        <source>Deactivate brand?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/brands/pages/brands.page.ts</context>
+          <context context-type="linenumber">179</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="brands.deactivate.message" datatype="html">
+        <source>Products keep this brand, but it can no longer be chosen for new products. Brands cannot be reactivated.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/brands/pages/brands.page.ts</context>
+          <context context-type="linenumber">180</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="brands.deactivated" datatype="html">
+        <source>Brand deactivated.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/brands/pages/brands.page.ts</context>
+          <context context-type="linenumber">190</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="brands.deactivateFailed" datatype="html">
+        <source>The brand could not be deactivated.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/brands/pages/brands.page.ts</context>
+          <context context-type="linenumber">194</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="brands.saved" datatype="html">
+        <source>Brand saved.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/brands/pages/brands.page.ts</context>
+          <context context-type="linenumber">205</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="brands.field.name" datatype="html">
+        <source>Brand name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/brands/ui/brand-dialog.component.ts</context>
+          <context context-type="linenumber">22,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="brands.dialog.create" datatype="html">
+        <source>New brand</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/brands/ui/brand-dialog.component.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="brands.dialog.edit" datatype="html">
+        <source>Edit brand</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/brands/ui/brand-dialog.component.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="brands.saveFailed" datatype="html">
+        <source>We could not save the brand.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/brands/ui/brand-dialog.component.ts</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="categories.subtitle" datatype="html">
+        <source>Group products into a tree. Products can sit under any category.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/categories/pages/categories.page.ts</context>
+          <context context-type="linenumber">47,48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="categories.create" datatype="html">
+        <source>New category</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/categories/pages/categories.page.ts</context>
+          <context context-type="linenumber">52,54</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/categories/pages/categories.page.ts</context>
+          <context context-type="linenumber">64,65</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="categories.heading" datatype="html">
+        <source>Categories</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/categories/pages/categories.page.ts</context>
+          <context context-type="linenumber">117</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="categories.loadFailed" datatype="html">
+        <source>We could not load categories</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/categories/pages/categories.page.ts</context>
+          <context context-type="linenumber">118</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="categories.empty.title" datatype="html">
+        <source>No categories yet</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/categories/pages/categories.page.ts</context>
+          <context context-type="linenumber">119</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="categories.empty.message" datatype="html">
+        <source>Create a top-level category, then nest subcategories under it.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/categories/pages/categories.page.ts</context>
+          <context context-type="linenumber">120</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="categories.loadFailedHint" datatype="html">
+        <source>Try again in a moment.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/categories/pages/categories.page.ts</context>
+          <context context-type="linenumber">146</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="categories.deactivate.title" datatype="html">
+        <source>Deactivate category?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/categories/pages/categories.page.ts</context>
+          <context context-type="linenumber">162</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="categories.deactivate.message" datatype="html">
+        <source>Subcategories and products keep their links. The category can no longer be chosen for new products.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/categories/pages/categories.page.ts</context>
+          <context context-type="linenumber">163</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="categories.deactivated" datatype="html">
+        <source>Category deactivated.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/categories/pages/categories.page.ts</context>
+          <context context-type="linenumber">173</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="categories.deactivateFailed" datatype="html">
+        <source>The category could not be deactivated.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/categories/pages/categories.page.ts</context>
+          <context context-type="linenumber">177</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="categories.saved" datatype="html">
+        <source>Category saved.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/categories/pages/categories.page.ts</context>
+          <context context-type="linenumber">196</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="categories.field.name" datatype="html">
+        <source>Category name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/categories/ui/category-dialog.component.ts</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="categories.field.parent" datatype="html">
+        <source>Parent category</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/categories/ui/category-dialog.component.ts</context>
+          <context context-type="linenumber">39,40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="categories.parent.root" datatype="html">
+        <source>Top level</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/categories/ui/category-dialog.component.ts</context>
+          <context context-type="linenumber">41,42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="categories.dialog.create" datatype="html">
+        <source>New category</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/categories/ui/category-dialog.component.ts</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="categories.dialog.edit" datatype="html">
+        <source>Edit category</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/categories/ui/category-dialog.component.ts</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="categories.saveFailed" datatype="html">
+        <source>We could not save the category.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/categories/ui/category-dialog.component.ts</context>
+          <context context-type="linenumber">100</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.details" datatype="html">
+        <source>Details</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-detail.page.ts</context>
+          <context context-type="linenumber">73,74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.code" datatype="html">
+        <source>Code</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-detail.page.ts</context>
+          <context context-type="linenumber">84,85</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-form.page.ts</context>
+          <context context-type="linenumber">75,76</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/products.page.ts</context>
+          <context context-type="linenumber">97,98</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.field.brand" datatype="html">
+        <source>Brand</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-detail.page.ts</context>
+          <context context-type="linenumber">86,87</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-form.page.ts</context>
+          <context context-type="linenumber">81,82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.field.category" datatype="html">
+        <source>Category</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-detail.page.ts</context>
+          <context context-type="linenumber">88,89</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-form.page.ts</context>
+          <context context-type="linenumber">91,92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.variants" datatype="html">
+        <source>Variants</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-detail.page.ts</context>
+          <context context-type="linenumber">99,100</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.variants.create" datatype="html">
+        <source>Add variant</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-detail.page.ts</context>
+          <context context-type="linenumber">102,105</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.sku" datatype="html">
+        <source>SKU</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-detail.page.ts</context>
+          <context context-type="linenumber">113</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-create.page.ts</context>
+          <context context-type="linenumber">50,51</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">107,108</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">131</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.barcode" datatype="html">
+        <source>Barcode</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-detail.page.ts</context>
+          <context context-type="linenumber">118,119</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-create.page.ts</context>
+          <context context-type="linenumber">57,58</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">88,89</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">114,115</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">132,133</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.retailPrice" datatype="html">
+        <source>Retail price</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-detail.page.ts</context>
+          <context context-type="linenumber">122,123</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-create.page.ts</context>
+          <context context-type="linenumber">62,63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.detail.loadFailed" datatype="html">
+        <source>We could not load this product</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-detail.page.ts</context>
+          <context context-type="linenumber">166</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.noVariants.title" datatype="html">
+        <source>No variants yet</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-detail.page.ts</context>
+          <context context-type="linenumber">167</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.noVariants.message" datatype="html">
+        <source>A variant is the sellable and stockable form of a product, for example a size and color. Add the first one.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-detail.page.ts</context>
+          <context context-type="linenumber">168</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.backToList" datatype="html">
+        <source>All products</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-detail.page.ts</context>
+          <context context-type="linenumber">171</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-form.page.ts</context>
+          <context context-type="linenumber">153</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.detail.loadFailedHint" datatype="html">
+        <source>Try again in a moment.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-detail.page.ts</context>
+          <context context-type="linenumber">201</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.deactivate.title" datatype="html">
+        <source>Deactivate product?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-detail.page.ts</context>
+          <context context-type="linenumber">209</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.deactivate.message" datatype="html">
+        <source>Its variants stay as they are, but the product is hidden from new work. Products cannot be reactivated.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-detail.page.ts</context>
+          <context context-type="linenumber">210</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.deactivated" datatype="html">
+        <source>Product deactivated.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-detail.page.ts</context>
+          <context context-type="linenumber">220</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.deactivateFailed" datatype="html">
+        <source>The product could not be deactivated.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-detail.page.ts</context>
+          <context context-type="linenumber">224</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.field.name" datatype="html">
+        <source>Product name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-form.page.ts</context>
+          <context context-type="linenumber">67,68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.field.codeHint" datatype="html">
+        <source>Optional. Stored in upper case and must be unique.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-form.page.ts</context>
+          <context context-type="linenumber">77,78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="common.none" datatype="html">
+        <source>None</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-form.page.ts</context>
+          <context context-type="linenumber">83,84</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-form.page.ts</context>
+          <context context-type="linenumber">93,94</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-create.page.ts</context>
+          <context context-type="linenumber">85,86</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.field.description" datatype="html">
+        <source>Description</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-form.page.ts</context>
+          <context context-type="linenumber">101,102</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.form.loadFailed" datatype="html">
+        <source>We could not load the product form</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-form.page.ts</context>
+          <context context-type="linenumber">131</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.form.editHeading" datatype="html">
+        <source>Edit product</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-form.page.ts</context>
+          <context context-type="linenumber">149</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.form.createHeading" datatype="html">
+        <source>New product</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-form.page.ts</context>
+          <context context-type="linenumber">149</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.form.loadFailedHint" datatype="html">
+        <source>Try again in a moment.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-form.page.ts</context>
+          <context context-type="linenumber">190</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.saved" datatype="html">
+        <source>Product saved.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-form.page.ts</context>
+          <context context-type="linenumber">215</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.created" datatype="html">
+        <source>Product created.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-form.page.ts</context>
+          <context context-type="linenumber">220</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.saveFailed" datatype="html">
+        <source>We could not save the product.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-form.page.ts</context>
+          <context context-type="linenumber">234</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="common.inactiveSuffix" datatype="html">
+        <source>(inactive)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/product-form.page.ts</context>
+          <context context-type="linenumber">260</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.subtitle" datatype="html">
+        <source>Products describe what you sell. Stock and prices belong to their variants.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/products.page.ts</context>
+          <context context-type="linenumber">44,45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.create" datatype="html">
+        <source>New product</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/products.page.ts</context>
+          <context context-type="linenumber">49,51</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/products.page.ts</context>
+          <context context-type="linenumber">85,86</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.search" datatype="html">
+        <source>Search products</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/products.page.ts</context>
+          <context context-type="linenumber">55,56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="common.all" datatype="html">
+        <source>All</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/products.page.ts</context>
+          <context context-type="linenumber">61,62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="common.apply" datatype="html">
+        <source>Apply</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/products.page.ts</context>
+          <context context-type="linenumber">66,69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.lookup" datatype="html">
+        <source>Find a variant by SKU or barcode</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/products.page.ts</context>
+          <context context-type="linenumber">71,72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.lookup.action" datatype="html">
+        <source>Find variant</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/products.page.ts</context>
+          <context context-type="linenumber">74,77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.variantCount" datatype="html">
+        <source>Variants</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/products.page.ts</context>
+          <context context-type="linenumber">101,102</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.heading" datatype="html">
+        <source>Products</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/products.page.ts</context>
+          <context context-type="linenumber">136</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.loadFailed" datatype="html">
+        <source>We could not load products</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/products.page.ts</context>
+          <context context-type="linenumber">137</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.empty.title" datatype="html">
+        <source>No products match</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/products.page.ts</context>
+          <context context-type="linenumber">138</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.empty.message" datatype="html">
+        <source>Try another search, or add your first product.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/products.page.ts</context>
+          <context context-type="linenumber">139</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.loadFailedHint" datatype="html">
+        <source>Try again in a moment.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/products.page.ts</context>
+          <context context-type="linenumber">180</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.lookupFailed" datatype="html">
+        <source>The lookup failed.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/products.page.ts</context>
+          <context context-type="linenumber">197</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/products.page.ts</context>
+          <context context-type="linenumber">207</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products.lookupNotFound" datatype="html">
+        <source>No variant has that SKU or barcode.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/products/pages/products.page.ts</context>
+          <context context-type="linenumber">206</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.create.goToAttributes" datatype="html">
+        <source>Go to attributes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-create.page.ts</context>
+          <context context-type="linenumber">43,45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.section.identity" datatype="html">
+        <source>Identity and prices</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-create.page.ts</context>
+          <context context-type="linenumber">47,49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.barcodeHint" datatype="html">
+        <source>Optional. You can generate one later.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-create.page.ts</context>
+          <context context-type="linenumber">59,60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.wholesalePrice" datatype="html">
+        <source>Wholesale price</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-create.page.ts</context>
+          <context context-type="linenumber">71,72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.legacyPriceHint" datatype="html">
+        <source>Legacy field. Selling uses price lists.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-create.page.ts</context>
+          <context context-type="linenumber">73,74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.section.attributes" datatype="html">
+        <source>Attribute values</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-create.page.ts</context>
+          <context context-type="linenumber">77,78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.attributesHint" datatype="html">
+        <source>Choose one value per attribute. A variant needs at least one value.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-create.page.ts</context>
+          <context context-type="linenumber">78,79</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.create.heading" datatype="html">
+        <source>New variant</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-create.page.ts</context>
+          <context context-type="linenumber">120</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.create.loadFailed" datatype="html">
+        <source>We could not load the variant form</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-create.page.ts</context>
+          <context context-type="linenumber">121</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.create.noAttributes.title" datatype="html">
+        <source>Add attributes first</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-create.page.ts</context>
+          <context context-type="linenumber">122</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.create.noAttributes.message" datatype="html">
+        <source>Variants are described by attribute values such as color or size. Create an attribute with values, then come back.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-create.page.ts</context>
+          <context context-type="linenumber">123</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.create.backToProduct" datatype="html">
+        <source>Back to product</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-create.page.ts</context>
+          <context context-type="linenumber">127</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.create.loadFailedHint" datatype="html">
+        <source>Try again in a moment.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-create.page.ts</context>
+          <context context-type="linenumber">175</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.create.needAttribute" datatype="html">
+        <source>Choose at least one attribute value.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-create.page.ts</context>
+          <context context-type="linenumber">191</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.created" datatype="html">
+        <source>Variant created.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-create.page.ts</context>
+          <context context-type="linenumber">210</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.saveFailed" datatype="html">
+        <source>We could not create the variant.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-create.page.ts</context>
+          <context context-type="linenumber">215</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.attributes" datatype="html">
+        <source>Attributes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">71,72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.noAttributes" datatype="html">
+        <source>No attribute values.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">81,83</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.generateBarcode" datatype="html">
+        <source>Generate barcode</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">95,97</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.section.identifiers" datatype="html">
+        <source>Identifiers</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">102,103</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.auditNotice" datatype="html">
+        <source>Changes to SKU and barcode are recorded in the audit trail.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">118,119</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.section.prices" datatype="html">
+        <source>Prices by price list</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">137,138</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="priceLists.name" datatype="html">
+        <source>Price list</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">144,145</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/price-lists/pages/price-lists.page.ts</context>
+          <context context-type="linenumber">52,53</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/price-lists/ui/price-list-dialog.component.ts</context>
+          <context context-type="linenumber">20,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="priceLists.currency" datatype="html">
+        <source>Currency</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">148,149</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/price-lists/pages/price-lists.page.ts</context>
+          <context context-type="linenumber">56,57</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/price-lists/ui/price-list-dialog.component.ts</context>
+          <context context-type="linenumber">27,28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="priceLists.price" datatype="html">
+        <source>Price</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">152,153</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="priceLists.notPriced" datatype="html">
+        <source>Not priced</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">157,159</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="priceLists.newPrice" datatype="html">
+        <source>New price</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">166,167</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.detail.loadFailed" datatype="html">
+        <source>We could not load this variant</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">205</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.noBarcode" datatype="html">
+        <source>No barcode yet</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">206</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="priceLists.savePrice" datatype="html">
+        <source>Save price for</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">209</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.noLists.title" datatype="html">
+        <source>No price lists</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">210</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.noLists.message" datatype="html">
+        <source>Create a price list before setting prices for this variant.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">211</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.backToProducts" datatype="html">
+        <source>All products</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">212</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.detail.loadFailedHint" datatype="html">
+        <source>Try again in a moment.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">276</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.identifiersSaved" datatype="html">
+        <source>Identifiers saved.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">301</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.identifiersFailed" datatype="html">
+        <source>We could not save the identifiers.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">306</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.barcodeGenerated" datatype="html">
+        <source>Barcode generated.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">316</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.barcodeFailed" datatype="html">
+        <source>The barcode could not be generated.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">321</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="priceLists.invalid" datatype="html">
+        <source>Enter a price of zero or more.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">329</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="priceLists.saved" datatype="html">
+        <source>Price saved.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">336</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="priceLists.saveFailed" datatype="html">
+        <source>The price could not be saved.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">341</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/price-lists/ui/price-list-dialog.component.ts</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.deactivate.title" datatype="html">
+        <source>Deactivate variant?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">349</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.deactivate.message" datatype="html">
+        <source>A deactivated variant cannot be sold or stocked. Variants cannot be reactivated.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">350</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.deactivated" datatype="html">
+        <source>Variant deactivated.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">360</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="variants.deactivateFailed" datatype="html">
+        <source>The variant could not be deactivated.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/catalogue/variants/pages/variant-detail.page.ts</context>
+          <context context-type="linenumber">364</context>
         </context-group>
       </trans-unit>
       <trans-unit id="dashboard.heading" datatype="html">
@@ -223,24 +2645,24 @@
         </context-group>
       </trans-unit>
       <trans-unit id="dashboard.roles.empty" datatype="html">
-        <source>No roles are assigned to your account.</source>
+        <source> No roles are assigned to your account. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/dashboard/pages/dashboard.page.ts</context>
-          <context context-type="linenumber">29,31</context>
+          <context context-type="linenumber">30,32</context>
         </context-group>
       </trans-unit>
       <trans-unit id="dashboard.permissions.title" datatype="html">
         <source>Permissions</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/dashboard/pages/dashboard.page.ts</context>
-          <context context-type="linenumber">37,38</context>
+          <context context-type="linenumber">39,40</context>
         </context-group>
       </trans-unit>
       <trans-unit id="dashboard.permissions.help" datatype="html">
         <source> Permissions granted to your account. Screens you cannot use are hidden from the menu. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/dashboard/pages/dashboard.page.ts</context>
-          <context context-type="linenumber">42,44</context>
+          <context context-type="linenumber">44,46</context>
         </context-group>
       </trans-unit>
       <trans-unit id="status.forbidden.heading" datatype="html">
@@ -261,11 +2683,11 @@
         <source>Back to dashboard</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/errors/pages/forbidden.page.ts</context>
-          <context context-type="linenumber">16,20</context>
+          <context context-type="linenumber">17,21</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/errors/pages/not-found.page.ts</context>
-          <context context-type="linenumber">14,18</context>
+          <context context-type="linenumber">15,19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="status.notFound.heading" datatype="html">
@@ -280,6 +2702,448 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/errors/pages/not-found.page.ts</context>
           <context context-type="linenumber">13,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="locations.name" datatype="html">
+        <source>Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/location-form.page.ts</context>
+          <context context-type="linenumber">42,43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="locations.code" datatype="html">
+        <source>Code</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/location-form.page.ts</context>
+          <context context-type="linenumber">50,51</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/locations.page.ts</context>
+          <context context-type="linenumber">59,60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="locations.codeHint" datatype="html">
+        <source>Optional. Stored in upper case and must be unique.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/location-form.page.ts</context>
+          <context context-type="linenumber">52,53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="locations.type" datatype="html">
+        <source>Type</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/location-form.page.ts</context>
+          <context context-type="linenumber">56,57</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/locations.page.ts</context>
+          <context context-type="linenumber">63,64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="locations.type.store" datatype="html">
+        <source>Store</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/location-form.page.ts</context>
+          <context context-type="linenumber">58,59</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/locations.page.ts</context>
+          <context context-type="linenumber">124</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="locations.type.warehouse" datatype="html">
+        <source>Warehouse</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/location-form.page.ts</context>
+          <context context-type="linenumber">59,60</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/locations.page.ts</context>
+          <context context-type="linenumber">124</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="locations.phone" datatype="html">
+        <source>Phone</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/location-form.page.ts</context>
+          <context context-type="linenumber">67,68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="locations.address" datatype="html">
+        <source>Address</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/location-form.page.ts</context>
+          <context context-type="linenumber">72,73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="locations.form.editHeading" datatype="html">
+        <source>Edit location</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/location-form.page.ts</context>
+          <context context-type="linenumber">101</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="locations.form.createHeading" datatype="html">
+        <source>New location</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/location-form.page.ts</context>
+          <context context-type="linenumber">102</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="locations.backToList" datatype="html">
+        <source>All locations</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/location-form.page.ts</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="locations.form.loadFailed" datatype="html">
+        <source>We could not load this location</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/location-form.page.ts</context>
+          <context context-type="linenumber">104</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="locations.form.loadFailedHint" datatype="html">
+        <source>Try again in a moment.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/location-form.page.ts</context>
+          <context context-type="linenumber">143</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="locations.saved" datatype="html">
+        <source>Location saved.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/location-form.page.ts</context>
+          <context context-type="linenumber">171</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="locations.saveFailed" datatype="html">
+        <source>We could not save the location.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/location-form.page.ts</context>
+          <context context-type="linenumber">176</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="locations.subtitle" datatype="html">
+        <source>Stores sell stock; warehouses hold it. Stock is tracked per location.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/locations.page.ts</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="locations.create" datatype="html">
+        <source>New location</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/locations.page.ts</context>
+          <context context-type="linenumber">37,39</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/locations.page.ts</context>
+          <context context-type="linenumber">49,51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="locations.heading" datatype="html">
+        <source>Locations</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/locations.page.ts</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="locations.loadFailed" datatype="html">
+        <source>We could not load locations</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/locations.page.ts</context>
+          <context context-type="linenumber">106</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="locations.empty.title" datatype="html">
+        <source>No locations yet</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/locations.page.ts</context>
+          <context context-type="linenumber">107</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="locations.empty.message" datatype="html">
+        <source>Add the store or warehouse where stock is kept and sold.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/locations.page.ts</context>
+          <context context-type="linenumber">108</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="locations.loadFailedHint" datatype="html">
+        <source>Try again in a moment.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/locations.page.ts</context>
+          <context context-type="linenumber">137</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="locations.deactivate.title" datatype="html">
+        <source>Deactivate location?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/locations.page.ts</context>
+          <context context-type="linenumber">145</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="locations.deactivate.message" datatype="html">
+        <source>Stock history is kept. The location can no longer be used for new stock or sales. Locations cannot be reactivated.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/locations.page.ts</context>
+          <context context-type="linenumber">146</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="locations.deactivated" datatype="html">
+        <source>Location deactivated.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/locations.page.ts</context>
+          <context context-type="linenumber">156</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="locations.deactivateFailed" datatype="html">
+        <source>The location could not be deactivated.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/locations/pages/locations.page.ts</context>
+          <context context-type="linenumber">160</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="priceLists.subtitle" datatype="html">
+        <source>Price lists hold the selling price of each variant. Prices are set per variant from its detail page.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/price-lists/pages/price-lists.page.ts</context>
+          <context context-type="linenumber">31,32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="priceLists.create" datatype="html">
+        <source>New price list</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/price-lists/pages/price-lists.page.ts</context>
+          <context context-type="linenumber">36,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="priceLists.type" datatype="html">
+        <source>Type</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/price-lists/pages/price-lists.page.ts</context>
+          <context context-type="linenumber">60,61</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/price-lists/ui/price-list-dialog.component.ts</context>
+          <context context-type="linenumber">35,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="priceLists.heading" datatype="html">
+        <source>Price lists</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/price-lists/pages/price-lists.page.ts</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="priceLists.loadFailed" datatype="html">
+        <source>We could not load price lists</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/price-lists/pages/price-lists.page.ts</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="priceLists.empty.title" datatype="html">
+        <source>No price lists yet</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/price-lists/pages/price-lists.page.ts</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="priceLists.empty.message" datatype="html">
+        <source>Create a price list such as Retail or Wholesale, then price your variants.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/price-lists/pages/price-lists.page.ts</context>
+          <context context-type="linenumber">90</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="priceLists.type.retail" datatype="html">
+        <source>Retail</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/price-lists/pages/price-lists.page.ts</context>
+          <context context-type="linenumber">104</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/price-lists/ui/price-list-dialog.component.ts</context>
+          <context context-type="linenumber">37,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="priceLists.type.wholesale" datatype="html">
+        <source>Wholesale</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/price-lists/pages/price-lists.page.ts</context>
+          <context context-type="linenumber">104</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/price-lists/ui/price-list-dialog.component.ts</context>
+          <context context-type="linenumber">38,40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="priceLists.loadFailedHint" datatype="html">
+        <source>Try again in a moment.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/price-lists/pages/price-lists.page.ts</context>
+          <context context-type="linenumber">117</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="priceLists.created" datatype="html">
+        <source>Price list created.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/price-lists/pages/price-lists.page.ts</context>
+          <context context-type="linenumber">128</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="priceLists.dialog.create" datatype="html">
+        <source>New price list</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/price-lists/ui/price-list-dialog.component.ts</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="priceLists.currencyHint" datatype="html">
+        <source>Three letters, for example DZD.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/price-lists/ui/price-list-dialog.component.ts</context>
+          <context context-type="linenumber">29,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="validation.currency" datatype="html">
+        <source>Use three letters.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory/price-lists/ui/price-list-dialog.component.ts</context>
+          <context context-type="linenumber">31,33</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/organization/pages/organization.page.ts</context>
+          <context context-type="linenumber">89,91</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="organization.subtitle" datatype="html">
+        <source>Business identity, contact details, and regional settings.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/organization/pages/organization.page.ts</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="organization.notConfigured" datatype="html">
+        <source> Your organization has not been set up yet. Save the profile to create it. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/organization/pages/organization.page.ts</context>
+          <context context-type="linenumber">45,49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="organization.field.name" datatype="html">
+        <source>Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/organization/pages/organization.page.ts</context>
+          <context context-type="linenumber">54,55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="organization.field.legalName" datatype="html">
+        <source>Legal name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/organization/pages/organization.page.ts</context>
+          <context context-type="linenumber">62,63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="organization.field.email" datatype="html">
+        <source>Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/organization/pages/organization.page.ts</context>
+          <context context-type="linenumber">67,68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="organization.field.phone" datatype="html">
+        <source>Phone</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/organization/pages/organization.page.ts</context>
+          <context context-type="linenumber">75,76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="organization.field.address" datatype="html">
+        <source>Address</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/organization/pages/organization.page.ts</context>
+          <context context-type="linenumber">80,81</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="organization.field.currency" datatype="html">
+        <source>Currency code</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/organization/pages/organization.page.ts</context>
+          <context context-type="linenumber">85,86</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="organization.field.currencyHint" datatype="html">
+        <source>Three letters, for example DZD.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/organization/pages/organization.page.ts</context>
+          <context context-type="linenumber">87,88</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="organization.field.language" datatype="html">
+        <source>Default language</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/organization/pages/organization.page.ts</context>
+          <context context-type="linenumber">94,95</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="organization.field.timeZone" datatype="html">
+        <source>Time zone</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/organization/pages/organization.page.ts</context>
+          <context context-type="linenumber">99,100</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="organization.field.timeZoneHint" datatype="html">
+        <source>An IANA name. Leave blank to keep the current value.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/organization/pages/organization.page.ts</context>
+          <context context-type="linenumber">101,104</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="organization.field.active" datatype="html">
+        <source> Organization is active </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/organization/pages/organization.page.ts</context>
+          <context context-type="linenumber">106,107</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="organization.heading" datatype="html">
+        <source>Organization</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/organization/pages/organization.page.ts</context>
+          <context context-type="linenumber">135</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="organization.loadFailed" datatype="html">
+        <source>We could not load the organization</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/organization/pages/organization.page.ts</context>
+          <context context-type="linenumber">136</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="organization.saved" datatype="html">
+        <source>Organization saved.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/organization/pages/organization.page.ts</context>
+          <context context-type="linenumber">191</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="organization.saveFailed" datatype="html">
+        <source>We could not save the organization.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/organization/pages/organization.page.ts</context>
+          <context context-type="linenumber">200</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="organization.loadFailedHint" datatype="html">
+        <source>Try again in a moment.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/organization/pages/organization.page.ts</context>
+          <context context-type="linenumber">225</context>
         </context-group>
       </trans-unit>
       <trans-unit id="theme.switchToLight" datatype="html">
