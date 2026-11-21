@@ -134,18 +134,32 @@ The root route table lives in `src/app/app.routes.ts`. Two layouts are lazy-load
 - `PublicLayoutComponent` (`core/layout/public-layout.component.ts`) wraps `/login`, `/forgot-password` and `/reset-password`, with a brand header and the theme toggle.
 - `ShellLayoutComponent` (`core/layout/shell-layout.component.ts`) wraps everything under `/app`, behind `authGuard`. It has a toolbar (navigation toggle, theme toggle, user menu with sign-out) and a sidebar built from `core/layout/navigation.ts`.
 
-Implemented routes today:
+Implemented routes, grouped by feature ownership. Each route declares the permissions it needs in `data.permissions` and passes through `permissionGuard` after `authGuard`:
 
 ```text
-/login  /forgot-password  /reset-password          (public)
-/app                                                → redirects to /app/dashboard
-/app/dashboard                                      (signed-in overview)
-/app/account/security                               (change password)
-/app/forbidden                                      (access denied)
-/app/**                                             (not found)
+Public        /login  /forgot-password  /reset-password
+Overview      /app/dashboard
+Business      /app/organization                      organization.view
+Catalogue     /app/catalogue/products                products.view
+              /app/catalogue/products/new            products.create
+              /app/catalogue/products/:id            products.view
+              /app/catalogue/products/:id/edit       products.edit
+              /app/catalogue/products/:id/variants/new   variants.create
+              /app/catalogue/variants/:id            variants.view
+              /app/catalogue/brands                  brands.view
+              /app/catalogue/categories              categories.view
+              /app/catalogue/attributes[/:id]        attributes.view
+Inventory     /app/inventory/locations[/new|/:id/edit]   locations.view / .create / .edit
+              /app/inventory/price-lists             price-lists.view
+Admin         /app/administration/users[/new|/:id]   users.view / users.create
+              /app/administration/roles[/:id]        roles.view
+Account       /app/account/security                  (any signed-in user)
+Status        /app/forbidden   /app/**  (not found)
 ```
 
-Planned feature routes will be added as their screens are built, for example `/app/organization`, `/app/inventory/products`, and `/app/inventory/brands`. Route metadata carries the permissions a page needs in `data.permissions`; `permissionGuard` checks them after `authGuard`. Permission checks are UX only; the API enforces every request.
+Feature folders follow the recipe in section 12: `data-access/` owns HTTP and DTOs, `pages/` orchestrates, `ui/` holds dialogs. Cross-feature imports are limited to the same business module (for example products reading brands from catalogue).
+
+Permission checks are UX only; the API enforces every request.
 
 The sidebar lists an entry only when its screen exists and its permissions are held. Add navigation entries in the same change that adds the route.
 
@@ -305,22 +319,23 @@ For a new Inventory feature such as Brands:
 
 ## 13. Current decisions and intentional deferrals
 
-| Decision                                                                         | Status                                                                    |
-| -------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| Standalone Angular, strict TypeScript, Yarn 4                                    | Implemented                                                               |
-| Angular Material/CDK and global Material theme                                   | Implemented                                                               |
-| Persisted light/dark theme toggle using Material color schemes                   | Implemented                                                               |
-| Runtime API configuration                                                        | Implemented; API URL is deployment-provided                               |
-| English/French/Arabic build-time localization and RTL bootstrap                  | Implemented                                                               |
-| ESLint, Prettier, Vitest, Playwright, CI                                         | Implemented                                                               |
-| Functional auth/refresh interceptors, public auth pages, guards, session restore | Implemented                                                               |
-| Authenticated shell: toolbar, permission-filtered sidebar, user menu, sign-out   | Implemented                                                               |
-| Change password, dashboard overview, forbidden and not-found pages               | Implemented                                                               |
-| Permission guard and `*appHasPermission` directive (UX only)                     | Implemented                                                               |
-| API capability matrix                                                            | Implemented — see `docs/api-capability-matrix.md`                         |
-| Organization and Inventory pages                                                 | Planned — add feature-by-feature                                          |
-| OpenAPI TypeScript generation                                                    | Deferred pending a compatible generator and confirmed API contract source |
-| Global state library                                                             | Deferred until a demonstrated cross-feature need                          |
-| SSR, PWA, runtime language switching                                             | Deferred pending concrete product requirements                            |
+| Decision                                                                          | Status                                                                                  |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| Standalone Angular, strict TypeScript, Yarn 4                                     | Implemented                                                                             |
+| Angular Material/CDK and global Material theme                                    | Implemented                                                                             |
+| Persisted light/dark theme toggle using Material color schemes                    | Implemented                                                                             |
+| Runtime API configuration                                                         | Implemented; API URL is deployment-provided                                             |
+| English/French/Arabic build-time localization and RTL bootstrap                   | Implemented                                                                             |
+| ESLint, Prettier, Vitest, Playwright, CI                                          | Implemented                                                                             |
+| Functional auth/refresh interceptors, public auth pages, guards, session restore  | Implemented                                                                             |
+| Authenticated shell: toolbar, permission-filtered sidebar, user menu, sign-out    | Implemented                                                                             |
+| Change password, dashboard overview, forbidden and not-found pages                | Implemented                                                                             |
+| Permission guard and `*appHasPermission` directive (UX only)                      | Implemented                                                                             |
+| API capability matrix                                                             | Implemented — see `docs/api-capability-matrix.md`                                       |
+| Organization, catalogue, inventory and administration screens (see routes above)  | Implemented — list, create, edit and deactivate where the API allows                    |
+| Stock, purchasing, sales, cash, expenses, reports, audit and worked hours screens | Deferred — endpoints exist; screens not built yet (see `docs/api-capability-matrix.md`) |
+| OpenAPI TypeScript generation                                                     | Deferred pending a compatible generator and confirmed API contract source               |
+| Global state library                                                              | Deferred until a demonstrated cross-feature need                                        |
+| SSR, PWA, runtime language switching                                              | Deferred pending concrete product requirements                                          |
 
 The goal is a frontend that grows by adding small, cohesive feature slices—not by pre-building an elaborate framework before the product needs it.
