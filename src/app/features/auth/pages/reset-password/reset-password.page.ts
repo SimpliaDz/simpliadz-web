@@ -21,36 +21,59 @@ import { AuthApiService } from '../../data-access/auth-api.service';
     <main class="auth-page">
       <mat-card class="auth-card">
         <mat-card-header>
-          <mat-card-title><h1 i18n="@@auth.reset.heading">Choose a new password</h1></mat-card-title>
-          <mat-card-subtitle
-            i18n="@@auth.reset.subtitle"
+          <mat-card-title
+            ><h1 i18n="@@auth.reset.heading">Choose a new password</h1></mat-card-title
+          >
+          <mat-card-subtitle i18n="@@auth.reset.subtitle"
             >Use the reset token from your password reset request.</mat-card-subtitle
           >
         </mat-card-header>
         <mat-card-content>
           @if (completed()) {
-            <p class="auth-success" i18n="@@auth.reset.done">Your password has been reset. You can now sign in.</p>
+            <p class="auth-success" i18n="@@auth.reset.done">
+              Your password has been reset. You can now sign in.
+            </p>
             <a mat-flat-button routerLink="/login" i18n="@@auth.reset.goToSignIn">Go to sign in</a>
           } @else {
             <form [formGroup]="form" (ngSubmit)="submit()">
               <mat-form-field appearance="outline">
                 <mat-label i18n="@@auth.field.email">Email address</mat-label>
-                <input matInput type="email" autocomplete="email" formControlName="email" />
+                <input
+                  matInput
+                  class="auth-credential-input"
+                  dir="ltr"
+                  lang="en"
+                  type="email"
+                  autocomplete="email"
+                  formControlName="email"
+                />
               </mat-form-field>
               <mat-form-field appearance="outline">
                 <mat-label i18n="@@auth.reset.token">Reset token</mat-label>
-                <input matInput autocomplete="one-time-code" formControlName="resetToken" />
+                <input
+                  matInput
+                  class="auth-credential-input"
+                  dir="ltr"
+                  lang="en"
+                  autocomplete="one-time-code"
+                  formControlName="resetToken"
+                />
               </mat-form-field>
               <mat-form-field appearance="outline">
                 <mat-label i18n="@@auth.reset.newPassword">New password</mat-label>
                 <input
                   matInput
+                  class="auth-credential-input"
+                  dir="ltr"
+                  lang="en"
                   type="password"
                   autocomplete="new-password"
                   formControlName="newPassword"
                 />
                 @if (form.controls.newPassword.hasError('minlength')) {
-                  <mat-error i18n="@@validation.passwordMinLength">Use at least 8 characters.</mat-error>
+                  <mat-error i18n="@@validation.passwordMinLength"
+                    >Use at least 8 characters.</mat-error
+                  >
                 }
               </mat-form-field>
               @if (error()) {
@@ -122,7 +145,9 @@ export class ResetPasswordPage {
         this.submitting.set(false);
       },
       error: () => {
-        this.error.set($localize`:@@auth.reset.failed:We could not reset your password. Check the token and try again.`);
+        this.error.set(
+          $localize`:@@auth.reset.failed:We could not reset your password. Check the token and try again.`,
+        );
         this.submitting.set(false);
       },
     });

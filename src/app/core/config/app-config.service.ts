@@ -6,7 +6,7 @@ export interface AppConfig {
   readonly apiBaseUrl: string;
 }
 
-const defaultConfig: AppConfig = { apiBaseUrl: '' };
+const defaultConfig: AppConfig = { apiBaseUrl: '/api' };
 
 @Injectable({ providedIn: 'root' })
 export class AppConfigService {
@@ -18,15 +18,23 @@ export class AppConfigService {
   }
 
   async load(): Promise<void> {
-    const loaded = await firstValueFrom(
-      this.http.get<Partial<AppConfig>>('/config/app-config.json'),
-    );
+    try {
+      const loaded = await firstValueFrom(
+        this.http.get<Partial<AppConfig>>('config/app-config.json'),
+      );
 
-    if (typeof loaded.apiBaseUrl !== 'string') {
-      throw new Error('Runtime configuration must define apiBaseUrl as a string.');
+      if (typeof loaded.apiBaseUrl !== 'string') {
+        throw new Error('Runtime configuration must define apiBaseUrl as a string.');
+      }
+
+      this.config = { apiBaseUrl: loaded.apiBaseUrl.replace(/\/$/, '') };
+    } catch (error) {
+      console.warn(
+        'Runtime configuration could not be loaded; using the default configuration.',
+        error,
+      );
+      this.config = defaultConfig;
     }
-
-    this.config = { apiBaseUrl: loaded.apiBaseUrl.replace(/\/$/, '') };
   }
 }
 

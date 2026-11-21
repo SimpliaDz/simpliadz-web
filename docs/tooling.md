@@ -12,6 +12,8 @@ Use `yarn install --immutable` after cloning. Never generate or commit `package-
 | Command                   | Purpose                                                                         |
 | ------------------------- | ------------------------------------------------------------------------------- |
 | `yarn start`              | Serve the English development build.                                            |
+| `yarn start:fr`           | Serve the French development build, with the local API proxy.                   |
+| `yarn start:ar`           | Serve the Arabic RTL development build, with the local API proxy.               |
 | `yarn lint`               | Run Angular-aware ESLint.                                                       |
 | `yarn test --watch=false` | Run the Vitest unit/component suite once.                                       |
 | `yarn build`              | Produce optimized English, French, and Arabic application builds.               |
@@ -22,6 +24,8 @@ End-to-end tests are split by dependency:
 
 - `e2e/shell.spec.ts` mocks `/api/auth/*` with `page.route`, so it is deterministic and needs no backend.
 - `e2e/smoke.spec.ts` and `e2e/live-auth.spec.ts` need the API at `http://localhost:5278` and exercise the browser-facing `/api` path through the dev proxy. `live-auth` uses the local dev admin seeded by the migrator.
+
+`yarn start`, `yarn start:fr`, and `yarn start:ar` all use `proxy.conf.json`: requests beginning with `/api` are forwarded to `http://localhost:5278`. Use these commands for any local sign-in test. A generic static file server can render a production build, but it does not implement this proxy, so `/api/auth/login` will return a static-server 404 unless its host is separately configured to proxy `/api`.
 
 CI runs lint, unit tests and the build only; it does not run e2e because the live tests need the backend.
 

@@ -36,6 +36,14 @@ body {
   margin: 0;
   height: 100%;
 }
+
+// Credentials, email addresses, reset tokens, SKUs, and similar machine-readable
+// values retain their left-to-right entry behavior even inside an Arabic RTL page.
+.auth-credential-input {
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: plaintext;
+}
 /* Shared screen patterns. Adapted from the Sneat template's header, card, table and form rhythm,
    expressed with Material tokens so light and dark themes stay consistent. */
 

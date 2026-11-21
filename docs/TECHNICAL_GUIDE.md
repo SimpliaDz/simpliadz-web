@@ -123,7 +123,9 @@ Angular bootstrap
 { "apiBaseUrl": "" }
 ```
 
-For local development it is set to `/api`. `proxy.conf.json` forwards that prefix to `http://localhost:5278` and removes the prefix before sending the request. This avoids a browser CORS dependency during local development. A production host must route `/api` to its API origin, or replace this public runtime configuration with an approved API base URL. Do not put credentials, refresh tokens, connection strings, or tenant data in this file. It is public deployment configuration.
+For local development it is set to `/api`. `proxy.conf.json` forwards that prefix to `http://localhost:5278` and removes the prefix before sending the request. This avoids a browser CORS dependency during local development. The build copies this file into each localized directory, for example `dist/.../browser/ar/config/app-config.json`. The application deliberately loads `config/app-config.json` relative to the locale base path, so the Arabic build requests `/ar/config/app-config.json` and the French build requests `/fr/config/app-config.json`. A production host must route `/api` to its API origin, or replace this public runtime configuration with an approved API base URL. If the file is absent, the app continues using `/api` and logs a warning rather than rendering a blank page. Do not put credentials, refresh tokens, connection strings, or tenant data in this file. It is public deployment configuration.
+
+Use `yarn start:ar` or `yarn start:fr` to test a localized development build against the local API. These configurations preserve the development server's `/api` proxy. Do not use a generic static server for an authenticated local test unless that server is also configured to proxy `/api` to port `5278`; otherwise the browser receives its `404 Not Found` response instead of reaching the API.
 
 Application code reads configuration through `AppConfigService`; it must not hard-code API origins in feature code. Consumers that build request URLs must read the current `value` when making the request, rather than capturing the pre-bootstrap default configuration. This lets the same compiled bundle move between local, test, and production API environments.
 
@@ -272,6 +274,8 @@ border-inline-start: 1px solid var(--mat-sys-outline);
 padding-left: 1rem;
 margin-right: 0.5rem;
 ```
+
+Credentials and other machine-readable identifiers are an exception: email addresses, passwords, reset tokens, SKUs, barcodes, and API keys must use `dir="ltr"` and the shared `auth-credential-input` class. This ensures mixed punctuation such as `Admin123!` is entered and displayed left-to-right inside an RTL page.
 
 ## 9. Light and dark theme
 

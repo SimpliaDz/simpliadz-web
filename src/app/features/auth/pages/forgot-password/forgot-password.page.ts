@@ -22,11 +22,15 @@ import { AuthApiService } from '../../data-access/auth-api.service';
       <mat-card class="auth-card">
         <mat-card-header>
           <mat-card-title><h1 i18n="@@auth.forgot.heading">Reset your password</h1></mat-card-title>
-          <mat-card-subtitle i18n="@@auth.forgot.subtitle">Enter your email address to begin.</mat-card-subtitle>
+          <mat-card-subtitle i18n="@@auth.forgot.subtitle"
+            >Enter your email address to begin.</mat-card-subtitle
+          >
         </mat-card-header>
         <mat-card-content>
           @if (resetToken()) {
-            <p class="auth-success" i18n="@@auth.forgot.generated">A development reset token was generated.</p>
+            <p class="auth-success" i18n="@@auth.forgot.generated">
+              A development reset token was generated.
+            </p>
             <button mat-flat-button type="button" (click)="continueToReset()">
               <span i18n="@@auth.forgot.continue">Continue to reset password</span>
             </button>
@@ -34,7 +38,15 @@ import { AuthApiService } from '../../data-access/auth-api.service';
             <form [formGroup]="form" (ngSubmit)="submit()">
               <mat-form-field appearance="outline">
                 <mat-label i18n="@@auth.field.email">Email address</mat-label>
-                <input matInput type="email" autocomplete="email" formControlName="email" />
+                <input
+                  matInput
+                  class="auth-credential-input"
+                  dir="ltr"
+                  lang="en"
+                  type="email"
+                  autocomplete="email"
+                  formControlName="email"
+                />
                 @if (form.controls.email.invalid && form.controls.email.touched) {
                   <mat-error i18n="@@validation.email">Enter a valid email address.</mat-error>
                 }
@@ -48,7 +60,11 @@ import { AuthApiService } from '../../data-access/auth-api.service';
             </form>
           }
         </mat-card-content>
-        <mat-card-actions><a mat-button routerLink="/login" i18n="@@auth.forgot.back">Back to sign in</a></mat-card-actions>
+        <mat-card-actions
+          ><a mat-button routerLink="/login" i18n="@@auth.forgot.back"
+            >Back to sign in</a
+          ></mat-card-actions
+        >
       </mat-card>
     </main>
   `,
@@ -101,7 +117,9 @@ export class ForgotPasswordPage {
         this.submitting.set(false);
       },
       error: () => {
-        this.error.set($localize`:@@auth.forgot.failed:We could not process the reset request. Try again later.`);
+        this.error.set(
+          $localize`:@@auth.forgot.failed:We could not process the reset request. Try again later.`,
+        );
         this.submitting.set(false);
       },
     });

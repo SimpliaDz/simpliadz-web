@@ -36,7 +36,13 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "public",
+                "ignore": ["config/app-config.json"]
+              },
+              {
+                "glob": "app-config.json",
+                "input": "public/config",
+                "output": "config"
               }
             ],
             "styles": ["src/styles.scss"]
@@ -62,6 +68,18 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
+            },
+            "development-fr": {
+              "localize": ["fr"],
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            },
+            "development-ar": {
+              "localize": ["ar"],
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
             }
           },
           "defaultConfiguration": "production"
@@ -77,6 +95,12 @@
             },
             "development": {
               "buildTarget": "simpliadz-web:build:development"
+            },
+            "development-fr": {
+              "buildTarget": "simpliadz-web:build:development-fr"
+            },
+            "development-ar": {
+              "buildTarget": "simpliadz-web:build:development-ar"
             }
           },
           "defaultConfiguration": "development"
