@@ -70,6 +70,42 @@ export const navigationSections: readonly NavigationSection[] = [
         path: '/app/inventory/price-lists',
         permissions: ['price-lists.view'],
       },
+      {
+        label: $localize`:@@nav.stock:Stock levels`,
+        icon: 'inventory',
+        path: '/app/inventory/stock',
+        permissions: ['stock.view'],
+      },
+      {
+        label: $localize`:@@nav.movements:Movements`,
+        icon: 'swap_vert',
+        path: '/app/inventory/stock/movements',
+        permissions: ['stock.view'],
+      },
+      {
+        label: $localize`:@@nav.policies:Reorder policies`,
+        icon: 'rule',
+        path: '/app/inventory/stock/policies',
+        permissions: ['stock.view'],
+      },
+      {
+        label: $localize`:@@nav.transfers:Transfers`,
+        icon: 'local_shipping',
+        path: '/app/inventory/transfers',
+        permissions: ['stock.view'],
+      },
+      {
+        label: $localize`:@@nav.counts:Stock counts`,
+        icon: 'checklist',
+        path: '/app/inventory/counts',
+        permissions: ['stock.view'],
+      },
+      {
+        label: $localize`:@@nav.warnings:Warnings`,
+        icon: 'notifications',
+        path: '/app/inventory/warnings',
+        permissions: ['inventory-warnings.view'],
+      },
     ],
   },
   {

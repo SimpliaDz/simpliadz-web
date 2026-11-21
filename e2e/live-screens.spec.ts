@@ -13,6 +13,12 @@ const screens: { path: string; heading: string }[] = [
   { path: '/app/catalogue/attributes', heading: 'Attributes' },
   { path: '/app/inventory/locations', heading: 'Locations' },
   { path: '/app/inventory/price-lists', heading: 'Price lists' },
+  { path: '/app/inventory/stock', heading: 'Stock levels' },
+  { path: '/app/inventory/stock/movements', heading: 'Stock movements' },
+  { path: '/app/inventory/stock/policies', heading: 'Reorder policies' },
+  { path: '/app/inventory/transfers', heading: 'Stock transfers' },
+  { path: '/app/inventory/counts', heading: 'Stock counts' },
+  { path: '/app/inventory/warnings', heading: 'Inventory warnings' },
   { path: '/app/administration/users', heading: 'Users' },
   { path: '/app/administration/roles', heading: 'Roles' },
 ];

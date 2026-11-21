@@ -193,6 +193,75 @@ export const routes: Routes = [
           ),
       },
 
+      {
+        path: 'inventory/stock',
+        title: $localize`:@@title.stock:Stock levels | SimpliaDz`,
+        ...permissioned(['stock.view']),
+        loadComponent: () =>
+          import('./features/inventory/stock/pages/stock-levels.page').then(
+            (m) => m.StockLevelsPage,
+          ),
+      },
+      {
+        path: 'inventory/stock/movements',
+        title: $localize`:@@title.movements:Stock movements | SimpliaDz`,
+        ...permissioned(['stock.view']),
+        loadComponent: () =>
+          import('./features/inventory/stock/pages/movements.page').then(
+            (m) => m.StockMovementsPage,
+          ),
+      },
+      {
+        path: 'inventory/stock/policies',
+        title: $localize`:@@title.policies:Reorder policies | SimpliaDz`,
+        ...permissioned(['stock.view']),
+        loadComponent: () =>
+          import('./features/inventory/stock/pages/policies.page').then(
+            (m) => m.ReorderPoliciesPage,
+          ),
+      },
+      {
+        path: 'inventory/transfers',
+        title: $localize`:@@title.transfers:Stock transfers | SimpliaDz`,
+        ...permissioned(['stock.view']),
+        loadComponent: () =>
+          import('./features/inventory/transfers/pages/transfers.page').then(
+            (m) => m.TransfersPage,
+          ),
+      },
+      {
+        path: 'inventory/transfers/:id',
+        title: $localize`:@@title.transfer:Transfer | SimpliaDz`,
+        ...permissioned(['stock.view']),
+        loadComponent: () =>
+          import('./features/inventory/transfers/pages/transfer-detail.page').then(
+            (m) => m.TransferDetailPage,
+          ),
+      },
+      {
+        path: 'inventory/counts',
+        title: $localize`:@@title.counts:Stock counts | SimpliaDz`,
+        ...permissioned(['stock.view']),
+        loadComponent: () =>
+          import('./features/inventory/counts/pages/counts.page').then((m) => m.CountsPage),
+      },
+      {
+        path: 'inventory/counts/:id',
+        title: $localize`:@@title.count:Stock count | SimpliaDz`,
+        ...permissioned(['stock.view']),
+        loadComponent: () =>
+          import('./features/inventory/counts/pages/count-detail.page').then(
+            (m) => m.CountDetailPage,
+          ),
+      },
+      {
+        path: 'inventory/warnings',
+        title: $localize`:@@title.warnings:Inventory warnings | SimpliaDz`,
+        ...permissioned(['inventory-warnings.view']),
+        loadComponent: () =>
+          import('./features/inventory/warnings/pages/warnings.page').then((m) => m.WarningsPage),
+      },
+
       // Administration
       {
         path: 'administration/users',

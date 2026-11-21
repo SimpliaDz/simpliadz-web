@@ -21,6 +21,14 @@
       <trans-unit id="title.newLocation" datatype="html"><source>New location | SimpliaDz</source><target>موقع جديد | SimpliaDz</target></trans-unit>
       <trans-unit id="title.editLocation" datatype="html"><source>Edit location | SimpliaDz</source><target>تعديل الموقع | SimpliaDz</target></trans-unit>
       <trans-unit id="title.priceLists" datatype="html"><source>Price lists | SimpliaDz</source><target>قوائم الأسعار | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.stock" datatype="html"><source>Stock levels | SimpliaDz</source><target>مستويات المخزون | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.movements" datatype="html"><source>Stock movements | SimpliaDz</source><target>حركات المخزون | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.policies" datatype="html"><source>Reorder policies | SimpliaDz</source><target>حدود إعادة الطلب | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.transfers" datatype="html"><source>Stock transfers | SimpliaDz</source><target>تحويلات المخزون | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.transfer" datatype="html"><source>Transfer | SimpliaDz</source><target>التحويل | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.counts" datatype="html"><source>Stock counts | SimpliaDz</source><target>جرد المخزون | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.count" datatype="html"><source>Stock count | SimpliaDz</source><target>جرد | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.warnings" datatype="html"><source>Inventory warnings | SimpliaDz</source><target>تنبيهات المخزون | SimpliaDz</target></trans-unit>
       <trans-unit id="title.users" datatype="html"><source>Users | SimpliaDz</source><target>المستخدمون | SimpliaDz</target></trans-unit>
       <trans-unit id="title.newUser" datatype="html"><source>New user | SimpliaDz</source><target>مستخدم جديد | SimpliaDz</target></trans-unit>
       <trans-unit id="title.user" datatype="html"><source>User | SimpliaDz</source><target>المستخدم | SimpliaDz</target></trans-unit>
@@ -43,6 +51,12 @@
       <trans-unit id="nav.section.inventory" datatype="html"><source>Inventory</source><target>المخزون</target></trans-unit>
       <trans-unit id="nav.locations" datatype="html"><source>Locations</source><target>المواقع</target></trans-unit>
       <trans-unit id="nav.priceLists" datatype="html"><source>Price lists</source><target>قوائم الأسعار</target></trans-unit>
+      <trans-unit id="nav.stock" datatype="html"><source>Stock levels</source><target>مستويات المخزون</target></trans-unit>
+      <trans-unit id="nav.movements" datatype="html"><source>Movements</source><target>الحركات</target></trans-unit>
+      <trans-unit id="nav.policies" datatype="html"><source>Reorder policies</source><target>حدود إعادة الطلب</target></trans-unit>
+      <trans-unit id="nav.transfers" datatype="html"><source>Transfers</source><target>التحويلات</target></trans-unit>
+      <trans-unit id="nav.counts" datatype="html"><source>Stock counts</source><target>الجرد</target></trans-unit>
+      <trans-unit id="nav.warnings" datatype="html"><source>Warnings</source><target>التنبيهات</target></trans-unit>
       <trans-unit id="nav.section.business" datatype="html"><source>Business</source><target>المؤسسة</target></trans-unit>
       <trans-unit id="nav.organization" datatype="html"><source>Organization</source><target>المؤسسة</target></trans-unit>
       <trans-unit id="nav.section.administration" datatype="html"><source>Administration</source><target>الإدارة</target></trans-unit>
@@ -66,8 +80,8 @@
       <trans-unit id="account.security.submit" datatype="html"><source>Change password</source><target>تغيير كلمة المرور</target></trans-unit>
       <trans-unit id="account.security.failed" datatype="html"><source>We could not change your password. Check your current password and try again.</source><target>تعذّر تغيير كلمة المرور. تحقّق من كلمة المرور الحالية وأعد المحاولة.</target></trans-unit>
       <trans-unit id="common.save" datatype="html"><source>Save</source><target>حفظ</target></trans-unit>
-      <trans-unit id="common.retry" datatype="html"><source>Try again</source><target>إعادة المحاولة</target></trans-unit>
-      <trans-unit id="roles.readOnly" datatype="html"><source>You can view this role but not change it.</source><target>يمكنك عرض هذا الدور دون تعديله.</target></trans-unit>
+      <trans-unit id="common.retry" datatype="html"><source> Try again </source><target>إعادة المحاولة</target></trans-unit>
+      <trans-unit id="roles.readOnly" datatype="html"><source> You can view this role but not change it. </source><target>يمكنك عرض هذا الدور دون تعديله.</target></trans-unit>
       <trans-unit id="roles.detail.heading" datatype="html"><source>Role</source><target>الدور</target></trans-unit>
       <trans-unit id="roles.detail.subtitle" datatype="html"><source>Tick the permissions this role grants, then save.</source><target>حدّد الصلاحيات التي يمنحها هذا الدور ثم احفظ.</target></trans-unit>
       <trans-unit id="roles.backToList" datatype="html"><source>All roles</source><target>كل الأدوار</target></trans-unit>
@@ -138,9 +152,9 @@
       <trans-unit id="auth.login.passwordChanged" datatype="html"><source> Your password was changed. Sign in again to continue. </source><target>تم تغيير كلمة المرور. سجّل الدخول مجددًا للمتابعة.</target></trans-unit>
       <trans-unit id="attributes.detail.note" datatype="html"><source>Attribute names are fixed after creation.</source><target>لا يمكن تغيير اسم الخاصية بعد إنشائها.</target></trans-unit>
       <trans-unit id="attributes.values" datatype="html"><source>Values</source><target>القيم</target></trans-unit>
-      <trans-unit id="attributes.noValuesHint" datatype="html"><source>No values yet. Add the first value below.</source><target>لا توجد قيم بعد. أضف الأولى أدناه.</target></trans-unit>
+      <trans-unit id="attributes.noValuesHint" datatype="html"><source> No values yet. Add the first value below. </source><target>لا توجد قيم بعد. أضف الأولى أدناه.</target></trans-unit>
       <trans-unit id="attributes.value.field" datatype="html"><source>Value</source><target>القيمة</target></trans-unit>
-      <trans-unit id="attributes.displayOrder" datatype="html"><source>Display order</source><target>ترتيب العرض</target></trans-unit>
+      <trans-unit id="attributes.displayOrder" datatype="html"><source> Display order </source><target>ترتيب العرض</target></trans-unit>
       <trans-unit id="attributes.addValue" datatype="html"><source>Add a value</source><target>إضافة قيمة</target></trans-unit>
       <trans-unit id="validation.nonNegative" datatype="html"><source>Use zero or a positive number.</source><target>أدخل صفرًا أو رقمًا موجبًا.</target></trans-unit>
       <trans-unit id="common.add" datatype="html"><source>Add value</source><target>إضافة</target></trans-unit>
@@ -237,7 +251,7 @@
       <trans-unit id="common.all" datatype="html"><source>All</source><target>الكل</target></trans-unit>
       <trans-unit id="common.apply" datatype="html"><source>Apply</source><target>تطبيق</target></trans-unit>
       <trans-unit id="products.lookup" datatype="html"><source>Find a variant by SKU or barcode</source><target>ابحث عن متغير بالـ SKU أو الباركود</target></trans-unit>
-      <trans-unit id="products.lookup.action" datatype="html"><source>Find variant</source><target>بحث عن المتغير</target></trans-unit>
+      <trans-unit id="products.lookup.action" datatype="html"><source> Find variant </source><target>بحث عن المتغير</target></trans-unit>
       <trans-unit id="products.variantCount" datatype="html"><source>Variants</source><target>المتغيرات</target></trans-unit>
       <trans-unit id="products.heading" datatype="html"><source>Products</source><target>المنتجات</target></trans-unit>
       <trans-unit id="products.loadFailed" datatype="html"><source>We could not load products</source><target>تعذّر تحميل المنتجات</target></trans-unit>
@@ -252,7 +266,7 @@
       <trans-unit id="variants.wholesalePrice" datatype="html"><source>Wholesale price</source><target>سعر الجملة</target></trans-unit>
       <trans-unit id="variants.legacyPriceHint" datatype="html"><source>Legacy field. Selling uses price lists.</source><target>حقل قديم. البيع يستخدم قوائم الأسعار.</target></trans-unit>
       <trans-unit id="variants.section.attributes" datatype="html"><source>Attribute values</source><target>قيم الخصائص</target></trans-unit>
-      <trans-unit id="variants.attributesHint" datatype="html"><source>Choose one value per attribute. A variant needs at least one value.</source><target>اختر قيمة واحدة لكل خاصية. يحتاج المتغير إلى قيمة واحدة على الأقل.</target></trans-unit>
+      <trans-unit id="variants.attributesHint" datatype="html"><source> Choose one value per attribute. A variant needs at least one value. </source><target>اختر قيمة واحدة لكل خاصية. يحتاج المتغير إلى قيمة واحدة على الأقل.</target></trans-unit>
       <trans-unit id="variants.create.heading" datatype="html"><source>New variant</source><target>متغير جديد</target></trans-unit>
       <trans-unit id="variants.create.loadFailed" datatype="html"><source>We could not load the variant form</source><target>تعذّر تحميل نموذج المتغير</target></trans-unit>
       <trans-unit id="variants.create.noAttributes.title" datatype="html"><source>Add attributes first</source><target>أضف الخصائص أولًا</target></trans-unit>
@@ -266,7 +280,7 @@
       <trans-unit id="variants.noAttributes" datatype="html"><source>No attribute values.</source><target>لا توجد قيم خصائص.</target></trans-unit>
       <trans-unit id="variants.generateBarcode" datatype="html"><source>Generate barcode</source><target>توليد باركود</target></trans-unit>
       <trans-unit id="variants.section.identifiers" datatype="html"><source>Identifiers</source><target>المعرّفات</target></trans-unit>
-      <trans-unit id="variants.auditNotice" datatype="html"><source>Changes to SKU and barcode are recorded in the audit trail.</source><target>تُسجَّل تغييرات الـ SKU والباركود في سجل التدقيق.</target></trans-unit>
+      <trans-unit id="variants.auditNotice" datatype="html"><source> Changes to SKU and barcode are recorded in the audit trail. </source><target>تُسجَّل تغييرات الـ SKU والباركود في سجل التدقيق.</target></trans-unit>
       <trans-unit id="variants.section.prices" datatype="html"><source>Prices by price list</source><target>الأسعار حسب قائمة الأسعار</target></trans-unit>
       <trans-unit id="priceLists.name" datatype="html"><source>Price list</source><target>قائمة الأسعار</target></trans-unit>
       <trans-unit id="priceLists.currency" datatype="html"><source>Currency</source><target>العملة</target></trans-unit>
@@ -301,6 +315,49 @@
       <trans-unit id="status.backToDashboard" datatype="html"><source>Back to dashboard</source><target>العودة إلى لوحة التحكم</target></trans-unit>
       <trans-unit id="status.notFound.heading" datatype="html"><source>Page not found</source><target>الصفحة غير موجودة</target></trans-unit>
       <trans-unit id="status.notFound.body" datatype="html"><source>The page you are looking for does not exist or has moved.</source><target>الصفحة التي تبحث عنها غير موجودة أو تم نقلها.</target></trans-unit>
+      <trans-unit id="counts.cancel" datatype="html"><source>Cancel count</source><target>إلغاء الجرد</target></trans-unit>
+      <trans-unit id="counts.complete" datatype="html"><source>Complete count</source><target>إنجاز الجرد</target></trans-unit>
+      <trans-unit id="counts.auditNotice" datatype="html"><source>Completing a count writes the differences as adjustments and is recorded in the audit trail.</source><target>إنجاز الجرد يحوّل الفروقات إلى تسويات، وتُسجَّل في سجل التدقيق.</target></trans-unit>
+      <trans-unit id="stock.column.product" datatype="html"><source>Product</source><target>المنتج</target></trans-unit>
+      <trans-unit id="counts.expected" datatype="html"><source>Expected</source><target>المتوقع</target></trans-unit>
+      <trans-unit id="counts.counted" datatype="html"><source>Counted</source><target>المعدود</target></trans-unit>
+      <trans-unit id="counts.difference" datatype="html"><source>Difference</source><target>الفرق</target></trans-unit>
+      <trans-unit id="counts.addLine" datatype="html"><source>Add a product to count</source><target>إضافة منتج للجرد</target></trans-unit>
+      <trans-unit id="stock.field.variant" datatype="html"><source>Product variant</source><target>متغير المنتج</target></trans-unit>
+      <trans-unit id="counts.addLine.action" datatype="html"><source>Add line</source><target>إضافة البند</target></trans-unit>
+      <trans-unit id="counts.detail.heading" datatype="html"><source>Stock count</source><target>جرد المخزون</target></trans-unit>
+      <trans-unit id="counts.detail.loadFailed" datatype="html"><source>We could not load this count</source><target>تعذّر تحميل هذا الجرد</target></trans-unit>
+      <trans-unit id="counts.noLines.title" datatype="html"><source>No products yet</source><target>لا توجد منتجات بعد</target></trans-unit>
+      <trans-unit id="counts.noLines.message" datatype="html"><source>Add the products you are counting, then enter the quantities you find.</source><target>أضف المنتجات المراد جردها ثم أدخل الكميات التي تجدها.</target></trans-unit>
+      <trans-unit id="counts.match" datatype="html"><source>Matches</source><target>مطابق</target></trans-unit>
+      <trans-unit id="counts.backToList" datatype="html"><source>All counts</source><target>كل عمليات الجرد</target></trans-unit>
+      <trans-unit id="counts.detail.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
+      <trans-unit id="counts.lineFailed" datatype="html"><source>The product could not be added.</source><target>تعذّرت إضافة المنتج.</target></trans-unit>
+      <trans-unit id="counts.quantityInvalid" datatype="html"><source>Enter a whole number of zero or more.</source><target>أدخل عددًا صحيحًا يساوي صفرًا أو أكبر.</target></trans-unit>
+      <trans-unit id="counts.countFailed" datatype="html"><source>The count could not be saved.</source><target>تعذّر حفظ العد.</target></trans-unit>
+      <trans-unit id="counts.complete.title" datatype="html"><source>Complete this count?</source><target>إنجاز هذا الجرد؟</target></trans-unit>
+      <trans-unit id="counts.complete.message" datatype="html"><source>Each difference becomes a stock adjustment. If stock moved at this location since the count started, the count is refused and must be started again.</source><target>يتحول كل فرق إلى تسوية مخزون. إذا تحرك المخزون في هذا الموقع منذ بدء الجرد فسيُرفض الجرد ويجب بدؤه من جديد.</target></trans-unit>
+      <trans-unit id="counts.completed" datatype="html"><source>Count completed.</source><target>تم إنجاز الجرد.</target></trans-unit>
+      <trans-unit id="counts.completeFailed" datatype="html"><source>The count could not be completed.</source><target>تعذّر إنجاز الجرد.</target></trans-unit>
+      <trans-unit id="counts.cancel.title" datatype="html"><source>Cancel this count?</source><target>إلغاء هذا الجرد؟</target></trans-unit>
+      <trans-unit id="counts.cancel.message" datatype="html"><source>The count is closed without changing any stock.</source><target>يُغلق الجرد دون تغيير أي مخزون.</target></trans-unit>
+      <trans-unit id="counts.cancelFailed" datatype="html"><source>The count could not be cancelled.</source><target>تعذّر إلغاء الجرد.</target></trans-unit>
+      <trans-unit id="counts.status.draft" datatype="html"><source>In progress</source><target>قيد التنفيذ</target></trans-unit>
+      <trans-unit id="counts.status.completed" datatype="html"><source>Completed</source><target>مُنجز</target></trans-unit>
+      <trans-unit id="counts.status.cancelled" datatype="html"><source>Cancelled</source><target>ملغى</target></trans-unit>
+      <trans-unit id="counts.subtitle" datatype="html"><source>A physical count compares what the system expects with what is on the shelf.</source><target>يقارن الجرد الفعلي ما يتوقعه النظام مع ما هو موجود على الرفوف.</target></trans-unit>
+      <trans-unit id="counts.start" datatype="html"><source>Start count</source><target>بدء جرد</target></trans-unit>
+      <trans-unit id="stock.field.location" datatype="html"><source>Location</source><target>الموقع</target></trans-unit>
+      <trans-unit id="counts.started" datatype="html"><source>Started</source><target>بدأ في</target></trans-unit>
+      <trans-unit id="counts.lines" datatype="html"><source>Lines</source><target>البنود</target></trans-unit>
+      <trans-unit id="counts.heading" datatype="html"><source>Stock counts</source><target>جرد المخزون</target></trans-unit>
+      <trans-unit id="counts.loadFailed" datatype="html"><source>We could not load stock counts</source><target>تعذّر تحميل عمليات الجرد</target></trans-unit>
+      <trans-unit id="counts.empty.title" datatype="html"><source>No counts yet</source><target>لا توجد عمليات جرد بعد</target></trans-unit>
+      <trans-unit id="counts.empty.message" datatype="html"><source>Start a count at a location to check the shelves against the system.</source><target>ابدأ جردًا في موقع للتحقق من الرفوف مقابل النظام.</target></trans-unit>
+      <trans-unit id="counts.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
+      <trans-unit id="counts.dialog.title" datatype="html"><source>Start a stock count</source><target>بدء جرد للمخزون</target></trans-unit>
+      <trans-unit id="counts.dialog.hint" datatype="html"><source> The count records today&apos;s balances at the location as expected quantities. Enter what you find, then complete the count. </source><target>يسجّل الجرد الأرصدة الحالية للموقع ككميات متوقعة. أدخل ما تجده ثم أنجز الجرد.</target></trans-unit>
+      <trans-unit id="counts.saveFailed" datatype="html"><source>The count could not be started.</source><target>تعذّر بدء الجرد.</target></trans-unit>
       <trans-unit id="locations.name" datatype="html"><source>Name</source><target>الاسم</target></trans-unit>
       <trans-unit id="locations.code" datatype="html"><source>Code</source><target>الرمز</target></trans-unit>
       <trans-unit id="locations.codeHint" datatype="html"><source>Optional. Stored in upper case and must be unique.</source><target>اختياري. يُحفظ بالأحرف الكبيرة ويجب أن يكون فريدًا.</target></trans-unit>
@@ -341,6 +398,137 @@
       <trans-unit id="priceLists.dialog.create" datatype="html"><source>New price list</source><target>قائمة أسعار جديدة</target></trans-unit>
       <trans-unit id="priceLists.currencyHint" datatype="html"><source>Three letters, for example DZD.</source><target>ثلاثة أحرف، مثل DZD.</target></trans-unit>
       <trans-unit id="validation.currency" datatype="html"><source>Use three letters.</source><target>استخدم ثلاثة أحرف.</target></trans-unit>
+      <trans-unit id="movements.subtitle" datatype="html"><source>Every stock change is recorded here and never edited. Corrections are new movements.</source><target>تُسجَّل كل تغييرات المخزون هنا ولا تُعدَّل أبدًا. التصحيح يكون بحركة جديدة.</target></trans-unit>
+      <trans-unit id="movements.when" datatype="html"><source>When</source><target>التاريخ</target></trans-unit>
+      <trans-unit id="movements.type" datatype="html"><source>Type</source><target>النوع</target></trans-unit>
+      <trans-unit id="movements.change" datatype="html"><source>Change</source><target>التغيير</target></trans-unit>
+      <trans-unit id="movements.note" datatype="html"><source>Reference and reason</source><target>المرجع والسبب</target></trans-unit>
+      <trans-unit id="movements.heading" datatype="html"><source>Stock movements</source><target>حركات المخزون</target></trans-unit>
+      <trans-unit id="movements.loadFailed" datatype="html"><source>We could not load movements</source><target>تعذّر تحميل الحركات</target></trans-unit>
+      <trans-unit id="movements.empty.title" datatype="html"><source>No movements</source><target>لا توجد حركات</target></trans-unit>
+      <trans-unit id="movements.empty.message" datatype="html"><source>Nothing matches these filters yet.</source><target>لا توجد حركات تطابق هذه المرشحات.</target></trans-unit>
+      <trans-unit id="movements.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
+      <trans-unit id="policies.subtitle" datatype="html"><source>A reorder point tells you when a variant at a location needs restocking.</source><target>يحدد الحد متى يحتاج متغير في موقع معيّن إلى إعادة التوريد.</target></trans-unit>
+      <trans-unit id="policies.create" datatype="html"><source>Set reorder policy</source><target>تحديد حد</target></trans-unit>
+      <trans-unit id="policies.filter.below" datatype="html"><source>Below reorder point</source><target>تحت الحد</target></trans-unit>
+      <trans-unit id="policies.filter.out" datatype="html"><source>Out of stock</source><target>نفد المخزون</target></trans-unit>
+      <trans-unit id="stock.column.onHand" datatype="html"><source>On hand</source><target>المتوفر</target></trans-unit>
+      <trans-unit id="policies.reorderPoint" datatype="html"><source>Reorder point</source><target>حد إعادة الطلب</target></trans-unit>
+      <trans-unit id="policies.targetLevel" datatype="html"><source>Target</source><target>المستوى المستهدف</target></trans-unit>
+      <trans-unit id="policies.heading" datatype="html"><source>Reorder policies</source><target>حدود إعادة الطلب</target></trans-unit>
+      <trans-unit id="policies.loadFailed" datatype="html"><source>We could not load reorder policies</source><target>تعذّر تحميل الحدود</target></trans-unit>
+      <trans-unit id="policies.empty.title" datatype="html"><source>No reorder policies</source><target>لا توجد حدود لإعادة الطلب</target></trans-unit>
+      <trans-unit id="policies.empty.message" datatype="html"><source>Set a reorder point for a variant at a location to get warned when stock runs low.</source><target>حدّد حدًا لمتغير في موقع لتصلك تنبيهات عند انخفاض المخزون.</target></trans-unit>
+      <trans-unit id="stock.out" datatype="html"><source>Out of stock</source><target>نفد المخزون</target></trans-unit>
+      <trans-unit id="policies.low" datatype="html"><source>Below reorder point</source><target>تحت حد إعادة الطلب</target></trans-unit>
+      <trans-unit id="policies.ok" datatype="html"><source>OK</source><target>جيد</target></trans-unit>
+      <trans-unit id="policies.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
+      <trans-unit id="policies.saved" datatype="html"><source>Reorder policy saved.</source><target>تم حفظ الحد.</target></trans-unit>
+      <trans-unit id="stock.subtitle" datatype="html"><source>Stock is held per product variant at each location. Products do not own quantities.</source><target>يُحتفظ بالمخزون لكل متغير منتج وفي كل موقع. المنتجات لا تملك كميات بذاتها.</target></trans-unit>
+      <trans-unit id="stock.opening.action" datatype="html"><source>Opening stock</source><target>رصيد افتتاحي</target></trans-unit>
+      <trans-unit id="stock.adjust.action" datatype="html"><source>Adjust</source><target>تسوية</target></trans-unit>
+      <trans-unit id="stock.receipt.action" datatype="html"><source>Receive stock</source><target>استلام مخزون</target></trans-unit>
+      <trans-unit id="stock.heading" datatype="html"><source>Stock levels</source><target>مستويات المخزون</target></trans-unit>
+      <trans-unit id="stock.loadFailed" datatype="html"><source>We could not load stock</source><target>تعذّر تحميل المخزون</target></trans-unit>
+      <trans-unit id="stock.noLocation.title" datatype="html"><source>No locations yet</source><target>لا توجد مواقع بعد</target></trans-unit>
+      <trans-unit id="stock.noLocation.message" datatype="html"><source>Create a location before recording stock.</source><target>أنشئ موقعًا قبل تسجيل المخزون.</target></trans-unit>
+      <trans-unit id="stock.empty.title" datatype="html"><source>No stock recorded here</source><target>لا يوجد مخزون مسجّل هنا</target></trans-unit>
+      <trans-unit id="stock.empty.message" datatype="html"><source>Record opening stock or receive goods to start tracking quantities at this location.</source><target>سجّل رصيدًا افتتاحيًا أو استلم بضاعة لبدء تتبع الكميات في هذا الموقع.</target></trans-unit>
+      <trans-unit id="stock.inStock" datatype="html"><source>In stock</source><target>متوفر</target></trans-unit>
+      <trans-unit id="stock.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
+      <trans-unit id="stock.saved" datatype="html"><source>Stock updated.</source><target>تم تحديث المخزون.</target></trans-unit>
+      <trans-unit id="policies.dialog.title" datatype="html"><source>Reorder policy</source><target>حد إعادة الطلب</target></trans-unit>
+      <trans-unit id="policies.reorderHint" datatype="html"><source>Reorder when on-hand stock falls below this.</source><target>أعد الطلب عندما ينخفض المخزون المتوفر عن هذا الرقم.</target></trans-unit>
+      <trans-unit id="policies.targetHint" datatype="html"><source>Optional. Must be at least the reorder point.</source><target>اختياري. يجب أن يساوي حد إعادة الطلب على الأقل.</target></trans-unit>
+      <trans-unit id="policies.targetInvalid" datatype="html"><source>The target must be a whole number at least equal to the reorder point.</source><target>يجب أن يكون المستوى المستهدف عددًا صحيحًا يساوي حد إعادة الطلب على الأقل.</target></trans-unit>
+      <trans-unit id="policies.saveFailed" datatype="html"><source>The policy could not be saved.</source><target>تعذّر حفظ الحد.</target></trans-unit>
+      <trans-unit id="stock.adjust.method" datatype="html"><source>Adjustment method</source><target>طريقة التسوية</target></trans-unit>
+      <trans-unit id="stock.adjust.set" datatype="html"><source>Set the counted quantity</source><target>تحديد الكمية المعدودة</target></trans-unit>
+      <trans-unit id="stock.adjust.delta" datatype="html"><source>Add or remove a quantity</source><target>إضافة كمية أو خصمها</target></trans-unit>
+      <trans-unit id="validation.wholeNumber" datatype="html"><source>Use a whole number.</source><target>أدخل عددًا صحيحًا.</target></trans-unit>
+      <trans-unit id="validation.stockMin" datatype="html"><source>The quantity is too small.</source><target>الكمية أقل من الحد المسموح.</target></trans-unit>
+      <trans-unit id="stock.adjust.zero" datatype="html"><source>Enter a quantity other than zero.</source><target>أدخل كمية غير الصفر.</target></trans-unit>
+      <trans-unit id="stock.field.reference" datatype="html"><source>Reference</source><target>المرجع</target></trans-unit>
+      <trans-unit id="stock.field.referenceHint" datatype="html"><source>Supplier invoice or delivery note.</source><target>فاتورة المورد أو إشعار التسليم.</target></trans-unit>
+      <trans-unit id="stock.adjust.reasonRequired" datatype="html"><source>A reason is required for an adjustment.</source><target>السبب مطلوب للتسوية.</target></trans-unit>
+      <trans-unit id="stock.adjust.auditNotice" datatype="html"><source>Adjustments are recorded in the audit trail.</source><target>تُسجَّل التسويات في سجل التدقيق.</target></trans-unit>
+      <trans-unit id="stock.receipt.title" datatype="html"><source>Receive stock</source><target>استلام مخزون</target></trans-unit>
+      <trans-unit id="stock.opening.title" datatype="html"><source>Record opening stock</source><target>تسجيل رصيد افتتاحي</target></trans-unit>
+      <trans-unit id="stock.adjust.title" datatype="html"><source>Adjust stock</source><target>تسوية المخزون</target></trans-unit>
+      <trans-unit id="stock.field.quantityChange" datatype="html"><source>Quantity</source><target>الكمية</target></trans-unit>
+      <trans-unit id="stock.field.quantity" datatype="html"><source>Quantity</source><target>الكمية</target></trans-unit>
+      <trans-unit id="stock.adjust.hint" datatype="html"><source>Use a negative number to remove stock.</source><target>استخدم رقمًا سالبًا لخصم الكمية.</target></trans-unit>
+      <trans-unit id="stock.field.reasonRequired" datatype="html"><source>Reason (required)</source><target>السبب (مطلوب)</target></trans-unit>
+      <trans-unit id="stock.field.reason" datatype="html"><source>Reason (optional)</source><target>السبب (اختياري)</target></trans-unit>
+      <trans-unit id="stock.saveFailed" datatype="html"><source>The stock change could not be saved.</source><target>تعذّر حفظ تغيير المخزون.</target></trans-unit>
+      <trans-unit id="transfers.cancel" datatype="html"><source>Cancel transfer</source><target>إلغاء التحويل</target></trans-unit>
+      <trans-unit id="transfers.complete" datatype="html"><source>Complete transfer</source><target>إنجاز التحويل</target></trans-unit>
+      <trans-unit id="transfers.lines" datatype="html"><source>Lines</source><target>البنود</target></trans-unit>
+      <trans-unit id="transfers.noLines" datatype="html"><source>No lines yet. Add the products to move.</source><target>لا توجد بنود بعد. أضف المنتجات المراد نقلها.</target></trans-unit>
+      <trans-unit id="transfers.quantity" datatype="html"><source>Quantity</source><target>الكمية</target></trans-unit>
+      <trans-unit id="transfers.addLine" datatype="html"><source>Add a line</source><target>إضافة بند</target></trans-unit>
+      <trans-unit id="validation.positive" datatype="html"><source>Enter at least 1.</source><target>أدخل 1 على الأقل.</target></trans-unit>
+      <trans-unit id="transfers.addLine.action" datatype="html"><source>Add line</source><target>إضافة البند</target></trans-unit>
+      <trans-unit id="transfers.details" datatype="html"><source>Details</source><target>التفاصيل</target></trans-unit>
+      <trans-unit id="transfers.source" datatype="html"><source>From</source><target>من</target></trans-unit>
+      <trans-unit id="transfers.destination" datatype="html"><source>To</source><target>إلى</target></trans-unit>
+      <trans-unit id="transfers.created" datatype="html"><source>Created</source><target>تاريخ الإنشاء</target></trans-unit>
+      <trans-unit id="transfers.completedAt" datatype="html"><source>Completed</source><target>تاريخ الإنجاز</target></trans-unit>
+      <trans-unit id="transfers.detail.loadFailed" datatype="html"><source>We could not load this transfer</source><target>تعذّر تحميل هذا التحويل</target></trans-unit>
+      <trans-unit id="transfers.backToList" datatype="html"><source>All transfers</source><target>كل التحويلات</target></trans-unit>
+      <trans-unit id="transfers.detail.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
+      <trans-unit id="transfers.lineFailed" datatype="html"><source>The line could not be added.</source><target>تعذّرت إضافة البند.</target></trans-unit>
+      <trans-unit id="transfers.complete.title" datatype="html"><source>Complete this transfer?</source><target>إنجاز هذا التحويل؟</target></trans-unit>
+      <trans-unit id="transfers.complete.message" datatype="html"><source>Stock moves from the source to the destination now. If any line is short, nothing moves and the transfer stays a draft.</source><target>ينتقل المخزون من المصدر إلى الوجهة الآن. إذا نقص مخزون أي بند فلن يتحرك شيء ويبقى التحويل مسودة.</target></trans-unit>
+      <trans-unit id="transfers.completed" datatype="html"><source>Transfer completed.</source><target>تم إنجاز التحويل.</target></trans-unit>
+      <trans-unit id="transfers.completeFailed" datatype="html"><source>The transfer could not be completed.</source><target>تعذّر إنجاز التحويل.</target></trans-unit>
+      <trans-unit id="transfers.cancel.title" datatype="html"><source>Cancel this transfer?</source><target>إلغاء هذا التحويل؟</target></trans-unit>
+      <trans-unit id="transfers.cancel.message" datatype="html"><source>A cancelled transfer cannot be reopened. No stock moves.</source><target>لا يمكن إعادة فتح التحويل الملغى. لن يتحرك أي مخزون.</target></trans-unit>
+      <trans-unit id="transfers.cancelFailed" datatype="html"><source>The transfer could not be cancelled.</source><target>تعذّر إلغاء التحويل.</target></trans-unit>
+      <trans-unit id="transfers.status.draft" datatype="html"><source>Draft</source><target>مسودة</target></trans-unit>
+      <trans-unit id="transfers.status.completed" datatype="html"><source>Completed</source><target>مُنجز</target></trans-unit>
+      <trans-unit id="transfers.status.cancelled" datatype="html"><source>Cancelled</source><target>ملغى</target></trans-unit>
+      <trans-unit id="transfers.subtitle" datatype="html"><source>Move stock between locations. A transfer is a draft until it is completed.</source><target>انقل المخزون بين المواقع. يبقى التحويل مسودة حتى يُنجز.</target></trans-unit>
+      <trans-unit id="transfers.create" datatype="html"><source>New transfer</source><target>تحويل جديد</target></trans-unit>
+      <trans-unit id="transfers.number" datatype="html"><source>Number</source><target>الرقم</target></trans-unit>
+      <trans-unit id="transfers.route" datatype="html"><source>From → To</source><target>من ← إلى</target></trans-unit>
+      <trans-unit id="transfers.heading" datatype="html"><source>Stock transfers</source><target>تحويلات المخزون</target></trans-unit>
+      <trans-unit id="transfers.loadFailed" datatype="html"><source>We could not load transfers</source><target>تعذّر تحميل التحويلات</target></trans-unit>
+      <trans-unit id="transfers.empty.title" datatype="html"><source>No transfers yet</source><target>لا توجد تحويلات بعد</target></trans-unit>
+      <trans-unit id="transfers.empty.message" datatype="html"><source>Create a transfer to move stock from one location to another.</source><target>أنشئ تحويلًا لنقل المخزون من موقع إلى آخر.</target></trans-unit>
+      <trans-unit id="transfers.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
+      <trans-unit id="transfers.dialog.title" datatype="html"><source>New transfer</source><target>تحويل جديد</target></trans-unit>
+      <trans-unit id="transfers.dialog.hint" datatype="html"><source>A transfer starts as a draft. Add lines, then complete it to move the stock.</source><target>يبدأ التحويل كمسودة. أضف البنود ثم أنجزه لنقل المخزون.</target></trans-unit>
+      <trans-unit id="transfers.sameLocation" datatype="html"><source>Choose two different locations.</source><target>اختر موقعين مختلفين.</target></trans-unit>
+      <trans-unit id="transfers.saveFailed" datatype="html"><source>The transfer could not be created.</source><target>تعذّر إنشاء التحويل.</target></trans-unit>
+      <trans-unit id="warnings.subtitle" datatype="html"><source>Warnings flag low stock and stock that has sat too long. Warnings clear themselves when the problem is fixed.</source><target>تُنبّه التنبيهات إلى انخفاض المخزون والمخزون الراكد لفترة طويلة. تختفي التنبيهات عند حل المشكلة.</target></trans-unit>
+      <trans-unit id="warnings.settings" datatype="html"><source>Scan settings</source><target>إعدادات الفحص</target></trans-unit>
+      <trans-unit id="warnings.enabled" datatype="html"><source>Run the scan on a schedule</source><target>تشغيل الفحص وفق جدول زمني</target></trans-unit>
+      <trans-unit id="warnings.lowStock" datatype="html"><source>Low stock warnings</source><target>تنبيهات انخفاض المخزون</target></trans-unit>
+      <trans-unit id="warnings.ageing" datatype="html"><source>Ageing stock warnings</source><target>تنبيهات المخزون الراكد</target></trans-unit>
+      <trans-unit id="warnings.interval" datatype="html"><source>Scan every (minutes)</source><target>الفحص كل (دقائق)</target></trans-unit>
+      <trans-unit id="warnings.intervalRange" datatype="html"><source>Use between 5 and 1440 minutes.</source><target>أدخل بين 5 و1440 دقيقة.</target></trans-unit>
+      <trans-unit id="warnings.ageDays" datatype="html"><source>Ageing threshold (days)</source><target>حد التقادم (أيام)</target></trans-unit>
+      <trans-unit id="warnings.ageRange" datatype="html"><source>Use between 1 and 3650 days.</source><target>أدخل بين 1 و3650 يومًا.</target></trans-unit>
+      <trans-unit id="warnings.runNow" datatype="html"><source>Run scan now</source><target>تشغيل الفحص الآن</target></trans-unit>
+      <trans-unit id="warnings.kind" datatype="html"><source>Type</source><target>النوع</target></trans-unit>
+      <trans-unit id="warnings.kind.low" datatype="html"><source>Low stock</source><target>مخزون منخفض</target></trans-unit>
+      <trans-unit id="warnings.kind.ageing" datatype="html"><source>Ageing</source><target>راكد</target></trans-unit>
+      <trans-unit id="warnings.activeOnly" datatype="html"><source>Active only</source><target>النشطة فقط</target></trans-unit>
+      <trans-unit id="warnings.since" datatype="html"><source>First seen</source><target>أول رصد</target></trans-unit>
+      <trans-unit id="warnings.heading" datatype="html"><source>Inventory warnings</source><target>تنبيهات المخزون</target></trans-unit>
+      <trans-unit id="warnings.loadFailed" datatype="html"><source>We could not load warnings</source><target>تعذّر تحميل التنبيهات</target></trans-unit>
+      <trans-unit id="warnings.empty.title" datatype="html"><source>No warnings</source><target>لا توجد تنبيهات</target></trans-unit>
+      <trans-unit id="warnings.empty.message" datatype="html"><source>Nothing needs attention with the current filters.</source><target>لا يوجد ما يحتاج إلى انتباه مع المرشحات الحالية.</target></trans-unit>
+      <trans-unit id="warnings.open" datatype="html"><source>Open</source><target>مفتوح</target></trans-unit>
+      <trans-unit id="warnings.resolved" datatype="html"><source>Resolved</source><target>تم الحل</target></trans-unit>
+      <trans-unit id="warnings.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
+      <trans-unit id="warnings.saved" datatype="html"><source>Scan settings saved.</source><target>تم حفظ إعدادات الفحص.</target></trans-unit>
+      <trans-unit id="warnings.saveFailed" datatype="html"><source>The settings could not be saved.</source><target>تعذّر حفظ الإعدادات.</target></trans-unit>
+      <trans-unit id="warnings.ran" datatype="html"><source>Scan finished.</source><target>انتهى الفحص.</target></trans-unit>
+      <trans-unit id="warnings.runFailed" datatype="html"><source>The scan could not run.</source><target>تعذّر تشغيل الفحص.</target></trans-unit>
+      <trans-unit id="warnings.scheduleOn" datatype="html"><source>Scheduled scans are on.</source><target>الفحص المجدول مفعّل.</target></trans-unit>
+      <trans-unit id="warnings.scheduleOff" datatype="html"><source>Scheduled scans are off. You can still run a scan manually.</source><target>الفحص المجدول معطّل. يمكنك تشغيل الفحص يدويًا.</target></trans-unit>
       <trans-unit id="organization.subtitle" datatype="html"><source>Business identity, contact details, and regional settings.</source><target>هوية المؤسسة وبيانات الاتصال والإعدادات الإقليمية.</target></trans-unit>
       <trans-unit id="organization.notConfigured" datatype="html"><source> Your organization has not been set up yet. Save the profile to create it. </source><target>لم تُعدّ مؤسستك بعد. احفظ الملف لإنشائها.</target></trans-unit>
       <trans-unit id="organization.field.name" datatype="html"><source>Name</source><target>الاسم</target></trans-unit>
@@ -359,6 +547,10 @@
       <trans-unit id="organization.saved" datatype="html"><source>Organization saved.</source><target>تم حفظ المؤسسة.</target></trans-unit>
       <trans-unit id="organization.saveFailed" datatype="html"><source>We could not save the organization.</source><target>تعذّر حفظ المؤسسة.</target></trans-unit>
       <trans-unit id="organization.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
+      <trans-unit id="pager.label" datatype="html"><source>Pagination</source><target>ترقيم الصفحات</target></trans-unit>
+      <trans-unit id="pager.previous" datatype="html"><source>Previous</source><target>السابق</target></trans-unit>
+      <trans-unit id="pager.page" datatype="html"><source>Page</source><target>صفحة</target></trans-unit>
+      <trans-unit id="pager.next" datatype="html"><source>Next</source><target>التالي</target></trans-unit>
       <trans-unit id="theme.switchToLight" datatype="html"><source>Switch to light theme</source><target>التبديل إلى السمة الفاتحة</target></trans-unit>
       <trans-unit id="theme.switchToDark" datatype="html"><source>Switch to dark theme</source><target>التبديل إلى السمة الداكنة</target></trans-unit>
     </body>
