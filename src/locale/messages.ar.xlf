@@ -244,9 +244,9 @@
       <trans-unit id="audit.entity" datatype="html"><source>Entity</source><target>العنصر</target></trans-unit>
       <trans-unit id="audit.changes" datatype="html"><source>Changes</source><target>التغييرات</target></trans-unit>
       <trans-unit id="pager.label" datatype="html"><source>Pagination</source><target>ترقيم الصفحات</target></trans-unit>
-      <trans-unit id="pager.previous" datatype="html"><source>Previous</source><target>السابق</target></trans-unit>
+      <trans-unit id="pager.previous" datatype="html"><source> Previous </source><target>السابق</target></trans-unit>
       <trans-unit id="pager.page" datatype="html"><source>Page</source><target>صفحة</target></trans-unit>
-      <trans-unit id="pager.next" datatype="html"><source>Next</source><target>التالي</target></trans-unit>
+      <trans-unit id="pager.next" datatype="html"><source> Next </source><target>التالي</target></trans-unit>
       <trans-unit id="audit.heading" datatype="html"><source>Audit log</source><target>سجل التدقيق</target></trans-unit>
       <trans-unit id="audit.loadFailed" datatype="html"><source>We could not load the audit log</source><target>تعذّر تحميل سجل التدقيق</target></trans-unit>
       <trans-unit id="audit.empty.title" datatype="html"><source>No entries match</source><target>لا توجد سجلات مطابقة</target></trans-unit>
@@ -254,7 +254,32 @@
       <trans-unit id="audit.show" datatype="html"><source>Show</source><target>عرض</target></trans-unit>
       <trans-unit id="audit.hide" datatype="html"><source>Hide</source><target>إخفاء</target></trans-unit>
       <trans-unit id="audit.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
+      <trans-unit id="auth.forgot.heading" datatype="html"><source>Reset your password</source><target>إعادة تعيين كلمة المرور</target></trans-unit>
+      <trans-unit id="auth.forgot.subtitle" datatype="html"><source>Enter your email address to begin.</source><target>أدخل بريدك الإلكتروني للبدء.</target></trans-unit>
+      <trans-unit id="auth.forgot.generated" datatype="html"><source>A development reset token was generated.</source><target>تم توليد رمز إعادة التعيين الخاص بالتطوير.</target></trans-unit>
+      <trans-unit id="auth.forgot.continue" datatype="html"><source>Continue to reset password</source><target>المتابعة إلى إعادة التعيين</target></trans-unit>
+      <trans-unit id="auth.field.email" datatype="html"><source>Email address</source><target>البريد الإلكتروني</target></trans-unit>
+      <trans-unit id="auth.forgot.submit" datatype="html"><source>Send reset request</source><target>إرسال طلب الإعادة</target></trans-unit>
+      <trans-unit id="auth.forgot.back" datatype="html"><source>Back to sign in</source><target>العودة إلى تسجيل الدخول</target></trans-unit>
+      <trans-unit id="auth.forgot.failed" datatype="html"><source>We could not process the reset request. Try again later.</source><target>تعذّر معالجة طلب إعادة التعيين. أعد المحاولة لاحقًا.</target></trans-unit>
+      <trans-unit id="auth.login.heading" datatype="html"><source>Sign in to SimpliaDz</source><target>تسجيل الدخول إلى SimpliaDz</target></trans-unit>
+      <trans-unit id="auth.login.subtitle" datatype="html"><source>Use your organization account to continue.</source><target>استخدم حساب مؤسستك للمتابعة.</target></trans-unit>
       <trans-unit id="auth.login.passwordChanged" datatype="html"><source> Your password was changed. Sign in again to continue. </source><target>تم تغيير كلمة المرور. سجّل الدخول مجددًا للمتابعة.</target></trans-unit>
+      <trans-unit id="auth.error.emailRequired" datatype="html"><source>Email is required.</source><target>البريد الإلكتروني مطلوب.</target></trans-unit>
+      <trans-unit id="auth.field.password" datatype="html"><source>Password</source><target>كلمة المرور</target></trans-unit>
+      <trans-unit id="auth.error.passwordRequired" datatype="html"><source>Password is required.</source><target>كلمة المرور مطلوبة.</target></trans-unit>
+      <trans-unit id="auth.login.signingIn" datatype="html"><source>Signing in</source><target>جارٍ تسجيل الدخول</target></trans-unit>
+      <trans-unit id="auth.login.submit" datatype="html"><source>Sign in</source><target>تسجيل الدخول</target></trans-unit>
+      <trans-unit id="auth.login.forgot" datatype="html"><source>Forgot your password?</source><target>نسيت كلمة المرور؟</target></trans-unit>
+      <trans-unit id="auth.login.failed" datatype="html"><source>We could not sign you in. Check your email and password, then try again.</source><target>تعذّر تسجيل الدخول. تحقّق من البريد الإلكتروني وكلمة المرور ثم أعد المحاولة.</target></trans-unit>
+      <trans-unit id="auth.reset.heading" datatype="html"><source>Choose a new password</source><target>اختر كلمة مرور جديدة</target></trans-unit>
+      <trans-unit id="auth.reset.subtitle" datatype="html"><source>Use the reset token from your password reset request.</source><target>استخدم رمز إعادة التعيين الوارد في طلبك.</target></trans-unit>
+      <trans-unit id="auth.reset.done" datatype="html"><source>Your password has been reset. You can now sign in.</source><target>تمت إعادة تعيين كلمة المرور. يمكنك الآن تسجيل الدخول.</target></trans-unit>
+      <trans-unit id="auth.reset.goToSignIn" datatype="html"><source>Go to sign in</source><target>الانتقال إلى تسجيل الدخول</target></trans-unit>
+      <trans-unit id="auth.reset.token" datatype="html"><source>Reset token</source><target>رمز إعادة التعيين</target></trans-unit>
+      <trans-unit id="auth.reset.newPassword" datatype="html"><source>New password</source><target>كلمة المرور الجديدة</target></trans-unit>
+      <trans-unit id="auth.reset.submit" datatype="html"><source>Reset password</source><target>إعادة تعيين كلمة المرور</target></trans-unit>
+      <trans-unit id="auth.reset.failed" datatype="html"><source>We could not reset your password. Check the token and try again.</source><target>تعذّرت إعادة تعيين كلمة المرور. تحقّق من الرمز ثم أعد المحاولة.</target></trans-unit>
       <trans-unit id="attributes.detail.note" datatype="html"><source>Attribute names are fixed after creation.</source><target>لا يمكن تغيير اسم الخاصية بعد إنشائها.</target></trans-unit>
       <trans-unit id="attributes.values" datatype="html"><source>Values</source><target>القيم</target></trans-unit>
       <trans-unit id="attributes.noValuesHint" datatype="html"><source> No values yet. Add the first value below. </source><target>لا توجد قيم بعد. أضف الأولى أدناه.</target></trans-unit>
@@ -416,11 +441,11 @@
       <trans-unit id="dashboard.expensesLabel" datatype="html"><source>Expenses</source><target>المصروفات</target></trans-unit>
       <trans-unit id="dashboard.lowStock" datatype="html"><source>Below reorder point</source><target>تحت حد إعادة الطلب</target></trans-unit>
       <trans-unit id="dashboard.viewLowStock" datatype="html"><source>View low stock</source><target>عرض المخزون المنخفض</target></trans-unit>
-      <trans-unit id="dashboard.unavailable" datatype="html"><source>Some figures are unavailable because a module is switched off for this organization.</source><target>بعض الأرقام غير متاحة لأن أحد الأنظمة معطّل لهذه المؤسسة.</target></trans-unit>
+      <trans-unit id="dashboard.unavailable" datatype="html"><source> Some figures are unavailable because a module is switched off for this organization. </source><target>بعض الأرقام غير متاحة لأن أحد الأنظمة معطّل لهذه المؤسسة.</target></trans-unit>
       <trans-unit id="dashboard.loading" datatype="html"><source>Loading today’s figures…</source><target>جارٍ تحميل أرقام اليوم…</target></trans-unit>
       <trans-unit id="dashboard.access" datatype="html"><source>Your access</source><target>صلاحياتك</target></trans-unit>
       <trans-unit id="dashboard.roles.title" datatype="html"><source>Your roles</source><target>أدوارك</target></trans-unit>
-      <trans-unit id="dashboard.roles.empty" datatype="html"><source>No roles are assigned to your account.</source><target>لم يتم تعيين أي أدوار لحسابك.</target></trans-unit>
+      <trans-unit id="dashboard.roles.empty" datatype="html"><source> No roles are assigned to your account. </source><target>لم يتم تعيين أي أدوار لحسابك.</target></trans-unit>
       <trans-unit id="dashboard.permissions.title" datatype="html"><source>Permissions</source><target>الصلاحيات</target></trans-unit>
       <trans-unit id="dashboard.permissions.help" datatype="html"><source> Permissions granted to your account. Screens you cannot use are hidden from the menu. </source><target>الصلاحيات الممنوحة لحسابك. تُخفى الشاشات غير المتاحة لك من القائمة.</target></trans-unit>
       <trans-unit id="dashboard.todayFailed" datatype="html"><source>Today’s figures could not be loaded.</source><target>تعذّر تحميل أرقام اليوم.</target></trans-unit>
@@ -814,7 +839,7 @@
       <trans-unit id="suppliers.dialog.create" datatype="html"><source>New supplier</source><target>مورد جديد</target></trans-unit>
       <trans-unit id="suppliers.dialog.edit" datatype="html"><source>Edit supplier</source><target>تعديل المورد</target></trans-unit>
       <trans-unit id="suppliers.saveFailed" datatype="html"><source>We could not save the supplier.</source><target>تعذّر حفظ المورد.</target></trans-unit>
-      <trans-unit id="report.run" datatype="html"><source>Run report</source><target>تشغيل التقرير</target></trans-unit>
+      <trans-unit id="report.run" datatype="html"><source> Run report </source><target>تشغيل التقرير</target></trans-unit>
       <trans-unit id="reports.revenue" datatype="html"><source>Revenue</source><target>الإيرادات</target></trans-unit>
       <trans-unit id="reports.cogs" datatype="html"><source>Cost of goods sold</source><target>تكلفة البضاعة المباعة</target></trans-unit>
       <trans-unit id="reports.grossProfit" datatype="html"><source>Gross profit</source><target>الربح الإجمالي</target></trans-unit>

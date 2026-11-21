@@ -23,8 +23,8 @@ import { AuthSessionService } from '../../../../core/auth/auth-session.service';
     <main class="auth-page">
       <mat-card class="auth-card">
         <mat-card-header>
-          <mat-card-title><h1>Sign in to SimpliaDz</h1></mat-card-title>
-          <mat-card-subtitle>Use your organization account to continue.</mat-card-subtitle>
+          <mat-card-title><h1 i18n="@@auth.login.heading">Sign in to SimpliaDz</h1></mat-card-title>
+          <mat-card-subtitle i18n="@@auth.login.subtitle">Use your organization account to continue.</mat-card-subtitle>
         </mat-card-header>
 
         <mat-card-content>
@@ -36,17 +36,17 @@ import { AuthSessionService } from '../../../../core/auth/auth-session.service';
 
           <form [formGroup]="form" (ngSubmit)="submit()">
             <mat-form-field appearance="outline">
-              <mat-label>Email address</mat-label>
+              <mat-label i18n="@@auth.field.email">Email address</mat-label>
               <input matInput type="email" autocomplete="email" formControlName="email" />
               @if (form.controls.email.hasError('required')) {
-                <mat-error>Email is required.</mat-error>
+                <mat-error i18n="@@auth.error.emailRequired">Email is required.</mat-error>
               } @else if (form.controls.email.hasError('email')) {
-                <mat-error>Enter a valid email address.</mat-error>
+                <mat-error i18n="@@validation.email">Enter a valid email address.</mat-error>
               }
             </mat-form-field>
 
             <mat-form-field appearance="outline">
-              <mat-label>Password</mat-label>
+              <mat-label i18n="@@auth.field.password">Password</mat-label>
               <input
                 matInput
                 type="password"
@@ -54,7 +54,7 @@ import { AuthSessionService } from '../../../../core/auth/auth-session.service';
                 formControlName="password"
               />
               @if (form.controls.password.hasError('required')) {
-                <mat-error>Password is required.</mat-error>
+                <mat-error i18n="@@auth.error.passwordRequired">Password is required.</mat-error>
               }
             </mat-form-field>
 
@@ -64,16 +64,16 @@ import { AuthSessionService } from '../../../../core/auth/auth-session.service';
 
             <button mat-flat-button type="submit" [disabled]="submitting()">
               @if (submitting()) {
-                <mat-spinner diameter="20" aria-label="Signing in"></mat-spinner>
+                <mat-spinner diameter="20" i18n-aria-label="@@auth.login.signingIn" aria-label="Signing in"></mat-spinner>
               } @else {
-                Sign in
+                <span i18n="@@auth.login.submit">Sign in</span>
               }
             </button>
           </form>
         </mat-card-content>
 
         <mat-card-actions>
-          <a mat-button routerLink="/forgot-password">Forgot your password?</a>
+          <a mat-button routerLink="/forgot-password" i18n="@@auth.login.forgot">Forgot your password?</a>
         </mat-card-actions>
       </mat-card>
     </main>
@@ -138,7 +138,7 @@ export class LoginPage {
         void this.router.navigateByUrl(returnUrl?.startsWith('/app') ? returnUrl : '/app');
       },
       error: () => {
-        this.error.set('We could not sign you in. Check your email and password, then try again.');
+        this.error.set($localize`:@@auth.login.failed:We could not sign you in. Check your email and password, then try again.`);
         this.submitting.set(false);
       },
     });

@@ -260,3 +260,17 @@ body {
   clip: rect(0 0 0 0);
   white-space: nowrap;
 }
+
+/* Links inside screens follow the Material primary colour, not the browser default. */
+a {
+  color: var(--mat-sys-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.toolbar .search-field {
+  min-width: 22rem;
+}

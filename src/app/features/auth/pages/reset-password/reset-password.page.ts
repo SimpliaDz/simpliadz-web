@@ -21,27 +21,28 @@ import { AuthApiService } from '../../data-access/auth-api.service';
     <main class="auth-page">
       <mat-card class="auth-card">
         <mat-card-header>
-          <mat-card-title><h1>Choose a new password</h1></mat-card-title>
+          <mat-card-title><h1 i18n="@@auth.reset.heading">Choose a new password</h1></mat-card-title>
           <mat-card-subtitle
+            i18n="@@auth.reset.subtitle"
             >Use the reset token from your password reset request.</mat-card-subtitle
           >
         </mat-card-header>
         <mat-card-content>
           @if (completed()) {
-            <p class="auth-success">Your password has been reset. You can now sign in.</p>
-            <a mat-flat-button routerLink="/login">Go to sign in</a>
+            <p class="auth-success" i18n="@@auth.reset.done">Your password has been reset. You can now sign in.</p>
+            <a mat-flat-button routerLink="/login" i18n="@@auth.reset.goToSignIn">Go to sign in</a>
           } @else {
             <form [formGroup]="form" (ngSubmit)="submit()">
               <mat-form-field appearance="outline">
-                <mat-label>Email address</mat-label>
+                <mat-label i18n="@@auth.field.email">Email address</mat-label>
                 <input matInput type="email" autocomplete="email" formControlName="email" />
               </mat-form-field>
               <mat-form-field appearance="outline">
-                <mat-label>Reset token</mat-label>
+                <mat-label i18n="@@auth.reset.token">Reset token</mat-label>
                 <input matInput autocomplete="one-time-code" formControlName="resetToken" />
               </mat-form-field>
               <mat-form-field appearance="outline">
-                <mat-label>New password</mat-label>
+                <mat-label i18n="@@auth.reset.newPassword">New password</mat-label>
                 <input
                   matInput
                   type="password"
@@ -49,14 +50,14 @@ import { AuthApiService } from '../../data-access/auth-api.service';
                   formControlName="newPassword"
                 />
                 @if (form.controls.newPassword.hasError('minlength')) {
-                  <mat-error>Use at least 8 characters.</mat-error>
+                  <mat-error i18n="@@validation.passwordMinLength">Use at least 8 characters.</mat-error>
                 }
               </mat-form-field>
               @if (error()) {
                 <p class="auth-error" role="alert">{{ error() }}</p>
               }
               <button mat-flat-button type="submit" [disabled]="submitting()">
-                Reset password
+                <span i18n="@@auth.reset.submit">Reset password</span>
               </button>
             </form>
           }
@@ -121,7 +122,7 @@ export class ResetPasswordPage {
         this.submitting.set(false);
       },
       error: () => {
-        this.error.set('We could not reset your password. Check the token and try again.');
+        this.error.set($localize`:@@auth.reset.failed:We could not reset your password. Check the token and try again.`);
         this.submitting.set(false);
       },
     });

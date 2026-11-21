@@ -244,9 +244,9 @@
       <trans-unit id="audit.entity" datatype="html"><source>Entity</source><target>Élément</target></trans-unit>
       <trans-unit id="audit.changes" datatype="html"><source>Changes</source><target>Modifications</target></trans-unit>
       <trans-unit id="pager.label" datatype="html"><source>Pagination</source><target>Pagination</target></trans-unit>
-      <trans-unit id="pager.previous" datatype="html"><source>Previous</source><target>Précédent</target></trans-unit>
+      <trans-unit id="pager.previous" datatype="html"><source> Previous </source><target>Précédent</target></trans-unit>
       <trans-unit id="pager.page" datatype="html"><source>Page</source><target>Page</target></trans-unit>
-      <trans-unit id="pager.next" datatype="html"><source>Next</source><target>Suivant</target></trans-unit>
+      <trans-unit id="pager.next" datatype="html"><source> Next </source><target>Suivant</target></trans-unit>
       <trans-unit id="audit.heading" datatype="html"><source>Audit log</source><target>Journal d’audit</target></trans-unit>
       <trans-unit id="audit.loadFailed" datatype="html"><source>We could not load the audit log</source><target>Impossible de charger le journal d’audit</target></trans-unit>
       <trans-unit id="audit.empty.title" datatype="html"><source>No entries match</source><target>Aucune entrée ne correspond</target></trans-unit>
@@ -254,7 +254,32 @@
       <trans-unit id="audit.show" datatype="html"><source>Show</source><target>Afficher</target></trans-unit>
       <trans-unit id="audit.hide" datatype="html"><source>Hide</source><target>Masquer</target></trans-unit>
       <trans-unit id="audit.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="auth.forgot.heading" datatype="html"><source>Reset your password</source><target>Réinitialiser votre mot de passe</target></trans-unit>
+      <trans-unit id="auth.forgot.subtitle" datatype="html"><source>Enter your email address to begin.</source><target>Saisissez votre adresse e-mail pour commencer.</target></trans-unit>
+      <trans-unit id="auth.forgot.generated" datatype="html"><source>A development reset token was generated.</source><target>Un jeton de réinitialisation de développement a été généré.</target></trans-unit>
+      <trans-unit id="auth.forgot.continue" datatype="html"><source>Continue to reset password</source><target>Continuer vers la réinitialisation</target></trans-unit>
+      <trans-unit id="auth.field.email" datatype="html"><source>Email address</source><target>Adresse e-mail</target></trans-unit>
+      <trans-unit id="auth.forgot.submit" datatype="html"><source>Send reset request</source><target>Envoyer la demande</target></trans-unit>
+      <trans-unit id="auth.forgot.back" datatype="html"><source>Back to sign in</source><target>Retour à la connexion</target></trans-unit>
+      <trans-unit id="auth.forgot.failed" datatype="html"><source>We could not process the reset request. Try again later.</source><target>La demande de réinitialisation n’a pas pu être traitée. Réessayez plus tard.</target></trans-unit>
+      <trans-unit id="auth.login.heading" datatype="html"><source>Sign in to SimpliaDz</source><target>Connexion à SimpliaDz</target></trans-unit>
+      <trans-unit id="auth.login.subtitle" datatype="html"><source>Use your organization account to continue.</source><target>Utilisez le compte de votre organisation pour continuer.</target></trans-unit>
       <trans-unit id="auth.login.passwordChanged" datatype="html"><source> Your password was changed. Sign in again to continue. </source><target>Votre mot de passe a été modifié. Reconnectez-vous pour continuer.</target></trans-unit>
+      <trans-unit id="auth.error.emailRequired" datatype="html"><source>Email is required.</source><target>L’adresse e-mail est obligatoire.</target></trans-unit>
+      <trans-unit id="auth.field.password" datatype="html"><source>Password</source><target>Mot de passe</target></trans-unit>
+      <trans-unit id="auth.error.passwordRequired" datatype="html"><source>Password is required.</source><target>Le mot de passe est obligatoire.</target></trans-unit>
+      <trans-unit id="auth.login.signingIn" datatype="html"><source>Signing in</source><target>Connexion en cours</target></trans-unit>
+      <trans-unit id="auth.login.submit" datatype="html"><source>Sign in</source><target>Se connecter</target></trans-unit>
+      <trans-unit id="auth.login.forgot" datatype="html"><source>Forgot your password?</source><target>Mot de passe oublié ?</target></trans-unit>
+      <trans-unit id="auth.login.failed" datatype="html"><source>We could not sign you in. Check your email and password, then try again.</source><target>Connexion impossible. Vérifiez votre e-mail et votre mot de passe, puis réessayez.</target></trans-unit>
+      <trans-unit id="auth.reset.heading" datatype="html"><source>Choose a new password</source><target>Choisissez un nouveau mot de passe</target></trans-unit>
+      <trans-unit id="auth.reset.subtitle" datatype="html"><source>Use the reset token from your password reset request.</source><target>Utilisez le jeton de réinitialisation reçu avec votre demande.</target></trans-unit>
+      <trans-unit id="auth.reset.done" datatype="html"><source>Your password has been reset. You can now sign in.</source><target>Votre mot de passe a été réinitialisé. Vous pouvez maintenant vous connecter.</target></trans-unit>
+      <trans-unit id="auth.reset.goToSignIn" datatype="html"><source>Go to sign in</source><target>Aller à la connexion</target></trans-unit>
+      <trans-unit id="auth.reset.token" datatype="html"><source>Reset token</source><target>Jeton de réinitialisation</target></trans-unit>
+      <trans-unit id="auth.reset.newPassword" datatype="html"><source>New password</source><target>Nouveau mot de passe</target></trans-unit>
+      <trans-unit id="auth.reset.submit" datatype="html"><source>Reset password</source><target>Réinitialiser le mot de passe</target></trans-unit>
+      <trans-unit id="auth.reset.failed" datatype="html"><source>We could not reset your password. Check the token and try again.</source><target>Votre mot de passe n’a pas pu être réinitialisé. Vérifiez le jeton et réessayez.</target></trans-unit>
       <trans-unit id="attributes.detail.note" datatype="html"><source>Attribute names are fixed after creation.</source><target>Le nom d’un attribut ne peut plus être modifié après sa création.</target></trans-unit>
       <trans-unit id="attributes.values" datatype="html"><source>Values</source><target>Valeurs</target></trans-unit>
       <trans-unit id="attributes.noValuesHint" datatype="html"><source> No values yet. Add the first value below. </source><target>Aucune valeur pour le moment. Ajoutez la première ci-dessous.</target></trans-unit>
@@ -416,11 +441,11 @@
       <trans-unit id="dashboard.expensesLabel" datatype="html"><source>Expenses</source><target>Dépenses</target></trans-unit>
       <trans-unit id="dashboard.lowStock" datatype="html"><source>Below reorder point</source><target>Sous le seuil de réapprovisionnement</target></trans-unit>
       <trans-unit id="dashboard.viewLowStock" datatype="html"><source>View low stock</source><target>Voir le stock bas</target></trans-unit>
-      <trans-unit id="dashboard.unavailable" datatype="html"><source>Some figures are unavailable because a module is switched off for this organization.</source><target>Certains chiffres sont indisponibles parce qu’un module est désactivé pour cette organisation.</target></trans-unit>
+      <trans-unit id="dashboard.unavailable" datatype="html"><source> Some figures are unavailable because a module is switched off for this organization. </source><target>Certains chiffres sont indisponibles parce qu’un module est désactivé pour cette organisation.</target></trans-unit>
       <trans-unit id="dashboard.loading" datatype="html"><source>Loading today’s figures…</source><target>Chargement des chiffres du jour…</target></trans-unit>
       <trans-unit id="dashboard.access" datatype="html"><source>Your access</source><target>Vos accès</target></trans-unit>
       <trans-unit id="dashboard.roles.title" datatype="html"><source>Your roles</source><target>Vos rôles</target></trans-unit>
-      <trans-unit id="dashboard.roles.empty" datatype="html"><source>No roles are assigned to your account.</source><target>Aucun rôle n’est attribué à votre compte.</target></trans-unit>
+      <trans-unit id="dashboard.roles.empty" datatype="html"><source> No roles are assigned to your account. </source><target>Aucun rôle n’est attribué à votre compte.</target></trans-unit>
       <trans-unit id="dashboard.permissions.title" datatype="html"><source>Permissions</source><target>Autorisations</target></trans-unit>
       <trans-unit id="dashboard.permissions.help" datatype="html"><source> Permissions granted to your account. Screens you cannot use are hidden from the menu. </source><target>Autorisations accordées à votre compte. Les écrans auxquels vous n’avez pas accès sont masqués dans le menu.</target></trans-unit>
       <trans-unit id="dashboard.todayFailed" datatype="html"><source>Today’s figures could not be loaded.</source><target>Les chiffres du jour n’ont pas pu être chargés.</target></trans-unit>
@@ -814,7 +839,7 @@
       <trans-unit id="suppliers.dialog.create" datatype="html"><source>New supplier</source><target>Nouveau fournisseur</target></trans-unit>
       <trans-unit id="suppliers.dialog.edit" datatype="html"><source>Edit supplier</source><target>Modifier le fournisseur</target></trans-unit>
       <trans-unit id="suppliers.saveFailed" datatype="html"><source>We could not save the supplier.</source><target>Le fournisseur n’a pas pu être enregistré.</target></trans-unit>
-      <trans-unit id="report.run" datatype="html"><source>Run report</source><target>Générer le rapport</target></trans-unit>
+      <trans-unit id="report.run" datatype="html"><source> Run report </source><target>Générer le rapport</target></trans-unit>
       <trans-unit id="reports.revenue" datatype="html"><source>Revenue</source><target>Chiffre d’affaires</target></trans-unit>
       <trans-unit id="reports.cogs" datatype="html"><source>Cost of goods sold</source><target>Coût des marchandises vendues</target></trans-unit>
       <trans-unit id="reports.grossProfit" datatype="html"><source>Gross profit</source><target>Marge brute</target></trans-unit>
