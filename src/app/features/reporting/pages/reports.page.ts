@@ -391,12 +391,10 @@ export class ReportsPage {
   private selectedProduct: string | null = null;
 
   constructor() {
-    this.locationsApi
-      .list()
-      .subscribe({
-        next: (locations) => this.locations.set(locations),
-        error: () => this.locations.set([]),
-      });
+    this.locationsApi.list().subscribe({
+      next: (locations) => this.locations.set(locations),
+      error: () => this.locations.set([]),
+    });
   }
 
   runSales(): void {
