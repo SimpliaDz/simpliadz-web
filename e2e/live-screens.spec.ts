@@ -19,6 +19,12 @@ const screens: { path: string; heading: string }[] = [
   { path: '/app/inventory/transfers', heading: 'Stock transfers' },
   { path: '/app/inventory/counts', heading: 'Stock counts' },
   { path: '/app/inventory/warnings', heading: 'Inventory warnings' },
+  { path: '/app/purchasing/suppliers', heading: 'Suppliers' },
+  { path: '/app/purchasing/orders', heading: 'Purchase orders' },
+  { path: '/app/sales/customers', heading: 'Customers' },
+  { path: '/app/sales/cash/registers', heading: 'Cash registers' },
+  { path: '/app/sales/cash/sessions', heading: 'Cash sessions' },
+  { path: '/app/sales/sales', heading: 'Sales' },
   { path: '/app/administration/users', heading: 'Users' },
   { path: '/app/administration/roles', heading: 'Roles' },
 ];
@@ -35,7 +41,9 @@ for (const screen of screens) {
   test(`loads ${screen.heading} from the live API without an error state`, async ({ page }) => {
     await page.goto(screen.path);
 
-    await expect(page.getByRole('heading', { name: screen.heading, exact: true })).toBeVisible();
+    await expect(
+      page.getByRole('heading', { level: 1, name: screen.heading, exact: true }),
+    ).toBeVisible();
     await expect(page.getByText(/could not load/i)).toHaveCount(0);
   });
 }

@@ -262,6 +262,83 @@ export const routes: Routes = [
           import('./features/inventory/warnings/pages/warnings.page').then((m) => m.WarningsPage),
       },
 
+      // Purchasing
+      {
+        path: 'purchasing/suppliers',
+        title: $localize`:@@title.suppliers:Suppliers | SimpliaDz`,
+        ...permissioned(['suppliers.view']),
+        loadComponent: () =>
+          import('./features/purchasing/suppliers/pages/suppliers.page').then(
+            (m) => m.SuppliersPage,
+          ),
+      },
+      {
+        path: 'purchasing/orders',
+        title: $localize`:@@title.orders:Purchase orders | SimpliaDz`,
+        ...permissioned(['purchase-orders.view']),
+        loadComponent: () =>
+          import('./features/purchasing/orders/pages/purchase-orders.page').then(
+            (m) => m.PurchaseOrdersPage,
+          ),
+      },
+      {
+        path: 'purchasing/orders/:id',
+        title: $localize`:@@title.order:Purchase order | SimpliaDz`,
+        ...permissioned(['purchase-orders.view']),
+        loadComponent: () =>
+          import('./features/purchasing/orders/pages/purchase-order-detail.page').then(
+            (m) => m.PurchaseOrderDetailPage,
+          ),
+      },
+
+      // Sales
+      {
+        path: 'sales/customers',
+        title: $localize`:@@title.customers:Customers | SimpliaDz`,
+        ...permissioned(['customers.view']),
+        loadComponent: () =>
+          import('./features/sales/customers/pages/customers.page').then((m) => m.CustomersPage),
+      },
+      {
+        path: 'sales/cash/registers',
+        title: $localize`:@@title.cashRegisters:Cash Registers | SimpliaDz`,
+        ...permissioned(['cash-registers.view']),
+        loadComponent: () =>
+          import('./features/sales/cash/pages/cash-registers.page').then(
+            (m) => m.CashRegistersPage,
+          ),
+      },
+      {
+        path: 'sales/cash/sessions',
+        title: $localize`:@@title.cashSessions:Cash Sessions | SimpliaDz`,
+        ...permissioned(['cash-sessions.view']),
+        loadComponent: () =>
+          import('./features/sales/cash/pages/cash-sessions.page').then((m) => m.CashSessionsPage),
+      },
+      {
+        path: 'sales/cash/sessions/:id',
+        title: $localize`:@@title.cashSession:Cash Session | SimpliaDz`,
+        ...permissioned(['cash-sessions.view']),
+        loadComponent: () =>
+          import('./features/sales/cash/pages/cash-session-detail.page').then(
+            (m) => m.CashSessionDetailPage,
+          ),
+      },
+      {
+        path: 'sales/sales',
+        title: $localize`:@@title.sales:Sales | SimpliaDz`,
+        ...permissioned(['sales.view']),
+        loadComponent: () =>
+          import('./features/sales/sales/pages/sales.page').then((m) => m.SalesPage),
+      },
+      {
+        path: 'sales/sales/:id',
+        title: $localize`:@@title.sale:Sale | SimpliaDz`,
+        ...permissioned(['sales.view']),
+        loadComponent: () =>
+          import('./features/sales/sales/pages/sale-detail.page').then((m) => m.SaleDetailPage),
+      },
+
       // Administration
       {
         path: 'administration/users',

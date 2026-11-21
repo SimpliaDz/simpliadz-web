@@ -109,6 +109,52 @@ export const navigationSections: readonly NavigationSection[] = [
     ],
   },
   {
+    title: $localize`:@@nav.section.sales:Sales`,
+    items: [
+      {
+        label: $localize`:@@nav.salesList:Sales`,
+        icon: 'point_of_sale',
+        path: '/app/sales/sales',
+        permissions: ['sales.view'],
+      },
+      {
+        label: $localize`:@@nav.customers:Customers`,
+        icon: 'groups',
+        path: '/app/sales/customers',
+        permissions: ['customers.view'],
+      },
+      {
+        label: $localize`:@@nav.registers:Cash registers`,
+        icon: 'payments',
+        path: '/app/sales/cash/registers',
+        permissions: ['cash-registers.view'],
+      },
+      {
+        label: $localize`:@@nav.sessions:Cash sessions`,
+        icon: 'lock_open',
+        path: '/app/sales/cash/sessions',
+        permissions: ['cash-sessions.view'],
+      },
+    ],
+  },
+  {
+    title: $localize`:@@nav.section.purchasing:Purchasing`,
+    items: [
+      {
+        label: $localize`:@@nav.suppliers:Suppliers`,
+        icon: 'contact_phone',
+        path: '/app/purchasing/suppliers',
+        permissions: ['suppliers.view'],
+      },
+      {
+        label: $localize`:@@nav.orders:Purchase orders`,
+        icon: 'receipt_long',
+        path: '/app/purchasing/orders',
+        permissions: ['purchase-orders.view'],
+      },
+    ],
+  },
+  {
     title: $localize`:@@nav.section.business:Business`,
     items: [
       {

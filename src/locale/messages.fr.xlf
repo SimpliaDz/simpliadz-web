@@ -29,6 +29,15 @@
       <trans-unit id="title.counts" datatype="html"><source>Stock counts | SimpliaDz</source><target>Inventaires | SimpliaDz</target></trans-unit>
       <trans-unit id="title.count" datatype="html"><source>Stock count | SimpliaDz</source><target>Inventaire | SimpliaDz</target></trans-unit>
       <trans-unit id="title.warnings" datatype="html"><source>Inventory warnings | SimpliaDz</source><target>Alertes de stock | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.suppliers" datatype="html"><source>Suppliers | SimpliaDz</source><target>Fournisseurs | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.orders" datatype="html"><source>Purchase orders | SimpliaDz</source><target>Commandes d’achat | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.order" datatype="html"><source>Purchase order | SimpliaDz</source><target>Commande d’achat | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.customers" datatype="html"><source>Customers | SimpliaDz</source><target>Clients | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.cashRegisters" datatype="html"><source>Cash Registers | SimpliaDz</source><target>Caisses | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.cashSessions" datatype="html"><source>Cash Sessions | SimpliaDz</source><target>Sessions de caisse | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.cashSession" datatype="html"><source>Cash Session | SimpliaDz</source><target>Session de caisse | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.sales" datatype="html"><source>Sales | SimpliaDz</source><target>Ventes | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.sale" datatype="html"><source>Sale | SimpliaDz</source><target>Vente | SimpliaDz</target></trans-unit>
       <trans-unit id="title.users" datatype="html"><source>Users | SimpliaDz</source><target>Utilisateurs | SimpliaDz</target></trans-unit>
       <trans-unit id="title.newUser" datatype="html"><source>New user | SimpliaDz</source><target>Nouvel utilisateur | SimpliaDz</target></trans-unit>
       <trans-unit id="title.user" datatype="html"><source>User | SimpliaDz</source><target>Utilisateur | SimpliaDz</target></trans-unit>
@@ -57,6 +66,14 @@
       <trans-unit id="nav.transfers" datatype="html"><source>Transfers</source><target>Transferts</target></trans-unit>
       <trans-unit id="nav.counts" datatype="html"><source>Stock counts</source><target>Inventaires</target></trans-unit>
       <trans-unit id="nav.warnings" datatype="html"><source>Warnings</source><target>Alertes</target></trans-unit>
+      <trans-unit id="nav.section.sales" datatype="html"><source>Sales</source><target>Ventes</target></trans-unit>
+      <trans-unit id="nav.salesList" datatype="html"><source>Sales</source><target>Ventes</target></trans-unit>
+      <trans-unit id="nav.customers" datatype="html"><source>Customers</source><target>Clients</target></trans-unit>
+      <trans-unit id="nav.registers" datatype="html"><source>Cash registers</source><target>Caisses</target></trans-unit>
+      <trans-unit id="nav.sessions" datatype="html"><source>Cash sessions</source><target>Sessions de caisse</target></trans-unit>
+      <trans-unit id="nav.section.purchasing" datatype="html"><source>Purchasing</source><target>Achats</target></trans-unit>
+      <trans-unit id="nav.suppliers" datatype="html"><source>Suppliers</source><target>Fournisseurs</target></trans-unit>
+      <trans-unit id="nav.orders" datatype="html"><source>Purchase orders</source><target>Commandes d’achat</target></trans-unit>
       <trans-unit id="nav.section.business" datatype="html"><source>Business</source><target>Entreprise</target></trans-unit>
       <trans-unit id="nav.organization" datatype="html"><source>Organization</source><target>Organisation</target></trans-unit>
       <trans-unit id="nav.section.administration" datatype="html"><source>Administration</source><target>Administration</target></trans-unit>
@@ -315,16 +332,16 @@
       <trans-unit id="status.backToDashboard" datatype="html"><source>Back to dashboard</source><target>Retour au tableau de bord</target></trans-unit>
       <trans-unit id="status.notFound.heading" datatype="html"><source>Page not found</source><target>Page introuvable</target></trans-unit>
       <trans-unit id="status.notFound.body" datatype="html"><source>The page you are looking for does not exist or has moved.</source><target>La page demandée n’existe pas ou a été déplacée.</target></trans-unit>
-      <trans-unit id="counts.cancel" datatype="html"><source>Cancel count</source><target>Annuler l’inventaire</target></trans-unit>
-      <trans-unit id="counts.complete" datatype="html"><source>Complete count</source><target>Finaliser l’inventaire</target></trans-unit>
-      <trans-unit id="counts.auditNotice" datatype="html"><source>Completing a count writes the differences as adjustments and is recorded in the audit trail.</source><target>Finaliser un inventaire crée les écarts sous forme d’ajustements, consignés dans le journal d’audit.</target></trans-unit>
+      <trans-unit id="counts.cancel" datatype="html"><source> Cancel count </source><target>Annuler l’inventaire</target></trans-unit>
+      <trans-unit id="counts.complete" datatype="html"><source> Complete count </source><target>Finaliser l’inventaire</target></trans-unit>
+      <trans-unit id="counts.auditNotice" datatype="html"><source> Completing a count writes the differences as adjustments and is recorded in the audit trail. </source><target>Finaliser un inventaire crée les écarts sous forme d’ajustements, consignés dans le journal d’audit.</target></trans-unit>
       <trans-unit id="stock.column.product" datatype="html"><source>Product</source><target>Produit</target></trans-unit>
       <trans-unit id="counts.expected" datatype="html"><source>Expected</source><target>Attendu</target></trans-unit>
       <trans-unit id="counts.counted" datatype="html"><source>Counted</source><target>Compté</target></trans-unit>
       <trans-unit id="counts.difference" datatype="html"><source>Difference</source><target>Écart</target></trans-unit>
       <trans-unit id="counts.addLine" datatype="html"><source>Add a product to count</source><target>Ajouter un produit à compter</target></trans-unit>
       <trans-unit id="stock.field.variant" datatype="html"><source>Product variant</source><target>Variante produit</target></trans-unit>
-      <trans-unit id="counts.addLine.action" datatype="html"><source>Add line</source><target>Ajouter la ligne</target></trans-unit>
+      <trans-unit id="counts.addLine.action" datatype="html"><source> Add line </source><target>Ajouter la ligne</target></trans-unit>
       <trans-unit id="counts.detail.heading" datatype="html"><source>Stock count</source><target>Inventaire</target></trans-unit>
       <trans-unit id="counts.detail.loadFailed" datatype="html"><source>We could not load this count</source><target>Impossible de charger cet inventaire</target></trans-unit>
       <trans-unit id="counts.noLines.title" datatype="html"><source>No products yet</source><target>Aucun produit pour le moment</target></trans-unit>
@@ -451,7 +468,7 @@
       <trans-unit id="stock.field.reference" datatype="html"><source>Reference</source><target>Référence</target></trans-unit>
       <trans-unit id="stock.field.referenceHint" datatype="html"><source>Supplier invoice or delivery note.</source><target>Facture fournisseur ou bon de livraison.</target></trans-unit>
       <trans-unit id="stock.adjust.reasonRequired" datatype="html"><source>A reason is required for an adjustment.</source><target>Un motif est obligatoire pour un ajustement.</target></trans-unit>
-      <trans-unit id="stock.adjust.auditNotice" datatype="html"><source>Adjustments are recorded in the audit trail.</source><target>Les ajustements sont consignés dans le journal d’audit.</target></trans-unit>
+      <trans-unit id="stock.adjust.auditNotice" datatype="html"><source> Adjustments are recorded in the audit trail. </source><target>Les ajustements sont consignés dans le journal d’audit.</target></trans-unit>
       <trans-unit id="stock.receipt.title" datatype="html"><source>Receive stock</source><target>Réceptionner du stock</target></trans-unit>
       <trans-unit id="stock.opening.title" datatype="html"><source>Record opening stock</source><target>Enregistrer le stock initial</target></trans-unit>
       <trans-unit id="stock.adjust.title" datatype="html"><source>Adjust stock</source><target>Ajuster le stock</target></trans-unit>
@@ -461,14 +478,14 @@
       <trans-unit id="stock.field.reasonRequired" datatype="html"><source>Reason (required)</source><target>Motif (obligatoire)</target></trans-unit>
       <trans-unit id="stock.field.reason" datatype="html"><source>Reason (optional)</source><target>Motif (facultatif)</target></trans-unit>
       <trans-unit id="stock.saveFailed" datatype="html"><source>The stock change could not be saved.</source><target>La modification de stock n’a pas pu être enregistrée.</target></trans-unit>
-      <trans-unit id="transfers.cancel" datatype="html"><source>Cancel transfer</source><target>Annuler le transfert</target></trans-unit>
-      <trans-unit id="transfers.complete" datatype="html"><source>Complete transfer</source><target>Finaliser le transfert</target></trans-unit>
+      <trans-unit id="transfers.cancel" datatype="html"><source> Cancel transfer </source><target>Annuler le transfert</target></trans-unit>
+      <trans-unit id="transfers.complete" datatype="html"><source> Complete transfer </source><target>Finaliser le transfert</target></trans-unit>
       <trans-unit id="transfers.lines" datatype="html"><source>Lines</source><target>Lignes</target></trans-unit>
       <trans-unit id="transfers.noLines" datatype="html"><source>No lines yet. Add the products to move.</source><target>Aucune ligne pour le moment. Ajoutez les produits à déplacer.</target></trans-unit>
       <trans-unit id="transfers.quantity" datatype="html"><source>Quantity</source><target>Quantité</target></trans-unit>
       <trans-unit id="transfers.addLine" datatype="html"><source>Add a line</source><target>Ajouter une ligne</target></trans-unit>
       <trans-unit id="validation.positive" datatype="html"><source>Enter at least 1.</source><target>Saisissez au moins 1.</target></trans-unit>
-      <trans-unit id="transfers.addLine.action" datatype="html"><source>Add line</source><target>Ajouter la ligne</target></trans-unit>
+      <trans-unit id="transfers.addLine.action" datatype="html"><source> Add line </source><target>Ajouter la ligne</target></trans-unit>
       <trans-unit id="transfers.details" datatype="html"><source>Details</source><target>Détails</target></trans-unit>
       <trans-unit id="transfers.source" datatype="html"><source>From</source><target>De</target></trans-unit>
       <trans-unit id="transfers.destination" datatype="html"><source>To</source><target>Vers</target></trans-unit>
@@ -498,7 +515,7 @@
       <trans-unit id="transfers.empty.message" datatype="html"><source>Create a transfer to move stock from one location to another.</source><target>Créez un transfert pour déplacer du stock d’un emplacement à un autre.</target></trans-unit>
       <trans-unit id="transfers.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
       <trans-unit id="transfers.dialog.title" datatype="html"><source>New transfer</source><target>Nouveau transfert</target></trans-unit>
-      <trans-unit id="transfers.dialog.hint" datatype="html"><source>A transfer starts as a draft. Add lines, then complete it to move the stock.</source><target>Un transfert commence en brouillon. Ajoutez des lignes, puis finalisez-le pour déplacer le stock.</target></trans-unit>
+      <trans-unit id="transfers.dialog.hint" datatype="html"><source> A transfer starts as a draft. Add lines, then complete it to move the stock. </source><target>Un transfert commence en brouillon. Ajoutez des lignes, puis finalisez-le pour déplacer le stock.</target></trans-unit>
       <trans-unit id="transfers.sameLocation" datatype="html"><source>Choose two different locations.</source><target>Choisissez deux emplacements différents.</target></trans-unit>
       <trans-unit id="transfers.saveFailed" datatype="html"><source>The transfer could not be created.</source><target>Le transfert n’a pas pu être créé.</target></trans-unit>
       <trans-unit id="warnings.subtitle" datatype="html"><source>Warnings flag low stock and stock that has sat too long. Warnings clear themselves when the problem is fixed.</source><target>Les alertes signalent les stocks bas et les stocks immobilisés trop longtemps. Elles disparaissent quand le problème est réglé.</target></trans-unit>
@@ -547,6 +564,246 @@
       <trans-unit id="organization.saved" datatype="html"><source>Organization saved.</source><target>Organisation enregistrée.</target></trans-unit>
       <trans-unit id="organization.saveFailed" datatype="html"><source>We could not save the organization.</source><target>Impossible d’enregistrer l’organisation.</target></trans-unit>
       <trans-unit id="organization.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="orders.cancel" datatype="html"><source>Cancel order</source><target>Annuler la commande</target></trans-unit>
+      <trans-unit id="orders.place" datatype="html"><source>Place order</source><target>Passer la commande</target></trans-unit>
+      <trans-unit id="orders.lines" datatype="html"><source>Lines</source><target>Lignes</target></trans-unit>
+      <trans-unit id="orders.noLines" datatype="html"><source>No lines yet. Add the products you are buying.</source><target>Aucune ligne pour le moment. Ajoutez les produits à acheter.</target></trans-unit>
+      <trans-unit id="orders.ordered" datatype="html"><source>Ordered</source><target>Commandé</target></trans-unit>
+      <trans-unit id="orders.received" datatype="html"><source>Received</source><target>Reçu</target></trans-unit>
+      <trans-unit id="orders.unitCost" datatype="html"><source>Unit cost</source><target>Coût unitaire</target></trans-unit>
+      <trans-unit id="orders.lineTotal" datatype="html"><source>Line total</source><target>Total de ligne</target></trans-unit>
+      <trans-unit id="orders.total" datatype="html"><source>Total</source><target>Total</target></trans-unit>
+      <trans-unit id="orders.addLine" datatype="html"><source>Add a line</source><target>Ajouter une ligne</target></trans-unit>
+      <trans-unit id="orders.orderedQty" datatype="html"><source>Quantity</source><target>Quantité</target></trans-unit>
+      <trans-unit id="orders.addLine.action" datatype="html"><source>Add line</source><target>Ajouter la ligne</target></trans-unit>
+      <trans-unit id="orders.receive" datatype="html"><source>Receive goods</source><target>Réception de marchandises</target></trans-unit>
+      <trans-unit id="orders.outstanding" datatype="html"><source>Still expected</source><target>Reste attendu</target></trans-unit>
+      <trans-unit id="orders.receiveNow" datatype="html"><source>Receive now</source><target>Recevoir maintenant</target></trans-unit>
+      <trans-unit id="orders.fullyReceived" datatype="html"><source>Complete</source><target>Complet</target></trans-unit>
+      <trans-unit id="orders.receive.action" datatype="html"><source> Record receipt </source><target>Enregistrer la réception</target></trans-unit>
+      <trans-unit id="orders.receive.hint" datatype="html"><source>A receipt adds stock to the destination location and is recorded in the audit trail.</source><target>Une réception ajoute du stock à l’emplacement de destination et est consignée dans le journal d’audit.</target></trans-unit>
+      <trans-unit id="orders.receiveDraft" datatype="html"><source>Place the order before receiving goods.</source><target>Passez la commande avant de réceptionner la marchandise.</target></trans-unit>
+      <trans-unit id="orders.receiveClosed" datatype="html"><source>Nothing is outstanding on this order.</source><target>Rien n’est en attente sur cette commande.</target></trans-unit>
+      <trans-unit id="orders.receipts" datatype="html"><source>Receipts</source><target>Réceptions</target></trans-unit>
+      <trans-unit id="orders.noReceipts" datatype="html"><source>No goods have been received yet.</source><target>Aucune marchandise n’a encore été reçue.</target></trans-unit>
+      <trans-unit id="orders.details" datatype="html"><source>Details</source><target>Détails</target></trans-unit>
+      <trans-unit id="orders.date" datatype="html"><source>Date</source><target>Date</target></trans-unit>
+      <trans-unit id="orders.field.destination" datatype="html"><source>Receive into</source><target>Réceptionner dans</target></trans-unit>
+      <trans-unit id="orders.createdBy" datatype="html"><source>Created by</source><target>Créée par</target></trans-unit>
+      <trans-unit id="orders.field.notes" datatype="html"><source>Notes</source><target>Notes</target></trans-unit>
+      <trans-unit id="orders.detail.loadFailed" datatype="html"><source>We could not load this purchase order</source><target>Impossible de charger cette commande d’achat</target></trans-unit>
+      <trans-unit id="orders.backToList" datatype="html"><source>All purchase orders</source><target>Toutes les commandes</target></trans-unit>
+      <trans-unit id="orders.detail.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="orders.lineFailed" datatype="html"><source>The line could not be added.</source><target>La ligne n’a pas pu être ajoutée.</target></trans-unit>
+      <trans-unit id="orders.place.title" datatype="html"><source>Place this order?</source><target>Passer cette commande ?</target></trans-unit>
+      <trans-unit id="orders.place.message" datatype="html"><source>The order is sent to the supplier and can then be received against. Lines cannot be changed after placing.</source><target>La commande est envoyée au fournisseur et peut ensuite être réceptionnée. Les lignes ne peuvent plus être modifiées après l’envoi.</target></trans-unit>
+      <trans-unit id="orders.placed" datatype="html"><source>Order placed.</source><target>Commande passée.</target></trans-unit>
+      <trans-unit id="orders.placeFailed" datatype="html"><source>The order could not be placed.</source><target>La commande n’a pas pu être passée.</target></trans-unit>
+      <trans-unit id="orders.cancel.title" datatype="html"><source>Cancel this order?</source><target>Annuler cette commande ?</target></trans-unit>
+      <trans-unit id="orders.cancel.message" datatype="html"><source>A cancelled order cannot be reopened. Goods already received are not reversed.</source><target>Une commande annulée ne peut pas être rouverte. La marchandise déjà reçue n’est pas annulée.</target></trans-unit>
+      <trans-unit id="orders.cancelFailed" datatype="html"><source>The order could not be cancelled.</source><target>La commande n’a pas pu être annulée.</target></trans-unit>
+      <trans-unit id="orders.receiveInvalid" datatype="html"><source>Enter whole numbers no larger than the outstanding quantity.</source><target>Saisissez des nombres entiers ne dépassant pas la quantité restante.</target></trans-unit>
+      <trans-unit id="orders.receivedDone" datatype="html"><source>Goods received. Stock updated.</source><target>Marchandise reçue. Stock mis à jour.</target></trans-unit>
+      <trans-unit id="orders.receiveFailed" datatype="html"><source>The receipt could not be recorded. Try again; it will not be applied twice.</source><target>La réception n’a pas pu être enregistrée. Réessayez ; elle ne sera pas appliquée deux fois.</target></trans-unit>
+      <trans-unit id="orders.status.draft" datatype="html"><source>Draft</source><target>Brouillon</target></trans-unit>
+      <trans-unit id="orders.status.ordered" datatype="html"><source>Ordered</source><target>Commandée</target></trans-unit>
+      <trans-unit id="orders.status.partial" datatype="html"><source>Partly received</source><target>Partiellement reçue</target></trans-unit>
+      <trans-unit id="orders.status.received" datatype="html"><source>Received</source><target>Reçue</target></trans-unit>
+      <trans-unit id="orders.status.cancelled" datatype="html"><source>Cancelled</source><target>Annulée</target></trans-unit>
+      <trans-unit id="orders.subtitle" datatype="html"><source>Orders to suppliers. Stock goes up only when goods are received against an order.</source><target>Commandes passées aux fournisseurs. Le stock n’augmente que lorsque la marchandise est réceptionnée sur une commande.</target></trans-unit>
+      <trans-unit id="orders.create" datatype="html"><source>New purchase order</source><target>Nouvelle commande d’achat</target></trans-unit>
+      <trans-unit id="orders.field.supplier" datatype="html"><source>Supplier</source><target>Fournisseur</target></trans-unit>
+      <trans-unit id="orders.number" datatype="html"><source>Number</source><target>Numéro</target></trans-unit>
+      <trans-unit id="orders.heading" datatype="html"><source>Purchase orders</source><target>Commandes d’achat</target></trans-unit>
+      <trans-unit id="orders.loadFailed" datatype="html"><source>We could not load purchase orders</source><target>Impossible de charger les commandes d’achat</target></trans-unit>
+      <trans-unit id="orders.empty.title" datatype="html"><source>No purchase orders</source><target>Aucune commande d’achat</target></trans-unit>
+      <trans-unit id="orders.empty.message" datatype="html"><source>Create an order for a supplier to start buying stock.</source><target>Créez une commande auprès d’un fournisseur pour commencer à acheter du stock.</target></trans-unit>
+      <trans-unit id="orders.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="orders.dialog.title" datatype="html"><source>New purchase order</source><target>Nouvelle commande d’achat</target></trans-unit>
+      <trans-unit id="orders.saveFailed" datatype="html"><source>The purchase order could not be created.</source><target>La commande d’achat n’a pas pu être créée.</target></trans-unit>
+      <trans-unit id="suppliers.subtitle" datatype="html"><source>Suppliers you buy stock from. Purchase orders are placed with a supplier.</source><target>Fournisseurs auprès de qui vous achetez du stock. Les commandes d’achat leur sont adressées.</target></trans-unit>
+      <trans-unit id="suppliers.create" datatype="html"><source>New supplier</source><target>Nouveau fournisseur</target></trans-unit>
+      <trans-unit id="suppliers.contact" datatype="html"><source>Contact</source><target>Contact</target></trans-unit>
+      <trans-unit id="suppliers.heading" datatype="html"><source>Suppliers</source><target>Fournisseurs</target></trans-unit>
+      <trans-unit id="suppliers.loadFailed" datatype="html"><source>We could not load suppliers</source><target>Impossible de charger les fournisseurs</target></trans-unit>
+      <trans-unit id="suppliers.empty.title" datatype="html"><source>No suppliers match</source><target>Aucun fournisseur ne correspond</target></trans-unit>
+      <trans-unit id="suppliers.empty.message" datatype="html"><source>Add a supplier to start placing purchase orders.</source><target>Ajoutez un fournisseur pour commencer à passer des commandes d’achat.</target></trans-unit>
+      <trans-unit id="suppliers.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="suppliers.saved" datatype="html"><source>Supplier saved.</source><target>Fournisseur enregistré.</target></trans-unit>
+      <trans-unit id="suppliers.deactivate.title" datatype="html"><source>Deactivate supplier?</source><target>Désactiver le fournisseur ?</target></trans-unit>
+      <trans-unit id="suppliers.deactivate.message" datatype="html"><source>Existing purchase orders stay as they are. The supplier can no longer be chosen for new orders. Suppliers cannot be reactivated.</source><target>Les commandes existantes restent telles quelles. Le fournisseur ne pourra plus être choisi pour de nouvelles commandes. Un fournisseur ne peut pas être réactivé.</target></trans-unit>
+      <trans-unit id="suppliers.deactivated" datatype="html"><source>Supplier deactivated.</source><target>Fournisseur désactivé.</target></trans-unit>
+      <trans-unit id="suppliers.deactivateFailed" datatype="html"><source>The supplier could not be deactivated.</source><target>Le fournisseur n’a pas pu être désactivé.</target></trans-unit>
+      <trans-unit id="suppliers.field.name" datatype="html"><source>Supplier name</source><target>Nom du fournisseur</target></trans-unit>
+      <trans-unit id="suppliers.field.phone" datatype="html"><source>Phone</source><target>Téléphone</target></trans-unit>
+      <trans-unit id="suppliers.field.email" datatype="html"><source>Email</source><target>E-mail</target></trans-unit>
+      <trans-unit id="suppliers.field.address" datatype="html"><source>Address</source><target>Adresse</target></trans-unit>
+      <trans-unit id="suppliers.field.notes" datatype="html"><source>Notes</source><target>Notes</target></trans-unit>
+      <trans-unit id="suppliers.dialog.create" datatype="html"><source>New supplier</source><target>Nouveau fournisseur</target></trans-unit>
+      <trans-unit id="suppliers.dialog.edit" datatype="html"><source>Edit supplier</source><target>Modifier le fournisseur</target></trans-unit>
+      <trans-unit id="suppliers.saveFailed" datatype="html"><source>We could not save the supplier.</source><target>Le fournisseur n’a pas pu être enregistré.</target></trans-unit>
+      <trans-unit id="registers.subtitle" datatype="html"><source>Each till at a location. A cash session is opened on a register before taking cash.</source><target>Chaque caisse d’un emplacement. Une session de caisse s’ouvre sur une caisse avant d’encaisser.</target></trans-unit>
+      <trans-unit id="registers.create" datatype="html"><source>New register</source><target>Nouvelle caisse</target></trans-unit>
+      <trans-unit id="registers.field.code" datatype="html"><source>Code</source><target>Code</target></trans-unit>
+      <trans-unit id="registers.field.name" datatype="html"><source>Name</source><target>Nom</target></trans-unit>
+      <trans-unit id="registers.heading" datatype="html"><source>Cash registers</source><target>Caisses</target></trans-unit>
+      <trans-unit id="registers.loadFailed" datatype="html"><source>We could not load cash registers</source><target>Impossible de charger les caisses</target></trans-unit>
+      <trans-unit id="registers.empty.title" datatype="html"><source>No cash registers</source><target>Aucune caisse</target></trans-unit>
+      <trans-unit id="registers.empty.message" datatype="html"><source>Add a register at a location to start taking cash there.</source><target>Ajoutez une caisse à un emplacement pour commencer à encaisser à cet endroit.</target></trans-unit>
+      <trans-unit id="registers.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="registers.saved" datatype="html"><source>Register saved.</source><target>Caisse enregistrée.</target></trans-unit>
+      <trans-unit id="registers.deactivate.title" datatype="html"><source>Deactivate register?</source><target>Désactiver la caisse ?</target></trans-unit>
+      <trans-unit id="registers.deactivate.message" datatype="html"><source>A register with an open session cannot be deactivated. Deactivated registers cannot be reactivated.</source><target>Une caisse ayant une session ouverte ne peut pas être désactivée. Une caisse désactivée ne peut pas être réactivée.</target></trans-unit>
+      <trans-unit id="registers.deactivated" datatype="html"><source>Register deactivated.</source><target>Caisse désactivée.</target></trans-unit>
+      <trans-unit id="registers.deactivateFailed" datatype="html"><source>The register could not be deactivated.</source><target>La caisse n’a pas pu être désactivée.</target></trans-unit>
+      <trans-unit id="sessions.summary" datatype="html"><source>Summary</source><target>Récapitulatif</target></trans-unit>
+      <trans-unit id="sessions.openingCash" datatype="html"><source>Opening cash</source><target>Fonds de caisse d’ouverture</target></trans-unit>
+      <trans-unit id="sessions.cashPayments" datatype="html"><source>Cash payments</source><target>Règlements en espèces</target></trans-unit>
+      <trans-unit id="sessions.otherPayments" datatype="html"><source>Other payments</source><target>Autres règlements</target></trans-unit>
+      <trans-unit id="sessions.movements" datatype="html"><source>Cash movements</source><target>Mouvements de caisse</target></trans-unit>
+      <trans-unit id="sessions.expected" datatype="html"><source>Expected cash</source><target>Espèces attendues</target></trans-unit>
+      <trans-unit id="sessions.counted" datatype="html"><source>Counted cash</source><target>Espèces comptées</target></trans-unit>
+      <trans-unit id="sessions.difference" datatype="html"><source>Difference</source><target>Écart</target></trans-unit>
+      <trans-unit id="sessions.noMovements" datatype="html"><source>No cash has been added or removed outside sales.</source><target>Aucune entrée ou sortie d’espèces hors ventes.</target></trans-unit>
+      <trans-unit id="sessions.amount" datatype="html"><source>Amount</source><target>Montant</target></trans-unit>
+      <trans-unit id="sessions.addMovement" datatype="html"><source>Add or remove cash</source><target>Ajouter ou retirer des espèces</target></trans-unit>
+      <trans-unit id="sessions.amountHint" datatype="html"><source>Negative to take cash out, for example a bank drop.</source><target>Négatif pour retirer de l’argent, par exemple un dépôt en banque.</target></trans-unit>
+      <trans-unit id="sessions.reason" datatype="html"><source>Reason</source><target>Motif</target></trans-unit>
+      <trans-unit id="sessions.addMovement.action" datatype="html"><source>Record movement</source><target>Enregistrer le mouvement</target></trans-unit>
+      <trans-unit id="sessions.close" datatype="html"><source>Close the session</source><target>Clôturer la session</target></trans-unit>
+      <trans-unit id="sessions.countedCash" datatype="html"><source>Counted cash</source><target>Espèces comptées</target></trans-unit>
+      <trans-unit id="sessions.closeHint" datatype="html"><source>Count the drawer. The difference against expected cash is recorded.</source><target>Comptez le tiroir. L’écart avec les espèces attendues est enregistré.</target></trans-unit>
+      <trans-unit id="sessions.close.action" datatype="html"><source>Close session</source><target>Clôturer la session</target></trans-unit>
+      <trans-unit id="sessions.auditNotice" datatype="html"><source>Closing a session is recorded in the audit trail.</source><target>L’ouverture d’une session est consignée dans le journal d’audit.</target></trans-unit>
+      <trans-unit id="sessions.detail.loadFailed" datatype="html"><source>We could not load this session</source><target>Impossible de charger cette session</target></trans-unit>
+      <trans-unit id="sessions.status.open" datatype="html"><source>Open</source><target>Ouverte</target></trans-unit>
+      <trans-unit id="sessions.status.closed" datatype="html"><source>Closed</source><target>Clôturée</target></trans-unit>
+      <trans-unit id="sessions.backToList" datatype="html"><source>All sessions</source><target>Toutes les sessions</target></trans-unit>
+      <trans-unit id="sessions.heading" datatype="html"><source>Cash session</source><target>Sessions de caisse</target></trans-unit>
+      <trans-unit id="sessions.detail.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="sessions.movementFailed" datatype="html"><source>The movement could not be recorded.</source><target>Le mouvement n’a pas pu être enregistré.</target></trans-unit>
+      <trans-unit id="sessions.close.title" datatype="html"><source>Close this session?</source><target>Clôturer cette session ?</target></trans-unit>
+      <trans-unit id="sessions.close.message" datatype="html"><source>After closing, no more sales can be paid in cash on this session.</source><target>Une fois clôturée, aucune vente ne peut plus être réglée en espèces sur cette session.</target></trans-unit>
+      <trans-unit id="sessions.closed" datatype="html"><source>Session closed.</source><target>Session clôturée.</target></trans-unit>
+      <trans-unit id="sessions.closeFailed" datatype="html"><source>The session could not be closed.</source><target>La session n’a pas pu être clôturée.</target></trans-unit>
+      <trans-unit id="sessions.subtitle" datatype="html"><source>A session is one drawer, from opening cash to the counted close.</source><target>Une session correspond à un tiroir, de l’ouverture avec le fonds de caisse à la clôture comptée.</target></trans-unit>
+      <trans-unit id="sessions.open" datatype="html"><source>Open session</source><target>Ouvrir une session</target></trans-unit>
+      <trans-unit id="sessions.opened" datatype="html"><source>Opened</source><target>Ouverte le</target></trans-unit>
+      <trans-unit id="registers.title" datatype="html"><source>Cash register</source><target>Caisse</target></trans-unit>
+      <trans-unit id="sessions.loadFailed" datatype="html"><source>We could not load cash sessions</source><target>Impossible de charger les sessions de caisse</target></trans-unit>
+      <trans-unit id="sessions.empty.title" datatype="html"><source>No cash sessions yet</source><target>Aucune session de caisse</target></trans-unit>
+      <trans-unit id="sessions.empty.message" datatype="html"><source>Open a session on a register to start taking cash.</source><target>Ouvrez une session sur une caisse pour commencer à encaisser.</target></trans-unit>
+      <trans-unit id="sessions.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="sessions.dialog.title" datatype="html"><source>Open a cash session</source><target>Ouvrir une session de caisse</target></trans-unit>
+      <trans-unit id="sessions.openFailed" datatype="html"><source>The session could not be opened.</source><target>La session n’a pas pu être ouverte.</target></trans-unit>
+      <trans-unit id="registers.dialog.create" datatype="html"><source>New cash register</source><target>Nouvelle caisse</target></trans-unit>
+      <trans-unit id="registers.dialog.edit" datatype="html"><source>Edit cash register</source><target>Modifier la caisse</target></trans-unit>
+      <trans-unit id="registers.saveFailed" datatype="html"><source>The cash register could not be saved.</source><target>La caisse n’a pas pu être enregistrée.</target></trans-unit>
+      <trans-unit id="customers.subtitle" datatype="html"><source>Customers you sell to. Wholesale customers are priced from wholesale lists.</source><target>Les clients à qui vous vendez. Les clients de gros sont tarifés selon les listes de gros.</target></trans-unit>
+      <trans-unit id="customers.create" datatype="html"><source>New customer</source><target>Nouveau client</target></trans-unit>
+      <trans-unit id="customers.field.type" datatype="html"><source>Customer type</source><target>Type de client</target></trans-unit>
+      <trans-unit id="customers.heading" datatype="html"><source>Customers</source><target>Clients</target></trans-unit>
+      <trans-unit id="customers.loadFailed" datatype="html"><source>We could not load customers</source><target>Impossible de charger les clients</target></trans-unit>
+      <trans-unit id="customers.empty.title" datatype="html"><source>No customers match</source><target>Aucun client ne correspond</target></trans-unit>
+      <trans-unit id="customers.empty.message" datatype="html"><source>Add a customer, or sell to a walk-in without one.</source><target>Ajoutez un client, ou vendez à un passant sans fiche.</target></trans-unit>
+      <trans-unit id="customers.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="customers.saved" datatype="html"><source>Customer saved.</source><target>Client enregistré.</target></trans-unit>
+      <trans-unit id="customers.deactivate.title" datatype="html"><source>Deactivate customer?</source><target>Désactiver le client ?</target></trans-unit>
+      <trans-unit id="customers.deactivate.message" datatype="html"><source>Past sales keep this customer. They can no longer be chosen for new sales. Customers cannot be reactivated.</source><target>Les ventes passées gardent ce client. Il ne pourra plus être choisi pour de nouvelles ventes. Un client ne peut pas être réactivé.</target></trans-unit>
+      <trans-unit id="customers.deactivated" datatype="html"><source>Customer deactivated.</source><target>Client désactivé.</target></trans-unit>
+      <trans-unit id="customers.deactivateFailed" datatype="html"><source>The customer could not be deactivated.</source><target>Le client n’a pas pu être désactivé.</target></trans-unit>
+      <trans-unit id="customers.field.name" datatype="html"><source>Customer name</source><target>Nom du client</target></trans-unit>
+      <trans-unit id="customers.field.phone" datatype="html"><source>Phone</source><target>Téléphone</target></trans-unit>
+      <trans-unit id="customers.field.email" datatype="html"><source>Email</source><target>E-mail</target></trans-unit>
+      <trans-unit id="customers.field.address" datatype="html"><source>Address</source><target>Adresse</target></trans-unit>
+      <trans-unit id="customers.field.notes" datatype="html"><source>Notes</source><target>Notes</target></trans-unit>
+      <trans-unit id="customers.dialog.create" datatype="html"><source>New customer</source><target>Nouveau client</target></trans-unit>
+      <trans-unit id="customers.dialog.edit" datatype="html"><source>Edit customer</source><target>Modifier le client</target></trans-unit>
+      <trans-unit id="customers.saveFailed" datatype="html"><source>We could not save the customer.</source><target>Le client n’a pas pu être enregistré.</target></trans-unit>
+      <trans-unit id="sales.cancel" datatype="html"><source>Cancel sale</source><target>Annuler la vente</target></trans-unit>
+      <trans-unit id="sales.complete" datatype="html"><source>Complete sale</source><target>Finaliser la vente</target></trans-unit>
+      <trans-unit id="sales.summary" datatype="html"><source>Totals</source><target>Totaux</target></trans-unit>
+      <trans-unit id="sales.subtotal" datatype="html"><source>Subtotal</source><target>Sous-total</target></trans-unit>
+      <trans-unit id="sales.discount" datatype="html"><source>Discount</source><target>Remise</target></trans-unit>
+      <trans-unit id="sales.discount.edit" datatype="html"><source>Change</source><target>Modifier</target></trans-unit>
+      <trans-unit id="sales.total" datatype="html"><source>Total</source><target>Total</target></trans-unit>
+      <trans-unit id="sales.paid" datatype="html"><source>Paid</source><target>Réglé</target></trans-unit>
+      <trans-unit id="sales.balance" datatype="html"><source>Balance due</source><target>Reste à payer</target></trans-unit>
+      <trans-unit id="sales.add" datatype="html"><source>Add products</source><target>Ajouter des produits</target></trans-unit>
+      <trans-unit id="sales.scan" datatype="html"><source>Scan or type a barcode or SKU</source><target>Scannez ou saisissez un code-barres ou un SKU</target></trans-unit>
+      <trans-unit id="sales.quantity" datatype="html"><source>Quantity</source><target>Quantité</target></trans-unit>
+      <trans-unit id="sales.add.action" datatype="html"><source>Add to sale</source><target>Ajouter à la vente</target></trans-unit>
+      <trans-unit id="sales.searchProducts" datatype="html"><source>Search by product name</source><target>Rechercher par nom de produit</target></trans-unit>
+      <trans-unit id="sales.price" datatype="html"><source>Price</source><target>Prix</target></trans-unit>
+      <trans-unit id="sales.lines" datatype="html"><source>Lines</source><target>Lignes</target></trans-unit>
+      <trans-unit id="sales.noLines" datatype="html"><source>No products yet.</source><target>Aucun produit pour le moment.</target></trans-unit>
+      <trans-unit id="sales.lineTotal" datatype="html"><source>Line total</source><target>Total de ligne</target></trans-unit>
+      <trans-unit id="sales.discount.line" datatype="html"><source>Discount</source><target>Remise</target></trans-unit>
+      <trans-unit id="sales.payments" datatype="html"><source>Payments</source><target>Règlements</target></trans-unit>
+      <trans-unit id="sales.noPayments" datatype="html"><source>No payments recorded.</source><target>Aucun règlement enregistré.</target></trans-unit>
+      <trans-unit id="sales.payment.amount" datatype="html"><source>Amount</source><target>Montant</target></trans-unit>
+      <trans-unit id="sales.payment.method" datatype="html"><source>Method</source><target>Mode de règlement</target></trans-unit>
+      <trans-unit id="sales.method.cash" datatype="html"><source>Cash</source><target>Espèces</target></trans-unit>
+      <trans-unit id="sales.method.card" datatype="html"><source>Card</source><target>Carte</target></trans-unit>
+      <trans-unit id="sales.method.transfer" datatype="html"><source>Bank transfer</source><target>Virement</target></trans-unit>
+      <trans-unit id="sales.method.other" datatype="html"><source>Other</source><target>Autre</target></trans-unit>
+      <trans-unit id="sales.payment.session" datatype="html"><source>Cash session</source><target>Session de caisse</target></trans-unit>
+      <trans-unit id="sales.payment.record" datatype="html"><source>Record payment</source><target>Enregistrer le règlement</target></trans-unit>
+      <trans-unit id="sales.returns" datatype="html"><source>Returns</source><target>Retours</target></trans-unit>
+      <trans-unit id="sales.noReturns" datatype="html"><source>No returns.</source><target>Aucun retour.</target></trans-unit>
+      <trans-unit id="sales.returns.reason" datatype="html"><source>Reason</source><target>Motif</target></trans-unit>
+      <trans-unit id="sales.returns.available" datatype="html"><source>Can return</source><target>Restant retournable</target></trans-unit>
+      <trans-unit id="sales.returns.quantity" datatype="html"><source>Return now</source><target>À retourner</target></trans-unit>
+      <trans-unit id="sales.returns.restock" datatype="html"><source>Put back in stock</source><target>Remettre en stock</target></trans-unit>
+      <trans-unit id="sales.returns.record" datatype="html"><source>Record return</source><target>Enregistrer le retour</target></trans-unit>
+      <trans-unit id="sales.returns.hint" datatype="html"><source>A return does not change the amount paid and creates no refund payment.</source><target>Un retour ne modifie pas le montant réglé et ne crée aucun remboursement.</target></trans-unit>
+      <trans-unit id="sales.detail.loadFailed" datatype="html"><source>We could not load this sale</source><target>Impossible de charger cette vente</target></trans-unit>
+      <trans-unit id="sales.draftTitle" datatype="html"><source>Draft sale</source><target>Vente en brouillon</target></trans-unit>
+      <trans-unit id="sales.backToList" datatype="html"><source>All sales</source><target>Toutes les ventes</target></trans-unit>
+      <trans-unit id="sales.detail.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="sales.notFound" datatype="html"><source>No active product with that barcode or SKU has a price in this price list.</source><target>Aucun produit actif avec ce code-barres ou ce SKU n’a de prix dans cette liste.</target></trans-unit>
+      <trans-unit id="sales.searchFailed" datatype="html"><source>The search failed.</source><target>La recherche a échoué.</target></trans-unit>
+      <trans-unit id="sales.lineFailed" datatype="html"><source>The product could not be added to the sale.</source><target>Le produit n’a pas pu être ajouté à la vente.</target></trans-unit>
+      <trans-unit id="sales.discount.sale" datatype="html"><source>Sale discount</source><target>Remise sur la vente</target></trans-unit>
+      <trans-unit id="sales.discountFailed" datatype="html"><source>The discount could not be applied.</source><target>La remise n’a pas pu être appliquée.</target></trans-unit>
+      <trans-unit id="sales.complete.title" datatype="html"><source>Complete this sale?</source><target>Finaliser cette vente ?</target></trans-unit>
+      <trans-unit id="sales.complete.message" datatype="html"><source>Stock for each line is reduced now. The sale can then be paid. If stock is short, the sale stays a draft.</source><target>Le stock de chaque ligne diminue maintenant. La vente peut ensuite être réglée. Si le stock manque, la vente reste un brouillon.</target></trans-unit>
+      <trans-unit id="sales.completed" datatype="html"><source>Sale completed.</source><target>Vente finalisée.</target></trans-unit>
+      <trans-unit id="sales.completeFailed" datatype="html"><source>The sale could not be completed.</source><target>La vente n’a pas pu être finalisée.</target></trans-unit>
+      <trans-unit id="sales.cancel.title" datatype="html"><source>Cancel this draft sale?</source><target>Annuler cette vente en brouillon ?</target></trans-unit>
+      <trans-unit id="sales.cancel.message" datatype="html"><source>Only drafts can be cancelled. Nothing has left stock yet. The cancellation is recorded in the audit trail.</source><target>Seuls les brouillons peuvent être annulés. Aucun stock n’est encore sorti. L’annulation est consignée dans le journal d’audit.</target></trans-unit>
+      <trans-unit id="sales.cancelFailed" datatype="html"><source>The sale could not be cancelled.</source><target>La vente n’a pas pu être annulée.</target></trans-unit>
+      <trans-unit id="sales.paid.done" datatype="html"><source>Payment recorded.</source><target>Règlement enregistré.</target></trans-unit>
+      <trans-unit id="sales.paymentFailed" datatype="html"><source>The payment could not be recorded.</source><target>Le règlement n’a pas pu être enregistré.</target></trans-unit>
+      <trans-unit id="sales.returns.none" datatype="html"><source>Enter a quantity for at least one line.</source><target>Saisissez une quantité pour au moins une ligne.</target></trans-unit>
+      <trans-unit id="sales.returns.tooMany" datatype="html"><source>Enter whole numbers no larger than the quantity that can still be returned.</source><target>Saisissez des nombres entiers ne dépassant pas la quantité encore retournable.</target></trans-unit>
+      <trans-unit id="sales.returns.done" datatype="html"><source>Return recorded.</source><target>Retour enregistré.</target></trans-unit>
+      <trans-unit id="sales.returns.failed" datatype="html"><source>The return could not be recorded.</source><target>Le retour n’a pas pu être enregistré.</target></trans-unit>
+      <trans-unit id="sales.status.draft" datatype="html"><source>Draft</source><target>Brouillon</target></trans-unit>
+      <trans-unit id="sales.status.completed" datatype="html"><source>Completed</source><target>Finalisée</target></trans-unit>
+      <trans-unit id="sales.status.partial" datatype="html"><source>Partly returned</source><target>Partiellement remboursée</target></trans-unit>
+      <trans-unit id="sales.status.returned" datatype="html"><source>Returned</source><target>Remboursée</target></trans-unit>
+      <trans-unit id="sales.status.cancelled" datatype="html"><source>Cancelled</source><target>Annulée</target></trans-unit>
+      <trans-unit id="sales.subtitle" datatype="html"><source>Point-of-sale receipts. A sale is a draft until it is completed and paid.</source><target>Tickets de caisse. Une vente reste un brouillon jusqu’à sa finalisation et son règlement.</target></trans-unit>
+      <trans-unit id="sales.create" datatype="html"><source>New sale</source><target>Nouvelle vente</target></trans-unit>
+      <trans-unit id="sales.number" datatype="html"><source>Sale</source><target>Vente</target></trans-unit>
+      <trans-unit id="sales.date" datatype="html"><source>Date</source><target>Date</target></trans-unit>
+      <trans-unit id="sales.heading" datatype="html"><source>Sales</source><target>Ventes</target></trans-unit>
+      <trans-unit id="sales.loadFailed" datatype="html"><source>We could not load sales</source><target>Impossible de charger les ventes</target></trans-unit>
+      <trans-unit id="sales.empty.title" datatype="html"><source>No sales match</source><target>Aucune vente ne correspond</target></trans-unit>
+      <trans-unit id="sales.empty.message" datatype="html"><source>Start a new sale to ring up a customer.</source><target>Démarrez une nouvelle vente pour encaisser un client.</target></trans-unit>
+      <trans-unit id="sales.draft" datatype="html"><source>Draft</source><target>Brouillon</target></trans-unit>
+      <trans-unit id="sales.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="discount.type" datatype="html"><source>Discount type</source><target>Type de remise</target></trans-unit>
+      <trans-unit id="discount.fixed" datatype="html"><source>Fixed amount</source><target>Montant fixe</target></trans-unit>
+      <trans-unit id="discount.percent" datatype="html"><source>Percentage</source><target>Pourcentage</target></trans-unit>
+      <trans-unit id="discount.value" datatype="html"><source>Value</source><target>Valeur</target></trans-unit>
+      <trans-unit id="discount.maxPercent" datatype="html"><source>A percentage cannot exceed 100.</source><target>Un pourcentage ne peut pas dépasser 100.</target></trans-unit>
+      <trans-unit id="sales.dialog.title" datatype="html"><source>New sale</source><target>Nouvelle vente</target></trans-unit>
+      <trans-unit id="sales.field.priceList" datatype="html"><source>Price list</source><target>Liste de prix</target></trans-unit>
+      <trans-unit id="sales.field.customer" datatype="html"><source>Customer (optional)</source><target>Client (facultatif)</target></trans-unit>
+      <trans-unit id="sales.start" datatype="html"><source>Start sale</source><target>Démarrer la vente</target></trans-unit>
+      <trans-unit id="sales.createFailed" datatype="html"><source>The sale could not be started.</source><target>La vente n’a pas pu être démarrée.</target></trans-unit>
       <trans-unit id="pager.label" datatype="html"><source>Pagination</source><target>Pagination</target></trans-unit>
       <trans-unit id="pager.previous" datatype="html"><source>Previous</source><target>Précédent</target></trans-unit>
       <trans-unit id="pager.page" datatype="html"><source>Page</source><target>Page</target></trans-unit>
