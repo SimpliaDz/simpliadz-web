@@ -45,6 +45,11 @@
       <trans-unit id="title.hoursReport" datatype="html"><source>Hours Report | SimpliaDz</source><target>تقرير الساعات | SimpliaDz</target></trans-unit>
       <trans-unit id="title.documents" datatype="html"><source>Inventory documents | SimpliaDz</source><target>مستندات المخزون | SimpliaDz</target></trans-unit>
       <trans-unit id="title.labels" datatype="html"><source>Barcode labels | SimpliaDz</source><target>ملصقات الباركود | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.report.sales" datatype="html"><source>Sales summary | SimpliaDz</source><target>ملخص المبيعات | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.report.products" datatype="html"><source>Product performance | SimpliaDz</source><target>أداء المنتجات | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.report.inventory" datatype="html"><source>Inventory report | SimpliaDz</source><target>تقرير المخزون | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.report.lowStock" datatype="html"><source>Low stock | SimpliaDz</source><target>مخزون منخفض | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.audit" datatype="html"><source>Audit log | SimpliaDz</source><target>سجل التدقيق | SimpliaDz</target></trans-unit>
       <trans-unit id="title.users" datatype="html"><source>Users | SimpliaDz</source><target>المستخدمون | SimpliaDz</target></trans-unit>
       <trans-unit id="title.newUser" datatype="html"><source>New user | SimpliaDz</source><target>مستخدم جديد | SimpliaDz</target></trans-unit>
       <trans-unit id="title.user" datatype="html"><source>User | SimpliaDz</source><target>المستخدم | SimpliaDz</target></trans-unit>
@@ -83,6 +88,11 @@
       <trans-unit id="nav.section.purchasing" datatype="html"><source>Purchasing</source><target>المشتريات</target></trans-unit>
       <trans-unit id="nav.suppliers" datatype="html"><source>Suppliers</source><target>الموردون</target></trans-unit>
       <trans-unit id="nav.orders" datatype="html"><source>Purchase orders</source><target>أوامر الشراء</target></trans-unit>
+      <trans-unit id="nav.section.reports" datatype="html"><source>Reports</source><target>التقارير</target></trans-unit>
+      <trans-unit id="nav.reportSales" datatype="html"><source>Sales summary</source><target>ملخص المبيعات</target></trans-unit>
+      <trans-unit id="nav.reportProducts" datatype="html"><source>Product performance</source><target>أداء المنتجات</target></trans-unit>
+      <trans-unit id="nav.reportInventory" datatype="html"><source>Inventory report</source><target>تقرير المخزون</target></trans-unit>
+      <trans-unit id="nav.reportLowStock" datatype="html"><source>Low stock</source><target>مخزون منخفض</target></trans-unit>
       <trans-unit id="nav.section.accounting" datatype="html"><source>Accounting</source><target>المحاسبة</target></trans-unit>
       <trans-unit id="nav.expenses" datatype="html"><source>Expenses</source><target>المصروفات</target></trans-unit>
       <trans-unit id="nav.expenseCategories" datatype="html"><source>Expense categories</source><target>فئات المصروفات</target></trans-unit>
@@ -95,6 +105,7 @@
       <trans-unit id="nav.section.administration" datatype="html"><source>Administration</source><target>الإدارة</target></trans-unit>
       <trans-unit id="nav.users" datatype="html"><source>Users</source><target>المستخدمون</target></trans-unit>
       <trans-unit id="nav.roles" datatype="html"><source>Roles</source><target>الأدوار</target></trans-unit>
+      <trans-unit id="nav.audit" datatype="html"><source>Audit log</source><target>سجل التدقيق</target></trans-unit>
       <trans-unit id="nav.section.account" datatype="html"><source>Account</source><target>الحساب</target></trans-unit>
       <trans-unit id="nav.accountSecurity" datatype="html"><source>Security</source><target>الأمان</target></trans-unit>
       <trans-unit id="app.tagline" datatype="html"><source>Business management</source><target>إدارة الأعمال</target></trans-unit>
@@ -224,6 +235,25 @@
       <trans-unit id="users.empty.title" datatype="html"><source>No users match</source><target>لا يوجد مستخدمون مطابقون</target></trans-unit>
       <trans-unit id="users.empty.message" datatype="html"><source>Try another search, or add a user.</source><target>جرّب بحثًا آخر أو أضف مستخدمًا.</target></trans-unit>
       <trans-unit id="users.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
+      <trans-unit id="audit.subtitle" datatype="html"><source>A read-only record of sensitive changes: adjustments, counts, prices, sessions and deactivations.</source><target>سجل للقراءة فقط للتغييرات الحساسة: التسويات والجرد والأسعار والجلسات والتعطيلات.</target></trans-unit>
+      <trans-unit id="audit.action" datatype="html"><source>Action</source><target>الإجراء</target></trans-unit>
+      <trans-unit id="time.person" datatype="html"><source>Person</source><target>الشخص</target></trans-unit>
+      <trans-unit id="audit.entityType" datatype="html"><source>Entity type</source><target>نوع العنصر</target></trans-unit>
+      <trans-unit id="audit.total" datatype="html"><source>Entries</source><target>عدد السجلات</target></trans-unit>
+      <trans-unit id="movements.when" datatype="html"><source>When</source><target>التاريخ</target></trans-unit>
+      <trans-unit id="audit.entity" datatype="html"><source>Entity</source><target>العنصر</target></trans-unit>
+      <trans-unit id="audit.changes" datatype="html"><source>Changes</source><target>التغييرات</target></trans-unit>
+      <trans-unit id="pager.label" datatype="html"><source>Pagination</source><target>ترقيم الصفحات</target></trans-unit>
+      <trans-unit id="pager.previous" datatype="html"><source>Previous</source><target>السابق</target></trans-unit>
+      <trans-unit id="pager.page" datatype="html"><source>Page</source><target>صفحة</target></trans-unit>
+      <trans-unit id="pager.next" datatype="html"><source>Next</source><target>التالي</target></trans-unit>
+      <trans-unit id="audit.heading" datatype="html"><source>Audit log</source><target>سجل التدقيق</target></trans-unit>
+      <trans-unit id="audit.loadFailed" datatype="html"><source>We could not load the audit log</source><target>تعذّر تحميل سجل التدقيق</target></trans-unit>
+      <trans-unit id="audit.empty.title" datatype="html"><source>No entries match</source><target>لا توجد سجلات مطابقة</target></trans-unit>
+      <trans-unit id="audit.empty.message" datatype="html"><source>Try a wider date range or a different action.</source><target>جرّب فترة أوسع أو إجراءً آخر.</target></trans-unit>
+      <trans-unit id="audit.show" datatype="html"><source>Show</source><target>عرض</target></trans-unit>
+      <trans-unit id="audit.hide" datatype="html"><source>Hide</source><target>إخفاء</target></trans-unit>
+      <trans-unit id="audit.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
       <trans-unit id="auth.login.passwordChanged" datatype="html"><source> Your password was changed. Sign in again to continue. </source><target>تم تغيير كلمة المرور. سجّل الدخول مجددًا للمتابعة.</target></trans-unit>
       <trans-unit id="attributes.detail.note" datatype="html"><source>Attribute names are fixed after creation.</source><target>لا يمكن تغيير اسم الخاصية بعد إنشائها.</target></trans-unit>
       <trans-unit id="attributes.values" datatype="html"><source>Values</source><target>القيم</target></trans-unit>
@@ -377,10 +407,23 @@
       <trans-unit id="variants.deactivated" datatype="html"><source>Variant deactivated.</source><target>تم تعطيل المتغير.</target></trans-unit>
       <trans-unit id="variants.deactivateFailed" datatype="html"><source>The variant could not be deactivated.</source><target>تعذّر تعطيل المتغير.</target></trans-unit>
       <trans-unit id="dashboard.heading" datatype="html"><source>Welcome back</source><target>مرحبًا بعودتك</target></trans-unit>
+      <trans-unit id="dashboard.today" datatype="html"><source>Today</source><target>اليوم</target></trans-unit>
+      <trans-unit id="dashboard.revenue" datatype="html"><source>Revenue</source><target>الإيرادات</target></trans-unit>
+      <trans-unit id="dashboard.sales" datatype="html"><source>sales</source><target>عمليات بيع</target></trans-unit>
+      <trans-unit id="dashboard.items" datatype="html"><source>items</source><target>أصناف</target></trans-unit>
+      <trans-unit id="dashboard.average" datatype="html"><source>Average basket</source><target>متوسط السلة</target></trans-unit>
+      <trans-unit id="dashboard.grossProfit" datatype="html"><source>Gross profit</source><target>الربح الإجمالي</target></trans-unit>
+      <trans-unit id="dashboard.expensesLabel" datatype="html"><source>Expenses</source><target>المصروفات</target></trans-unit>
+      <trans-unit id="dashboard.lowStock" datatype="html"><source>Below reorder point</source><target>تحت حد إعادة الطلب</target></trans-unit>
+      <trans-unit id="dashboard.viewLowStock" datatype="html"><source>View low stock</source><target>عرض المخزون المنخفض</target></trans-unit>
+      <trans-unit id="dashboard.unavailable" datatype="html"><source>Some figures are unavailable because a module is switched off for this organization.</source><target>بعض الأرقام غير متاحة لأن أحد الأنظمة معطّل لهذه المؤسسة.</target></trans-unit>
+      <trans-unit id="dashboard.loading" datatype="html"><source>Loading today’s figures…</source><target>جارٍ تحميل أرقام اليوم…</target></trans-unit>
+      <trans-unit id="dashboard.access" datatype="html"><source>Your access</source><target>صلاحياتك</target></trans-unit>
       <trans-unit id="dashboard.roles.title" datatype="html"><source>Your roles</source><target>أدوارك</target></trans-unit>
-      <trans-unit id="dashboard.roles.empty" datatype="html"><source> No roles are assigned to your account. </source><target>لم يتم تعيين أي أدوار لحسابك.</target></trans-unit>
+      <trans-unit id="dashboard.roles.empty" datatype="html"><source>No roles are assigned to your account.</source><target>لم يتم تعيين أي أدوار لحسابك.</target></trans-unit>
       <trans-unit id="dashboard.permissions.title" datatype="html"><source>Permissions</source><target>الصلاحيات</target></trans-unit>
       <trans-unit id="dashboard.permissions.help" datatype="html"><source> Permissions granted to your account. Screens you cannot use are hidden from the menu. </source><target>الصلاحيات الممنوحة لحسابك. تُخفى الشاشات غير المتاحة لك من القائمة.</target></trans-unit>
+      <trans-unit id="dashboard.todayFailed" datatype="html"><source>Today’s figures could not be loaded.</source><target>تعذّر تحميل أرقام اليوم.</target></trans-unit>
       <trans-unit id="status.forbidden.heading" datatype="html"><source>You do not have access to this page</source><target>ليست لديك صلاحية الوصول إلى هذه الصفحة</target></trans-unit>
       <trans-unit id="status.forbidden.body" datatype="html"><source> Ask an administrator if you need access. Your menu shows the screens available to you. </source><target>اطلب من المسؤول صلاحية الوصول إن احتجتها. تعرض القائمة الشاشات المتاحة لك.</target></trans-unit>
       <trans-unit id="status.backToDashboard" datatype="html"><source>Back to dashboard</source><target>العودة إلى لوحة التحكم</target></trans-unit>
@@ -388,8 +431,8 @@
       <trans-unit id="status.notFound.body" datatype="html"><source>The page you are looking for does not exist or has moved.</source><target>الصفحة التي تبحث عنها غير موجودة أو تم نقلها.</target></trans-unit>
       <trans-unit id="counts.cancel" datatype="html"><source> Cancel count </source><target>إلغاء الجرد</target></trans-unit>
       <trans-unit id="counts.complete" datatype="html"><source> Complete count </source><target>إنجاز الجرد</target></trans-unit>
-      <trans-unit id="counts.print.sheet" datatype="html"><source>Print count sheet</source><target>طباعة ورقة الجرد</target></trans-unit>
-      <trans-unit id="counts.print.differences" datatype="html"><source>Print differences</source><target>طباعة الفروقات</target></trans-unit>
+      <trans-unit id="counts.print.sheet" datatype="html"><source> Print count sheet </source><target>طباعة ورقة الجرد</target></trans-unit>
+      <trans-unit id="counts.print.differences" datatype="html"><source> Print differences </source><target>طباعة الفروقات</target></trans-unit>
       <trans-unit id="counts.auditNotice" datatype="html"><source> Completing a count writes the differences as adjustments and is recorded in the audit trail. </source><target>إنجاز الجرد يحوّل الفروقات إلى تسويات، وتُسجَّل في سجل التدقيق.</target></trans-unit>
       <trans-unit id="stock.column.product" datatype="html"><source>Product</source><target>المنتج</target></trans-unit>
       <trans-unit id="counts.expected" datatype="html"><source>Expected</source><target>المتوقع</target></trans-unit>
@@ -439,9 +482,9 @@
       <trans-unit id="documents.print.stockList" datatype="html"><source>Print a stock list</source><target>طباعة قائمة مخزون</target></trans-unit>
       <trans-unit id="documents.template" datatype="html"><source>Template</source><target>القالب</target></trans-unit>
       <trans-unit id="documents.includeZero" datatype="html"><source>Include zero stock</source><target>تضمين المخزون الصفري</target></trans-unit>
-      <trans-unit id="documents.print.action" datatype="html"><source>Open for printing</source><target>فتح للطباعة</target></trans-unit>
+      <trans-unit id="documents.print.action" datatype="html"><source> Open for printing </source><target>فتح للطباعة</target></trans-unit>
       <trans-unit id="documents.limit" datatype="html"><source>A stock list is limited to 5,000 rows.</source><target>قائمة المخزون محدودة بـ 5000 صف.</target></trans-unit>
-      <trans-unit id="documents.noPrint" datatype="html"><source>You need the print permission to open documents.</source><target>تحتاج صلاحية الطباعة لفتح المستندات.</target></trans-unit>
+      <trans-unit id="documents.noPrint" datatype="html"><source> You need the print permission to open documents. </source><target>تحتاج صلاحية الطباعة لفتح المستندات.</target></trans-unit>
       <trans-unit id="documents.templates" datatype="html"><source>Templates</source><target>القوالب</target></trans-unit>
       <trans-unit id="documents.field.type" datatype="html"><source>Document type</source><target>نوع المستند</target></trans-unit>
       <trans-unit id="documents.paperHeader" datatype="html"><source>Paper</source><target>الورق</target></trans-unit>
@@ -475,12 +518,12 @@
       <trans-unit id="labels.print.title" datatype="html"><source>Print labels</source><target>طباعة الملصقات</target></trans-unit>
       <trans-unit id="labels.template" datatype="html"><source>Label template</source><target>قالب الملصق</target></trans-unit>
       <trans-unit id="labels.copies" datatype="html"><source>Labels</source><target>عدد الملصقات</target></trans-unit>
-      <trans-unit id="labels.addLine" datatype="html"><source>Add to print list</source><target>إضافة إلى القائمة</target></trans-unit>
-      <trans-unit id="common.remove" datatype="html"><source>Remove</source><target>إزالة</target></trans-unit>
-      <trans-unit id="labels.print.action" datatype="html"><source>Open for printing</source><target>فتح للطباعة</target></trans-unit>
-      <trans-unit id="labels.limit" datatype="html"><source>A print run is limited to 500 labels in total.</source><target>الطباعة محدودة بـ 500 ملصق في المجموع.</target></trans-unit>
+      <trans-unit id="labels.addLine" datatype="html"><source> Add to print list </source><target>إضافة إلى القائمة</target></trans-unit>
+      <trans-unit id="common.remove" datatype="html"><source> Remove </source><target>إزالة</target></trans-unit>
+      <trans-unit id="labels.print.action" datatype="html"><source> Open for printing </source><target>فتح للطباعة</target></trans-unit>
+      <trans-unit id="labels.limit" datatype="html"><source> A print run is limited to 500 labels in total. </source><target>الطباعة محدودة بـ 500 ملصق في المجموع.</target></trans-unit>
       <trans-unit id="labels.noPrint" datatype="html"><source>You need the print permission to print labels.</source><target>تحتاج صلاحية الطباعة لطباعة الملصقات.</target></trans-unit>
-      <trans-unit id="labels.noTemplate" datatype="html"><source>Create an active label template before printing.</source><target>أنشئ قالب ملصق نشطًا قبل الطباعة.</target></trans-unit>
+      <trans-unit id="labels.noTemplate" datatype="html"><source> Create an active label template before printing. </source><target>أنشئ قالب ملصق نشطًا قبل الطباعة.</target></trans-unit>
       <trans-unit id="labels.templates" datatype="html"><source>Templates</source><target>القوالب</target></trans-unit>
       <trans-unit id="labels.size" datatype="html"><source>Label size</source><target>حجم الملصق</target></trans-unit>
       <trans-unit id="labels.page" datatype="html"><source>Page</source><target>الصفحة</target></trans-unit>
@@ -547,7 +590,6 @@
       <trans-unit id="priceLists.currencyHint" datatype="html"><source>Three letters, for example DZD.</source><target>ثلاثة أحرف، مثل DZD.</target></trans-unit>
       <trans-unit id="validation.currency" datatype="html"><source>Use three letters.</source><target>استخدم ثلاثة أحرف.</target></trans-unit>
       <trans-unit id="movements.subtitle" datatype="html"><source>Every stock change is recorded here and never edited. Corrections are new movements.</source><target>تُسجَّل كل تغييرات المخزون هنا ولا تُعدَّل أبدًا. التصحيح يكون بحركة جديدة.</target></trans-unit>
-      <trans-unit id="movements.when" datatype="html"><source>When</source><target>التاريخ</target></trans-unit>
       <trans-unit id="movements.type" datatype="html"><source>Type</source><target>النوع</target></trans-unit>
       <trans-unit id="movements.change" datatype="html"><source>Change</source><target>التغيير</target></trans-unit>
       <trans-unit id="movements.note" datatype="html"><source>Reference and reason</source><target>المرجع والسبب</target></trans-unit>
@@ -772,6 +814,40 @@
       <trans-unit id="suppliers.dialog.create" datatype="html"><source>New supplier</source><target>مورد جديد</target></trans-unit>
       <trans-unit id="suppliers.dialog.edit" datatype="html"><source>Edit supplier</source><target>تعديل المورد</target></trans-unit>
       <trans-unit id="suppliers.saveFailed" datatype="html"><source>We could not save the supplier.</source><target>تعذّر حفظ المورد.</target></trans-unit>
+      <trans-unit id="report.run" datatype="html"><source>Run report</source><target>تشغيل التقرير</target></trans-unit>
+      <trans-unit id="reports.revenue" datatype="html"><source>Revenue</source><target>الإيرادات</target></trans-unit>
+      <trans-unit id="reports.cogs" datatype="html"><source>Cost of goods sold</source><target>تكلفة البضاعة المباعة</target></trans-unit>
+      <trans-unit id="reports.grossProfit" datatype="html"><source>Gross profit</source><target>الربح الإجمالي</target></trans-unit>
+      <trans-unit id="reports.transactions" datatype="html"><source>Transactions</source><target>عمليات البيع</target></trans-unit>
+      <trans-unit id="reports.averageLabel" datatype="html"><source>Average</source><target>المتوسط</target></trans-unit>
+      <trans-unit id="reports.prompt" datatype="html"><source>Choose a date range and run the report.</source><target>اختر فترة ثم شغّل التقرير.</target></trans-unit>
+      <trans-unit id="reports.rankBy" datatype="html"><source>Rank by</source><target>ترتيب حسب</target></trans-unit>
+      <trans-unit id="reports.rank.quantity" datatype="html"><source>Quantity sold</source><target>الكمية المباعة</target></trans-unit>
+      <trans-unit id="reports.rank.revenue" datatype="html"><source>Revenue</source><target>الإيرادات</target></trans-unit>
+      <trans-unit id="reports.sold" datatype="html"><source>Sold</source><target>المباع</target></trans-unit>
+      <trans-unit id="reports.returned" datatype="html"><source>Returned</source><target>المرتجع</target></trans-unit>
+      <trans-unit id="reports.netQuantity" datatype="html"><source>Net quantity</source><target>الكمية الصافية</target></trans-unit>
+      <trans-unit id="reports.netRevenue" datatype="html"><source>Net revenue</source><target>صافي الإيرادات</target></trans-unit>
+      <trans-unit id="reports.variants" datatype="html"><source>Variants</source><target>المتغيرات</target></trans-unit>
+      <trans-unit id="reports.noRows" datatype="html"><source>No sales in this range.</source><target>لا توجد مبيعات في هذه الفترة.</target></trans-unit>
+      <trans-unit id="reports.onHand" datatype="html"><source>Quantity on hand</source><target>الكمية المتوفرة</target></trans-unit>
+      <trans-unit id="reports.stockValue" datatype="html"><source>Stock value</source><target>قيمة المخزون</target></trans-unit>
+      <trans-unit id="reports.unvaluedWord" datatype="html"><source>units have no cost recorded.</source><target>وحدة بلا تكلفة مسجّلة.</target></trans-unit>
+      <trans-unit id="reports.unitCost" datatype="html"><source>Unit cost</source><target>تكلفة الوحدة</target></trans-unit>
+      <trans-unit id="reports.value" datatype="html"><source>Value</source><target>القيمة</target></trans-unit>
+      <trans-unit id="reports.lowStockTotal" datatype="html"><source>Items below reorder point</source><target>الأصناف تحت الحد</target></trans-unit>
+      <trans-unit id="reports.failed" datatype="html"><source>The report could not be run</source><target>تعذّر تشغيل التقرير</target></trans-unit>
+      <trans-unit id="reports.noLow.title" datatype="html"><source>Nothing is below its reorder point</source><target>لا توجد أصناف تحت حد إعادة الطلب</target></trans-unit>
+      <trans-unit id="reports.noLow.message" datatype="html"><source>Items appear here when stock falls to or below the reorder point.</source><target>تظهر الأصناف هنا عندما ينخفض المخزون إلى الحد أو دونه.</target></trans-unit>
+      <trans-unit id="reports.failedHint" datatype="html"><source>Check the dates and try again.</source><target>تحقّق من التواريخ وأعد المحاولة.</target></trans-unit>
+      <trans-unit id="reports.products.heading" datatype="html"><source>Product performance</source><target>أداء المنتجات</target></trans-unit>
+      <trans-unit id="reports.inventory.heading" datatype="html"><source>Inventory report</source><target>تقرير المخزون</target></trans-unit>
+      <trans-unit id="reports.lowStock.heading" datatype="html"><source>Low stock</source><target>مخزون منخفض</target></trans-unit>
+      <trans-unit id="reports.sales.heading" datatype="html"><source>Sales summary</source><target>ملخص المبيعات</target></trans-unit>
+      <trans-unit id="reports.products.subtitle" datatype="html"><source>Gross, returned and net sales per product. Select a product to see its variants.</source><target>المبيعات الإجمالية والمرتجعات والصافية لكل منتج. اختر منتجًا لعرض متغيراته.</target></trans-unit>
+      <trans-unit id="reports.inventory.subtitle" datatype="html"><source>Quantity on hand per variant, with value where a cost is recorded.</source><target>الكمية المتوفرة لكل متغير، مع القيمة حيث يُسجَّل التكلفة.</target></trans-unit>
+      <trans-unit id="reports.lowStock.subtitle" datatype="html"><source>Variants at or below their reorder point at each location.</source><target>المتغيرات عند حد إعادة الطلب أو دونه في كل موقع.</target></trans-unit>
+      <trans-unit id="reports.sales.subtitle" datatype="html"><source>Revenue, cost and gross profit for completed sales. Dates are UTC.</source><target>الإيرادات والتكلفة والربح الإجمالي للمبيعات المُنجزة. التواريخ بالتوقيت العالمي.</target></trans-unit>
       <trans-unit id="registers.subtitle" datatype="html"><source>Each till at a location. A cash session is opened on a register before taking cash.</source><target>كل صندوق في موقع. تُفتح جلسة صندوق قبل استلام النقد.</target></trans-unit>
       <trans-unit id="registers.create" datatype="html"><source>New register</source><target>صندوق جديد</target></trans-unit>
       <trans-unit id="registers.field.code" datatype="html"><source>Code</source><target>الرمز</target></trans-unit>
@@ -935,8 +1011,6 @@
       <trans-unit id="sales.start" datatype="html"><source>Start sale</source><target>بدء البيع</target></trans-unit>
       <trans-unit id="sales.createFailed" datatype="html"><source>The sale could not be started.</source><target>تعذّر بدء عملية البيع.</target></trans-unit>
       <trans-unit id="report.subtitle" datatype="html"><source>Hours worked per day, for closed sessions. Days are split at local midnight in the organization&apos;s time zone.</source><target>الساعات المعمولة لكل يوم، للجلسات المغلقة. تُقسَم الأيام عند منتصف الليل المحلي في المنطقة الزمنية للمؤسسة.</target></trans-unit>
-      <trans-unit id="time.person" datatype="html"><source>Person</source><target>الشخص</target></trans-unit>
-      <trans-unit id="report.run" datatype="html"><source> Run report </source><target>تشغيل التقرير</target></trans-unit>
       <trans-unit id="report.total" datatype="html"><source>Total</source><target>الإجمالي</target></trans-unit>
       <trans-unit id="report.date" datatype="html"><source>Date</source><target>التاريخ</target></trans-unit>
       <trans-unit id="time.hours" datatype="html"><source>Hours</source><target>الساعات</target></trans-unit>
@@ -985,10 +1059,6 @@
       <trans-unit id="time.correct.before" datatype="html"><source>Before</source><target>قبل</target></trans-unit>
       <trans-unit id="time.correct.order" datatype="html"><source>The clock-out time must be after the clock-in time.</source><target>يجب أن يكون وقت الانصراف بعد وقت الحضور.</target></trans-unit>
       <trans-unit id="time.correct.failed" datatype="html"><source>The session could not be corrected.</source><target>تعذّر تصحيح الجلسة.</target></trans-unit>
-      <trans-unit id="pager.label" datatype="html"><source>Pagination</source><target>ترقيم الصفحات</target></trans-unit>
-      <trans-unit id="pager.previous" datatype="html"><source>Previous</source><target>السابق</target></trans-unit>
-      <trans-unit id="pager.page" datatype="html"><source>Page</source><target>صفحة</target></trans-unit>
-      <trans-unit id="pager.next" datatype="html"><source>Next</source><target>التالي</target></trans-unit>
       <trans-unit id="theme.switchToLight" datatype="html"><source>Switch to light theme</source><target>التبديل إلى السمة الفاتحة</target></trans-unit>
       <trans-unit id="theme.switchToDark" datatype="html"><source>Switch to dark theme</source><target>التبديل إلى السمة الداكنة</target></trans-unit>
     </body>

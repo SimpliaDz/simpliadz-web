@@ -1,18 +1,87 @@
-import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
+import { DecimalPipe } from '@angular/common';
+import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { describeApiError } from '../../../core/api/api-error-message';
 import { AuthSessionService } from '../../../core/auth/auth-session.service';
+import {
+  DashboardSummary,
+  ReportsApiService,
+} from '../../reporting/data-access/reports-api.service';
 
 @Component({
   selector: 'app-dashboard-page',
-  imports: [MatCardModule, MatIconModule],
+  imports: [DecimalPipe, MatCardModule, MatIconModule, RouterLink],
   template: `
     <header class="page-header">
-      <h1 i18n="@@dashboard.heading">Welcome back</h1>
-      <p class="page-subtitle">{{ email() }}</p>
+      <div>
+        <h1 i18n="@@dashboard.heading">Welcome back</h1>
+        <p class="page-subtitle">{{ email() }}</p>
+      </div>
     </header>
 
-    <div class="cards">
+    @if (canSeeToday()) {
+      <h2 class="section-title" i18n="@@dashboard.today">Today</h2>
+      @if (todayError(); as message) {
+        <p class="form-error" role="alert">{{ message }}</p>
+      } @else if (today(); as t) {
+        <div class="card-grid">
+          @if (t.salesAvailable) {
+            <mat-card appearance="outlined"
+              ><mat-card-content>
+                <p class="label" i18n="@@dashboard.revenue">Revenue</p>
+                <p class="metric">{{ t.revenue | number: '1.2-2' }}</p>
+                <p class="muted">
+                  {{ t.transactionCount }} <span i18n="@@dashboard.sales">sales</span> ·
+                  {{ t.itemsSold }} <span i18n="@@dashboard.items">items</span>
+                </p>
+              </mat-card-content></mat-card
+            >
+            <mat-card appearance="outlined"
+              ><mat-card-content>
+                <p class="label" i18n="@@dashboard.average">Average basket</p>
+                <p class="metric">{{ t.averageBasket | number: '1.2-2' }}</p>
+              </mat-card-content></mat-card
+            >
+          }
+          @if (t.salesAvailable && t.accountingAvailable) {
+            <mat-card appearance="outlined"
+              ><mat-card-content>
+                <p class="label" i18n="@@dashboard.grossProfit">Gross profit</p>
+                <p class="metric">{{ t.grossProfit | number: '1.2-2' }}</p>
+                <p class="muted">
+                  <span i18n="@@dashboard.expensesLabel">Expenses</span>:
+                  {{ t.expenses | number: '1.2-2' }}
+                </p>
+              </mat-card-content></mat-card
+            >
+          }
+          @if (t.inventoryAvailable) {
+            <mat-card appearance="outlined"
+              ><mat-card-content>
+                <p class="label" i18n="@@dashboard.lowStock">Below reorder point</p>
+                <p class="metric">{{ t.lowStockCount }}</p>
+                <a mat-button routerLink="/app/reports/low-stock" i18n="@@dashboard.viewLowStock"
+                  >View low stock</a
+                >
+              </mat-card-content></mat-card
+            >
+          }
+        </div>
+        @if (!t.salesAvailable || !t.inventoryAvailable) {
+          <p class="form-hint" i18n="@@dashboard.unavailable">
+            Some figures are unavailable because a module is switched off for this organization.
+          </p>
+        }
+        <p class="form-hint">{{ t.date }} · {{ t.timeZone }}</p>
+      } @else {
+        <p class="muted" i18n="@@dashboard.loading">Loading today’s figures…</p>
+      }
+    }
+
+    <h2 class="section-title" i18n="@@dashboard.access">Your access</h2>
+    <div class="card-grid">
       <mat-card appearance="outlined">
         <mat-card-header>
           <mat-icon mat-card-avatar aria-hidden="true">badge</mat-icon>
@@ -20,9 +89,9 @@ import { AuthSessionService } from '../../../core/auth/auth-session.service';
         </mat-card-header>
         <mat-card-content>
           @if (roles().length) {
-            <ul class="chips">
+            <ul class="chip-list">
               @for (role of roles(); track role) {
-                <li class="chip">{{ role }}</li>
+                <li>{{ role }}</li>
               }
             </ul>
           } @else {
@@ -59,42 +128,41 @@ import { AuthSessionService } from '../../../core/auth/auth-session.service';
       margin: 0.25rem 0 0;
       color: var(--mat-sys-on-surface-variant);
     }
-    .cards {
-      display: grid;
-      gap: 1rem;
-      grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
-    }
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
+    .card-grid mat-card p {
       margin: 0;
-      padding: 0;
-      list-style: none;
     }
-    .chip {
-      padding: 0.25rem 0.75rem;
-      border-radius: 999px;
-      background: var(--mat-sys-secondary-container);
-      color: var(--mat-sys-on-secondary-container);
-      font: var(--mat-sys-label-large);
+    .label {
+      color: var(--mat-sys-on-surface-variant);
     }
     .metric {
-      margin: 0;
-      font: var(--mat-sys-display-small);
-      color: var(--mat-sys-primary);
-    }
-    .muted {
-      margin: 0.5rem 0 0;
-      color: var(--mat-sys-on-surface-variant);
+      font: var(--mat-sys-headline-small);
     }
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DashboardPage {
   private readonly session = inject(AuthSessionService);
+  private readonly reports = inject(ReportsApiService);
 
   readonly email = computed(() => this.session.user()?.email ?? '');
   readonly roles = computed(() => this.session.user()?.roles ?? []);
   readonly permissionCount = computed(() => this.session.user()?.permissions.length ?? 0);
+  readonly canSeeToday = computed(() => this.session.hasPermission('reports.dashboard.view'));
+  readonly today = signal<DashboardSummary | null>(null);
+  readonly todayError = signal<string | null>(null);
+
+  constructor() {
+    if (this.canSeeToday()) {
+      this.reports.dashboardToday().subscribe({
+        next: (summary) => this.today.set(summary),
+        error: (error: unknown) =>
+          this.todayError.set(
+            describeApiError(
+              error,
+              $localize`:@@dashboard.todayFailed:Today’s figures could not be loaded.`,
+            ),
+          ),
+      });
+    }
+  }
 }

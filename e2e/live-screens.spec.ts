@@ -32,6 +32,11 @@ const screens: { path: string; heading: string }[] = [
   { path: '/app/workforce/report', heading: 'Hours report' },
   { path: '/app/inventory/documents', heading: 'Inventory documents' },
   { path: '/app/inventory/labels', heading: 'Barcode labels' },
+  { path: '/app/reports/sales', heading: 'Sales summary' },
+  { path: '/app/reports/products', heading: 'Product performance' },
+  { path: '/app/reports/inventory', heading: 'Inventory report' },
+  { path: '/app/reports/low-stock', heading: 'Low stock' },
+  { path: '/app/administration/audit', heading: 'Audit log' },
   { path: '/app/administration/users', heading: 'Users' },
   { path: '/app/administration/roles', heading: 'Roles' },
 ];

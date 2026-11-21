@@ -45,6 +45,11 @@
       <trans-unit id="title.hoursReport" datatype="html"><source>Hours Report | SimpliaDz</source><target>Rapport d’heures | SimpliaDz</target></trans-unit>
       <trans-unit id="title.documents" datatype="html"><source>Inventory documents | SimpliaDz</source><target>Documents d’inventaire | SimpliaDz</target></trans-unit>
       <trans-unit id="title.labels" datatype="html"><source>Barcode labels | SimpliaDz</source><target>Étiquettes code-barres | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.report.sales" datatype="html"><source>Sales summary | SimpliaDz</source><target>Synthèse des ventes | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.report.products" datatype="html"><source>Product performance | SimpliaDz</source><target>Performance des produits | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.report.inventory" datatype="html"><source>Inventory report | SimpliaDz</source><target>Rapport de stock | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.report.lowStock" datatype="html"><source>Low stock | SimpliaDz</source><target>Stock bas | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.audit" datatype="html"><source>Audit log | SimpliaDz</source><target>Journal d’audit | SimpliaDz</target></trans-unit>
       <trans-unit id="title.users" datatype="html"><source>Users | SimpliaDz</source><target>Utilisateurs | SimpliaDz</target></trans-unit>
       <trans-unit id="title.newUser" datatype="html"><source>New user | SimpliaDz</source><target>Nouvel utilisateur | SimpliaDz</target></trans-unit>
       <trans-unit id="title.user" datatype="html"><source>User | SimpliaDz</source><target>Utilisateur | SimpliaDz</target></trans-unit>
@@ -83,6 +88,11 @@
       <trans-unit id="nav.section.purchasing" datatype="html"><source>Purchasing</source><target>Achats</target></trans-unit>
       <trans-unit id="nav.suppliers" datatype="html"><source>Suppliers</source><target>Fournisseurs</target></trans-unit>
       <trans-unit id="nav.orders" datatype="html"><source>Purchase orders</source><target>Commandes d’achat</target></trans-unit>
+      <trans-unit id="nav.section.reports" datatype="html"><source>Reports</source><target>Rapports</target></trans-unit>
+      <trans-unit id="nav.reportSales" datatype="html"><source>Sales summary</source><target>Synthèse des ventes</target></trans-unit>
+      <trans-unit id="nav.reportProducts" datatype="html"><source>Product performance</source><target>Performance des produits</target></trans-unit>
+      <trans-unit id="nav.reportInventory" datatype="html"><source>Inventory report</source><target>Rapport de stock</target></trans-unit>
+      <trans-unit id="nav.reportLowStock" datatype="html"><source>Low stock</source><target>Stock bas</target></trans-unit>
       <trans-unit id="nav.section.accounting" datatype="html"><source>Accounting</source><target>Comptabilité</target></trans-unit>
       <trans-unit id="nav.expenses" datatype="html"><source>Expenses</source><target>Dépenses</target></trans-unit>
       <trans-unit id="nav.expenseCategories" datatype="html"><source>Expense categories</source><target>Catégories de dépenses</target></trans-unit>
@@ -95,6 +105,7 @@
       <trans-unit id="nav.section.administration" datatype="html"><source>Administration</source><target>Administration</target></trans-unit>
       <trans-unit id="nav.users" datatype="html"><source>Users</source><target>Utilisateurs</target></trans-unit>
       <trans-unit id="nav.roles" datatype="html"><source>Roles</source><target>Rôles</target></trans-unit>
+      <trans-unit id="nav.audit" datatype="html"><source>Audit log</source><target>Journal d’audit</target></trans-unit>
       <trans-unit id="nav.section.account" datatype="html"><source>Account</source><target>Compte</target></trans-unit>
       <trans-unit id="nav.accountSecurity" datatype="html"><source>Security</source><target>Sécurité</target></trans-unit>
       <trans-unit id="app.tagline" datatype="html"><source>Business management</source><target>Gestion d’entreprise</target></trans-unit>
@@ -224,6 +235,25 @@
       <trans-unit id="users.empty.title" datatype="html"><source>No users match</source><target>Aucun utilisateur ne correspond</target></trans-unit>
       <trans-unit id="users.empty.message" datatype="html"><source>Try another search, or add a user.</source><target>Essayez une autre recherche ou ajoutez un utilisateur.</target></trans-unit>
       <trans-unit id="users.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
+      <trans-unit id="audit.subtitle" datatype="html"><source>A read-only record of sensitive changes: adjustments, counts, prices, sessions and deactivations.</source><target>Historique en lecture seule des modifications sensibles : ajustements, inventaires, prix, sessions et désactivations.</target></trans-unit>
+      <trans-unit id="audit.action" datatype="html"><source>Action</source><target>Action</target></trans-unit>
+      <trans-unit id="time.person" datatype="html"><source>Person</source><target>Personne</target></trans-unit>
+      <trans-unit id="audit.entityType" datatype="html"><source>Entity type</source><target>Type d’élément</target></trans-unit>
+      <trans-unit id="audit.total" datatype="html"><source>Entries</source><target>Entrées</target></trans-unit>
+      <trans-unit id="movements.when" datatype="html"><source>When</source><target>Date</target></trans-unit>
+      <trans-unit id="audit.entity" datatype="html"><source>Entity</source><target>Élément</target></trans-unit>
+      <trans-unit id="audit.changes" datatype="html"><source>Changes</source><target>Modifications</target></trans-unit>
+      <trans-unit id="pager.label" datatype="html"><source>Pagination</source><target>Pagination</target></trans-unit>
+      <trans-unit id="pager.previous" datatype="html"><source>Previous</source><target>Précédent</target></trans-unit>
+      <trans-unit id="pager.page" datatype="html"><source>Page</source><target>Page</target></trans-unit>
+      <trans-unit id="pager.next" datatype="html"><source>Next</source><target>Suivant</target></trans-unit>
+      <trans-unit id="audit.heading" datatype="html"><source>Audit log</source><target>Journal d’audit</target></trans-unit>
+      <trans-unit id="audit.loadFailed" datatype="html"><source>We could not load the audit log</source><target>Impossible de charger le journal d’audit</target></trans-unit>
+      <trans-unit id="audit.empty.title" datatype="html"><source>No entries match</source><target>Aucune entrée ne correspond</target></trans-unit>
+      <trans-unit id="audit.empty.message" datatype="html"><source>Try a wider date range or a different action.</source><target>Essayez une période plus large ou une autre action.</target></trans-unit>
+      <trans-unit id="audit.show" datatype="html"><source>Show</source><target>Afficher</target></trans-unit>
+      <trans-unit id="audit.hide" datatype="html"><source>Hide</source><target>Masquer</target></trans-unit>
+      <trans-unit id="audit.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
       <trans-unit id="auth.login.passwordChanged" datatype="html"><source> Your password was changed. Sign in again to continue. </source><target>Votre mot de passe a été modifié. Reconnectez-vous pour continuer.</target></trans-unit>
       <trans-unit id="attributes.detail.note" datatype="html"><source>Attribute names are fixed after creation.</source><target>Le nom d’un attribut ne peut plus être modifié après sa création.</target></trans-unit>
       <trans-unit id="attributes.values" datatype="html"><source>Values</source><target>Valeurs</target></trans-unit>
@@ -377,10 +407,23 @@
       <trans-unit id="variants.deactivated" datatype="html"><source>Variant deactivated.</source><target>Variante désactivée.</target></trans-unit>
       <trans-unit id="variants.deactivateFailed" datatype="html"><source>The variant could not be deactivated.</source><target>Impossible de désactiver la variante.</target></trans-unit>
       <trans-unit id="dashboard.heading" datatype="html"><source>Welcome back</source><target>Bon retour</target></trans-unit>
+      <trans-unit id="dashboard.today" datatype="html"><source>Today</source><target>Aujourd’hui</target></trans-unit>
+      <trans-unit id="dashboard.revenue" datatype="html"><source>Revenue</source><target>Chiffre d’affaires</target></trans-unit>
+      <trans-unit id="dashboard.sales" datatype="html"><source>sales</source><target>ventes</target></trans-unit>
+      <trans-unit id="dashboard.items" datatype="html"><source>items</source><target>articles</target></trans-unit>
+      <trans-unit id="dashboard.average" datatype="html"><source>Average basket</source><target>Panier moyen</target></trans-unit>
+      <trans-unit id="dashboard.grossProfit" datatype="html"><source>Gross profit</source><target>Marge brute</target></trans-unit>
+      <trans-unit id="dashboard.expensesLabel" datatype="html"><source>Expenses</source><target>Dépenses</target></trans-unit>
+      <trans-unit id="dashboard.lowStock" datatype="html"><source>Below reorder point</source><target>Sous le seuil de réapprovisionnement</target></trans-unit>
+      <trans-unit id="dashboard.viewLowStock" datatype="html"><source>View low stock</source><target>Voir le stock bas</target></trans-unit>
+      <trans-unit id="dashboard.unavailable" datatype="html"><source>Some figures are unavailable because a module is switched off for this organization.</source><target>Certains chiffres sont indisponibles parce qu’un module est désactivé pour cette organisation.</target></trans-unit>
+      <trans-unit id="dashboard.loading" datatype="html"><source>Loading today’s figures…</source><target>Chargement des chiffres du jour…</target></trans-unit>
+      <trans-unit id="dashboard.access" datatype="html"><source>Your access</source><target>Vos accès</target></trans-unit>
       <trans-unit id="dashboard.roles.title" datatype="html"><source>Your roles</source><target>Vos rôles</target></trans-unit>
-      <trans-unit id="dashboard.roles.empty" datatype="html"><source> No roles are assigned to your account. </source><target>Aucun rôle n’est attribué à votre compte.</target></trans-unit>
+      <trans-unit id="dashboard.roles.empty" datatype="html"><source>No roles are assigned to your account.</source><target>Aucun rôle n’est attribué à votre compte.</target></trans-unit>
       <trans-unit id="dashboard.permissions.title" datatype="html"><source>Permissions</source><target>Autorisations</target></trans-unit>
       <trans-unit id="dashboard.permissions.help" datatype="html"><source> Permissions granted to your account. Screens you cannot use are hidden from the menu. </source><target>Autorisations accordées à votre compte. Les écrans auxquels vous n’avez pas accès sont masqués dans le menu.</target></trans-unit>
+      <trans-unit id="dashboard.todayFailed" datatype="html"><source>Today’s figures could not be loaded.</source><target>Les chiffres du jour n’ont pas pu être chargés.</target></trans-unit>
       <trans-unit id="status.forbidden.heading" datatype="html"><source>You do not have access to this page</source><target>Vous n’avez pas accès à cette page</target></trans-unit>
       <trans-unit id="status.forbidden.body" datatype="html"><source> Ask an administrator if you need access. Your menu shows the screens available to you. </source><target>Demandez à un administrateur si vous avez besoin d’un accès. Le menu affiche les écrans auxquels vous avez accès.</target></trans-unit>
       <trans-unit id="status.backToDashboard" datatype="html"><source>Back to dashboard</source><target>Retour au tableau de bord</target></trans-unit>
@@ -388,8 +431,8 @@
       <trans-unit id="status.notFound.body" datatype="html"><source>The page you are looking for does not exist or has moved.</source><target>La page demandée n’existe pas ou a été déplacée.</target></trans-unit>
       <trans-unit id="counts.cancel" datatype="html"><source> Cancel count </source><target>Annuler l’inventaire</target></trans-unit>
       <trans-unit id="counts.complete" datatype="html"><source> Complete count </source><target>Finaliser l’inventaire</target></trans-unit>
-      <trans-unit id="counts.print.sheet" datatype="html"><source>Print count sheet</source><target>Imprimer la feuille de comptage</target></trans-unit>
-      <trans-unit id="counts.print.differences" datatype="html"><source>Print differences</source><target>Imprimer les écarts</target></trans-unit>
+      <trans-unit id="counts.print.sheet" datatype="html"><source> Print count sheet </source><target>Imprimer la feuille de comptage</target></trans-unit>
+      <trans-unit id="counts.print.differences" datatype="html"><source> Print differences </source><target>Imprimer les écarts</target></trans-unit>
       <trans-unit id="counts.auditNotice" datatype="html"><source> Completing a count writes the differences as adjustments and is recorded in the audit trail. </source><target>Finaliser un inventaire crée les écarts sous forme d’ajustements, consignés dans le journal d’audit.</target></trans-unit>
       <trans-unit id="stock.column.product" datatype="html"><source>Product</source><target>Produit</target></trans-unit>
       <trans-unit id="counts.expected" datatype="html"><source>Expected</source><target>Attendu</target></trans-unit>
@@ -439,9 +482,9 @@
       <trans-unit id="documents.print.stockList" datatype="html"><source>Print a stock list</source><target>Imprimer une liste de stock</target></trans-unit>
       <trans-unit id="documents.template" datatype="html"><source>Template</source><target>Modèle</target></trans-unit>
       <trans-unit id="documents.includeZero" datatype="html"><source>Include zero stock</source><target>Inclure les stocks nuls</target></trans-unit>
-      <trans-unit id="documents.print.action" datatype="html"><source>Open for printing</source><target>Ouvrir pour impression</target></trans-unit>
+      <trans-unit id="documents.print.action" datatype="html"><source> Open for printing </source><target>Ouvrir pour impression</target></trans-unit>
       <trans-unit id="documents.limit" datatype="html"><source>A stock list is limited to 5,000 rows.</source><target>Une liste de stock est limitée à 5 000 lignes.</target></trans-unit>
-      <trans-unit id="documents.noPrint" datatype="html"><source>You need the print permission to open documents.</source><target>Vous avez besoin de l’autorisation d’impression pour ouvrir des documents.</target></trans-unit>
+      <trans-unit id="documents.noPrint" datatype="html"><source> You need the print permission to open documents. </source><target>Vous avez besoin de l’autorisation d’impression pour ouvrir des documents.</target></trans-unit>
       <trans-unit id="documents.templates" datatype="html"><source>Templates</source><target>Modèles</target></trans-unit>
       <trans-unit id="documents.field.type" datatype="html"><source>Document type</source><target>Type de document</target></trans-unit>
       <trans-unit id="documents.paperHeader" datatype="html"><source>Paper</source><target>Papier</target></trans-unit>
@@ -475,12 +518,12 @@
       <trans-unit id="labels.print.title" datatype="html"><source>Print labels</source><target>Imprimer des étiquettes</target></trans-unit>
       <trans-unit id="labels.template" datatype="html"><source>Label template</source><target>Modèle d’étiquette</target></trans-unit>
       <trans-unit id="labels.copies" datatype="html"><source>Labels</source><target>Étiquettes</target></trans-unit>
-      <trans-unit id="labels.addLine" datatype="html"><source>Add to print list</source><target>Ajouter à la liste</target></trans-unit>
-      <trans-unit id="common.remove" datatype="html"><source>Remove</source><target>Retirer</target></trans-unit>
-      <trans-unit id="labels.print.action" datatype="html"><source>Open for printing</source><target>Ouvrir pour impression</target></trans-unit>
-      <trans-unit id="labels.limit" datatype="html"><source>A print run is limited to 500 labels in total.</source><target>Une impression est limitée à 500 étiquettes au total.</target></trans-unit>
+      <trans-unit id="labels.addLine" datatype="html"><source> Add to print list </source><target>Ajouter à la liste</target></trans-unit>
+      <trans-unit id="common.remove" datatype="html"><source> Remove </source><target>Retirer</target></trans-unit>
+      <trans-unit id="labels.print.action" datatype="html"><source> Open for printing </source><target>Ouvrir pour impression</target></trans-unit>
+      <trans-unit id="labels.limit" datatype="html"><source> A print run is limited to 500 labels in total. </source><target>Une impression est limitée à 500 étiquettes au total.</target></trans-unit>
       <trans-unit id="labels.noPrint" datatype="html"><source>You need the print permission to print labels.</source><target>Vous avez besoin de l’autorisation d’impression pour imprimer des étiquettes.</target></trans-unit>
-      <trans-unit id="labels.noTemplate" datatype="html"><source>Create an active label template before printing.</source><target>Créez un modèle d’étiquette actif avant d’imprimer.</target></trans-unit>
+      <trans-unit id="labels.noTemplate" datatype="html"><source> Create an active label template before printing. </source><target>Créez un modèle d’étiquette actif avant d’imprimer.</target></trans-unit>
       <trans-unit id="labels.templates" datatype="html"><source>Templates</source><target>Modèles</target></trans-unit>
       <trans-unit id="labels.size" datatype="html"><source>Label size</source><target>Taille d’étiquette</target></trans-unit>
       <trans-unit id="labels.page" datatype="html"><source>Page</source><target>Page</target></trans-unit>
@@ -547,7 +590,6 @@
       <trans-unit id="priceLists.currencyHint" datatype="html"><source>Three letters, for example DZD.</source><target>Trois lettres, par exemple DZD.</target></trans-unit>
       <trans-unit id="validation.currency" datatype="html"><source>Use three letters.</source><target>Utilisez trois lettres.</target></trans-unit>
       <trans-unit id="movements.subtitle" datatype="html"><source>Every stock change is recorded here and never edited. Corrections are new movements.</source><target>Chaque variation de stock est consignée ici et n’est jamais modifiée. Une correction est un nouveau mouvement.</target></trans-unit>
-      <trans-unit id="movements.when" datatype="html"><source>When</source><target>Date</target></trans-unit>
       <trans-unit id="movements.type" datatype="html"><source>Type</source><target>Type</target></trans-unit>
       <trans-unit id="movements.change" datatype="html"><source>Change</source><target>Variation</target></trans-unit>
       <trans-unit id="movements.note" datatype="html"><source>Reference and reason</source><target>Référence et motif</target></trans-unit>
@@ -772,6 +814,40 @@
       <trans-unit id="suppliers.dialog.create" datatype="html"><source>New supplier</source><target>Nouveau fournisseur</target></trans-unit>
       <trans-unit id="suppliers.dialog.edit" datatype="html"><source>Edit supplier</source><target>Modifier le fournisseur</target></trans-unit>
       <trans-unit id="suppliers.saveFailed" datatype="html"><source>We could not save the supplier.</source><target>Le fournisseur n’a pas pu être enregistré.</target></trans-unit>
+      <trans-unit id="report.run" datatype="html"><source>Run report</source><target>Générer le rapport</target></trans-unit>
+      <trans-unit id="reports.revenue" datatype="html"><source>Revenue</source><target>Chiffre d’affaires</target></trans-unit>
+      <trans-unit id="reports.cogs" datatype="html"><source>Cost of goods sold</source><target>Coût des marchandises vendues</target></trans-unit>
+      <trans-unit id="reports.grossProfit" datatype="html"><source>Gross profit</source><target>Marge brute</target></trans-unit>
+      <trans-unit id="reports.transactions" datatype="html"><source>Transactions</source><target>Ventes</target></trans-unit>
+      <trans-unit id="reports.averageLabel" datatype="html"><source>Average</source><target>Moyenne</target></trans-unit>
+      <trans-unit id="reports.prompt" datatype="html"><source>Choose a date range and run the report.</source><target>Choisissez une période puis lancez le rapport.</target></trans-unit>
+      <trans-unit id="reports.rankBy" datatype="html"><source>Rank by</source><target>Classer par</target></trans-unit>
+      <trans-unit id="reports.rank.quantity" datatype="html"><source>Quantity sold</source><target>Quantité vendue</target></trans-unit>
+      <trans-unit id="reports.rank.revenue" datatype="html"><source>Revenue</source><target>Chiffre d’affaires</target></trans-unit>
+      <trans-unit id="reports.sold" datatype="html"><source>Sold</source><target>Vendu</target></trans-unit>
+      <trans-unit id="reports.returned" datatype="html"><source>Returned</source><target>Retourné</target></trans-unit>
+      <trans-unit id="reports.netQuantity" datatype="html"><source>Net quantity</source><target>Quantité nette</target></trans-unit>
+      <trans-unit id="reports.netRevenue" datatype="html"><source>Net revenue</source><target>Chiffre d’affaires net</target></trans-unit>
+      <trans-unit id="reports.variants" datatype="html"><source>Variants</source><target>Variantes</target></trans-unit>
+      <trans-unit id="reports.noRows" datatype="html"><source>No sales in this range.</source><target>Aucune vente sur cette période.</target></trans-unit>
+      <trans-unit id="reports.onHand" datatype="html"><source>Quantity on hand</source><target>Quantité en stock</target></trans-unit>
+      <trans-unit id="reports.stockValue" datatype="html"><source>Stock value</source><target>Valeur du stock</target></trans-unit>
+      <trans-unit id="reports.unvaluedWord" datatype="html"><source>units have no cost recorded.</source><target>unités sans coût enregistré.</target></trans-unit>
+      <trans-unit id="reports.unitCost" datatype="html"><source>Unit cost</source><target>Coût unitaire</target></trans-unit>
+      <trans-unit id="reports.value" datatype="html"><source>Value</source><target>Valeur</target></trans-unit>
+      <trans-unit id="reports.lowStockTotal" datatype="html"><source>Items below reorder point</source><target>Articles sous le seuil</target></trans-unit>
+      <trans-unit id="reports.failed" datatype="html"><source>The report could not be run</source><target>Le rapport n’a pas pu être lancé</target></trans-unit>
+      <trans-unit id="reports.noLow.title" datatype="html"><source>Nothing is below its reorder point</source><target>Aucun article sous son seuil</target></trans-unit>
+      <trans-unit id="reports.noLow.message" datatype="html"><source>Items appear here when stock falls to or below the reorder point.</source><target>Les articles apparaissent ici lorsque le stock atteint le seuil ou passe en dessous.</target></trans-unit>
+      <trans-unit id="reports.failedHint" datatype="html"><source>Check the dates and try again.</source><target>Vérifiez les dates et réessayez.</target></trans-unit>
+      <trans-unit id="reports.products.heading" datatype="html"><source>Product performance</source><target>Performance des produits</target></trans-unit>
+      <trans-unit id="reports.inventory.heading" datatype="html"><source>Inventory report</source><target>Rapport de stock</target></trans-unit>
+      <trans-unit id="reports.lowStock.heading" datatype="html"><source>Low stock</source><target>Stock bas</target></trans-unit>
+      <trans-unit id="reports.sales.heading" datatype="html"><source>Sales summary</source><target>Synthèse des ventes</target></trans-unit>
+      <trans-unit id="reports.products.subtitle" datatype="html"><source>Gross, returned and net sales per product. Select a product to see its variants.</source><target>Ventes brutes, retours et ventes nettes par produit. Sélectionnez un produit pour voir ses variantes.</target></trans-unit>
+      <trans-unit id="reports.inventory.subtitle" datatype="html"><source>Quantity on hand per variant, with value where a cost is recorded.</source><target>Quantité en stock par variante, avec la valeur lorsqu’un coût est enregistré.</target></trans-unit>
+      <trans-unit id="reports.lowStock.subtitle" datatype="html"><source>Variants at or below their reorder point at each location.</source><target>Variantes au seuil de réapprovisionnement ou en dessous, dans chaque emplacement.</target></trans-unit>
+      <trans-unit id="reports.sales.subtitle" datatype="html"><source>Revenue, cost and gross profit for completed sales. Dates are UTC.</source><target>Chiffre d’affaires, coût et marge brute des ventes finalisées. Les dates sont en UTC.</target></trans-unit>
       <trans-unit id="registers.subtitle" datatype="html"><source>Each till at a location. A cash session is opened on a register before taking cash.</source><target>Chaque caisse d’un emplacement. Une session de caisse s’ouvre sur une caisse avant d’encaisser.</target></trans-unit>
       <trans-unit id="registers.create" datatype="html"><source>New register</source><target>Nouvelle caisse</target></trans-unit>
       <trans-unit id="registers.field.code" datatype="html"><source>Code</source><target>Code</target></trans-unit>
@@ -935,8 +1011,6 @@
       <trans-unit id="sales.start" datatype="html"><source>Start sale</source><target>Démarrer la vente</target></trans-unit>
       <trans-unit id="sales.createFailed" datatype="html"><source>The sale could not be started.</source><target>La vente n’a pas pu être démarrée.</target></trans-unit>
       <trans-unit id="report.subtitle" datatype="html"><source>Hours worked per day, for closed sessions. Days are split at local midnight in the organization&apos;s time zone.</source><target>Heures travaillées par jour, pour les sessions clôturées. Les journées sont découpées à minuit local, dans le fuseau horaire de l’organisation.</target></trans-unit>
-      <trans-unit id="time.person" datatype="html"><source>Person</source><target>Personne</target></trans-unit>
-      <trans-unit id="report.run" datatype="html"><source> Run report </source><target>Générer le rapport</target></trans-unit>
       <trans-unit id="report.total" datatype="html"><source>Total</source><target>Total</target></trans-unit>
       <trans-unit id="report.date" datatype="html"><source>Date</source><target>Date</target></trans-unit>
       <trans-unit id="time.hours" datatype="html"><source>Hours</source><target>Heures</target></trans-unit>
@@ -985,10 +1059,6 @@
       <trans-unit id="time.correct.before" datatype="html"><source>Before</source><target>Avant</target></trans-unit>
       <trans-unit id="time.correct.order" datatype="html"><source>The clock-out time must be after the clock-in time.</source><target>L’heure de départ doit être postérieure à l’heure d’arrivée.</target></trans-unit>
       <trans-unit id="time.correct.failed" datatype="html"><source>The session could not be corrected.</source><target>La session n’a pas pu être corrigée.</target></trans-unit>
-      <trans-unit id="pager.label" datatype="html"><source>Pagination</source><target>Pagination</target></trans-unit>
-      <trans-unit id="pager.previous" datatype="html"><source>Previous</source><target>Précédent</target></trans-unit>
-      <trans-unit id="pager.page" datatype="html"><source>Page</source><target>Page</target></trans-unit>
-      <trans-unit id="pager.next" datatype="html"><source>Next</source><target>Suivant</target></trans-unit>
       <trans-unit id="theme.switchToLight" datatype="html"><source>Switch to light theme</source><target>Passer au thème clair</target></trans-unit>
       <trans-unit id="theme.switchToDark" datatype="html"><source>Switch to dark theme</source><target>Passer au thème sombre</target></trans-unit>
     </body>

@@ -167,6 +167,35 @@ export const navigationSections: readonly NavigationSection[] = [
     ],
   },
   {
+    title: $localize`:@@nav.section.reports:Reports`,
+    items: [
+      {
+        label: $localize`:@@nav.reportSales:Sales summary`,
+        icon: 'bar_chart',
+        path: '/app/reports/sales',
+        permissions: ['reports.sales-summary.view'],
+      },
+      {
+        label: $localize`:@@nav.reportProducts:Product performance`,
+        icon: 'trending_up',
+        path: '/app/reports/products',
+        permissions: ['reports.product-performance.view'],
+      },
+      {
+        label: $localize`:@@nav.reportInventory:Inventory report`,
+        icon: 'inventory_2',
+        path: '/app/reports/inventory',
+        permissions: ['reports.inventory.view'],
+      },
+      {
+        label: $localize`:@@nav.reportLowStock:Low stock`,
+        icon: 'warning',
+        path: '/app/reports/low-stock',
+        permissions: ['reports.low-stock.view'],
+      },
+    ],
+  },
+  {
     title: $localize`:@@nav.section.accounting:Accounting`,
     items: [
       {
@@ -231,6 +260,12 @@ export const navigationSections: readonly NavigationSection[] = [
         icon: 'shield_person',
         path: '/app/administration/roles',
         permissions: ['roles.view'],
+      },
+      {
+        label: $localize`:@@nav.audit:Audit log`,
+        icon: 'fact_check',
+        path: '/app/administration/audit',
+        permissions: ['audit.view'],
       },
     ],
   },

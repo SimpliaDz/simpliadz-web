@@ -396,6 +396,49 @@ export const routes: Routes = [
           import('./features/inventory/labels/pages/labels.page').then((m) => m.LabelsPage),
       },
 
+      // Reports and audit
+      {
+        path: 'reports/sales',
+        title: $localize`:@@title.report.sales:Sales summary | SimpliaDz`,
+        canActivate: [permissionGuard],
+        data: { report: 'sales', [requiredPermissionsKey]: ['reports.sales-summary.view'] },
+        loadComponent: () =>
+          import('./features/reporting/pages/reports.page').then((m) => m.ReportsPage),
+      },
+      {
+        path: 'reports/products',
+        title: $localize`:@@title.report.products:Product performance | SimpliaDz`,
+        canActivate: [permissionGuard],
+        data: {
+          report: 'products',
+          [requiredPermissionsKey]: ['reports.product-performance.view'],
+        },
+        loadComponent: () =>
+          import('./features/reporting/pages/reports.page').then((m) => m.ReportsPage),
+      },
+      {
+        path: 'reports/inventory',
+        title: $localize`:@@title.report.inventory:Inventory report | SimpliaDz`,
+        canActivate: [permissionGuard],
+        data: { report: 'inventory', [requiredPermissionsKey]: ['reports.inventory.view'] },
+        loadComponent: () =>
+          import('./features/reporting/pages/reports.page').then((m) => m.ReportsPage),
+      },
+      {
+        path: 'reports/low-stock',
+        title: $localize`:@@title.report.lowStock:Low stock | SimpliaDz`,
+        canActivate: [permissionGuard],
+        data: { report: 'lowStock', [requiredPermissionsKey]: ['reports.low-stock.view'] },
+        loadComponent: () =>
+          import('./features/reporting/pages/reports.page').then((m) => m.ReportsPage),
+      },
+      {
+        path: 'administration/audit',
+        title: $localize`:@@title.audit:Audit log | SimpliaDz`,
+        ...permissioned(['audit.view']),
+        loadComponent: () =>
+          import('./features/audit/pages/audit-log.page').then((m) => m.AuditLogPage),
+      },
       // Administration
       {
         path: 'administration/users',
