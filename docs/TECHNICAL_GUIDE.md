@@ -169,8 +169,6 @@ Account       /app/account/security                               (any signed-in
 Status        /app/forbidden   /app/** (not found)
 ```
 
-Reports (dashboard figures, sales summary, product performance, inventory and low-stock reports) and the audit log are not built yet.
-
 Feature folders follow the recipe in section 12: `data-access/` owns HTTP and DTOs, `pages/` orchestrates, `ui/` holds dialogs. Cross-feature imports are limited to the same business module (for example products reading brands from catalogue).
 
 Permission checks are UX only; the API enforces every request.
@@ -333,23 +331,23 @@ For a new Inventory feature such as Brands:
 
 ## 13. Current decisions and intentional deferrals
 
-| Decision                                                                             | Status                                                                    |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------- |
-| Standalone Angular, strict TypeScript, Yarn 4                                        | Implemented                                                               |
-| Angular Material/CDK and global Material theme                                       | Implemented                                                               |
-| Persisted light/dark theme toggle using Material color schemes                       | Implemented                                                               |
-| Runtime API configuration                                                            | Implemented; API URL is deployment-provided                               |
-| English/French/Arabic build-time localization and RTL bootstrap                      | Implemented                                                               |
-| ESLint, Prettier, Vitest, Playwright, CI                                             | Implemented                                                               |
-| Functional auth/refresh interceptors, public auth pages, guards, session restore     | Implemented                                                               |
-| Authenticated shell: toolbar, permission-filtered sidebar, user menu, sign-out       | Implemented                                                               |
-| Change password, dashboard overview, forbidden and not-found pages                   | Implemented                                                               |
-| Permission guard and `*appHasPermission` directive (UX only)                         | Implemented                                                               |
-| API capability matrix                                                                | Implemented — see `docs/api-capability-matrix.md`                         |
-| Organization, catalogue, inventory and administration screens (see routes above)     | Implemented — list, create, edit and deactivate where the API allows      |
-| Reports (dashboard figures, sales, products, inventory, low stock) and the audit log | Deferred — endpoints exist; screens not built yet                         |
-| OpenAPI TypeScript generation                                                        | Deferred pending a compatible generator and confirmed API contract source |
-| Global state library                                                                 | Deferred until a demonstrated cross-feature need                          |
-| SSR, PWA, runtime language switching                                                 | Deferred pending concrete product requirements                            |
+| Decision                                                                         | Status                                                                    |
+| -------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| Standalone Angular, strict TypeScript, Yarn 4                                    | Implemented                                                               |
+| Angular Material/CDK and global Material theme                                   | Implemented                                                               |
+| Persisted light/dark theme toggle using Material color schemes                   | Implemented                                                               |
+| Runtime API configuration                                                        | Implemented; API URL is deployment-provided                               |
+| English/French/Arabic build-time localization and RTL bootstrap                  | Implemented                                                               |
+| ESLint, Prettier, Vitest, Playwright, CI                                         | Implemented                                                               |
+| Functional auth/refresh interceptors, public auth pages, guards, session restore | Implemented                                                               |
+| Authenticated shell: toolbar, permission-filtered sidebar, user menu, sign-out   | Implemented                                                               |
+| Change password, dashboard overview, forbidden and not-found pages               | Implemented                                                               |
+| Permission guard and `*appHasPermission` directive (UX only)                     | Implemented                                                               |
+| API capability matrix                                                            | Implemented — see `docs/api-capability-matrix.md`                         |
+| Organization, catalogue, inventory and administration screens (see routes above) | Implemented — list, create, edit and deactivate where the API allows      |
+| Reports, audit log and dashboard figures                                         | Implemented — sales, products, inventory, low stock, audit, today         |
+| OpenAPI TypeScript generation                                                    | Deferred pending a compatible generator and confirmed API contract source |
+| Global state library                                                             | Deferred until a demonstrated cross-feature need                          |
+| SSR, PWA, runtime language switching                                             | Deferred pending concrete product requirements                            |
 
 The goal is a frontend that grows by adding small, cohesive feature slices—not by pre-building an elaborate framework before the product needs it.
