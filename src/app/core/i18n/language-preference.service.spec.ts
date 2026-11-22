@@ -13,5 +13,6 @@ describe('language preference paths', () => {
     expect(localePath('/app/account/profile', 'fr')).toBe('/fr/app/account/profile');
     expect(localePath('/ar/app/account/profile', 'en')).toBe('/app/account/profile');
     expect(localePath('/fr/app/catalogue/products', 'ar')).toBe('/ar/app/catalogue/products');
+    expect(localePath('/fr/app/account/profile', 'fr')).toBe('/fr/app/account/profile');
   });
 });

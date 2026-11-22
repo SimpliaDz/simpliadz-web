@@ -33,19 +33,19 @@ export class LanguagePreferenceService {
 
   apply(languageCode: string | null | undefined): void {
     const target = normalizeLanguage(languageCode);
-
-    // Development locale builds can be served at the root; the injected locale is the reliable
-    // signal that no navigation is necessary in that case.
-    if (target === this.current()) {
-      return;
-    }
-
     const location = this.document.defaultView?.location;
     if (!location) {
       return;
     }
 
     const targetPath = localePath(location.pathname, target);
+
+    // The URL already identifies the requested locale. This also prevents a history fallback
+    // from causing repeated redirects before a localized production bundle takes over.
+    if (target === this.current() || targetPath === location.pathname) {
+      return;
+    }
+
     location.assign(`${targetPath}${location.search}${location.hash}`);
   }
 }
