@@ -22,6 +22,9 @@ import { AuthSessionService } from '../../../../core/auth/auth-session.service';
   template: `
     <main class="auth-page">
       <mat-card class="auth-card">
+        <div class="auth-visual" aria-hidden="true">
+          <img src="graphics/illustrations/operations-overview.svg" alt="" />
+        </div>
         <mat-card-header>
           <mat-card-title><h1 i18n="@@auth.login.heading">Sign in to SimpliaDz</h1></mat-card-title>
           <mat-card-subtitle i18n="@@auth.login.subtitle"
@@ -105,6 +108,28 @@ import { AuthSessionService } from '../../../../core/auth/auth-session.service';
     }
     .auth-card {
       width: min(100%, 28rem);
+      overflow: hidden;
+      border-block-start: 0.25rem solid var(--mat-sys-primary);
+      box-shadow: 0 1rem 2.5rem color-mix(in srgb, var(--mat-sys-primary) 7%, transparent);
+    }
+    .auth-visual {
+      height: 7.25rem;
+      overflow: hidden;
+      background: var(--app-soft-primary);
+    }
+    .auth-visual img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 57%;
+    }
+    mat-card-header {
+      padding-block: 1.5rem 0.5rem;
+    }
+    h1 {
+      font-weight: 700;
+      letter-spacing: -0.02em;
     }
     form {
       display: grid;
@@ -116,6 +141,7 @@ import { AuthSessionService } from '../../../../core/auth/auth-session.service';
     }
     button {
       min-height: 2.75rem;
+      margin-block-start: 0.25rem;
     }
     .auth-error {
       color: var(--mat-sys-error);

@@ -7,6 +7,10 @@ export interface ForgotPasswordResponse {
   readonly resetToken: string;
 }
 
+export interface UpdateLanguageResponse {
+  readonly languageCode: string;
+}
+
 @Injectable({ providedIn: 'root' })
 export class AuthApiService {
   private readonly http = inject(HttpClient);
@@ -30,6 +34,12 @@ export class AuthApiService {
     return this.http.post<void>(this.apiUrl.path('/auth/change-password'), {
       currentPassword,
       newPassword,
+    });
+  }
+
+  updateLanguage(languageCode: string): Observable<UpdateLanguageResponse> {
+    return this.http.put<UpdateLanguageResponse>(this.apiUrl.path('/auth/me/language'), {
+      languageCode,
     });
   }
 }

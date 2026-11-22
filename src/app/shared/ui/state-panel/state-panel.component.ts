@@ -7,7 +7,16 @@ import { MatIconModule } from '@angular/material/icon';
   imports: [MatIconModule],
   template: `
     <section class="state-panel" [attr.role]="tone() === 'error' ? 'alert' : null">
-      <mat-icon aria-hidden="true">{{ icon() }}</mat-icon>
+      @if (tone() === 'error') {
+        <mat-icon aria-hidden="true">{{ icon() }}</mat-icon>
+      } @else {
+        <img
+          class="state-panel__illustration"
+          src="graphics/empty-states/collection-empty.svg"
+          alt=""
+          aria-hidden="true"
+        />
+      }
       <h2>{{ title() }}</h2>
       @if (message(); as text) {
         <p>{{ text }}</p>

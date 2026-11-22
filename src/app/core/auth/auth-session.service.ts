@@ -14,6 +14,7 @@ import {
   throwError,
 } from 'rxjs';
 import { ApiUrlService } from '../api/api-url.service';
+import { LanguagePreferenceService } from '../i18n/language-preference.service';
 import { CurrentUser, LoginRequest, LoginResponse } from './auth.models';
 
 /**
@@ -28,6 +29,7 @@ export class AuthSessionService {
   private readonly apiUrl = inject(ApiUrlService);
   private readonly http = inject(HttpClient);
   private readonly rawHttp = new HttpClient(inject(HttpBackend));
+  private readonly languagePreference = inject(LanguagePreferenceService);
   private readonly storage = inject(DOCUMENT).defaultView?.sessionStorage ?? null;
   private refreshToken: string | null = this.storage?.getItem(refreshTokenStorageKey) ?? null;
   private refreshInFlight$: Observable<void> | null = null;
@@ -121,10 +123,22 @@ export class AuthSessionService {
     this.setRefreshToken(null);
   }
 
+  setLanguage(languageCode: string): void {
+    const user = this.user();
+    if (user) {
+      this.user.set({ ...user, languageCode });
+    }
+  }
+
   private loadCurrentUser(): Observable<CurrentUser> {
     return this.http
       .get<CurrentUser>(this.apiUrl.path('/auth/me'))
-      .pipe(tap((user) => this.user.set(user)));
+      .pipe(
+        tap((user) => {
+          this.user.set(user);
+          this.languagePreference.apply(user.languageCode);
+        }),
+      );
   }
 
   private applyTokens(response: LoginResponse): void {

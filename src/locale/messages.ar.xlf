@@ -1086,6 +1086,19 @@
       <trans-unit id="time.correct.failed" datatype="html"><source>The session could not be corrected.</source><target>تعذّر تصحيح الجلسة.</target></trans-unit>
       <trans-unit id="theme.switchToLight" datatype="html"><source>Switch to light theme</source><target>التبديل إلى السمة الفاتحة</target></trans-unit>
       <trans-unit id="theme.switchToDark" datatype="html"><source>Switch to dark theme</source><target>التبديل إلى السمة الداكنة</target></trans-unit>
+      <trans-unit id="title.accountProfile" datatype="html"><source>Profile | SimpliaDz</source><target>الملف الشخصي | SimpliaDz</target></trans-unit>
+      <trans-unit id="nav.accountProfile" datatype="html"><source>Profile</source><target>الملف الشخصي</target></trans-unit>
+      <trans-unit id="account.profile.heading" datatype="html"><source>Profile</source><target>الملف الشخصي</target></trans-unit>
+      <trans-unit id="account.profile.subtitle" datatype="html"><source> Manage your personal application preferences. </source><target>أدر تفضيلاتك الشخصية في التطبيق.</target></trans-unit>
+      <trans-unit id="account.profile.language.title" datatype="html"><source>Display language</source><target>لغة العرض</target></trans-unit>
+      <trans-unit id="account.profile.language.help" datatype="html"><source>Choose the language used throughout SimpliaDz.</source><target>اختر اللغة المستخدمة في SimpliaDz.</target></trans-unit>
+      <trans-unit id="account.profile.language.label" datatype="html"><source>Language</source><target>اللغة</target></trans-unit>
+      <trans-unit id="language.english" datatype="html"><source>English</source><target>الإنجليزية</target></trans-unit>
+      <trans-unit id="language.french" datatype="html"><source>French</source><target>الفرنسية</target></trans-unit>
+      <trans-unit id="language.arabic" datatype="html"><source>Arabic</source><target>العربية</target></trans-unit>
+      <trans-unit id="account.profile.language.redirect" datatype="html"><source> Saving reloads the application in your selected language. </source><target>يؤدي الحفظ إلى إعادة تحميل التطبيق باللغة التي اخترتها.</target></trans-unit>
+      <trans-unit id="account.profile.language.save" datatype="html"><source>Save language</source><target>حفظ اللغة</target></trans-unit>
+      <trans-unit id="account.profile.language.failed" datatype="html"><source>We could not save your language preference. Try again.</source><target>تعذّر حفظ تفضيل اللغة. أعد المحاولة.</target></trans-unit>
     </body>
   </file>
 </xliff>

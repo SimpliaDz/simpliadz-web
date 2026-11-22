@@ -11,8 +11,9 @@ html {
   @include mat.theme(
     (
       color: (
+        // A restrained blue system: clear enough for actions, calm enough for all-day back-office use.
         primary: mat.$azure-palette,
-        tertiary: mat.$blue-palette,
+        tertiary: mat.$cyan-palette,
       ),
       typography: Roboto,
       density: 0,
@@ -28,13 +29,23 @@ body {
   // Set a default background, font and text colors for the application using
   // Angular Material's system-level CSS variables. Learn more about these
   // variables at https://material.angular.dev/guide/system-variables
-  background-color: var(--mat-sys-surface);
+  background:
+    radial-gradient(circle at 0 0, color-mix(in srgb, var(--mat-sys-primary) 3%, transparent), transparent 28rem),
+    var(--mat-sys-surface);
   color: var(--mat-sys-on-surface);
   font: var(--mat-sys-body-medium);
 
   // Reset the user agent margin.
   margin: 0;
   height: 100%;
+}
+
+:root {
+  --app-content-surface: color-mix(in srgb, var(--mat-sys-surface-container-low) 97%, var(--mat-sys-primary));
+  --app-raised-surface: var(--mat-sys-surface-container-lowest);
+  --app-soft-primary: color-mix(in srgb, var(--mat-sys-primary) 6%, var(--mat-sys-surface));
+  --app-card-shadow: 0 0.375rem 1.5rem color-mix(in srgb, var(--mat-sys-shadow) 6%, transparent);
+  --app-card-radius: 0.9rem;
 }
 
 // Credentials, email addresses, reset tokens, SKUs, and similar machine-readable
@@ -53,16 +64,18 @@ body {
   align-items: flex-end;
   justify-content: space-between;
   gap: 1rem;
-  margin-block-end: 1.5rem;
+  margin-block-end: 1.75rem;
 }
 
 .page-header h1 {
   margin: 0;
   font: var(--mat-sys-headline-medium);
+  font-weight: 700;
+  letter-spacing: -0.025em;
 }
 
 .page-subtitle {
-  margin: 0.25rem 0 0;
+  margin: 0.4rem 0 0;
   color: var(--mat-sys-on-surface-variant);
 }
 
@@ -70,6 +83,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+}
+
+.page-header__actions > button,
+.page-header__actions > a {
+  box-shadow: 0 0.25rem 0.75rem color-mix(in srgb, var(--mat-sys-primary) 8%, transparent);
 }
 
 .back-link {
@@ -82,7 +100,12 @@ body {
   flex-wrap: wrap;
   align-items: center;
   gap: 0.75rem;
-  margin-block-end: 1rem;
+  margin-block-end: 1.25rem;
+  padding: 0.75rem;
+  border: 1px solid var(--mat-sys-outline-variant);
+  border-radius: var(--app-card-radius);
+  background: var(--app-raised-surface);
+  box-shadow: var(--app-card-shadow);
 }
 
 .toolbar .search-field {
@@ -90,13 +113,14 @@ body {
 }
 
 .section-title {
-  margin: 1.5rem 0 0.75rem;
+  margin: 2rem 0 0.85rem;
   font: var(--mat-sys-title-large);
+  font-weight: 700;
 }
 
 .card-grid {
   display: grid;
-  gap: 1rem;
+  gap: 1.25rem;
   grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
 }
 
@@ -112,13 +136,26 @@ body {
 .data-table th {
   color: var(--mat-sys-on-surface-variant);
   font: var(--mat-sys-label-large);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.055em;
   text-transform: uppercase;
 }
 
 .data-table td,
 .data-table th {
   text-align: start;
+}
+
+.data-table th {
+  height: 3.5rem;
+  background: color-mix(in srgb, var(--mat-sys-surface-container) 94%, var(--mat-sys-primary));
+}
+
+.data-table td {
+  border-block-color: var(--mat-sys-outline-variant);
+}
+
+.data-table tr:hover td {
+  background: color-mix(in srgb, var(--mat-sys-primary) 2%, transparent);
 }
 
 .data-table .actions-cell {
@@ -128,7 +165,7 @@ body {
 
 .form-grid {
   display: grid;
-  gap: 0.75rem;
+  gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
 }
 
@@ -178,6 +215,12 @@ body {
   color: var(--mat-sys-primary);
 }
 
+.state-panel__illustration {
+  width: min(100%, 14rem);
+  height: auto;
+  margin-block-end: 0.25rem;
+}
+
 .state-panel h2 {
   margin: 0;
   font: var(--mat-sys-title-medium);
@@ -200,7 +243,7 @@ body {
 .status-chip {
   display: inline-block;
   padding: 0.2rem 0.65rem;
-  border-radius: 0.25rem;
+  border-radius: 999px;
   font: var(--mat-sys-label-medium);
   text-transform: uppercase;
   letter-spacing: 0.03em;
@@ -256,8 +299,30 @@ body {
 
 .table-card {
   border: 1px solid var(--mat-sys-outline-variant);
-  border-radius: 0.75rem;
-  background: var(--mat-sys-surface-container-low);
+  border-radius: var(--app-card-radius);
+  background: var(--app-raised-surface);
+  box-shadow: var(--app-card-shadow);
+}
+
+mat-card[appearance='outlined'] {
+  border-color: var(--mat-sys-outline-variant) !important;
+  border-radius: var(--app-card-radius) !important;
+  background: var(--app-raised-surface) !important;
+  box-shadow: var(--app-card-shadow);
+}
+
+mat-card[appearance='outlined']:has(button:hover, a:hover) {
+  border-color: color-mix(in srgb, var(--mat-sys-primary) 24%, var(--mat-sys-outline-variant)) !important;
+}
+
+mat-form-field {
+  --mat-form-field-outlined-outline-color: var(--mat-sys-outline-variant);
+}
+
+.mat-mdc-raised-button,
+.mat-mdc-unelevated-button,
+.mat-mdc-outlined-button {
+  border-radius: 0.625rem !important;
 }
 
 .visually-hidden {
@@ -281,4 +346,14 @@ a:hover {
 
 .toolbar .search-field {
   min-width: 22rem;
+}
+
+@media (max-width: 599.98px) {
+  .toolbar {
+    padding: 0.625rem;
+  }
+
+  .toolbar .search-field {
+    min-width: 100%;
+  }
 }

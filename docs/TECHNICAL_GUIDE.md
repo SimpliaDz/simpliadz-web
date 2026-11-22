@@ -167,7 +167,8 @@ Workforce     /app/workforce/clock                                (any signed-in
               /app/workforce/report                               work-sessions.report
 Admin         /app/administration/users[/new|/:id]                users.view / users.create
               /app/administration/roles[/:id]                     roles.view
-Account       /app/account/security                               (any signed-in user)
+Account       /app/account/profile                                (any signed-in user)
+              /app/account/security                               (any signed-in user)
 Status        /app/forbidden   /app/** (not found)
 ```
 
@@ -188,11 +189,12 @@ Authentication is the first implemented API slice. Its public pages are lazy-loa
 | `POST` | `/auth/login`           | `{ email, password }` → access token, refresh token, expiries, email, roles. |
 | `POST` | `/auth/refresh`         | `{ refreshToken }` → rotated token pair.                                     |
 | `POST` | `/auth/logout`          | `{ refreshToken }` → `204 No Content`.                                       |
-| `GET`  | `/auth/me`              | Current user ID, email, roles, and permissions.                              |
+| `GET`  | `/auth/me`              | Current user ID, email, roles, permissions, and saved `languageCode`.         |
+| `PUT`  | `/auth/me/language`     | `{ languageCode: "en" | "fr" | "ar" }` → saved language code.             |
 | `POST` | `/auth/forgot-password` | `{ email }` → development-only reset token.                                  |
 | `POST` | `/auth/reset-password`  | `{ email, resetToken, newPassword }` → `204 No Content`.                     |
 
-`AuthSessionService` owns the access token (memory only), the current user, and the refresh token. Login and refresh use a raw `HttpClient` backed by `HttpBackend` so they cannot recurse through interceptors; after each token response, `/auth/me` loads authoritative roles and permissions. It exposes `hasPermission` and `hasAllPermissions` for UX checks.
+`AuthSessionService` owns the access token (memory only), the current user, and the refresh token. Login and refresh use a raw `HttpClient` backed by `HttpBackend` so they cannot recurse through interceptors; after each token response, `/auth/me` loads authoritative roles, permissions, and the saved language. It exposes `hasPermission` and `hasAllPermissions` for UX checks.
 
 The HTTP structure is:
 
@@ -275,6 +277,8 @@ padding-left: 1rem;
 margin-right: 0.5rem;
 ```
 
+Language is a user preference, managed from Account › Profile. The Profile page saves `en`, `fr`, or `ar` through `PUT /auth/me/language`; after any login, session refresh, or preference update, `LanguagePreferenceService` compares the saved value with the current compiled locale. If they differ, it performs a full navigation to the matching localized build while preserving the current route, query string, and hash: English uses `/`, French `/fr/`, and Arabic `/ar/`. A full navigation is intentional because Angular compile-time i18n cannot safely replace every translated message in an already-running bundle.
+
 Credentials and other machine-readable identifiers are an exception: email addresses, passwords, reset tokens, SKUs, barcodes, and API keys must use `dir="ltr"` and the shared `auth-credential-input` class. This ensures mixed punctuation such as `Admin123!` is entered and displayed left-to-right inside an RTL page.
 
 ## 9. Light and dark theme
@@ -352,6 +356,7 @@ For a new Inventory feature such as Brands:
 | Reports, audit log and dashboard figures                                         | Implemented — sales, products, inventory, low stock, audit, today         |
 | OpenAPI TypeScript generation                                                    | Deferred pending a compatible generator and confirmed API contract source |
 | Global state library                                                             | Deferred until a demonstrated cross-feature need                          |
-| SSR, PWA, runtime language switching                                             | Deferred pending concrete product requirements                            |
+| SSR, PWA                                                                        | Deferred pending concrete product requirements                            |
+| Saved user language preference and locale-build navigation                       | Implemented — Account › Profile persists `en`, `fr`, or `ar`             |
 
 The goal is a frontend that grows by adding small, cohesive feature slices—not by pre-building an elaborate framework before the product needs it.

@@ -1,6 +1,7 @@
 import { DecimalPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { describeApiError } from '../../../core/api/api-error-message';
@@ -12,76 +13,99 @@ import {
 
 @Component({
   selector: 'app-dashboard-page',
-  imports: [DecimalPipe, MatCardModule, MatIconModule, RouterLink],
+  imports: [DecimalPipe, MatButtonModule, MatCardModule, MatIconModule, RouterLink],
   template: `
-    <header class="page-header">
-      <div>
-        <h1 i18n="@@dashboard.heading">Welcome back</h1>
-        <p class="page-subtitle">{{ email() }}</p>
-      </div>
-    </header>
-
-    @if (canSeeToday()) {
-      <h2 class="section-title" i18n="@@dashboard.today">Today</h2>
-      @if (todayError(); as message) {
-        <p class="form-error" role="alert">{{ message }}</p>
-      } @else if (today(); as t) {
-        <div class="card-grid">
-          @if (t.salesAvailable) {
-            <mat-card appearance="outlined"
-              ><mat-card-content>
-                <p class="label" i18n="@@dashboard.revenue">Revenue</p>
-                <p class="metric">{{ t.revenue | number: '1.2-2' }}</p>
-                <p class="muted">
-                  {{ t.transactionCount }} <span i18n="@@dashboard.sales">sales</span> ·
-                  {{ t.itemsSold }} <span i18n="@@dashboard.items">items</span>
-                </p>
-              </mat-card-content></mat-card
-            >
-            <mat-card appearance="outlined"
-              ><mat-card-content>
-                <p class="label" i18n="@@dashboard.average">Average basket</p>
-                <p class="metric">{{ t.averageBasket | number: '1.2-2' }}</p>
-              </mat-card-content></mat-card
-            >
-          }
-          @if (t.salesAvailable && t.accountingAvailable) {
-            <mat-card appearance="outlined"
-              ><mat-card-content>
-                <p class="label" i18n="@@dashboard.grossProfit">Gross profit</p>
-                <p class="metric">{{ t.grossProfit | number: '1.2-2' }}</p>
-                <p class="muted">
-                  <span i18n="@@dashboard.expensesLabel">Expenses</span>:
-                  {{ t.expenses | number: '1.2-2' }}
-                </p>
-              </mat-card-content></mat-card
-            >
-          }
-          @if (t.inventoryAvailable) {
-            <mat-card appearance="outlined"
-              ><mat-card-content>
-                <p class="label" i18n="@@dashboard.lowStock">Below reorder point</p>
-                <p class="metric">{{ t.lowStockCount }}</p>
-                <a mat-button routerLink="/app/reports/low-stock" i18n="@@dashboard.viewLowStock"
-                  >View low stock</a
-                >
-              </mat-card-content></mat-card
-            >
+    <section class="dashboard-overview">
+      <header class="dashboard-hero">
+        <div class="dashboard-hero__content">
+          <p class="dashboard-hero__eyebrow" i18n="@@dashboard.today">Today</p>
+          <h1 i18n="@@dashboard.heading">Welcome back</h1>
+          <p class="page-subtitle">{{ email() }}</p>
+          @if (today(); as t) {
+            <p class="dashboard-hero__date">{{ t.date }} · {{ t.timeZone }}</p>
           }
         </div>
-        @if (!t.salesAvailable || !t.inventoryAvailable) {
-          <p class="form-hint" i18n="@@dashboard.unavailable">
-            Some figures are unavailable because a module is switched off for this organization.
-          </p>
+        <img
+          class="dashboard-hero__art"
+          src="graphics/illustrations/operations-overview.svg"
+          alt=""
+          aria-hidden="true"
+        />
+      </header>
+
+      @if (canSeeToday()) {
+        @if (todayError(); as message) {
+          <p class="form-error" role="alert">{{ message }}</p>
+        } @else if (today(); as t) {
+          <section class="dashboard-metrics" aria-labelledby="today-metrics-title">
+            <h2 id="today-metrics-title" class="visually-hidden" i18n="@@dashboard.today">Today</h2>
+            @if (t.salesAvailable) {
+              <mat-card appearance="outlined" class="metric-card metric-card--revenue"
+                ><mat-card-content>
+                  <div class="metric-card__top">
+                    <p class="label" i18n="@@dashboard.revenue">Revenue</p>
+                    <mat-icon aria-hidden="true">payments</mat-icon>
+                  </div>
+                  <p class="metric">{{ t.revenue | number: '1.2-2' }}</p>
+                  <p class="muted">
+                    {{ t.transactionCount }} <span i18n="@@dashboard.sales">sales</span> ·
+                    {{ t.itemsSold }} <span i18n="@@dashboard.items">items</span>
+                  </p>
+                </mat-card-content></mat-card
+              >
+              <mat-card appearance="outlined" class="metric-card"
+                ><mat-card-content>
+                  <div class="metric-card__top">
+                    <p class="label" i18n="@@dashboard.average">Average basket</p>
+                    <mat-icon aria-hidden="true">shopping_bag</mat-icon>
+                  </div>
+                  <p class="metric">{{ t.averageBasket | number: '1.2-2' }}</p>
+                </mat-card-content></mat-card
+              >
+            }
+            @if (t.salesAvailable && t.accountingAvailable) {
+              <mat-card appearance="outlined" class="metric-card"
+                ><mat-card-content>
+                  <div class="metric-card__top">
+                    <p class="label" i18n="@@dashboard.grossProfit">Gross profit</p>
+                    <mat-icon aria-hidden="true">trending_up</mat-icon>
+                  </div>
+                  <p class="metric">{{ t.grossProfit | number: '1.2-2' }}</p>
+                  <p class="muted">
+                    <span i18n="@@dashboard.expensesLabel">Expenses</span>:
+                    {{ t.expenses | number: '1.2-2' }}
+                  </p>
+                </mat-card-content></mat-card
+              >
+            }
+            @if (t.inventoryAvailable) {
+              <mat-card appearance="outlined" class="metric-card"
+                ><mat-card-content>
+                  <div class="metric-card__top">
+                    <p class="label" i18n="@@dashboard.lowStock">Below reorder point</p>
+                    <mat-icon aria-hidden="true">inventory</mat-icon>
+                  </div>
+                  <p class="metric">{{ t.lowStockCount }}</p>
+                  <a mat-button routerLink="/app/reports/low-stock" i18n="@@dashboard.viewLowStock"
+                    >View low stock</a
+                  >
+                </mat-card-content></mat-card
+              >
+            }
+          </section>
+          @if (!t.salesAvailable || !t.inventoryAvailable) {
+            <p class="form-hint dashboard-note" i18n="@@dashboard.unavailable">
+              Some figures are unavailable because a module is switched off for this organization.
+            </p>
+          }
+        } @else {
+          <p class="muted dashboard-loading" i18n="@@dashboard.loading">Loading today’s figures…</p>
         }
-        <p class="form-hint">{{ t.date }} · {{ t.timeZone }}</p>
-      } @else {
-        <p class="muted" i18n="@@dashboard.loading">Loading today’s figures…</p>
       }
-    }
+    </section>
 
     <h2 class="section-title" i18n="@@dashboard.access">Your access</h2>
-    <div class="card-grid">
+    <div class="card-grid access-grid">
       <mat-card appearance="outlined">
         <mat-card-header>
           <mat-icon mat-card-avatar aria-hidden="true">badge</mat-icon>
@@ -117,25 +141,137 @@ import {
     </div>
   `,
   styles: `
-    .page-header {
-      margin-block-end: 1.5rem;
+    .dashboard-overview {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(22rem, 0.8fr);
+      gap: 1.25rem;
+      align-items: stretch;
     }
-    .page-header h1 {
+    .dashboard-hero {
+      position: relative;
+      display: flex;
+      min-height: 18rem;
+      overflow: hidden;
+      align-items: flex-start;
+      padding: clamp(1.5rem, 3vw, 2.5rem);
+      border: 1px solid var(--mat-sys-outline-variant);
+      border-radius: var(--app-card-radius);
+      background:
+        linear-gradient(135deg, color-mix(in srgb, var(--mat-sys-primary) 8%, var(--app-raised-surface)), var(--app-raised-surface) 60%),
+        var(--app-raised-surface);
+      box-shadow: var(--app-card-shadow);
+    }
+    .dashboard-hero__content {
+      position: relative;
+      z-index: 1;
+      max-width: 18rem;
+    }
+    .dashboard-hero h1 {
       margin: 0;
       font: var(--mat-sys-headline-medium);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+    .dashboard-hero__eyebrow {
+      margin: 0 0 0.625rem;
+      color: var(--mat-sys-primary);
+      font: var(--mat-sys-label-large);
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
     }
     .page-subtitle {
-      margin: 0.25rem 0 0;
+      margin: 0.5rem 0 0;
       color: var(--mat-sys-on-surface-variant);
     }
-    .card-grid mat-card p {
+    .dashboard-hero__date {
+      margin: 1.5rem 0 0;
+      color: var(--mat-sys-on-surface-variant);
+      font: var(--mat-sys-label-medium);
+    }
+    .dashboard-hero__art {
+      position: absolute;
+      inset-inline-end: -3rem;
+      bottom: -1.25rem;
+      width: min(58%, 28rem);
+      height: auto;
+      opacity: 0.95;
+      pointer-events: none;
+    }
+    .dashboard-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+    .metric-card p {
       margin: 0;
+    }
+    .metric-card {
+      min-height: 8.375rem;
+      overflow: hidden;
+      transition: transform 160ms ease, box-shadow 160ms ease;
+    }
+    .metric-card:hover {
+      transform: translateY(-0.2rem);
+      box-shadow: 0 0.75rem 1.75rem color-mix(in srgb, var(--mat-sys-primary) 8%, transparent);
+    }
+    .metric-card--revenue {
+      background: linear-gradient(135deg, color-mix(in srgb, var(--mat-sys-primary) 7%, var(--app-raised-surface)), var(--app-raised-surface)) !important;
+    }
+    .metric-card__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+    .metric-card__top mat-icon {
+      display: grid;
+      width: 2.5rem;
+      height: 2.5rem;
+      place-items: center;
+      border-radius: 0.625rem;
+      color: var(--mat-sys-primary);
+      background: var(--app-soft-primary);
     }
     .label {
       color: var(--mat-sys-on-surface-variant);
+      font: var(--mat-sys-label-large);
     }
     .metric {
       font: var(--mat-sys-headline-small);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+    }
+    .dashboard-note,
+    .dashboard-loading {
+      grid-column: 1 / -1;
+      margin: 0;
+    }
+    .access-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      max-width: 48rem;
+    }
+    @media (max-width: 1099.98px) {
+      .dashboard-overview {
+        grid-template-columns: 1fr;
+      }
+      .dashboard-hero {
+        min-height: 15rem;
+      }
+    }
+    @media (max-width: 599.98px) {
+      .dashboard-hero {
+        min-height: 13.5rem;
+      }
+      .dashboard-hero__art {
+        inset-inline-end: -5.5rem;
+        width: 20rem;
+        opacity: 0.45;
+      }
+      .dashboard-metrics,
+      .access-grid {
+        grid-template-columns: 1fr;
+      }
     }
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,

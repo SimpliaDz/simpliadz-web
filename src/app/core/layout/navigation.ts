@@ -273,6 +273,12 @@ export const navigationSections: readonly NavigationSection[] = [
     title: $localize`:@@nav.section.account:Account`,
     items: [
       {
+        label: $localize`:@@nav.accountProfile:Profile`,
+        icon: 'person',
+        path: '/app/account/profile',
+        permissions: [],
+      },
+      {
         label: $localize`:@@nav.accountSecurity:Security`,
         icon: 'lock',
         path: '/app/account/security',

@@ -1086,6 +1086,19 @@
       <trans-unit id="time.correct.failed" datatype="html"><source>The session could not be corrected.</source><target>La session n’a pas pu être corrigée.</target></trans-unit>
       <trans-unit id="theme.switchToLight" datatype="html"><source>Switch to light theme</source><target>Passer au thème clair</target></trans-unit>
       <trans-unit id="theme.switchToDark" datatype="html"><source>Switch to dark theme</source><target>Passer au thème sombre</target></trans-unit>
+      <trans-unit id="title.accountProfile" datatype="html"><source>Profile | SimpliaDz</source><target>Profil | SimpliaDz</target></trans-unit>
+      <trans-unit id="nav.accountProfile" datatype="html"><source>Profile</source><target>Profil</target></trans-unit>
+      <trans-unit id="account.profile.heading" datatype="html"><source>Profile</source><target>Profil</target></trans-unit>
+      <trans-unit id="account.profile.subtitle" datatype="html"><source> Manage your personal application preferences. </source><target>Gérez vos préférences personnelles dans l’application.</target></trans-unit>
+      <trans-unit id="account.profile.language.title" datatype="html"><source>Display language</source><target>Langue d’affichage</target></trans-unit>
+      <trans-unit id="account.profile.language.help" datatype="html"><source>Choose the language used throughout SimpliaDz.</source><target>Choisissez la langue utilisée dans SimpliaDz.</target></trans-unit>
+      <trans-unit id="account.profile.language.label" datatype="html"><source>Language</source><target>Langue</target></trans-unit>
+      <trans-unit id="language.english" datatype="html"><source>English</source><target>Anglais</target></trans-unit>
+      <trans-unit id="language.french" datatype="html"><source>French</source><target>Français</target></trans-unit>
+      <trans-unit id="language.arabic" datatype="html"><source>Arabic</source><target>Arabe</target></trans-unit>
+      <trans-unit id="account.profile.language.redirect" datatype="html"><source> Saving reloads the application in your selected language. </source><target>L’enregistrement recharge l’application dans la langue sélectionnée.</target></trans-unit>
+      <trans-unit id="account.profile.language.save" datatype="html"><source>Save language</source><target>Enregistrer la langue</target></trans-unit>
+      <trans-unit id="account.profile.language.failed" datatype="html"><source>We could not save your language preference. Try again.</source><target>Impossible d’enregistrer votre préférence de langue. Réessayez.</target></trans-unit>
     </body>
   </file>
 </xliff>

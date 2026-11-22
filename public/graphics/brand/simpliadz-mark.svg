@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="SimpliaDz">
+  <defs>
+    <linearGradient id="simplia-gradient" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5577C8"/>
+      <stop offset="1" stop-color="#4AA4C9"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="url(#simplia-gradient)"/>
+  <path d="M41.5 17.5H25.25a8.75 8.75 0 0 0 0 17.5h13.5a6.25 6.25 0 1 1 0 12.5H21.5" stroke="white" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="45" cy="17.5" r="3.5" fill="#D9F1FF"/>
+  <circle cx="19" cy="47.5" r="3.5" fill="#D9F1FF"/>
+</svg>

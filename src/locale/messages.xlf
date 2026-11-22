@@ -373,25 +373,32 @@
           <context context-type="linenumber">477</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="title.accountProfile" datatype="html">
+        <source>Profile | SimpliaDz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">488</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="title.accountSecurity" datatype="html">
         <source>Security | SimpliaDz</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
-          <context context-type="linenumber">488</context>
+          <context context-type="linenumber">494</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.forbidden" datatype="html">
         <source>Access denied | SimpliaDz</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
-          <context context-type="linenumber">494</context>
+          <context context-type="linenumber">500</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.notFound" datatype="html">
         <source>Page not found | SimpliaDz</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
-          <context context-type="linenumber">500</context>
+          <context context-type="linenumber">506</context>
         </context-group>
       </trans-unit>
       <trans-unit id="error.network" datatype="html">
@@ -737,22 +744,33 @@
           <context context-type="linenumber">273</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="nav.accountSecurity" datatype="html">
-        <source>Security</source>
+      <trans-unit id="nav.accountProfile" datatype="html">
+        <source>Profile</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/layout/navigation.ts</context>
           <context context-type="linenumber">276</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/layout/shell-layout.component.ts</context>
-          <context context-type="linenumber">72,74</context>
+          <context context-type="linenumber">75,77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.accountSecurity" datatype="html">
+        <source>Security</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/layout/navigation.ts</context>
+          <context context-type="linenumber">282</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/layout/shell-layout.component.ts</context>
+          <context context-type="linenumber">79,81</context>
         </context-group>
       </trans-unit>
       <trans-unit id="app.tagline" datatype="html">
         <source>Business management</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/layout/public-layout.component.ts</context>
-          <context context-type="linenumber">15,21</context>
+          <context context-type="linenumber">17,23</context>
         </context-group>
         <note priority="1" from="description">A concise product description in the global header</note>
         <note priority="1" from="meaning">Application tagline</note>
@@ -769,7 +787,7 @@
         <source>Open user menu</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/layout/shell-layout.component.ts</context>
-          <context context-type="linenumber">55,57</context>
+          <context context-type="linenumber">58,60</context>
         </context-group>
         <note priority="1" from="description">Open user menu</note>
       </trans-unit>
@@ -777,16 +795,93 @@
         <source>Sign out</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/layout/shell-layout.component.ts</context>
-          <context context-type="linenumber">76,78</context>
+          <context context-type="linenumber">83,85</context>
         </context-group>
       </trans-unit>
       <trans-unit id="shell.mainNavigation" datatype="html">
         <source>Main</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/layout/shell-layout.component.ts</context>
-          <context context-type="linenumber">88</context>
+          <context context-type="linenumber">95</context>
         </context-group>
         <note priority="1" from="description">Main navigation</note>
+      </trans-unit>
+      <trans-unit id="account.profile.heading" datatype="html">
+        <source>Profile</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/pages/profile.page.ts</context>
+          <context context-type="linenumber">30,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.profile.subtitle" datatype="html">
+        <source> Manage your personal application preferences. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/pages/profile.page.ts</context>
+          <context context-type="linenumber">32,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.profile.language.title" datatype="html">
+        <source>Display language</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/pages/profile.page.ts</context>
+          <context context-type="linenumber">40,41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.profile.language.help" datatype="html">
+        <source>Choose the language used throughout SimpliaDz.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/pages/profile.page.ts</context>
+          <context context-type="linenumber">42,44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.profile.language.label" datatype="html">
+        <source>Language</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/pages/profile.page.ts</context>
+          <context context-type="linenumber">48,49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="language.english" datatype="html">
+        <source>English</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/pages/profile.page.ts</context>
+          <context context-type="linenumber">50,51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="language.french" datatype="html">
+        <source>French</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/pages/profile.page.ts</context>
+          <context context-type="linenumber">51,52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="language.arabic" datatype="html">
+        <source>Arabic</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/pages/profile.page.ts</context>
+          <context context-type="linenumber">52,53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.profile.language.redirect" datatype="html">
+        <source> Saving reloads the application in your selected language. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/pages/profile.page.ts</context>
+          <context context-type="linenumber">57,60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.profile.language.save" datatype="html">
+        <source>Save language</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/pages/profile.page.ts</context>
+          <context context-type="linenumber">66,68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account.profile.language.failed" datatype="html">
+        <source>We could not save your language preference. Try again.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/account/pages/profile.page.ts</context>
+          <context context-type="linenumber">130</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="account.security.heading" datatype="html">
         <source>Security</source>
@@ -1027,7 +1122,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/auth/pages/reset-password/reset-password.page.ts</context>
-          <context context-type="linenumber">53,55</context>
+          <context context-type="linenumber">75,77</context>
         </context-group>
       </trans-unit>
       <trans-unit id="account.security.confirmPassword" datatype="html">
@@ -2584,11 +2679,11 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/auth/pages/forgot-password/forgot-password.page.ts</context>
-          <context context-type="linenumber">39,41</context>
+          <context context-type="linenumber">51,53</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/auth/pages/login/login.page.ts</context>
-          <context context-type="linenumber">44,46</context>
+          <context context-type="linenumber">57,59</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/organization/pages/organization.page.ts</context>
@@ -3138,183 +3233,183 @@
         <source>Enter your email address to begin.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/auth/pages/forgot-password/forgot-password.page.ts</context>
-          <context context-type="linenumber">25,26</context>
+          <context context-type="linenumber">26,28</context>
         </context-group>
       </trans-unit>
       <trans-unit id="auth.forgot.generated" datatype="html">
-        <source>A development reset token was generated.</source>
+        <source> A development reset token was generated. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/auth/pages/forgot-password/forgot-password.page.ts</context>
-          <context context-type="linenumber">29,30</context>
+          <context context-type="linenumber">32,34</context>
         </context-group>
       </trans-unit>
       <trans-unit id="auth.forgot.continue" datatype="html">
         <source>Continue to reset password</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/auth/pages/forgot-password/forgot-password.page.ts</context>
-          <context context-type="linenumber">31,33</context>
+          <context context-type="linenumber">35,37</context>
         </context-group>
       </trans-unit>
       <trans-unit id="auth.field.email" datatype="html">
         <source>Email address</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/auth/pages/forgot-password/forgot-password.page.ts</context>
-          <context context-type="linenumber">36,37</context>
+          <context context-type="linenumber">40,41</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/auth/pages/login/login.page.ts</context>
-          <context context-type="linenumber">39,40</context>
+          <context context-type="linenumber">44,45</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/auth/pages/reset-password/reset-password.page.ts</context>
-          <context context-type="linenumber">37,38</context>
+          <context context-type="linenumber">40,41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="auth.forgot.submit" datatype="html">
         <source>Send reset request</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/auth/pages/forgot-password/forgot-password.page.ts</context>
-          <context context-type="linenumber">46,48</context>
+          <context context-type="linenumber">58,60</context>
         </context-group>
       </trans-unit>
       <trans-unit id="auth.forgot.back" datatype="html">
         <source>Back to sign in</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/auth/pages/forgot-password/forgot-password.page.ts</context>
-          <context context-type="linenumber">51,52</context>
+          <context context-type="linenumber">65,66</context>
         </context-group>
       </trans-unit>
       <trans-unit id="auth.forgot.failed" datatype="html">
         <source>We could not process the reset request. Try again later.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/auth/pages/forgot-password/forgot-password.page.ts</context>
-          <context context-type="linenumber">104</context>
+          <context context-type="linenumber">121</context>
         </context-group>
       </trans-unit>
       <trans-unit id="auth.login.heading" datatype="html">
         <source>Sign in to SimpliaDz</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/auth/pages/login/login.page.ts</context>
-          <context context-type="linenumber">26,27</context>
+          <context context-type="linenumber">29,30</context>
         </context-group>
       </trans-unit>
       <trans-unit id="auth.login.subtitle" datatype="html">
         <source>Use your organization account to continue.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/auth/pages/login/login.page.ts</context>
-          <context context-type="linenumber">27,28</context>
+          <context context-type="linenumber">31,33</context>
         </context-group>
       </trans-unit>
       <trans-unit id="auth.login.passwordChanged" datatype="html">
         <source> Your password was changed. Sign in again to continue. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/auth/pages/login/login.page.ts</context>
-          <context context-type="linenumber">33,35</context>
+          <context context-type="linenumber">38,40</context>
         </context-group>
       </trans-unit>
       <trans-unit id="auth.error.emailRequired" datatype="html">
         <source>Email is required.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/auth/pages/login/login.page.ts</context>
-          <context context-type="linenumber">42,43</context>
+          <context context-type="linenumber">55,56</context>
         </context-group>
       </trans-unit>
       <trans-unit id="auth.field.password" datatype="html">
         <source>Password</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/auth/pages/login/login.page.ts</context>
-          <context context-type="linenumber">49,51</context>
+          <context context-type="linenumber">62,64</context>
         </context-group>
       </trans-unit>
       <trans-unit id="auth.error.passwordRequired" datatype="html">
         <source>Password is required.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/auth/pages/login/login.page.ts</context>
-          <context context-type="linenumber">57,59</context>
+          <context context-type="linenumber">73,75</context>
         </context-group>
       </trans-unit>
       <trans-unit id="auth.login.signingIn" datatype="html">
         <source>Signing in</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/auth/pages/login/login.page.ts</context>
-          <context context-type="linenumber">67,68</context>
+          <context context-type="linenumber">86,88</context>
         </context-group>
       </trans-unit>
       <trans-unit id="auth.login.submit" datatype="html">
         <source>Sign in</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/auth/pages/login/login.page.ts</context>
-          <context context-type="linenumber">69,71</context>
+          <context context-type="linenumber">89,91</context>
         </context-group>
       </trans-unit>
       <trans-unit id="auth.login.forgot" datatype="html">
         <source>Forgot your password?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/auth/pages/login/login.page.ts</context>
-          <context context-type="linenumber">76,77</context>
+          <context context-type="linenumber">97,99</context>
         </context-group>
       </trans-unit>
       <trans-unit id="auth.login.failed" datatype="html">
         <source>We could not sign you in. Check your email and password, then try again.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/auth/pages/login/login.page.ts</context>
-          <context context-type="linenumber">141</context>
+          <context context-type="linenumber">187</context>
         </context-group>
       </trans-unit>
       <trans-unit id="auth.reset.heading" datatype="html">
         <source>Choose a new password</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/auth/pages/reset-password/reset-password.page.ts</context>
-          <context context-type="linenumber">24,25</context>
+          <context context-type="linenumber">25,26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="auth.reset.subtitle" datatype="html">
         <source>Use the reset token from your password reset request.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/auth/pages/reset-password/reset-password.page.ts</context>
-          <context context-type="linenumber">27,29</context>
+          <context context-type="linenumber">28,30</context>
         </context-group>
       </trans-unit>
       <trans-unit id="auth.reset.done" datatype="html">
-        <source>Your password has been reset. You can now sign in.</source>
+        <source> Your password has been reset. You can now sign in. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/auth/pages/reset-password/reset-password.page.ts</context>
-          <context context-type="linenumber">32,33</context>
+          <context context-type="linenumber">34,35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="auth.reset.goToSignIn" datatype="html">
         <source>Go to sign in</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/auth/pages/reset-password/reset-password.page.ts</context>
-          <context context-type="linenumber">33,35</context>
+          <context context-type="linenumber">36,38</context>
         </context-group>
       </trans-unit>
       <trans-unit id="auth.reset.token" datatype="html">
         <source>Reset token</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/auth/pages/reset-password/reset-password.page.ts</context>
-          <context context-type="linenumber">41,42</context>
+          <context context-type="linenumber">52,53</context>
         </context-group>
       </trans-unit>
       <trans-unit id="auth.reset.newPassword" datatype="html">
         <source>New password</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/auth/pages/reset-password/reset-password.page.ts</context>
-          <context context-type="linenumber">45,47</context>
+          <context context-type="linenumber">63,65</context>
         </context-group>
       </trans-unit>
       <trans-unit id="auth.reset.submit" datatype="html">
         <source>Reset password</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/auth/pages/reset-password/reset-password.page.ts</context>
-          <context context-type="linenumber">60,62</context>
+          <context context-type="linenumber">83,85</context>
         </context-group>
       </trans-unit>
       <trans-unit id="auth.reset.failed" datatype="html">
         <source>We could not reset your password. Check the token and try again.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/auth/pages/reset-password/reset-password.page.ts</context>
-          <context context-type="linenumber">125</context>
+          <context context-type="linenumber">149</context>
         </context-group>
       </trans-unit>
       <trans-unit id="attributes.detail.note" datatype="html">
@@ -4514,130 +4609,134 @@
           <context context-type="linenumber">454</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="dashboard.heading" datatype="html">
-        <source>Welcome back</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/dashboard/pages/dashboard.page.ts</context>
-          <context context-type="linenumber">19,20</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="dashboard.today" datatype="html">
         <source>Today</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/dashboard/pages/dashboard.page.ts</context>
-          <context context-type="linenumber">25,26</context>
+          <context context-type="linenumber">21,22</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/dashboard/pages/dashboard.page.ts</context>
+          <context context-type="linenumber">41,42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboard.heading" datatype="html">
+        <source>Welcome back</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/dashboard/pages/dashboard.page.ts</context>
+          <context context-type="linenumber">22,23</context>
         </context-group>
       </trans-unit>
       <trans-unit id="dashboard.revenue" datatype="html">
         <source>Revenue</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/dashboard/pages/dashboard.page.ts</context>
-          <context context-type="linenumber">33,34</context>
+          <context context-type="linenumber">46,47</context>
         </context-group>
       </trans-unit>
       <trans-unit id="dashboard.sales" datatype="html">
         <source>sales</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/dashboard/pages/dashboard.page.ts</context>
-          <context context-type="linenumber">36,37</context>
+          <context context-type="linenumber">51,52</context>
         </context-group>
       </trans-unit>
       <trans-unit id="dashboard.items" datatype="html">
         <source>items</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/dashboard/pages/dashboard.page.ts</context>
-          <context context-type="linenumber">37,39</context>
+          <context context-type="linenumber">52,53</context>
         </context-group>
       </trans-unit>
       <trans-unit id="dashboard.average" datatype="html">
         <source>Average basket</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/dashboard/pages/dashboard.page.ts</context>
-          <context context-type="linenumber">43,44</context>
+          <context context-type="linenumber">59,60</context>
         </context-group>
       </trans-unit>
       <trans-unit id="dashboard.grossProfit" datatype="html">
         <source>Gross profit</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/dashboard/pages/dashboard.page.ts</context>
-          <context context-type="linenumber">51,52</context>
+          <context context-type="linenumber">70,71</context>
         </context-group>
       </trans-unit>
       <trans-unit id="dashboard.expensesLabel" datatype="html">
         <source>Expenses</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/dashboard/pages/dashboard.page.ts</context>
-          <context context-type="linenumber">54,55</context>
+          <context context-type="linenumber">75,76</context>
         </context-group>
       </trans-unit>
       <trans-unit id="dashboard.lowStock" datatype="html">
         <source>Below reorder point</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/dashboard/pages/dashboard.page.ts</context>
-          <context context-type="linenumber">63,64</context>
+          <context context-type="linenumber">85,86</context>
         </context-group>
       </trans-unit>
       <trans-unit id="dashboard.viewLowStock" datatype="html">
         <source>View low stock</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/dashboard/pages/dashboard.page.ts</context>
-          <context context-type="linenumber">66,68</context>
+          <context context-type="linenumber">90,92</context>
         </context-group>
       </trans-unit>
       <trans-unit id="dashboard.unavailable" datatype="html">
         <source> Some figures are unavailable because a module is switched off for this organization. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/dashboard/pages/dashboard.page.ts</context>
-          <context context-type="linenumber">74,76</context>
+          <context context-type="linenumber">98,100</context>
         </context-group>
       </trans-unit>
       <trans-unit id="dashboard.loading" datatype="html">
         <source>Loading today’s figures…</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/dashboard/pages/dashboard.page.ts</context>
-          <context context-type="linenumber">79,83</context>
+          <context context-type="linenumber">102,105</context>
         </context-group>
       </trans-unit>
       <trans-unit id="dashboard.access" datatype="html">
         <source>Your access</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/dashboard/pages/dashboard.page.ts</context>
-          <context context-type="linenumber">83,84</context>
+          <context context-type="linenumber">107,108</context>
         </context-group>
       </trans-unit>
       <trans-unit id="dashboard.roles.title" datatype="html">
         <source>Your roles</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/dashboard/pages/dashboard.page.ts</context>
-          <context context-type="linenumber">88,89</context>
+          <context context-type="linenumber">112,113</context>
         </context-group>
       </trans-unit>
       <trans-unit id="dashboard.roles.empty" datatype="html">
         <source> No roles are assigned to your account. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/dashboard/pages/dashboard.page.ts</context>
-          <context context-type="linenumber">99,101</context>
+          <context context-type="linenumber">123,125</context>
         </context-group>
       </trans-unit>
       <trans-unit id="dashboard.permissions.title" datatype="html">
         <source>Permissions</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/dashboard/pages/dashboard.page.ts</context>
-          <context context-type="linenumber">108,109</context>
+          <context context-type="linenumber">132,133</context>
         </context-group>
       </trans-unit>
       <trans-unit id="dashboard.permissions.help" datatype="html">
         <source> Permissions granted to your account. Screens you cannot use are hidden from the menu. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/dashboard/pages/dashboard.page.ts</context>
-          <context context-type="linenumber">113,115</context>
+          <context context-type="linenumber">137,139</context>
         </context-group>
       </trans-unit>
       <trans-unit id="dashboard.todayFailed" datatype="html">
         <source>Today’s figures could not be loaded.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/dashboard/pages/dashboard.page.ts</context>
-          <context context-type="linenumber">162</context>
+          <context context-type="linenumber">298</context>
         </context-group>
       </trans-unit>
       <trans-unit id="status.forbidden.heading" datatype="html">

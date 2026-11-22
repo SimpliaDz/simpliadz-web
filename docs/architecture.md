@@ -30,7 +30,7 @@ Implemented API modules map to Identity, Organization, and Inventory features. I
 The authenticated experience follows the Sneat template's layout language, rebuilt with Angular Material (no Bootstrap, jQuery or second UI library):
 
 - Sidebar: 260px (16.25rem) docked from 1200px up, an overlay below that. The active item has a tinted background and a trailing 4px indicator, written with logical properties so it flips in Arabic.
-- Toolbar: sticky, with the navigation toggle, theme toggle and a user menu. The menu shows the signed-in email and roles, links to security, and signs out.
+- Toolbar: sticky, with the navigation toggle, theme toggle and a user menu. The menu shows the signed-in email and roles, links to profile and security, and signs out.
 - Content: centred, 72rem maximum width, with page headers using the Material headline type scale.
 - Colours, radii and elevation come from Material system tokens, so light and dark themes stay aligned. Sneat's free edition has no dark theme, so dark values are Material's own.
 - Icons: Material Symbols (already loaded), not the template's Boxicons. The Sneat free edition is MIT-licensed; its copyright notice must be kept in any copied assets.
@@ -43,6 +43,6 @@ Not carried over from the template: demo illustrations, third-party brand logos,
 
 ## Localization
 
-English (`en-US`) is the source locale. French (`fr`) and Arabic (`ar`) translations are compiled as separate production outputs using Angular’s built-in localization system. This keeps translated content statically analyzable and avoids a runtime translation framework.
+English (`en-US`) is the source locale. French (`fr`) and Arabic (`ar`) translations are compiled as separate production outputs using Angular’s built-in localization system. This keeps translated content statically analyzable and avoids a runtime translation framework. The signed-in user’s `languageCode` is persisted by the API; after it is read or updated from Account › Profile, the client fully navigates to the matching locale output rather than trying to mutate a running translated bundle.
 
 Mark user-facing template text with Angular `i18n` attributes and run `yarn i18n:extract` whenever English source copy changes. Translate only `messages.fr.xlf` and `messages.ar.xlf`; do not edit the generated English source catalogue. Arabic receives `dir="rtl"` during application bootstrap, so new layouts must use logical CSS properties (`margin-inline`, `padding-inline`, `inset-inline`) when direction matters.

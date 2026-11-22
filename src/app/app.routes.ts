@@ -484,6 +484,12 @@ export const routes: Routes = [
 
       // Account and status
       {
+        path: 'account/profile',
+        title: $localize`:@@title.accountProfile:Profile | SimpliaDz`,
+        loadComponent: () =>
+          import('./features/account/pages/profile.page').then((m) => m.ProfilePage),
+      },
+      {
         path: 'account/security',
         title: $localize`:@@title.accountSecurity:Security | SimpliaDz`,
         loadComponent: () =>

@@ -18,4 +18,5 @@ export interface CurrentUser {
   readonly email: string;
   readonly roles: readonly string[];
   readonly permissions: readonly string[];
+  readonly languageCode?: string;
 }

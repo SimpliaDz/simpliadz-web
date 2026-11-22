@@ -31,7 +31,7 @@ import { NavigationSection, navigationSections } from './navigation';
     ThemeToggleComponent,
   ],
   template: `
-    <mat-toolbar class="shell-toolbar" color="primary">
+    <mat-toolbar class="shell-toolbar">
       <button
         mat-icon-button
         type="button"
@@ -43,7 +43,10 @@ import { NavigationSection, navigationSections } from './navigation';
       >
         <mat-icon aria-hidden="true">menu</mat-icon>
       </button>
-      <a class="brand" routerLink="/app/dashboard">SimpliaDz</a>
+      <a class="brand" routerLink="/app/dashboard">
+        <img class="brand-mark" src="graphics/brand/simpliadz-mark.svg" alt="" />
+        <span>SimpliaDz</span>
+      </a>
       <span class="spacer"></span>
       <app-theme-toggle />
       <button
@@ -67,6 +70,10 @@ import { NavigationSection, navigationSections } from './navigation';
         }
       </div>
       <mat-divider />
+      <a mat-menu-item routerLink="/app/account/profile">
+        <mat-icon aria-hidden="true">person</mat-icon>
+        <span i18n="@@nav.accountProfile">Profile</span>
+      </a>
       <a mat-menu-item routerLink="/app/account/security">
         <mat-icon aria-hidden="true">lock</mat-icon>
         <span i18n="@@nav.accountSecurity">Security</span>
@@ -118,28 +125,45 @@ import { NavigationSection, navigationSections } from './navigation';
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      background: var(--mat-sys-surface);
+      background: var(--app-content-surface);
       color: var(--mat-sys-on-surface);
     }
     .shell-toolbar {
       position: sticky;
       top: 0;
-      z-index: 2;
-      gap: 0.5rem;
+      z-index: 4;
+      min-height: 4.5rem;
+      gap: 0.625rem;
+      padding-inline: 1.25rem;
+      background: color-mix(in srgb, var(--mat-sys-surface-container-lowest) 94%, transparent);
+      border-block-end: 1px solid var(--mat-sys-outline-variant);
+      box-shadow: 0 0.125rem 0.75rem color-mix(in srgb, var(--mat-sys-shadow) 5%, transparent);
+      backdrop-filter: blur(1rem);
     }
     .brand {
-      color: inherit;
-      font-size: 1.125rem;
-      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.625rem;
+      color: var(--mat-sys-on-surface);
+      font-size: 1.1875rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
       text-decoration: none;
       margin-inline-start: 0.25rem;
+    }
+    .brand-mark {
+      width: 2rem;
+      height: 2rem;
+      box-shadow: 0 0.25rem 0.75rem color-mix(in srgb, var(--mat-sys-primary) 18%, transparent);
     }
     .spacer {
       flex: 1;
     }
     .user-button {
-      color: inherit;
+      color: var(--mat-sys-on-surface);
       max-width: 16rem;
+      border-radius: 0.625rem;
+      background: var(--app-soft-primary);
     }
     .user-email {
       overflow: hidden;
@@ -165,12 +189,12 @@ import { NavigationSection, navigationSections } from './navigation';
     }
     .shell-nav {
       width: 16.25rem;
-      padding-block: 1rem;
-      background: var(--mat-sys-surface-container-low);
+      padding-block: 1.25rem;
+      background: var(--mat-sys-surface-container-lowest);
       border-inline-end: 1px solid var(--mat-sys-outline-variant);
     }
     .nav-section {
-      margin: 1rem 0 0.25rem;
+      margin: 1.25rem 0 0.375rem;
       padding-inline: 1.5rem;
       color: var(--mat-sys-on-surface-variant);
       font: var(--mat-sys-label-small);
@@ -178,27 +202,37 @@ import { NavigationSection, navigationSections } from './navigation';
       text-transform: uppercase;
     }
     .nav-item {
-      margin-inline: 0.75rem;
-      border-radius: 0.5rem;
+      min-height: 2.875rem;
+      margin-inline: 0.875rem;
+      border-radius: 0.625rem;
+      transition: background-color 150ms ease, color 150ms ease, transform 150ms ease;
+    }
+    .nav-item:hover {
+      background: var(--app-soft-primary);
+      transform: translateX(0.125rem);
+    }
+    :host-context([dir='rtl']) .nav-item:hover {
+      transform: translateX(-0.125rem);
     }
     .nav-item--active {
-      background: var(--mat-sys-secondary-container);
-      color: var(--mat-sys-on-secondary-container);
+      background: var(--app-soft-primary);
+      color: var(--mat-sys-primary);
       font-weight: 600;
       /* Logical property: the indicator sits on the trailing edge in both LTR and RTL. */
-      border-inline-end: 4px solid var(--mat-sys-primary);
+      border-inline-end: 3px solid var(--mat-sys-primary);
     }
     .shell-main {
-      max-width: 72rem;
+      width: min(100%, 100rem);
+      max-width: none;
       margin: 0 auto;
-      padding: 2rem 1.5rem;
+      padding: 2.25rem 1.75rem 3rem;
     }
     @media (max-width: 599.98px) {
       .user-email {
         display: none;
       }
       .shell-main {
-        padding: 1.25rem 1rem;
+        padding: 1.5rem 1rem 2.5rem;
       }
     }
   `,
