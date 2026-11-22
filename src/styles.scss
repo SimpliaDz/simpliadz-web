@@ -109,7 +109,10 @@ body {
 }
 
 .toolbar .search-field {
-  min-width: 16rem;
+  // Let the search control absorb available room but never force a toolbar wider
+  // than its container. This is important for dense tablet toolbars.
+  flex: 1 1 20rem;
+  min-width: 0;
 }
 
 .section-title {
@@ -131,6 +134,9 @@ body {
 
 .data-table {
   width: 100%;
+  // Tables preserve readable columns on tablets. Their surrounding card owns the
+  // horizontal scroll instead of allowing text to collapse into unusable columns.
+  min-width: 42rem;
 }
 
 .data-table th {
@@ -344,16 +350,63 @@ a:hover {
   text-decoration: underline;
 }
 
-.toolbar .search-field {
-  min-width: 22rem;
+/* The application is optimized for tablet and desktop. These breakpoints are
+   deliberately shared instead of being repeated in every feature page. */
+@media (max-width: 1199.98px) {
+  .page-header {
+    margin-block-end: 1.5rem;
+  }
+
+  .toolbar {
+    gap: 0.625rem;
+  }
+}
+
+@media (max-width: 899.98px) {
+  .page-header {
+    align-items: flex-start;
+  }
+
+  .page-header__actions,
+  .form-actions {
+    width: 100%;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  }
+
+  .form-grid {
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  }
+
+  .detail-list {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
+  .detail-list dd {
+    margin-block-end: 0.75rem;
+  }
+}
+
+@media (max-width: 719.98px) {
+  .card-grid,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .toolbar > * {
+    flex-basis: 100%;
+  }
+
+  .toolbar .search-field {
+    flex-basis: 100%;
+  }
 }
 
 @media (max-width: 599.98px) {
   .toolbar {
     padding: 0.625rem;
-  }
-
-  .toolbar .search-field {
-    min-width: 100%;
   }
 }

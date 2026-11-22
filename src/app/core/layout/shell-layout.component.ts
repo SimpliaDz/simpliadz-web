@@ -227,6 +227,19 @@ import { NavigationSection, navigationSections } from './navigation';
       margin: 0 auto;
       padding: 2.25rem 1.75rem 3rem;
     }
+    @media (max-width: 1199.98px) {
+      .shell-toolbar {
+        padding-inline: 1rem;
+      }
+      .shell-main {
+        padding: 1.75rem 1.5rem 2.75rem;
+      }
+    }
+    @media (max-width: 899.98px) {
+      .shell-main {
+        padding: 1.5rem 1.25rem 2.5rem;
+      }
+    }
     @media (max-width: 599.98px) {
       .user-email {
         display: none;

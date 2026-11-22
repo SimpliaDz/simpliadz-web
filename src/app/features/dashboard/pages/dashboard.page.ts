@@ -259,6 +259,18 @@ import {
         min-height: 15rem;
       }
     }
+    @media (max-width: 899.98px) {
+      .dashboard-hero__art {
+        inset-inline-end: -1rem;
+        width: min(48%, 23rem);
+      }
+    }
+    @media (max-width: 719.98px) {
+      .dashboard-metrics,
+      .access-grid {
+        grid-template-columns: 1fr;
+      }
+    }
     @media (max-width: 599.98px) {
       .dashboard-hero {
         min-height: 13.5rem;
@@ -267,10 +279,6 @@ import {
         inset-inline-end: -5.5rem;
         width: 20rem;
         opacity: 0.45;
-      }
-      .dashboard-metrics,
-      .access-grid {
-        grid-template-columns: 1fr;
       }
     }
   `,

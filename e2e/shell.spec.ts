@@ -56,6 +56,27 @@ test('shows the dashboard and only permitted navigation after sign in', async ({
   await expect(page.locator('app-shell-layout')).toContainText('manager@example.test');
 });
 
+test.describe('small laptop and tablet layout', () => {
+  for (const viewport of [
+    { name: 'small laptop', width: 1280, height: 800 },
+    { name: 'tablet landscape', width: 1024, height: 768 },
+    { name: 'tablet portrait', width: 768, height: 1024 },
+  ]) {
+    test(`keeps the dashboard within the ${viewport.name} viewport`, async ({ page }) => {
+      await page.setViewportSize({ width: viewport.width, height: viewport.height });
+      await signIn(page);
+
+      await expect(page.getByRole('heading', { name: 'Welcome back' })).toBeVisible();
+      await expect(page.locator('.shell-main')).toBeVisible();
+      await expect
+        .poll(() =>
+          page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth),
+        )
+        .toBe(true);
+    });
+  }
+});
+
 test('keeps the session across a reload using the stored refresh token', async ({ page }) => {
   await signIn(page);
 
