@@ -56,6 +56,19 @@ test('shows the dashboard and only permitted navigation after sign in', async ({
   await expect(page.locator('app-shell-layout')).toContainText('manager@example.test');
 });
 
+test('enables Save language after a different language is selected', async ({ page }) => {
+  await signIn(page);
+
+  await page.getByRole('button', { name: 'Open user menu' }).click();
+  await page.getByRole('menuitem', { name: 'Profile' }).click();
+
+  const saveButton = page.getByRole('button', { name: 'Save language' });
+  await expect(saveButton).toBeDisabled();
+  await page.getByRole('combobox', { name: 'Language' }).click();
+  await page.getByRole('option', { name: 'French' }).click();
+  await expect(saveButton).toBeEnabled();
+});
+
 test.describe('small laptop and tablet layout', () => {
   for (const viewport of [
     { name: 'small laptop', width: 1280, height: 800 },

@@ -1,5 +1,7 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 import { NonNullableFormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { startWith } from 'rxjs';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -108,9 +110,15 @@ export class ProfilePage {
 
   readonly selectedLanguage = normalizeLanguage(this.session.user()?.languageCode);
   readonly form = this.formBuilder.group({ languageCode: this.selectedLanguage });
+  // Reactive form values are not Angular signals. Bridge the control's value changes so the
+  // computed state is re-evaluated immediately when an option is selected.
+  readonly currentLanguage = toSignal(
+    this.form.controls.languageCode.valueChanges.pipe(startWith(this.selectedLanguage)),
+    { initialValue: this.selectedLanguage },
+  );
   readonly saving = signal(false);
   readonly error = signal<string | null>(null);
-  readonly hasChanged = computed(() => this.form.controls.languageCode.value !== this.selectedLanguage);
+  readonly hasChanged = computed(() => this.currentLanguage() !== this.selectedLanguage);
 
   saveLanguage(): void {
     const languageCode = this.form.controls.languageCode.value as SupportedLanguage;
