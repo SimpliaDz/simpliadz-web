@@ -79,6 +79,11 @@ function findCategoryName(nodes: readonly CategoryNode[], id: string): string | 
             <mat-icon aria-hidden="true">block</mat-icon>
             <span i18n="@@common.deactivate">Deactivate</span>
           </button>
+        } @else {
+          <button *appHasPermission="'products.edit'" mat-flat-button type="button" (click)="activate(current)">
+            <mat-icon aria-hidden="true">check_circle</mat-icon>
+            <span i18n="@@common.activate">Activate</span>
+          </button>
         }
       </app-page-header>
 
@@ -243,7 +248,7 @@ export class ProductDetailPage {
     this.confirm
       .confirm({
         title: $localize`:@@products.deactivate.title:Deactivate product?`,
-        message: $localize`:@@products.deactivate.message:Its variants stay as they are, but the product is hidden from new work. Products cannot be reactivated.`,
+        message: $localize`:@@products.deactivate.message:Its variants stay as they are, but the product is hidden from new work until it is reactivated.`,
         confirmLabel: $localize`:@@common.deactivate:Deactivate`,
         destructive: true,
       })
@@ -269,5 +274,17 @@ export class ProductDetailPage {
             ),
         });
       });
+  }
+
+  activate(product: Product): void {
+    this.api.activate(product.id).subscribe({
+      next: () => {
+        this.snackBar.open($localize`:@@products.activated:Product activated.`, undefined, { duration: 3000 });
+        this.load();
+      },
+      error: (error: unknown) => this.snackBar.open(
+        describeApiError(error, $localize`:@@products.activateFailed:The product could not be activated.`),
+        undefined, { duration: 5000 }),
+    });
   }
 }

@@ -185,6 +185,7 @@ import { NavigationSection, navigationSections } from './navigation';
     }
     .shell-container {
       flex: 1;
+      min-width: 0;
       background: transparent;
     }
     .shell-nav {
@@ -224,6 +225,7 @@ import { NavigationSection, navigationSections } from './navigation';
     .shell-main {
       width: min(100%, 100rem);
       max-width: none;
+      min-width: 0;
       margin: 0 auto;
       padding: 2.25rem 1.75rem 3rem;
     }

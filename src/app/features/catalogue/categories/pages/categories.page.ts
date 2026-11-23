@@ -124,6 +124,10 @@ function descendantIds(node: CategoryNode): string[] {
                 >
                   <mat-icon aria-hidden="true">block</mat-icon>
                 </button>
+              } @else {
+                <button *appHasPermission="'categories.edit'" mat-icon-button type="button" (click)="activate(row.node)" [attr.aria-label]="activateLabel + ' ' + row.node.name">
+                  <mat-icon aria-hidden="true">check_circle</mat-icon>
+                </button>
               }
             </td>
           </ng-container>
@@ -149,6 +153,7 @@ export class CategoriesPage {
   readonly inactiveLabel = $localize`:@@common.inactive:Inactive`;
   readonly editLabel = $localize`:@@common.edit:Edit`;
   readonly deactivateLabel = $localize`:@@common.deactivate:Deactivate`;
+  readonly activateLabel = $localize`:@@common.activate:Activate`;
 
   readonly columns = ['name', 'status', 'updated', 'actions'];
   readonly tree = signal<CategoryNode[]>([]);
@@ -217,6 +222,10 @@ export class CategoriesPage {
             ),
         });
       });
+  }
+
+  activate(node: CategoryNode): void {
+    this.api.activate(node.id).subscribe({ next: () => { this.snackBar.open($localize`:@@categories.activated:Category activated.`, undefined, { duration: 3000 }); this.load(); }, error: (error: unknown) => this.snackBar.open(describeApiError(error, $localize`:@@categories.activateFailed:The category could not be activated.`), undefined, { duration: 5000 }) });
   }
 
   private openDialog(node: CategoryNode | null): void {

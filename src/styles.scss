@@ -8,6 +8,7 @@
 html {
   height: 100%;
   color-scheme: light;
+  overflow-x: clip;
   @include mat.theme(
     (
       color: (
@@ -38,6 +39,7 @@ body {
   // Reset the user agent margin.
   margin: 0;
   height: 100%;
+  overflow-x: clip;
 }
 
 :root {
@@ -129,6 +131,7 @@ body {
 
 .table-card {
   overflow-x: auto;
+  max-width: 100%;
   padding: 0;
 }
 

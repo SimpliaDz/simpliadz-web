@@ -131,6 +131,10 @@ import { BrandDialogComponent } from '../ui/brand-dialog.component';
                 >
                   <mat-icon aria-hidden="true">block</mat-icon>
                 </button>
+              } @else {
+                <button *appHasPermission="'brands.edit'" mat-icon-button type="button" (click)="activate(brand)" [attr.aria-label]="activateLabel + ' ' + brand.name">
+                  <mat-icon aria-hidden="true">check_circle</mat-icon>
+                </button>
               }
             </td>
           </ng-container>
@@ -156,6 +160,7 @@ export class BrandsPage {
   readonly inactiveLabel = $localize`:@@common.inactive:Inactive`;
   readonly editLabel = $localize`:@@common.edit:Edit`;
   readonly deactivateLabel = $localize`:@@common.deactivate:Deactivate`;
+  readonly activateLabel = $localize`:@@common.activate:Activate`;
 
   readonly columns = ['name', 'status', 'updated', 'actions'];
   readonly brands = signal<Brand[]>([]);
@@ -232,6 +237,10 @@ export class BrandsPage {
             ),
         });
       });
+  }
+
+  activate(brand: Brand): void {
+    this.api.activate(brand.id).subscribe({ next: () => { this.snackBar.open($localize`:@@brands.activated:Brand activated.`, undefined, { duration: 3000 }); this.load(); }, error: (error: unknown) => this.snackBar.open(describeApiError(error, $localize`:@@brands.activateFailed:The brand could not be activated.`), undefined, { duration: 5000 }) });
   }
 
   private openDialog(brand: Brand | null): void {

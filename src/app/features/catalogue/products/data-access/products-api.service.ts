@@ -72,4 +72,8 @@ export class ProductsApiService {
   deactivate(id: string): Observable<void> {
     return this.http.put<void>(this.apiUrl.path(`/products/${id}/deactivate`), null);
   }
+
+  activate(id: string): Observable<void> {
+    return this.http.put<void>(this.apiUrl.path(`/products/${id}/activate`), null);
+  }
 }
