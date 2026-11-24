@@ -293,6 +293,13 @@ export const routes: Routes = [
 
       // Sales
       {
+        path: 'crm/loyalty',
+        title: $localize`:@@title.loyalty:Customer loyalty | SimpliaDz`,
+        ...permissioned(['crm.view']),
+        loadComponent: () =>
+          import('./features/crm/pages/loyalty.page').then((m) => m.LoyaltyPage),
+      },
+      {
         path: 'sales/customers',
         title: $localize`:@@title.customers:Customers | SimpliaDz`,
         ...permissioned(['customers.view']),

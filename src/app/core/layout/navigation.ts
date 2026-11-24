@@ -142,6 +142,12 @@ export const navigationSections: readonly NavigationSection[] = [
         permissions: ['customers.view'],
       },
       {
+        label: $localize`:@@nav.loyalty:Customer loyalty`,
+        icon: 'card_membership',
+        path: '/app/crm/loyalty',
+        permissions: ['crm.view'],
+      },
+      {
         label: $localize`:@@nav.registers:Cash registers`,
         icon: 'payments',
         path: '/app/sales/cash/registers',
