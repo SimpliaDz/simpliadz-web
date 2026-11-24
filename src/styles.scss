@@ -22,6 +22,12 @@ html {
   );
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html[data-theme='dark'] {
   color-scheme: dark;
 }
@@ -87,6 +93,15 @@ body {
   gap: 0.5rem;
 }
 
+// Grid and flex children otherwise keep their intrinsic minimum width, which can make a
+// wide form field or long label push an entire laptop screen sideways.
+.page-header > *,
+.toolbar > *,
+.card-grid > *,
+.form-grid > * {
+  min-width: 0;
+}
+
 .page-header__actions > button,
 .page-header__actions > a {
   box-shadow: 0 0.25rem 0.75rem color-mix(in srgb, var(--mat-sys-primary) 8%, transparent);
@@ -132,6 +147,7 @@ body {
 .table-card {
   overflow-x: auto;
   max-width: 100%;
+  overscroll-behavior-inline: contain;
   padding: 0;
 }
 

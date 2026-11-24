@@ -222,14 +222,19 @@ import { NavigationSection, navigationSections } from './navigation';
       /* Logical property: the indicator sits on the trailing edge in both LTR and RTL. */
       border-inline-end: 3px solid var(--mat-sys-primary);
     }
+    .shell-content {
+      min-width: 0;
+      overflow-x: clip;
+    }
     .shell-main {
-      width: min(100%, 100rem);
-      max-width: none;
+      box-sizing: border-box;
+      inline-size: 100%;
+      max-inline-size: 100rem;
       min-width: 0;
       margin: 0 auto;
       padding: 2.25rem 1.75rem 3rem;
     }
-    @media (max-width: 1199.98px) {
+    @media (max-width: 1439.98px) {
       .shell-toolbar {
         padding-inline: 1rem;
       }
@@ -258,9 +263,9 @@ export class ShellLayoutComponent {
   private readonly router = inject(Router);
   private readonly breakpoints = inject(BreakpointObserver);
 
-  /** Below 1200px the sidebar becomes an overlay, matching the template's breakpoint. */
+  /** Preserve usable page width on typical laptops by overlaying the wide navigation below 1440px. */
   readonly isHandset = toSignal(
-    this.breakpoints.observe('(max-width: 1199.98px)').pipe(map((state) => state.matches)),
+    this.breakpoints.observe('(max-width: 1439.98px)').pipe(map((state) => state.matches)),
     { initialValue: false },
   );
   readonly navOpen = linkedSignal(() => !this.isHandset());
