@@ -44,17 +44,17 @@ export interface ParentOption {
             }
           </mat-form-field>
           <mat-form-field appearance="outline" class="full-row">
-            <mat-label i18n="@@categories.field.requiredAttributes">Required variant attributes</mat-label>
-            <mat-select formControlName="requiredAttributeIds" multiple>
-              @for (attribute of selectedAttributes(); track attribute.id) {
+            <mat-label i18n="@@categories.field.attributes">Variant attributes</mat-label>
+            <mat-select formControlName="attributeIds" multiple>
+              @for (attribute of attributes(); track attribute.id) {
                 <mat-option [value]="attribute.id">{{ attribute.name }}</mat-option>
               }
             </mat-select>
           </mat-form-field>
           <mat-form-field appearance="outline" class="full-row">
-            <mat-label i18n="@@categories.field.attributes">Variant attributes</mat-label>
-            <mat-select formControlName="attributeIds" multiple>
-              @for (attribute of attributes(); track attribute.id) {
+            <mat-label i18n="@@categories.field.requiredAttributes">Required variant attributes</mat-label>
+            <mat-select formControlName="requiredAttributeIds" multiple>
+              @for (attribute of selectedAttributes(); track attribute.id) {
                 <mat-option [value]="attribute.id">{{ attribute.name }}</mat-option>
               }
             </mat-select>
