@@ -18,6 +18,7 @@ import {
   CategoryNode,
 } from '../../categories/data-access/categories-api.service';
 import { ProductsApiService } from '../data-access/products-api.service';
+import { Attribute, AttributesApiService } from '../../attributes/data-access/attributes-api.service';
 
 interface Option {
   readonly id: string;
@@ -76,6 +77,16 @@ function categoryDepth(id: string, nodes: readonly CategoryNode[], depth = 0): n
             }
           </mat-form-field>
 
+          <mat-form-field appearance="outline" class="full-row">
+            <mat-label i18n="@@products.field.attributes">Variant attributes</mat-label>
+            <mat-select formControlName="attributeIds" multiple>
+              @for (attribute of attributes(); track attribute.id) {
+                <mat-option [value]="attribute.id">{{ attribute.name }}</mat-option>
+              }
+            </mat-select>
+            <mat-hint i18n="@@products.field.attributesHint">Optional. These attributes are available on this product's variants.</mat-hint>
+          </mat-form-field>
+
           <mat-form-field appearance="outline">
             <mat-label i18n="@@products.code">Code</mat-label>
             <input matInput formControlName="code" maxlength="50" />
@@ -129,6 +140,7 @@ export class ProductFormPage {
   private readonly api = inject(ProductsApiService);
   private readonly brandsApi = inject(BrandsApiService);
   private readonly categoriesApi = inject(CategoriesApiService);
+  private readonly attributesApi = inject(AttributesApiService);
   private readonly route = inject(ActivatedRoute);
   private readonly router = inject(Router);
   private readonly snackBar = inject(MatSnackBar);
@@ -143,6 +155,7 @@ export class ProductFormPage {
     description: ['', [Validators.maxLength(2000)]],
     brandId: [''],
     categoryId: [''],
+    attributeIds: this.formBuilder.control<string[]>([]),
   });
 
   readonly loading = signal(true);
@@ -151,6 +164,7 @@ export class ProductFormPage {
   readonly formError = signal<string | null>(null);
   readonly brandOptions = signal<Option[]>([]);
   readonly categoryOptions = signal<Option[]>([]);
+  readonly attributes = signal<Attribute[]>([]);
 
   readonly heading = signal(
     this.productId
@@ -178,11 +192,13 @@ export class ProductFormPage {
     forkJoin({
       brands: this.brandsApi.list(),
       categories: this.categoriesApi.tree(),
+      attributes: this.attributesApi.list(),
       product: this.productId ? this.api.get(this.productId) : of(null),
     }).subscribe({
-      next: ({ brands, categories, product }) => {
+      next: ({ brands, categories, attributes, product }) => {
         this.brandOptions.set(this.brandChoices(brands, product?.brandId ?? null));
         this.categoryOptions.set(this.categoryChoices(categories, product?.categoryId ?? null));
+        this.attributes.set(attributes);
         if (product) {
           this.form.reset({
             name: product.name,
@@ -190,6 +206,7 @@ export class ProductFormPage {
             description: product.description ?? '',
             brandId: product.brandId ?? '',
             categoryId: product.categoryId ?? '',
+            attributeIds: product.attributeIds,
           });
         }
         this.loading.set(false);
@@ -219,6 +236,7 @@ export class ProductFormPage {
       description: blankToNull(value.description),
       brandId: blankToNull(value.brandId),
       categoryId: blankToNull(value.categoryId),
+      attributeIds: value.attributeIds,
     };
 
     this.saving.set(true);

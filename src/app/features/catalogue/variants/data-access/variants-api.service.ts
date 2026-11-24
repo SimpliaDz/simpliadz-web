@@ -61,8 +61,8 @@ export class VariantsApiService {
   }
 
   /** Requires the Audit module on the backend; the API returns 409 when it is disabled. */
-  updateIdentifiers(id: string, sku: string, barcode: string | null): Observable<Variant> {
-    return this.http.put<Variant>(this.apiUrl.path(`/variants/${id}`), { sku, barcode });
+  updateIdentifiers(id: string, sku: string, barcode: string | null, attributeValueIds: readonly string[]): Observable<Variant> {
+    return this.http.put<Variant>(this.apiUrl.path(`/variants/${id}`), { sku, barcode, attributeValueIds });
   }
 
   generateBarcode(id: string): Observable<Variant> {

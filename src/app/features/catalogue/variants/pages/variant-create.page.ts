@@ -49,15 +49,6 @@ import { VariantsApiService } from '../data-access/variants-api.service';
           Try again
         </button>
       </app-state-panel>
-    } @else if (attributes().length === 0) {
-      <app-state-panel icon="tune" [title]="noAttributesTitle" [message]="noAttributesMessage">
-        <a
-          mat-flat-button
-          routerLink="/app/catalogue/attributes"
-          i18n="@@variants.create.goToAttributes"
-          >Go to attributes</a
-        >
-      </app-state-panel>
     } @else if (base(); as form) {
       <form [formGroup]="form" (ngSubmit)="save()" novalidate class="form-surface">
         <h2 class="section-title" i18n="@@variants.section.identity">Identity and prices</h2>
@@ -94,7 +85,7 @@ import { VariantsApiService } from '../data-access/variants-api.service';
 
         <h2 class="section-title" i18n="@@variants.section.attributes">Attribute values</h2>
         <p class="form-hint" i18n="@@variants.attributesHint">
-          Choose one value per attribute. A variant needs at least one value.
+          Optional. Choose at most one value per configured attribute.
         </p>
         @if (selections(); as group) {
           <div class="form-grid" [formGroup]="group">
@@ -141,8 +132,6 @@ export class VariantCreatePage {
   readonly productId = this.route.snapshot.paramMap.get('productId') ?? '';
   readonly heading = $localize`:@@variants.create.heading:New variant`;
   readonly errorTitle = $localize`:@@variants.create.loadFailed:We could not load the variant form`;
-  readonly noAttributesTitle = $localize`:@@variants.create.noAttributes.title:Add attributes first`;
-  readonly noAttributesMessage = $localize`:@@variants.create.noAttributes.message:Variants are described by attribute values such as color or size. Create an attribute with values, then come back.`;
 
   readonly product = signal<Product | null>(null);
   readonly attributes = signal<Attribute[]>([]);
@@ -179,7 +168,7 @@ export class VariantCreatePage {
       next: ({ product, attributes }) => {
         this.product.set(product);
         this.subtitle.set(product.name);
-        this.attributes.set(attributes);
+        this.attributes.set(attributes.filter((attribute) => product.attributeIds.includes(attribute.id)));
         this.base.set(
           this.formBuilder.group({
             sku: ['', [Validators.required, Validators.maxLength(64)]],
@@ -194,7 +183,8 @@ export class VariantCreatePage {
         this.selections.set(
           this.formBuilder.group(
             Object.fromEntries(
-              attributes.map((attribute) => [attribute.id, this.formBuilder.control('')]),
+              attributes.filter((attribute) => product.attributeIds.includes(attribute.id))
+                .map((attribute) => [attribute.id, this.formBuilder.control('')]),
             ),
           ),
         );
@@ -220,13 +210,8 @@ export class VariantCreatePage {
     }
 
     const chosen = Object.values(selections.getRawValue()).filter((id) => id.length > 0);
-    if (base.invalid || chosen.length === 0) {
+    if (base.invalid) {
       base.markAllAsTouched();
-      if (chosen.length === 0) {
-        this.formError.set(
-          $localize`:@@variants.create.needAttribute:Choose at least one attribute value.`,
-        );
-      }
       return;
     }
 

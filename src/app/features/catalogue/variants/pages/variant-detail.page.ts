@@ -2,6 +2,7 @@ import { DecimalPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import {
   FormControl,
+  FormGroup,
   NonNullableFormBuilder,
   ReactiveFormsModule,
   Validators,
@@ -14,6 +15,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatSelectModule } from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table';
 import { forkJoin, map, of, switchMap } from 'rxjs';
 import { describeApiError } from '../../../../core/api/api-error-message';
@@ -29,6 +31,8 @@ import {
   PriceListsApiService,
 } from '../../../inventory/price-lists/data-access/price-lists-api.service';
 import { Variant, VariantPrice, VariantsApiService } from '../data-access/variants-api.service';
+import { ProductsApiService } from '../../products/data-access/products-api.service';
+import { Attribute, AttributesApiService } from '../../attributes/data-access/attributes-api.service';
 
 interface PriceRow {
   readonly list: PriceList;
@@ -46,6 +50,7 @@ interface PriceRow {
     MatIconModule,
     MatInputModule,
     MatProgressBarModule,
+    MatSelectModule,
     MatTableModule,
     PageHeaderComponent,
     ReactiveFormsModule,
@@ -140,6 +145,21 @@ interface PriceRow {
               <mat-label i18n="@@variants.barcode">Barcode</mat-label>
               <input matInput formControlName="barcode" maxlength="64" />
             </mat-form-field>
+            @if (attributeSelections(); as selections) {
+              <ng-container [formGroup]="selections">
+                @for (attribute of attributes(); track attribute.id) {
+                  <mat-form-field appearance="outline">
+                    <mat-label>{{ attribute.name }}</mat-label>
+                    <mat-select [formControlName]="attribute.id">
+                      <mat-option value="" i18n="@@common.none">None</mat-option>
+                      @for (value of attribute.values; track value.id) {
+                        <mat-option [value]="value.id">{{ value.value }}</mat-option>
+                      }
+                    </mat-select>
+                  </mat-form-field>
+                }
+              </ng-container>
+            }
           </div>
           <p class="form-hint" i18n="@@variants.auditNotice">
             Changes to SKU and barcode are recorded in the audit trail.
@@ -243,6 +263,8 @@ interface PriceRow {
 export class VariantDetailPage {
   private readonly api = inject(VariantsApiService);
   private readonly priceListsApi = inject(PriceListsApiService);
+  private readonly productsApi = inject(ProductsApiService);
+  private readonly attributesApi = inject(AttributesApiService);
   private readonly route = inject(ActivatedRoute);
   private readonly confirm = inject(ConfirmService);
   private readonly snackBar = inject(MatSnackBar);
@@ -271,6 +293,8 @@ export class VariantDetailPage {
   readonly busy = signal(false);
   readonly identifierError = signal<string | null>(null);
   readonly priceControls = new Map<string, FormControl<number | null>>();
+  readonly attributes = signal<Attribute[]>([]);
+  readonly attributeSelections = signal<FormGroup<Record<string, FormControl<string>>> | null>(null);
 
   readonly identifiers = this.formBuilder.group({
     sku: ['', [Validators.required, Validators.maxLength(64)]],
@@ -319,7 +343,8 @@ export class VariantDetailPage {
           this.subtitle.set(variant.attributeValues.map((item) => item.value).join(' · ') || null);
           this.identifiers.reset({ sku: variant.sku, barcode: variant.barcode ?? '' });
           this.priceRows.set(rows);
-          rows.forEach((row) => this.priceControl(row.list.id).setValue(row.price?.price ?? null));
+          rows.forEach((row) => this.priceControl(row.list.id).reset());
+          this.loadAttributeSelections(variant);
           this.loading.set(false);
         },
         error: (error: unknown) => {
@@ -349,9 +374,11 @@ export class VariantDetailPage {
       return;
     }
     const value = this.identifiers.getRawValue();
+    const attributeValueIds = Object.values(this.attributeSelections()?.getRawValue() ?? {})
+      .filter((id) => id.length > 0);
     this.busy.set(true);
     this.identifierError.set(null);
-    this.api.updateIdentifiers(current.id, value.sku.trim(), blankToNull(value.barcode)).subscribe({
+    this.api.updateIdentifiers(current.id, value.sku.trim(), blankToNull(value.barcode), attributeValueIds).subscribe({
       next: () => {
         this.busy.set(false);
         this.snackBar.open($localize`:@@variants.identifiersSaved:Identifiers saved.`, undefined, {
@@ -409,6 +436,7 @@ export class VariantDetailPage {
     this.api.setPrice(row.list.id, this.variantId, price).subscribe({
       next: () => {
         this.busy.set(false);
+        this.priceControl(row.list.id).reset();
         this.snackBar.open($localize`:@@priceLists.saved:Price saved.`, undefined, {
           duration: 3000,
         });
@@ -458,5 +486,23 @@ export class VariantDetailPage {
             ),
         });
       });
+  }
+
+  private loadAttributeSelections(variant: Variant): void {
+    forkJoin({
+      product: this.productsApi.get(variant.productId),
+      attributes: this.attributesApi.list(),
+    }).subscribe({
+      next: ({ product, attributes }) => {
+        const configured = attributes.filter((attribute) => product.attributeIds.includes(attribute.id));
+        const selected = new Map(variant.attributeValues.map((value) => [value.attributeId, value.attributeValueId]));
+        this.attributes.set(configured);
+        this.attributeSelections.set(this.formBuilder.group(Object.fromEntries(configured.map((attribute) => [
+          attribute.id,
+          this.formBuilder.control(selected.get(attribute.id) ?? ''),
+        ]))));
+      },
+      error: () => this.attributeSelections.set(this.formBuilder.group({})),
+    });
   }
 }

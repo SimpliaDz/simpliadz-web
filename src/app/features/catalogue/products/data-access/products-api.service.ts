@@ -24,6 +24,7 @@ export interface Product {
   readonly isActive: boolean;
   readonly createdAt: string;
   readonly updatedAt: string;
+  readonly attributeIds: string[];
   readonly variants: ProductVariantSummary[];
 }
 
@@ -33,6 +34,7 @@ export interface ProductRequest {
   readonly description: string | null;
   readonly brandId: string | null;
   readonly categoryId: string | null;
+  readonly attributeIds: readonly string[];
 }
 
 export interface ProductFilter {
