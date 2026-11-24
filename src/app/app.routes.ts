@@ -325,6 +325,13 @@ export const routes: Routes = [
           ),
       },
       {
+        path: 'sales/pos',
+        title: $localize`:@@title.pos:Point of Sale | SimpliaDz`,
+        ...permissioned(['sales.manage']),
+        loadComponent: () =>
+          import('./features/sales/sales/pages/pos.page').then((m) => m.PosPage),
+      },
+      {
         path: 'sales/sales',
         title: $localize`:@@title.sales:Sales | SimpliaDz`,
         ...permissioned(['sales.view']),
