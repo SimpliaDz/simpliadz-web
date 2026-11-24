@@ -10,6 +10,7 @@ export interface CategoryNode {
   readonly isActive: boolean;
   readonly updatedAt: string;
   readonly attributeIds: string[];
+  readonly requiredAttributeIds: string[];
   readonly children: CategoryNode[];
 }
 
@@ -17,6 +18,7 @@ export interface CategoryRequest {
   readonly name: string;
   readonly parentCategoryId: string | null;
   readonly attributeIds: readonly string[];
+  readonly requiredAttributeIds: readonly string[];
 }
 
 @Injectable({ providedIn: 'root' })

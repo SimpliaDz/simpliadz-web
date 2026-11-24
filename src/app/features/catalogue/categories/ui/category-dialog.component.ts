@@ -44,6 +44,14 @@ export interface ParentOption {
             }
           </mat-form-field>
           <mat-form-field appearance="outline" class="full-row">
+            <mat-label i18n="@@categories.field.requiredAttributes">Required variant attributes</mat-label>
+            <mat-select formControlName="requiredAttributeIds" multiple>
+              @for (attribute of selectedAttributes(); track attribute.id) {
+                <mat-option [value]="attribute.id">{{ attribute.name }}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="full-row">
             <mat-label i18n="@@categories.field.attributes">Variant attributes</mat-label>
             <mat-select formControlName="attributeIds" multiple>
               @for (attribute of attributes(); track attribute.id) {
@@ -89,8 +97,13 @@ export class CategoryDialogComponent {
     name: [this.data.category?.name ?? '', [Validators.required, Validators.maxLength(150)]],
     parentCategoryId: [this.data.category?.parentCategoryId ?? ''],
     attributeIds: this.formBuilder.control<string[]>(this.data.category?.attributeIds ?? []),
+    requiredAttributeIds: this.formBuilder.control<string[]>(this.data.category?.requiredAttributeIds ?? []),
   });
   readonly attributes = signal<Attribute[]>([]);
+  selectedAttributes(): Attribute[] {
+    const ids = new Set(this.form.controls.attributeIds.value);
+    return this.attributes().filter((attribute) => ids.has(attribute.id));
+  }
   readonly saving = signal(false);
   readonly error = signal<string | null>(null);
 
@@ -109,6 +122,7 @@ export class CategoryDialogComponent {
       name: value.name.trim(),
       parentCategoryId: blankToNull(value.parentCategoryId),
       attributeIds: value.attributeIds,
+      requiredAttributeIds: value.requiredAttributeIds,
     };
     const call = this.data.category
       ? this.api.update(this.data.category.id, request)
