@@ -66,6 +66,12 @@ export const routes: Routes = [
         loadComponent: () =>
           import('./features/organization/pages/organization.page').then((m) => m.OrganizationPage),
       },
+      {
+        path: 'organization/settings',
+        title: 'Organization settings | SimpliaDz',
+        ...permissioned(['organization.manage']),
+        loadComponent: () => import('./features/organization/pages/organization-settings.page').then((m) => m.OrganizationSettingsPage),
+      },
 
       // Catalogue
       {

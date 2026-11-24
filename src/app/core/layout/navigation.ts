@@ -256,6 +256,12 @@ export const navigationSections: readonly NavigationSection[] = [
         path: '/app/organization',
         permissions: ['organization.view'],
       },
+      {
+        label: 'Organization settings',
+        icon: 'settings',
+        path: '/app/organization/settings',
+        permissions: ['organization.manage'],
+      },
     ],
   },
   {

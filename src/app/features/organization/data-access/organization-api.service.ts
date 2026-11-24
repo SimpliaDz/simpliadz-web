@@ -29,6 +29,7 @@ export interface OrganizationRequest {
   readonly isActive: boolean;
   readonly timeZoneId: string | null;
 }
+export interface OrganizationSetting { readonly key: string; readonly value: string | null; readonly valueType: string; readonly isSecret: boolean; readonly hasValue: boolean; }
 
 @Injectable({ providedIn: 'root' })
 export class OrganizationApiService {
@@ -43,4 +44,6 @@ export class OrganizationApiService {
   save(request: OrganizationRequest): Observable<Organization> {
     return this.http.put<Organization>(this.apiUrl.path('/organization'), request);
   }
+  settings(): Observable<OrganizationSetting[]> { return this.http.get<OrganizationSetting[]>(this.apiUrl.path('/organization/settings')); }
+  saveSetting(key: string, value: string): Observable<OrganizationSetting> { return this.http.put<OrganizationSetting>(this.apiUrl.path(`/organization/settings/${encodeURIComponent(key)}`), { value }); }
 }
