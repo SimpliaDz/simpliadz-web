@@ -28,6 +28,11 @@ export interface SalesSummary {
   readonly itemsSold: number;
   readonly averageTransactionValue: number;
 }
+export interface FinancialTrendPoint { readonly date: string; readonly netSales: number; readonly grossProfit: number; readonly expenses: number; readonly transactions: number; }
+export interface PaymentMethodBreakdown { readonly method: string; readonly amount: number; readonly percentOfPayments: number; }
+export interface LocationPerformance { readonly locationId: string; readonly locationName: string; readonly netSales: number; readonly grossProfit: number; readonly expenses: number; readonly transactions: number; }
+export interface TopProduct { readonly productId: string; readonly productName: string; readonly netSales: number; readonly netQuantity: number; }
+export interface FinancialDashboard { readonly fromDate: string; readonly toDate: string; readonly locationId: string | null; readonly netSales: number; readonly discounts: number; readonly refunds: number; readonly costOfGoodsSold: number; readonly grossProfit: number; readonly grossMarginPercent: number; readonly expenses: number; readonly operatingContribution: number; readonly transactionCount: number; readonly itemsSold: number; readonly averageTransactionValue: number; readonly dailyTrend: FinancialTrendPoint[]; readonly paymentMethods: PaymentMethodBreakdown[]; readonly locations: LocationPerformance[]; readonly topProducts: TopProduct[]; }
 
 export interface ProductPerformance {
   readonly productId: string;
@@ -111,6 +116,12 @@ export class ReportsApiService {
     return this.http.get<SalesSummary>(this.apiUrl.path('/reports/sales/summary'), {
       params: new HttpParams().set('fromDate', fromDate).set('toDate', toDate),
     });
+  }
+
+  financialDashboard(fromDate: string, toDate: string, locationId: string | null): Observable<FinancialDashboard> {
+    let params = new HttpParams().set('fromDate', fromDate).set('toDate', toDate);
+    if (locationId) params = params.set('locationId', locationId);
+    return this.http.get<FinancialDashboard>(this.apiUrl.path('/reports/financial-dashboard'), { params });
   }
 
   productPerformance(

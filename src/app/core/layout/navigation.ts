@@ -19,6 +19,12 @@ export const navigationSections: readonly NavigationSection[] = [
     title: $localize`:@@nav.section.overview:Overview`,
     items: [
       {
+        label: $localize`:@@nav.financialDashboard:Financial dashboard`,
+        icon: 'monitoring',
+        path: '/app/reports/financial',
+        permissions: ['reports.sales-summary.view'],
+      },
+      {
         label: $localize`:@@nav.dashboard:Dashboard`,
         icon: 'dashboard',
         path: '/app/dashboard',

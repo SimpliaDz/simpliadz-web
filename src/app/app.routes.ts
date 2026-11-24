@@ -418,6 +418,12 @@ export const routes: Routes = [
 
       // Reports and audit
       {
+        path: 'reports/financial',
+        title: 'Financial dashboard | SimpliaDz',
+        ...permissioned(['reports.sales-summary.view']),
+        loadComponent: () => import('./features/reporting/pages/financial-dashboard.page').then((m) => m.FinancialDashboardPage),
+      },
+      {
         path: 'reports/sales',
         title: $localize`:@@title.report.sales:Sales summary | SimpliaDz`,
         canActivate: [permissionGuard],
