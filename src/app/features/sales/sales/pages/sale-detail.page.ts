@@ -94,6 +94,14 @@ interface ReturnRowControl {
         [subtitle]="locationName(current.locationId) + ' · ' + priceListName(current.priceListId)"
       >
         <app-status-chip [label]="statusLabel(current.status)" [tone]="tone(current.status)" />
+        <button mat-stroked-button type="button" [disabled]="busy()" (click)="downloadProForma(current)">
+          Download pro-forma
+        </button>
+        @if (current.status === 'Completed' || current.status === 'PartiallyReturned' || current.status === 'Returned') {
+          <button mat-stroked-button type="button" [disabled]="busy()" (click)="downloadReceipt(current)">
+            Download receipt
+          </button>
+        }
         @if (canManage() && current.status === 'Draft') {
           <button
             mat-stroked-button
@@ -771,6 +779,28 @@ export class SaleDetailPage {
           },
         });
       });
+  }
+
+  downloadProForma(current: Sale): void {
+    this.downloadDocument(this.api.proFormaPdf(current.id), `pro-forma-${current.saleNumber ?? current.id}.pdf`);
+  }
+
+  downloadReceipt(current: Sale): void {
+    this.downloadDocument(this.api.receiptPdf(current.id), `receipt-${current.saleNumber ?? current.id}.pdf`);
+  }
+
+  private downloadDocument(request: ReturnType<SalesApiService['proFormaPdf']>, fileName: string): void {
+    request.subscribe({
+      next: (content) => {
+        const url = URL.createObjectURL(content);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = fileName;
+        link.click();
+        URL.revokeObjectURL(url);
+      },
+      error: (error) => this.actionError.set(describeApiError(error, 'The PDF could not be generated.')),
+    });
   }
 
   cancel(current: Sale): void {

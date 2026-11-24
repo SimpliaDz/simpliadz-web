@@ -122,6 +122,18 @@ export class SalesApiService {
     return this.http.get<Sale>(this.apiUrl.path(`/sales/${id}`));
   }
 
+  proFormaPdf(id: string): Observable<Blob> {
+    return this.http.get(this.apiUrl.path(`/sales/${id}/documents/pro-forma.pdf`), {
+      responseType: 'blob',
+    });
+  }
+
+  receiptPdf(id: string): Observable<Blob> {
+    return this.http.get(this.apiUrl.path(`/sales/${id}/documents/receipt.pdf`), {
+      responseType: 'blob',
+    });
+  }
+
   create(request: NewSaleRequest): Observable<Sale> {
     return this.http.post<Sale>(this.apiUrl.path('/sales'), request);
   }
