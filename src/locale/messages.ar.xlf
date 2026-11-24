@@ -2,6 +2,19 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en-US" target-language="ar" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="title.loyalty" datatype="html"><source>Customer loyalty | SimpliaDz</source><target>ولاء العملاء | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.pos" datatype="html"><source>Point of Sale | SimpliaDz</source><target>نقطة البيع | SimpliaDz</target></trans-unit>
+      <trans-unit id="brands.activated" datatype="html"><source>Brand activated.</source><target>تم تفعيل العلامة التجارية.</target></trans-unit>
+      <trans-unit id="brands.activateFailed" datatype="html"><source>The brand could not be activated.</source><target>تعذر تفعيل العلامة التجارية.</target></trans-unit>
+      <trans-unit id="products.activated" datatype="html"><source>Product activated.</source><target>تم تفعيل المنتج.</target></trans-unit>
+      <trans-unit id="products.activateFailed" datatype="html"><source>The product could not be activated.</source><target>تعذر تفعيل المنتج.</target></trans-unit>
+      <trans-unit id="categories.field.attributes" datatype="html"><source>Variant attributes</source><target>خصائص المتغيرات</target></trans-unit>
+      <trans-unit id="categories.field.requiredAttributes" datatype="html"><source>Required variant attributes</source><target>خصائص المتغيرات المطلوبة</target></trans-unit>
+      <trans-unit id="categories.activated" datatype="html"><source>Category activated.</source><target>تم تفعيل الفئة.</target></trans-unit>
+      <trans-unit id="categories.activateFailed" datatype="html"><source>The category could not be activated.</source><target>تعذر تفعيل الفئة.</target></trans-unit>
+      <trans-unit id="nav.financialDashboard" datatype="html"><source>Financial dashboard</source><target>لوحة المعلومات المالية</target></trans-unit>
+      <trans-unit id="nav.pos" datatype="html"><source>Point of Sale</source><target>نقطة البيع</target></trans-unit>
+      <trans-unit id="nav.loyalty" datatype="html"><source>Customer loyalty</source><target>ولاء العملاء</target></trans-unit>
       <trans-unit id="title.signIn" datatype="html"><source>Sign in | SimpliaDz</source><target>تسجيل الدخول | SimpliaDz</target></trans-unit>
       <trans-unit id="title.forgotPassword" datatype="html"><source>Reset password | SimpliaDz</source><target>إعادة تعيين كلمة المرور | SimpliaDz</target></trans-unit>
       <trans-unit id="title.resetPassword" datatype="html"><source>Choose a password | SimpliaDz</source><target>اختيار كلمة مرور | SimpliaDz</target></trans-unit>

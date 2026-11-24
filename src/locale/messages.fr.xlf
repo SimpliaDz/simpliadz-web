@@ -2,6 +2,19 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en-US" target-language="fr" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="title.loyalty" datatype="html"><source>Customer loyalty | SimpliaDz</source><target>Fidélité client | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.pos" datatype="html"><source>Point of Sale | SimpliaDz</source><target>Point de vente | SimpliaDz</target></trans-unit>
+      <trans-unit id="brands.activated" datatype="html"><source>Brand activated.</source><target>Marque activée.</target></trans-unit>
+      <trans-unit id="brands.activateFailed" datatype="html"><source>The brand could not be activated.</source><target>La marque n’a pas pu être activée.</target></trans-unit>
+      <trans-unit id="products.activated" datatype="html"><source>Product activated.</source><target>Produit activé.</target></trans-unit>
+      <trans-unit id="products.activateFailed" datatype="html"><source>The product could not be activated.</source><target>Le produit n’a pas pu être activé.</target></trans-unit>
+      <trans-unit id="categories.field.attributes" datatype="html"><source>Variant attributes</source><target>Attributs des variantes</target></trans-unit>
+      <trans-unit id="categories.field.requiredAttributes" datatype="html"><source>Required variant attributes</source><target>Attributs de variante obligatoires</target></trans-unit>
+      <trans-unit id="categories.activated" datatype="html"><source>Category activated.</source><target>Catégorie activée.</target></trans-unit>
+      <trans-unit id="categories.activateFailed" datatype="html"><source>The category could not be activated.</source><target>La catégorie n’a pas pu être activée.</target></trans-unit>
+      <trans-unit id="nav.financialDashboard" datatype="html"><source>Financial dashboard</source><target>Tableau de bord financier</target></trans-unit>
+      <trans-unit id="nav.pos" datatype="html"><source>Point of Sale</source><target>Point de vente</target></trans-unit>
+      <trans-unit id="nav.loyalty" datatype="html"><source>Customer loyalty</source><target>Fidélité client</target></trans-unit>
       <trans-unit id="title.signIn" datatype="html"><source>Sign in | SimpliaDz</source><target>Connexion | SimpliaDz</target></trans-unit>
       <trans-unit id="title.forgotPassword" datatype="html"><source>Reset password | SimpliaDz</source><target>Réinitialiser le mot de passe | SimpliaDz</target></trans-unit>
       <trans-unit id="title.resetPassword" datatype="html"><source>Choose a password | SimpliaDz</source><target>Choisir un mot de passe | SimpliaDz</target></trans-unit>
