@@ -124,6 +124,12 @@ export const navigationSections: readonly NavigationSection[] = [
     title: $localize`:@@nav.section.sales:Sales`,
     items: [
       {
+        label: $localize`:@@nav.pos:Point of Sale`,
+        icon: 'point_of_sale',
+        path: '/app/sales/pos',
+        permissions: ['sales.manage'],
+      },
+      {
         label: $localize`:@@nav.salesList:Sales`,
         icon: 'point_of_sale',
         path: '/app/sales/sales',
