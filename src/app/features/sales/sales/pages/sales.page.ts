@@ -1,18 +1,15 @@
 import { DatePipe, DecimalPipe } from '@angular/common';
-import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterLink, Router } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
-import { MatDialog } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table';
 import { forkJoin } from 'rxjs';
 import { describeApiError } from '../../../../core/api/api-error-message';
-import { HasPermissionDirective } from '../../../../core/auth/has-permission.directive';
 import { PagerComponent } from '../../../../shared/ui/pager/pager.component';
 import { PageHeaderComponent } from '../../../../shared/ui/page-header/page-header.component';
 import { StatePanelComponent } from '../../../../shared/ui/state-panel/state-panel.component';
@@ -24,13 +21,7 @@ import {
   Location,
   LocationsApiService,
 } from '../../../inventory/locations/data-access/locations-api.service';
-import {
-  PriceList,
-  PriceListsApiService,
-} from '../../../inventory/price-lists/data-access/price-lists-api.service';
-import { Customer, CustomersApiService } from '../../customers/data-access/customers-api.service';
 import { Sale, SaleFilter, SaleStatus, SalesApiService } from '../data-access/sales-api.service';
-import { NewSaleDialogComponent, NewSaleDialogData } from '../ui/new-sale-dialog.component';
 
 const pageSize = 50;
 const statuses: SaleStatus[] = ['Draft', 'Completed', 'PartiallyReturned', 'Returned', 'Cancelled'];
@@ -41,10 +32,8 @@ const statuses: SaleStatus[] = ['Draft', 'Completed', 'PartiallyReturned', 'Retu
     DatePipe,
     DecimalPipe,
     FormsModule,
-    HasPermissionDirective,
     MatButtonModule,
     MatFormFieldModule,
-    MatIconModule,
     MatInputModule,
     MatProgressBarModule,
     MatSelectModule,
@@ -58,14 +47,9 @@ const statuses: SaleStatus[] = ['Draft', 'Completed', 'PartiallyReturned', 'Retu
   template: `
     <app-page-header
       [title]="heading"
-      subtitle="Point-of-sale receipts. A sale is a draft until it is completed and paid."
+      subtitle="Search sale history and download the associated business documents. Sales are created and paid in Point of Sale."
       i18n-subtitle="@@sales.subtitle"
-    >
-      <button *appHasPermission="'sales.manage'" mat-flat-button type="button" (click)="openNew()">
-        <mat-icon aria-hidden="true">point_of_sale</mat-icon>
-        <span i18n="@@sales.create">New sale</span>
-      </button>
-    </app-page-header>
+    />
 
     <div class="toolbar">
       <mat-form-field appearance="outline">
@@ -130,6 +114,15 @@ const statuses: SaleStatus[] = ['Draft', 'Completed', 'PartiallyReturned', 'Retu
               <app-status-chip [label]="statusLabel(row.status)" [tone]="tone(row.status)" />
             </td>
           </ng-container>
+          <ng-container matColumnDef="documents">
+            <th mat-header-cell *matHeaderCellDef>Documents</th>
+            <td mat-cell *matCellDef="let row">
+              <button mat-button type="button" (click)="downloadProForma(row)">Pro-forma</button>
+              @if (row.status === 'Completed' || row.status === 'PartiallyReturned' || row.status === 'Returned') {
+                <button mat-button type="button" (click)="downloadReceipt(row)">Receipt</button>
+              }
+            </td>
+          </ng-container>
           <tr mat-header-row *matHeaderRowDef="columns"></tr>
           <tr mat-row *matRowDef="let row; columns: columns"></tr>
         </table>
@@ -142,23 +135,17 @@ const statuses: SaleStatus[] = ['Draft', 'Completed', 'PartiallyReturned', 'Retu
 export class SalesPage {
   private readonly api = inject(SalesApiService);
   private readonly locationsApi = inject(LocationsApiService);
-  private readonly priceListsApi = inject(PriceListsApiService);
-  private readonly customersApi = inject(CustomersApiService);
-  private readonly dialog = inject(MatDialog);
-  private readonly router = inject(Router);
 
   readonly heading = $localize`:@@sales.heading:Sales`;
   readonly errorTitle = $localize`:@@sales.loadFailed:We could not load sales`;
   readonly emptyTitle = $localize`:@@sales.empty.title:No sales match`;
-  readonly emptyMessage = $localize`:@@sales.empty.message:Start a new sale to ring up a customer.`;
+  readonly emptyMessage = $localize`:@@sales.empty.message:Try changing the search or filters.`;
   readonly draftLabel = $localize`:@@sales.draft:Draft`;
-  readonly columns = ['number', 'date', 'location', 'total', 'status'];
+  readonly columns = ['number', 'date', 'location', 'total', 'status', 'documents'];
   readonly statusOptions = statuses;
 
   readonly sales = signal<Sale[]>([]);
   readonly locations = signal<Location[]>([]);
-  readonly priceLists = signal<PriceList[]>([]);
-  readonly customers = signal<Customer[]>([]);
   readonly locationId = signal<string | null>(null);
   readonly status = signal<SaleStatus | null>(null);
   search = '';
@@ -166,8 +153,6 @@ export class SalesPage {
   readonly hasNext = signal(false);
   readonly loading = signal(true);
   readonly loadError = signal<string | null>(null);
-
-  readonly canStart = computed(() => this.locations().length > 0);
 
   constructor() {
     this.load();
@@ -187,20 +172,10 @@ export class SalesPage {
     forkJoin({
       sales: this.api.list(filter),
       locations: this.locationsApi.list(),
-      priceLists: this.priceListsApi.list(),
-      customers: this.customersApi.list({
-        search: null,
-        customerType: null,
-        isActive: true,
-        page: 1,
-        pageSize: 100,
-      }),
     }).subscribe({
-      next: ({ sales, locations, priceLists, customers }) => {
+      next: ({ sales, locations }) => {
         this.sales.set(sales);
         this.locations.set(locations);
-        this.priceLists.set(priceLists);
-        this.customers.set(customers);
         this.hasNext.set(sales.length === pageSize);
         this.loading.set(false);
       },
@@ -233,24 +208,26 @@ export class SalesPage {
     this.load();
   }
 
-  openNew(): void {
-    const data: NewSaleDialogData = {
-      locations: this.locations(),
-      priceLists: this.priceLists(),
-      customers: this.customers(),
-    };
-    this.dialog
-      .open<NewSaleDialogComponent, NewSaleDialogData, Sale>(NewSaleDialogComponent, {
-        data,
-        width: '34rem',
-        autoFocus: 'dialog',
-      })
-      .afterClosed()
-      .subscribe((sale) => {
-        if (sale) {
-          void this.router.navigate(['/app/sales/sales', sale.id]);
-        }
-      });
+  downloadProForma(sale: Sale): void {
+    this.download(this.api.proFormaPdf(sale.id), `pro-forma-${sale.saleNumber ?? sale.id}.pdf`);
+  }
+
+  downloadReceipt(sale: Sale): void {
+    this.download(this.api.receiptPdf(sale.id), `receipt-${sale.saleNumber ?? sale.id}.pdf`);
+  }
+
+  private download(request: ReturnType<SalesApiService['proFormaPdf']>, name: string): void {
+    request.subscribe({
+      next: (content) => {
+        const url = URL.createObjectURL(content);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = name;
+        link.click();
+        URL.revokeObjectURL(url);
+      },
+      error: (error: unknown) => this.loadError.set(describeApiError(error, 'The PDF could not be generated.')),
+    });
   }
 
   locationName(id: string): string {
