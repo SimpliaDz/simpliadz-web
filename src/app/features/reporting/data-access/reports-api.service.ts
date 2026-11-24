@@ -112,9 +112,11 @@ export class ReportsApiService {
     return this.http.get<DashboardSummary>(this.apiUrl.path('/reports/dashboard/today'));
   }
 
-  salesSummary(fromDate: string, toDate: string): Observable<SalesSummary> {
+  salesSummary(fromDate: string, toDate: string, locationId: string | null = null): Observable<SalesSummary> {
+    let params = new HttpParams().set('fromDate', fromDate).set('toDate', toDate);
+    if (locationId) params = params.set('locationId', locationId);
     return this.http.get<SalesSummary>(this.apiUrl.path('/reports/sales/summary'), {
-      params: new HttpParams().set('fromDate', fromDate).set('toDate', toDate),
+      params,
     });
   }
 

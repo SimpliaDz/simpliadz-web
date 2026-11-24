@@ -89,6 +89,7 @@ export interface SaleFilter extends PageRequest {
   readonly locationId: string | null;
   readonly customerId: string | null;
   readonly status: SaleStatus | null;
+  readonly search: string | null;
 }
 
 export interface NewSaleRequest {
@@ -114,6 +115,9 @@ export class SalesApiService {
     }
     if (filter.status) {
       params = params.set('status', filter.status);
+    }
+    if (filter.search) {
+      params = params.set('search', filter.search);
     }
     return this.http.get<Sale[]>(this.apiUrl.path('/sales'), { params });
   }

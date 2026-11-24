@@ -1,10 +1,12 @@
 import { DatePipe, DecimalPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { RouterLink, Router } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table';
@@ -38,10 +40,12 @@ const statuses: SaleStatus[] = ['Draft', 'Completed', 'PartiallyReturned', 'Retu
   imports: [
     DatePipe,
     DecimalPipe,
+    FormsModule,
     HasPermissionDirective,
     MatButtonModule,
     MatFormFieldModule,
     MatIconModule,
+    MatInputModule,
     MatProgressBarModule,
     MatSelectModule,
     MatTableModule,
@@ -64,6 +68,11 @@ const statuses: SaleStatus[] = ['Draft', 'Completed', 'PartiallyReturned', 'Retu
     </app-page-header>
 
     <div class="toolbar">
+      <mat-form-field appearance="outline">
+        <mat-label>Search sale or customer</mat-label>
+        <input matInput name="saleSearch" [(ngModel)]="search" maxlength="150" (keyup.enter)="runSearch()" placeholder="Sale ID, number, customer, phone or email" />
+      </mat-form-field>
+      <button mat-stroked-button type="button" (click)="runSearch()">Search</button>
       <mat-form-field appearance="outline">
         <mat-label i18n="@@stock.field.location">Location</mat-label>
         <mat-select [value]="locationId()" (selectionChange)="setFilter('location', $event.value)">
@@ -152,6 +161,7 @@ export class SalesPage {
   readonly customers = signal<Customer[]>([]);
   readonly locationId = signal<string | null>(null);
   readonly status = signal<SaleStatus | null>(null);
+  search = '';
   readonly page = signal(1);
   readonly hasNext = signal(false);
   readonly loading = signal(true);
@@ -170,6 +180,7 @@ export class SalesPage {
       locationId: this.locationId(),
       customerId: null,
       status: this.status(),
+      search: this.search.trim() || null,
       page: this.page(),
       pageSize,
     };
@@ -208,6 +219,11 @@ export class SalesPage {
     } else {
       this.status.set(value as SaleStatus | null);
     }
+    this.page.set(1);
+    this.load();
+  }
+
+  runSearch(): void {
     this.page.set(1);
     this.load();
   }

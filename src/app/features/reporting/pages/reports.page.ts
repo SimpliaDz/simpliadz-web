@@ -69,6 +69,15 @@ function dayText(date: Date): string {
             <mat-label i18n="@@expenses.to">To</mat-label>
             <input matInput type="date" name="to" [(ngModel)]="toDate" required />
           </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Location</mat-label>
+            <mat-select name="salesLocation" [(ngModel)]="salesLocationId">
+              <mat-option [value]="null">All locations</mat-option>
+              @for (location of locations(); track location.id) {
+                <mat-option [value]="location.id">{{ location.name }}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
           <button mat-flat-button type="submit" [disabled]="busy()" i18n="@@report.run">
             Run report
           </button>
@@ -387,6 +396,7 @@ export class ReportsPage {
   toDate = dayText(new Date());
   rankBy: 'Quantity' | 'Revenue' = 'Quantity';
   locationId: string | null = null;
+  salesLocationId: string | null = null;
   includeZero = false;
   private selectedProduct: string | null = null;
 
@@ -399,7 +409,7 @@ export class ReportsPage {
 
   runSales(): void {
     this.run(
-      () => this.api.salesSummary(this.fromDate, this.toDate),
+      () => this.api.salesSummary(this.fromDate, this.toDate, this.salesLocationId),
       (value) => this.sales.set(value),
     );
   }
