@@ -7,6 +7,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { describeApiError } from '../../../../core/api/api-error-message';
+import { AuthSessionService } from '../../../../core/auth/auth-session.service';
 import { PageHeaderComponent } from '../../../../shared/ui/page-header/page-header.component';
 import { DiscountType, PosContext, PosCustomer, PosVariant, Sale, SalesApiService } from '../data-access/sales-api.service';
 
@@ -16,7 +17,7 @@ import { DiscountType, PosContext, PosCustomer, PosVariant, Sale, SalesApiServic
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
 <app-page-header title="Point of Sale" subtitle="Fast checkout for the active cash register.">
-  @if (context()?.cashRegisterCode) {<span class="chip"><mat-icon>point_of_sale</mat-icon>{{ context()?.cashRegisterCode }} · Occupied by you</span><button mat-stroked-button type="button" (click)="changeRegister()"><mat-icon>swap_horiz</mat-icon>Change register</button>}
+  @if (context()?.cashRegisterCode) {<span class="chip"><mat-icon>point_of_sale</mat-icon>{{ context()?.cashRegisterCode }} · {{ cashierName() }}</span><button mat-stroked-button type="button" (click)="changeRegister()"><mat-icon>swap_horiz</mat-icon>Change register</button>}
 </app-page-header>
 @if (context(); as ctx) {
   @if (!ctx.isClockedIn) {<mat-card appearance="outlined"><mat-card-content><h2>Clock in to start selling</h2><p class="muted">Clock in from My time, then return here.</p></mat-card-content></mat-card>}
@@ -44,6 +45,7 @@ import { DiscountType, PosContext, PosCustomer, PosVariant, Sale, SalesApiServic
 })
 export class PosPage {
   private readonly api = inject(SalesApiService);
+  private readonly session = inject(AuthSessionService);
   private searchTimer?: ReturnType<typeof setTimeout>;
   private customerTimer?: ReturnType<typeof setTimeout>;
   @ViewChild('scanner') scanner?: ElementRef<HTMLInputElement>;
@@ -51,6 +53,7 @@ export class PosPage {
   readonly context = signal<PosContext | null>(null); readonly sale = signal<Sale | null>(null); readonly results = signal<readonly PosVariant[]>([]); readonly held = signal<readonly Sale[]>([]); readonly labels = signal<ReadonlyMap<string, string>>(new Map()); readonly checkout = signal<'Cash' | 'Card' | null>(null); readonly customer = signal<PosCustomer | null>(null); readonly ticketCustomers = signal<ReadonlyMap<string, PosCustomer | null>>(new Map()); readonly showCustomerSearch = signal(false); readonly customerResults = signal<readonly PosCustomer[]>([]); readonly error = signal<string | null>(null);
   code = ''; search = ''; customerSearch = ''; printTicket = false; discountType: DiscountType = 'Percentage'; discountValue: number | null = null;
   constructor() { this.load(); }
+  cashierName(): string { return this.session.user()?.displayName ?? this.session.user()?.email ?? 'Cashier'; }
   @HostListener('window:keydown', ['$event']) shortcut(event: KeyboardEvent): void { if (event.key === 'F5' && this.sale() && !this.checkout()) { event.preventDefault(); this.openCheckout('Cash'); } if (event.key === 'Enter' && this.checkout()) { event.preventDefault(); this.confirmPay(); } }
   load(): void { this.api.posContext().subscribe({ next: x => this.context.set(x), error: e => this.fail(e, 'Could not load POS.') }); }
   changeRegister(): void { this.api.releaseRegister().subscribe({ next: () => { this.sale.set(null); this.customer.set(null); this.results.set([]); this.load(); }, error: e => this.fail(e, 'Could not change register.') }); }

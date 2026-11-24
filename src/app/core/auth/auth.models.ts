@@ -16,6 +16,7 @@ export interface LoginResponse {
 export interface CurrentUser {
   readonly userId: string;
   readonly email: string;
+  readonly displayName?: string;
   readonly roles: readonly string[];
   readonly permissions: readonly string[];
   readonly languageCode?: string;
