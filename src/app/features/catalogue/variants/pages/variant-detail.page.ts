@@ -33,10 +33,19 @@ import {
 import { Variant, VariantPrice, VariantsApiService } from '../data-access/variants-api.service';
 import { ProductsApiService } from '../../products/data-access/products-api.service';
 import { Attribute, AttributesApiService } from '../../attributes/data-access/attributes-api.service';
+import { CategoriesApiService, CategoryNode } from '../../categories/data-access/categories-api.service';
 
 interface PriceRow {
   readonly list: PriceList;
   readonly price: VariantPrice | null;
+}
+function findCategory(nodes: readonly CategoryNode[], id: string | null): CategoryNode | null {
+  for (const node of nodes) {
+    if (node.id === id) return node;
+    const nested = findCategory(node.children, id);
+    if (nested) return nested;
+  }
+  return null;
 }
 
 @Component({
@@ -265,6 +274,7 @@ export class VariantDetailPage {
   private readonly priceListsApi = inject(PriceListsApiService);
   private readonly productsApi = inject(ProductsApiService);
   private readonly attributesApi = inject(AttributesApiService);
+  private readonly categoriesApi = inject(CategoriesApiService);
   private readonly route = inject(ActivatedRoute);
   private readonly confirm = inject(ConfirmService);
   private readonly snackBar = inject(MatSnackBar);
@@ -492,9 +502,11 @@ export class VariantDetailPage {
     forkJoin({
       product: this.productsApi.get(variant.productId),
       attributes: this.attributesApi.list(),
+      categories: this.categoriesApi.tree(),
     }).subscribe({
-      next: ({ product, attributes }) => {
-        const configured = attributes.filter((attribute) => product.attributeIds.includes(attribute.id));
+      next: ({ product, attributes, categories }) => {
+        const category = findCategory(categories, product.categoryId);
+        const configured = attributes.filter((attribute) => category?.attributeIds.includes(attribute.id));
         const selected = new Map(variant.attributeValues.map((value) => [value.attributeId, value.attributeValueId]));
         this.attributes.set(configured);
         this.attributeSelections.set(this.formBuilder.group(Object.fromEntries(configured.map((attribute) => [

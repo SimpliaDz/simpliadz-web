@@ -8,6 +8,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { describeApiError } from '../../../../core/api/api-error-message';
 import { blankToNull } from '../../../../shared/forms/form-values';
 import { CategoriesApiService, CategoryNode } from '../data-access/categories-api.service';
+import { Attribute, AttributesApiService } from '../../attributes/data-access/attributes-api.service';
 
 export interface CategoryDialogData {
   readonly category: CategoryNode | null;
@@ -43,6 +44,14 @@ export interface ParentOption {
             }
           </mat-form-field>
           <mat-form-field appearance="outline" class="full-row">
+            <mat-label i18n="@@categories.field.attributes">Variant attributes</mat-label>
+            <mat-select formControlName="attributeIds" multiple>
+              @for (attribute of attributes(); track attribute.id) {
+                <mat-option [value]="attribute.id">{{ attribute.name }}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="full-row">
             <mat-label i18n="@@categories.field.parent">Parent category</mat-label>
             <mat-select formControlName="parentCategoryId">
               <mat-option value="" i18n="@@categories.parent.root">Top level</mat-option>
@@ -70,6 +79,7 @@ export class CategoryDialogComponent {
   readonly data = inject<CategoryDialogData>(MAT_DIALOG_DATA);
   private readonly dialogRef = inject<MatDialogRef<CategoryDialogComponent, boolean>>(MatDialogRef);
   private readonly api = inject(CategoriesApiService);
+  private readonly attributesApi = inject(AttributesApiService);
   private readonly formBuilder = inject(NonNullableFormBuilder);
 
   readonly createTitle = $localize`:@@categories.dialog.create:New category`;
@@ -78,9 +88,15 @@ export class CategoryDialogComponent {
   readonly form = this.formBuilder.group({
     name: [this.data.category?.name ?? '', [Validators.required, Validators.maxLength(150)]],
     parentCategoryId: [this.data.category?.parentCategoryId ?? ''],
+    attributeIds: this.formBuilder.control<string[]>(this.data.category?.attributeIds ?? []),
   });
+  readonly attributes = signal<Attribute[]>([]);
   readonly saving = signal(false);
   readonly error = signal<string | null>(null);
+
+  constructor() {
+    this.attributesApi.list().subscribe({ next: (attributes) => this.attributes.set(attributes) });
+  }
 
   save(): void {
     if (this.form.invalid) {
@@ -92,6 +108,7 @@ export class CategoryDialogComponent {
     const request = {
       name: value.name.trim(),
       parentCategoryId: blankToNull(value.parentCategoryId),
+      attributeIds: value.attributeIds,
     };
     const call = this.data.category
       ? this.api.update(this.data.category.id, request)

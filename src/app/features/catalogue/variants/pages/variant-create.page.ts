@@ -23,7 +23,12 @@ import {
   AttributesApiService,
 } from '../../attributes/data-access/attributes-api.service';
 import { Product, ProductsApiService } from '../../products/data-access/products-api.service';
+import { CategoriesApiService, CategoryNode } from '../../categories/data-access/categories-api.service';
 import { VariantsApiService } from '../data-access/variants-api.service';
+
+function flattenCategories(nodes: readonly CategoryNode[]): CategoryNode[] {
+  return nodes.flatMap((node) => [node, ...flattenCategories(node.children)]);
+}
 
 @Component({
   selector: 'app-variant-create-page',
@@ -123,6 +128,7 @@ import { VariantsApiService } from '../data-access/variants-api.service';
 export class VariantCreatePage {
   private readonly productsApi = inject(ProductsApiService);
   private readonly attributesApi = inject(AttributesApiService);
+  private readonly categoriesApi = inject(CategoriesApiService);
   private readonly variantsApi = inject(VariantsApiService);
   private readonly route = inject(ActivatedRoute);
   private readonly router = inject(Router);
@@ -164,11 +170,14 @@ export class VariantCreatePage {
     forkJoin({
       product: this.productsApi.get(this.productId),
       attributes: this.attributesApi.list(),
+      categories: this.categoriesApi.tree(),
     }).subscribe({
-      next: ({ product, attributes }) => {
+      next: ({ product, attributes, categories }) => {
         this.product.set(product);
         this.subtitle.set(product.name);
-        this.attributes.set(attributes.filter((attribute) => product.attributeIds.includes(attribute.id)));
+        const category = flattenCategories(categories).find((item) => item.id === product.categoryId);
+        const configured = attributes.filter((attribute) => category?.attributeIds.includes(attribute.id));
+        this.attributes.set(configured);
         this.base.set(
           this.formBuilder.group({
             sku: ['', [Validators.required, Validators.maxLength(64)]],
@@ -183,7 +192,7 @@ export class VariantCreatePage {
         this.selections.set(
           this.formBuilder.group(
             Object.fromEntries(
-              attributes.filter((attribute) => product.attributeIds.includes(attribute.id))
+              configured
                 .map((attribute) => [attribute.id, this.formBuilder.control('')]),
             ),
           ),
