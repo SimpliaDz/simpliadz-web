@@ -97,6 +97,7 @@ export interface NewSaleRequest {
   readonly priceListId: string;
 }
 export interface PosContext { readonly isClockedIn: boolean; readonly cashRegisterId: string | null; readonly cashRegisterCode: string | null; readonly cashRegisterName: string | null; readonly cashSessionId: string | null; readonly defaultPriceListId: string | null; readonly currencyCode: string | null; readonly registers: readonly { id: string; code: string; name: string; cashSessionId: string | null; occupiedByUserId: string | null; isAvailable: boolean }[]; }
+export interface PosCustomer { readonly id: string; readonly name: string; readonly phone: string | null; readonly email: string | null; }
 
 @Injectable({ providedIn: 'root' })
 export class SalesApiService {
@@ -130,6 +131,8 @@ export class SalesApiService {
   releaseRegister(): Observable<void> { return this.http.delete<void>(this.apiUrl.path('/pos/register-assignment')); }
   posCreate(customerId: string | null = null): Observable<Sale> { return this.http.post<Sale>(this.apiUrl.path('/pos/sales'), { customerId }); }
   posScan(saleId: string, code: string): Observable<Sale> { return this.http.post<Sale>(this.apiUrl.path(`/pos/sales/${saleId}/scan`), { code }); }
+  posSetCustomer(saleId: string, customerId: string | null): Observable<Sale> { return this.http.put<Sale>(this.apiUrl.path(`/pos/sales/${saleId}/customer`), { customerId }); }
+  posCustomers(search: string): Observable<PosCustomer[]> { return this.http.get<PosCustomer[]>(this.apiUrl.path('/pos/customers'), { params: new HttpParams().set('search', search) }); }
   posPay(saleId: string, amount: number, method: PaymentMethod): Observable<{ sale: Sale; payment: Payment }> { return this.http.post<{ sale: Sale; payment: Payment }>(this.apiUrl.path(`/pos/sales/${saleId}/pay`), { id: crypto.randomUUID(), amount, paymentMethod: method }); }
 
   /** Adds one unit line by exact SKU or barcode. Adding a discount requires the discount permission. */
