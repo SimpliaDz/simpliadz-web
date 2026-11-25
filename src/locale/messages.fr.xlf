@@ -2,8 +2,8 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en-US" target-language="fr" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="title.loyalty" datatype="html"><source>Customer loyalty | SimpliaDz</source><target>Fidélité client | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.pos" datatype="html"><source>Point of Sale | SimpliaDz</source><target>Point de vente | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.loyalty" datatype="html"><source>Customer loyalty | Simplia</source><target>Fidélité client | Simplia</target></trans-unit>
+      <trans-unit id="title.pos" datatype="html"><source>Point of Sale | Simplia</source><target>Point de vente | Simplia</target></trans-unit>
       <trans-unit id="brands.activated" datatype="html"><source>Brand activated.</source><target>Marque activée.</target></trans-unit>
       <trans-unit id="brands.activateFailed" datatype="html"><source>The brand could not be activated.</source><target>La marque n’a pas pu être activée.</target></trans-unit>
       <trans-unit id="products.activated" datatype="html"><source>Product activated.</source><target>Produit activé.</target></trans-unit>
@@ -15,62 +15,62 @@
       <trans-unit id="nav.financialDashboard" datatype="html"><source>Financial dashboard</source><target>Tableau de bord financier</target></trans-unit>
       <trans-unit id="nav.pos" datatype="html"><source>Point of Sale</source><target>Point de vente</target></trans-unit>
       <trans-unit id="nav.loyalty" datatype="html"><source>Customer loyalty</source><target>Fidélité client</target></trans-unit>
-      <trans-unit id="title.signIn" datatype="html"><source>Sign in | SimpliaDz</source><target>Connexion | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.forgotPassword" datatype="html"><source>Reset password | SimpliaDz</source><target>Réinitialiser le mot de passe | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.resetPassword" datatype="html"><source>Choose a password | SimpliaDz</source><target>Choisir un mot de passe | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.dashboard" datatype="html"><source>Dashboard | SimpliaDz</source><target>Tableau de bord | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.organization" datatype="html"><source>Organization | SimpliaDz</source><target>Organisation | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.brands" datatype="html"><source>Brands | SimpliaDz</source><target>Marques | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.categories" datatype="html"><source>Categories | SimpliaDz</source><target>Catégories | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.attributes" datatype="html"><source>Attributes | SimpliaDz</source><target>Attributs | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.attribute" datatype="html"><source>Attribute | SimpliaDz</source><target>Attribut | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.products" datatype="html"><source>Products | SimpliaDz</source><target>Produits | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.newProduct" datatype="html"><source>New product | SimpliaDz</source><target>Nouveau produit | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.product" datatype="html"><source>Product | SimpliaDz</source><target>Produit | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.editProduct" datatype="html"><source>Edit product | SimpliaDz</source><target>Modifier le produit | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.newVariant" datatype="html"><source>New variant | SimpliaDz</source><target>Nouvelle variante | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.variant" datatype="html"><source>Variant | SimpliaDz</source><target>Variante | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.locations" datatype="html"><source>Locations | SimpliaDz</source><target>Emplacements | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.newLocation" datatype="html"><source>New location | SimpliaDz</source><target>Nouvel emplacement | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.editLocation" datatype="html"><source>Edit location | SimpliaDz</source><target>Modifier l’emplacement | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.priceLists" datatype="html"><source>Price lists | SimpliaDz</source><target>Listes de prix | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.stock" datatype="html"><source>Stock levels | SimpliaDz</source><target>Niveaux de stock | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.movements" datatype="html"><source>Stock movements | SimpliaDz</source><target>Mouvements de stock | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.policies" datatype="html"><source>Reorder policies | SimpliaDz</source><target>Seuils de réapprovisionnement | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.transfers" datatype="html"><source>Stock transfers | SimpliaDz</source><target>Transferts de stock | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.transfer" datatype="html"><source>Transfer | SimpliaDz</source><target>Transfert | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.counts" datatype="html"><source>Stock counts | SimpliaDz</source><target>Inventaires | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.count" datatype="html"><source>Stock count | SimpliaDz</source><target>Inventaire | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.warnings" datatype="html"><source>Inventory warnings | SimpliaDz</source><target>Alertes de stock | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.suppliers" datatype="html"><source>Suppliers | SimpliaDz</source><target>Fournisseurs | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.orders" datatype="html"><source>Purchase orders | SimpliaDz</source><target>Commandes d’achat | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.order" datatype="html"><source>Purchase order | SimpliaDz</source><target>Commande d’achat | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.customers" datatype="html"><source>Customers | SimpliaDz</source><target>Clients | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.cashRegisters" datatype="html"><source>Cash Registers | SimpliaDz</source><target>Caisses | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.cashSessions" datatype="html"><source>Cash Sessions | SimpliaDz</source><target>Sessions de caisse | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.cashSession" datatype="html"><source>Cash Session | SimpliaDz</source><target>Session de caisse | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.sales" datatype="html"><source>Sales | SimpliaDz</source><target>Ventes | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.sale" datatype="html"><source>Sale | SimpliaDz</source><target>Vente | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.expenses" datatype="html"><source>Expenses | SimpliaDz</source><target>Dépenses | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.expenseCategories" datatype="html"><source>Expense Categories | SimpliaDz</source><target>Catégories de dépenses | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.myTime" datatype="html"><source>My Time | SimpliaDz</source><target>Mes heures | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.workSessions" datatype="html"><source>Work Sessions | SimpliaDz</source><target>Sessions de travail | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.hoursReport" datatype="html"><source>Hours Report | SimpliaDz</source><target>Rapport d’heures | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.documents" datatype="html"><source>Inventory documents | SimpliaDz</source><target>Documents d’inventaire | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.labels" datatype="html"><source>Barcode labels | SimpliaDz</source><target>Étiquettes code-barres | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.report.sales" datatype="html"><source>Sales summary | SimpliaDz</source><target>Synthèse des ventes | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.report.products" datatype="html"><source>Product performance | SimpliaDz</source><target>Performance des produits | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.report.inventory" datatype="html"><source>Inventory report | SimpliaDz</source><target>Rapport de stock | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.report.lowStock" datatype="html"><source>Low stock | SimpliaDz</source><target>Stock bas | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.audit" datatype="html"><source>Audit log | SimpliaDz</source><target>Journal d’audit | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.users" datatype="html"><source>Users | SimpliaDz</source><target>Utilisateurs | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.newUser" datatype="html"><source>New user | SimpliaDz</source><target>Nouvel utilisateur | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.user" datatype="html"><source>User | SimpliaDz</source><target>Utilisateur | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.roles" datatype="html"><source>Roles | SimpliaDz</source><target>Rôles | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.role" datatype="html"><source>Role | SimpliaDz</source><target>Rôle | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.accountSecurity" datatype="html"><source>Security | SimpliaDz</source><target>Sécurité | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.forbidden" datatype="html"><source>Access denied | SimpliaDz</source><target>Accès refusé | SimpliaDz</target></trans-unit>
-      <trans-unit id="title.notFound" datatype="html"><source>Page not found | SimpliaDz</source><target>Page introuvable | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.signIn" datatype="html"><source>Sign in | Simplia</source><target>Connexion | Simplia</target></trans-unit>
+      <trans-unit id="title.forgotPassword" datatype="html"><source>Reset password | Simplia</source><target>Réinitialiser le mot de passe | Simplia</target></trans-unit>
+      <trans-unit id="title.resetPassword" datatype="html"><source>Choose a password | Simplia</source><target>Choisir un mot de passe | Simplia</target></trans-unit>
+      <trans-unit id="title.dashboard" datatype="html"><source>Dashboard | Simplia</source><target>Tableau de bord | Simplia</target></trans-unit>
+      <trans-unit id="title.organization" datatype="html"><source>Organization | Simplia</source><target>Organisation | Simplia</target></trans-unit>
+      <trans-unit id="title.brands" datatype="html"><source>Brands | Simplia</source><target>Marques | Simplia</target></trans-unit>
+      <trans-unit id="title.categories" datatype="html"><source>Categories | Simplia</source><target>Catégories | Simplia</target></trans-unit>
+      <trans-unit id="title.attributes" datatype="html"><source>Attributes | Simplia</source><target>Attributs | Simplia</target></trans-unit>
+      <trans-unit id="title.attribute" datatype="html"><source>Attribute | Simplia</source><target>Attribut | Simplia</target></trans-unit>
+      <trans-unit id="title.products" datatype="html"><source>Products | Simplia</source><target>Produits | Simplia</target></trans-unit>
+      <trans-unit id="title.newProduct" datatype="html"><source>New product | Simplia</source><target>Nouveau produit | Simplia</target></trans-unit>
+      <trans-unit id="title.product" datatype="html"><source>Product | Simplia</source><target>Produit | Simplia</target></trans-unit>
+      <trans-unit id="title.editProduct" datatype="html"><source>Edit product | Simplia</source><target>Modifier le produit | Simplia</target></trans-unit>
+      <trans-unit id="title.newVariant" datatype="html"><source>New variant | Simplia</source><target>Nouvelle variante | Simplia</target></trans-unit>
+      <trans-unit id="title.variant" datatype="html"><source>Variant | Simplia</source><target>Variante | Simplia</target></trans-unit>
+      <trans-unit id="title.locations" datatype="html"><source>Locations | Simplia</source><target>Emplacements | Simplia</target></trans-unit>
+      <trans-unit id="title.newLocation" datatype="html"><source>New location | Simplia</source><target>Nouvel emplacement | Simplia</target></trans-unit>
+      <trans-unit id="title.editLocation" datatype="html"><source>Edit location | Simplia</source><target>Modifier l’emplacement | Simplia</target></trans-unit>
+      <trans-unit id="title.priceLists" datatype="html"><source>Price lists | Simplia</source><target>Listes de prix | Simplia</target></trans-unit>
+      <trans-unit id="title.stock" datatype="html"><source>Stock levels | Simplia</source><target>Niveaux de stock | Simplia</target></trans-unit>
+      <trans-unit id="title.movements" datatype="html"><source>Stock movements | Simplia</source><target>Mouvements de stock | Simplia</target></trans-unit>
+      <trans-unit id="title.policies" datatype="html"><source>Reorder policies | Simplia</source><target>Seuils de réapprovisionnement | Simplia</target></trans-unit>
+      <trans-unit id="title.transfers" datatype="html"><source>Stock transfers | Simplia</source><target>Transferts de stock | Simplia</target></trans-unit>
+      <trans-unit id="title.transfer" datatype="html"><source>Transfer | Simplia</source><target>Transfert | Simplia</target></trans-unit>
+      <trans-unit id="title.counts" datatype="html"><source>Stock counts | Simplia</source><target>Inventaires | Simplia</target></trans-unit>
+      <trans-unit id="title.count" datatype="html"><source>Stock count | Simplia</source><target>Inventaire | Simplia</target></trans-unit>
+      <trans-unit id="title.warnings" datatype="html"><source>Inventory warnings | Simplia</source><target>Alertes de stock | Simplia</target></trans-unit>
+      <trans-unit id="title.suppliers" datatype="html"><source>Suppliers | Simplia</source><target>Fournisseurs | Simplia</target></trans-unit>
+      <trans-unit id="title.orders" datatype="html"><source>Purchase orders | Simplia</source><target>Commandes d’achat | Simplia</target></trans-unit>
+      <trans-unit id="title.order" datatype="html"><source>Purchase order | Simplia</source><target>Commande d’achat | Simplia</target></trans-unit>
+      <trans-unit id="title.customers" datatype="html"><source>Customers | Simplia</source><target>Clients | Simplia</target></trans-unit>
+      <trans-unit id="title.cashRegisters" datatype="html"><source>Cash Registers | Simplia</source><target>Caisses | Simplia</target></trans-unit>
+      <trans-unit id="title.cashSessions" datatype="html"><source>Cash Sessions | Simplia</source><target>Sessions de caisse | Simplia</target></trans-unit>
+      <trans-unit id="title.cashSession" datatype="html"><source>Cash Session | Simplia</source><target>Session de caisse | Simplia</target></trans-unit>
+      <trans-unit id="title.sales" datatype="html"><source>Sales | Simplia</source><target>Ventes | Simplia</target></trans-unit>
+      <trans-unit id="title.sale" datatype="html"><source>Sale | Simplia</source><target>Vente | Simplia</target></trans-unit>
+      <trans-unit id="title.expenses" datatype="html"><source>Expenses | Simplia</source><target>Dépenses | Simplia</target></trans-unit>
+      <trans-unit id="title.expenseCategories" datatype="html"><source>Expense Categories | Simplia</source><target>Catégories de dépenses | Simplia</target></trans-unit>
+      <trans-unit id="title.myTime" datatype="html"><source>My Time | Simplia</source><target>Mes heures | Simplia</target></trans-unit>
+      <trans-unit id="title.workSessions" datatype="html"><source>Work Sessions | Simplia</source><target>Sessions de travail | Simplia</target></trans-unit>
+      <trans-unit id="title.hoursReport" datatype="html"><source>Hours Report | Simplia</source><target>Rapport d’heures | Simplia</target></trans-unit>
+      <trans-unit id="title.documents" datatype="html"><source>Inventory documents | Simplia</source><target>Documents d’inventaire | Simplia</target></trans-unit>
+      <trans-unit id="title.labels" datatype="html"><source>Barcode labels | Simplia</source><target>Étiquettes code-barres | Simplia</target></trans-unit>
+      <trans-unit id="title.report.sales" datatype="html"><source>Sales summary | Simplia</source><target>Synthèse des ventes | Simplia</target></trans-unit>
+      <trans-unit id="title.report.products" datatype="html"><source>Product performance | Simplia</source><target>Performance des produits | Simplia</target></trans-unit>
+      <trans-unit id="title.report.inventory" datatype="html"><source>Inventory report | Simplia</source><target>Rapport de stock | Simplia</target></trans-unit>
+      <trans-unit id="title.report.lowStock" datatype="html"><source>Low stock | Simplia</source><target>Stock bas | Simplia</target></trans-unit>
+      <trans-unit id="title.audit" datatype="html"><source>Audit log | Simplia</source><target>Journal d’audit | Simplia</target></trans-unit>
+      <trans-unit id="title.users" datatype="html"><source>Users | Simplia</source><target>Utilisateurs | Simplia</target></trans-unit>
+      <trans-unit id="title.newUser" datatype="html"><source>New user | Simplia</source><target>Nouvel utilisateur | Simplia</target></trans-unit>
+      <trans-unit id="title.user" datatype="html"><source>User | Simplia</source><target>Utilisateur | Simplia</target></trans-unit>
+      <trans-unit id="title.roles" datatype="html"><source>Roles | Simplia</source><target>Rôles | Simplia</target></trans-unit>
+      <trans-unit id="title.role" datatype="html"><source>Role | Simplia</source><target>Rôle | Simplia</target></trans-unit>
+      <trans-unit id="title.accountSecurity" datatype="html"><source>Security | Simplia</source><target>Sécurité | Simplia</target></trans-unit>
+      <trans-unit id="title.forbidden" datatype="html"><source>Access denied | Simplia</source><target>Accès refusé | Simplia</target></trans-unit>
+      <trans-unit id="title.notFound" datatype="html"><source>Page not found | Simplia</source><target>Page introuvable | Simplia</target></trans-unit>
       <trans-unit id="error.network" datatype="html"><source>We could not reach the server. Check your connection and try again.</source><target>Impossible de joindre le serveur. Vérifiez votre connexion et réessayez.</target></trans-unit>
       <trans-unit id="error.sessionExpired" datatype="html"><source>Your session has ended. Sign in again to continue.</source><target>Votre session a pris fin. Reconnectez-vous pour continuer.</target></trans-unit>
       <trans-unit id="error.forbidden" datatype="html"><source>You do not have permission to do this.</source><target>Vous n’avez pas l’autorisation de faire cela.</target></trans-unit>
@@ -275,7 +275,7 @@
       <trans-unit id="auth.forgot.submit" datatype="html"><source>Send reset request</source><target>Envoyer la demande</target></trans-unit>
       <trans-unit id="auth.forgot.back" datatype="html"><source>Back to sign in</source><target>Retour à la connexion</target></trans-unit>
       <trans-unit id="auth.forgot.failed" datatype="html"><source>We could not process the reset request. Try again later.</source><target>La demande de réinitialisation n’a pas pu être traitée. Réessayez plus tard.</target></trans-unit>
-      <trans-unit id="auth.login.heading" datatype="html"><source>Sign in to SimpliaDz</source><target>Connexion à SimpliaDz</target></trans-unit>
+      <trans-unit id="auth.login.heading" datatype="html"><source>Sign in to Simplia</source><target>Connexion à Simplia</target></trans-unit>
       <trans-unit id="auth.login.subtitle" datatype="html"><source>Use your organization account to continue.</source><target>Utilisez le compte de votre organisation pour continuer.</target></trans-unit>
       <trans-unit id="auth.login.passwordChanged" datatype="html"><source> Your password was changed. Sign in again to continue. </source><target>Votre mot de passe a été modifié. Reconnectez-vous pour continuer.</target></trans-unit>
       <trans-unit id="auth.error.emailRequired" datatype="html"><source>Email is required.</source><target>L’adresse e-mail est obligatoire.</target></trans-unit>
@@ -1099,7 +1099,7 @@
       <trans-unit id="time.correct.failed" datatype="html"><source>The session could not be corrected.</source><target>La session n’a pas pu être corrigée.</target></trans-unit>
       <trans-unit id="theme.switchToLight" datatype="html"><source>Switch to light theme</source><target>Passer au thème clair</target></trans-unit>
       <trans-unit id="theme.switchToDark" datatype="html"><source>Switch to dark theme</source><target>Passer au thème sombre</target></trans-unit>
-      <trans-unit id="title.accountProfile" datatype="html"><source>Profile | SimpliaDz</source><target>Profil | SimpliaDz</target></trans-unit>
+      <trans-unit id="title.accountProfile" datatype="html"><source>Profile | Simplia</source><target>Profil | Simplia</target></trans-unit>
       <trans-unit id="nav.accountProfile" datatype="html"><source>Profile</source><target>Profil</target></trans-unit>
       <trans-unit id="account.profile.heading" datatype="html"><source>Profile</source><target>Profil</target></trans-unit>
       <trans-unit id="account.profile.subtitle" datatype="html"><source> Manage your personal application preferences. </source><target>Gérez vos préférences personnelles dans l’application.</target></trans-unit>

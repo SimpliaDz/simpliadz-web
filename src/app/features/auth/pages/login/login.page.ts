@@ -26,7 +26,7 @@ import { AuthSessionService } from '../../../../core/auth/auth-session.service';
           <img src="graphics/illustrations/operations-overview.svg" alt="" />
         </div>
         <mat-card-header>
-          <mat-card-title><h1 i18n="@@auth.login.heading">Sign in to SimpliaDz</h1></mat-card-title>
+          <mat-card-title><h1 i18n="@@auth.login.heading">Sign in to Simplia</h1></mat-card-title>
           <mat-card-subtitle i18n="@@auth.login.subtitle"
             >Use your organization account to continue.</mat-card-subtitle
           >

@@ -3,399 +3,399 @@
   <file source-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
       <trans-unit id="title.signIn" datatype="html">
-        <source>Sign in | SimpliaDz</source>
+        <source>Sign in | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.forgotPassword" datatype="html">
-        <source>Reset password | SimpliaDz</source>
+        <source>Reset password | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.resetPassword" datatype="html">
-        <source>Choose a password | SimpliaDz</source>
+        <source>Choose a password | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">40</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.dashboard" datatype="html">
-        <source>Dashboard | SimpliaDz</source>
+        <source>Dashboard | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">58</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.organization" datatype="html">
-        <source>Organization | SimpliaDz</source>
+        <source>Organization | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">64</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.brands" datatype="html">
-        <source>Brands | SimpliaDz</source>
+        <source>Brands | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">73</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.categories" datatype="html">
-        <source>Categories | SimpliaDz</source>
+        <source>Categories | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">80</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.attributes" datatype="html">
-        <source>Attributes | SimpliaDz</source>
+        <source>Attributes | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">89</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.attribute" datatype="html">
-        <source>Attribute | SimpliaDz</source>
+        <source>Attribute | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">98</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.products" datatype="html">
-        <source>Products | SimpliaDz</source>
+        <source>Products | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">107</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.newProduct" datatype="html">
-        <source>New product | SimpliaDz</source>
+        <source>New product | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">114</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.product" datatype="html">
-        <source>Product | SimpliaDz</source>
+        <source>Product | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">123</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.editProduct" datatype="html">
-        <source>Edit product | SimpliaDz</source>
+        <source>Edit product | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">132</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.newVariant" datatype="html">
-        <source>New variant | SimpliaDz</source>
+        <source>New variant | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">141</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.variant" datatype="html">
-        <source>Variant | SimpliaDz</source>
+        <source>Variant | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">150</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.locations" datatype="html">
-        <source>Locations | SimpliaDz</source>
+        <source>Locations | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">161</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.newLocation" datatype="html">
-        <source>New location | SimpliaDz</source>
+        <source>New location | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">170</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.editLocation" datatype="html">
-        <source>Edit location | SimpliaDz</source>
+        <source>Edit location | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">179</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.priceLists" datatype="html">
-        <source>Price lists | SimpliaDz</source>
+        <source>Price lists | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">188</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.stock" datatype="html">
-        <source>Stock levels | SimpliaDz</source>
+        <source>Stock levels | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">198</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.movements" datatype="html">
-        <source>Stock movements | SimpliaDz</source>
+        <source>Stock movements | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">207</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.policies" datatype="html">
-        <source>Reorder policies | SimpliaDz</source>
+        <source>Reorder policies | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">216</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.transfers" datatype="html">
-        <source>Stock transfers | SimpliaDz</source>
+        <source>Stock transfers | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">225</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.transfer" datatype="html">
-        <source>Transfer | SimpliaDz</source>
+        <source>Transfer | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">234</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.counts" datatype="html">
-        <source>Stock counts | SimpliaDz</source>
+        <source>Stock counts | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">243</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.count" datatype="html">
-        <source>Stock count | SimpliaDz</source>
+        <source>Stock count | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">250</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.warnings" datatype="html">
-        <source>Inventory warnings | SimpliaDz</source>
+        <source>Inventory warnings | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">259</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.suppliers" datatype="html">
-        <source>Suppliers | SimpliaDz</source>
+        <source>Suppliers | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">268</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.orders" datatype="html">
-        <source>Purchase orders | SimpliaDz</source>
+        <source>Purchase orders | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">277</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.order" datatype="html">
-        <source>Purchase order | SimpliaDz</source>
+        <source>Purchase order | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">286</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.customers" datatype="html">
-        <source>Customers | SimpliaDz</source>
+        <source>Customers | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">297</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.cashRegisters" datatype="html">
-        <source>Cash Registers | SimpliaDz</source>
+        <source>Cash Registers | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">304</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.cashSessions" datatype="html">
-        <source>Cash Sessions | SimpliaDz</source>
+        <source>Cash Sessions | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">313</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.cashSession" datatype="html">
-        <source>Cash Session | SimpliaDz</source>
+        <source>Cash Session | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">320</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.sales" datatype="html">
-        <source>Sales | SimpliaDz</source>
+        <source>Sales | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">329</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.sale" datatype="html">
-        <source>Sale | SimpliaDz</source>
+        <source>Sale | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">336</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.expenses" datatype="html">
-        <source>Expenses | SimpliaDz</source>
+        <source>Expenses | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">345</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.expenseCategories" datatype="html">
-        <source>Expense Categories | SimpliaDz</source>
+        <source>Expense Categories | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">352</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.myTime" datatype="html">
-        <source>My Time | SimpliaDz</source>
+        <source>My Time | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">361</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.workSessions" datatype="html">
-        <source>Work Sessions | SimpliaDz</source>
+        <source>Work Sessions | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">368</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.hoursReport" datatype="html">
-        <source>Hours Report | SimpliaDz</source>
+        <source>Hours Report | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">375</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.documents" datatype="html">
-        <source>Inventory documents | SimpliaDz</source>
+        <source>Inventory documents | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">384</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.labels" datatype="html">
-        <source>Barcode labels | SimpliaDz</source>
+        <source>Barcode labels | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">393</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.report.sales" datatype="html">
-        <source>Sales summary | SimpliaDz</source>
+        <source>Sales summary | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">402</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.report.products" datatype="html">
-        <source>Product performance | SimpliaDz</source>
+        <source>Product performance | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">410</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.report.inventory" datatype="html">
-        <source>Inventory report | SimpliaDz</source>
+        <source>Inventory report | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">421</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.report.lowStock" datatype="html">
-        <source>Low stock | SimpliaDz</source>
+        <source>Low stock | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">429</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.audit" datatype="html">
-        <source>Audit log | SimpliaDz</source>
+        <source>Audit log | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">437</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.users" datatype="html">
-        <source>Users | SimpliaDz</source>
+        <source>Users | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">445</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.newUser" datatype="html">
-        <source>New user | SimpliaDz</source>
+        <source>New user | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">452</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.user" datatype="html">
-        <source>User | SimpliaDz</source>
+        <source>User | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">461</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.roles" datatype="html">
-        <source>Roles | SimpliaDz</source>
+        <source>Roles | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">470</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.role" datatype="html">
-        <source>Role | SimpliaDz</source>
+        <source>Role | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">477</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.accountProfile" datatype="html">
-        <source>Profile | SimpliaDz</source>
+        <source>Profile | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">488</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.accountSecurity" datatype="html">
-        <source>Security | SimpliaDz</source>
+        <source>Security | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">494</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.forbidden" datatype="html">
-        <source>Access denied | SimpliaDz</source>
+        <source>Access denied | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">500</context>
         </context-group>
       </trans-unit>
       <trans-unit id="title.notFound" datatype="html">
-        <source>Page not found | SimpliaDz</source>
+        <source>Page not found | Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.routes.ts</context>
           <context context-type="linenumber">506</context>
@@ -3287,7 +3287,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="auth.login.heading" datatype="html">
-        <source>Sign in to SimpliaDz</source>
+        <source>Sign in to Simplia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/auth/pages/login/login.page.ts</context>
           <context context-type="linenumber">29,30</context>

@@ -1,8 +1,8 @@
-# SimpliaDz Web — Technical Guide
+# Simplia Web — Technical Guide
 
 ## 1. Purpose and current scope
 
-SimpliaDz Web is the separate Angular frontend for the SimpliaDz platform. It is intentionally independent from the .NET backend repository: it has its own Git history, dependency lockfile, build pipeline, and deployment configuration.
+Simplia Web is the separate Angular frontend for the Simplia platform. It is intentionally independent from the .NET backend repository: it has its own Git history, dependency lockfile, build pipeline, and deployment configuration.
 
 The project currently establishes a production-minded frontend foundation. It has an application shell, configuration bootstrap, routing, localization, quality tooling, smoke tests, and public authentication pages. Permission-aware navigation beyond the authenticated-route guard, Organization management, and Inventory workflows remain future feature slices.
 

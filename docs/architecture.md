@@ -1,6 +1,6 @@
 # Frontend architecture
 
-SimpliaDz Web is a standalone Angular application organized by business feature.
+Simplia Web is a standalone Angular application organized by business feature.
 
 ## Structure
 

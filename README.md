@@ -1,6 +1,6 @@
-# SimpliaDz Web
+# Simplia Web
 
-The Angular frontend for SimpliaDz. It is a separate repository from the .NET backend.
+The Angular frontend for Simplia. It is a separate repository from the .NET backend. The Angular project and build output directory are still named `simpliadz-web`.
 
 ## Prerequisites
 

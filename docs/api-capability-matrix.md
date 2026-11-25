@@ -1,4 +1,4 @@
-# SimpliaDz API capability matrix (frontend view)
+# Simplia API capability matrix (frontend view)
 
 Status: **Phase 1 draft**. Verified against `simpliadz-platform` source (endpoints, contracts,
 validators, services) on 2026-11-20. Where backend docs and source disagree, **source wins**; see

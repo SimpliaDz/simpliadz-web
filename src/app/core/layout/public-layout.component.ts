@@ -9,7 +9,7 @@ import { ThemeToggleComponent } from '../../shared/ui/theme-toggle/theme-toggle.
   template: `
     <header class="public-header">
       <a class="brand" routerLink="/"
-        ><img class="brand-mark" src="graphics/brand/simpliadz-mark.svg" alt="" /> SimpliaDz</a
+        ><img class="brand-mark" src="graphics/brand/simpliadz-mark.svg" alt="" /> Simplia</a
       >
       <span
         class="tagline"

@@ -47,7 +47,7 @@ import { NavigationSection, navigationSections } from './navigation';
       </button>
       <a class="brand" routerLink="/app/dashboard">
         <img class="brand-mark" src="graphics/brand/simpliadz-mark.svg" alt="" />
-        <span>SimpliaDz</span>
+        <span>Simplia</span>
       </a>
       <span class="spacer"></span>
       @if (posShortcut(); as pos) {

@@ -106,7 +106,7 @@ test('signs out from the user menu and returns to sign in', async ({ page }) => 
   await page.getByRole('menuitem', { name: 'Sign out' }).click();
 
   await expect(page).toHaveURL(/\/login$/);
-  await expect(page.getByRole('heading', { name: 'Sign in to SimpliaDz' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Sign in to Simplia' })).toBeVisible();
 });
 
 test('rejects mismatched new passwords without calling the API', async ({ page }) => {
