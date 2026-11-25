@@ -536,7 +536,7 @@
       <trans-unit id="documents.printFailed" datatype="html"><source>The document could not be created.</source><target>Le document n’a pas pu être créé.</target></trans-unit>
       <trans-unit id="documents.saved" datatype="html"><source>Template saved.</source><target>Modèle enregistré.</target></trans-unit>
       <trans-unit id="documents.deactivate.title" datatype="html"><source>Deactivate template?</source><target>Désactiver le modèle ?</target></trans-unit>
-      <trans-unit id="documents.deactivate.message" datatype="html"><source>The template can no longer be used for printing. Templates cannot be reactivated.</source><target>Le modèle ne pourra plus servir à l’impression. Un modèle ne peut pas être réactivé.</target></trans-unit>
+      <trans-unit id="documents.deactivate.message" datatype="html"><source>The template can no longer be used for printing.</source><target>Le modèle ne pourra plus servir à l’impression.</target></trans-unit>
       <trans-unit id="documents.deactivateFailed" datatype="html"><source>The template could not be deactivated.</source><target>Le modèle n’a pas pu être désactivé.</target></trans-unit>
       <trans-unit id="documents.type.countSheet" datatype="html"><source>Count sheet</source><target>Feuille de comptage</target></trans-unit>
       <trans-unit id="documents.type.differences" datatype="html"><source>Count differences</source><target>Écarts de comptage</target></trans-unit>
@@ -610,7 +610,7 @@
       <trans-unit id="locations.empty.message" datatype="html"><source>Add the store or warehouse where stock is kept and sold.</source><target>Ajoutez le magasin ou l’entrepôt où le stock est conservé et vendu.</target></trans-unit>
       <trans-unit id="locations.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>Réessayez dans un instant.</target></trans-unit>
       <trans-unit id="locations.deactivate.title" datatype="html"><source>Deactivate location?</source><target>Désactiver l’emplacement ?</target></trans-unit>
-      <trans-unit id="locations.deactivate.message" datatype="html"><source>Stock history is kept. The location can no longer be used for new stock or sales. Locations cannot be reactivated.</source><target>L’historique du stock est conservé. L’emplacement ne peut plus servir pour de nouveaux stocks ou ventes. Un emplacement ne peut pas être réactivé.</target></trans-unit>
+      <trans-unit id="locations.deactivate.message" datatype="html"><source>Stock history is kept. The location can no longer be used for new stock or sales.</source><target>L’historique du stock est conservé. L’emplacement ne peut plus servir pour de nouveaux stocks ou ventes.</target></trans-unit>
       <trans-unit id="locations.deactivated" datatype="html"><source>Location deactivated.</source><target>Emplacement désactivé.</target></trans-unit>
       <trans-unit id="locations.deactivateFailed" datatype="html"><source>The location could not be deactivated.</source><target>Impossible de désactiver l’emplacement.</target></trans-unit>
       <trans-unit id="priceLists.subtitle" datatype="html"><source>Price lists hold the selling price of each variant. Prices are set per variant from its detail page.</source><target>Les listes de prix contiennent le prix de vente de chaque variante. Les prix se fixent par variante, depuis sa fiche.</target></trans-unit>

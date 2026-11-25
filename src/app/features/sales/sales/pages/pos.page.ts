@@ -1,4 +1,5 @@
 import { DecimalPipe } from '@angular/common';
+import { HttpErrorResponse } from '@angular/common/http';
 import { ChangeDetectionStrategy, Component, DestroyRef, ElementRef, HostListener, ViewChild, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -40,7 +41,7 @@ interface HeldTicket {
       <mat-form-field appearance="outline" class="scanner"><mat-label>Scan barcode or SKU</mat-label><input #scanner matInput [(ngModel)]="code" (keydown.enter)="scanOnEnter($event)" autocomplete="off"/><button mat-icon-button matSuffix (click)="scan()"><mat-icon>add</mat-icon></button></mat-form-field>
       <mat-form-field appearance="outline" class="search"><mat-label>Find product by name</mat-label><input matInput [(ngModel)]="search" (ngModelChange)="searchChanged()" autocomplete="off"/></mat-form-field>
       @for (item of results(); track item.variantId) {<button class="result" (click)="add(item)"><span>{{ item.productName }} · {{ item.sku }}</span><strong>{{ item.price | number:'1.2-2' }}</strong></button>}
-      @if (sale(); as s) {<div class="lines">@for (line of s.lines; track line.id) {<div><span class="line-item"><input #quantity class="quantity" type="number" min="1" [value]="line.quantity" [attr.max]="line.availableQuantity" (change)="setQuantity(line, quantity)" [attr.aria-label]="'Quantity for ' + (lineName(line))"/>× {{ lineName(line) }}</span><strong>{{ line.lineTotal | number:'1.2-2' }}</strong><button mat-icon-button type="button" [disabled]="editingTicket()" matTooltip="Remove item" [attr.aria-label]="'Remove ' + lineName(line)" (click)="removeLine(line.id)"><mat-icon aria-hidden="true">delete_outline</mat-icon></button></div>}</div>} @else {<p class="muted">Scan an item to begin.</p>}
+      @if (sale(); as s) {<div class="lines">@for (line of s.lines; track line.id) {<div><span class="line-item"><input #quantity class="quantity" type="number" min="1" [value]="line.quantity" [attr.max]="line.availableQuantity" (change)="setQuantity(line, quantity)" [attr.aria-label]="'Quantity for ' + (lineName(line))"/>× {{ lineName(line) }} @if (line.quantity > (line.availableQuantity ?? line.quantity)) { <small [style.color]="'var(--mat-sys-error)'">Stock discrepancy · {{ line.availableQuantity }} recorded</small> }</span><strong>{{ line.lineTotal | number:'1.2-2' }}</strong><button mat-icon-button type="button" [disabled]="editingTicket()" matTooltip="Remove item" [attr.aria-label]="'Remove ' + lineName(line)" (click)="removeLine(line.id)"><mat-icon aria-hidden="true">delete_outline</mat-icon></button></div>}</div>} @else {<p class="muted">Scan an item to begin.</p>}
     </mat-card-content></mat-card>
     <mat-card appearance="outlined" class="summary"><mat-card-content>
       <div class="customer-title">
@@ -83,6 +84,7 @@ export class PosPage {
   private readonly api = inject(SalesApiService);
   private readonly session = inject(AuthSessionService);
   private readonly dialog = inject(MatDialog);
+  private readonly destroyRef = inject(DestroyRef);
   private readonly confirm = inject(ConfirmService);
   readonly editingTicket = signal(false);
   readonly paying = signal(false);
@@ -105,14 +107,14 @@ export class PosPage {
   readonly startingTicket = signal(false);
   code = ''; search = ''; customerSearch = ''; printTicket = false; discountType: DiscountType = 'Percentage'; discountValue: number | null = null;
   constructor() {
-    inject(DestroyRef).onDestroy(() => this.holdActiveTicket());
+    this.destroyRef.onDestroy(() => this.holdActiveTicket());
     this.load();
   }
 
   @HostListener('window:pagehide')
   holdActiveTicket(): void {
     const sale = this.sale();
-    if (sale?.status === 'Draft' && (sale.lines.length > 0 || sale.customerId)) {
+    if (sale?.status === 'Draft' && sale.lines.length > 0) {
       this.parkCurrentTicket();
     }
   }
@@ -151,30 +153,18 @@ export class PosPage {
     this.scan();
   }
   load(): void { this.api.posContext().subscribe({ next: x => this.setContext(x), error: e => this.fail(e, 'Could not load POS.') }); }
-  changeRegister(): void { this.api.releaseRegister().subscribe({ next: () => { this.sale.set(null); this.customer.set(null); this.results.set([]); this.load(); }, error: e => this.fail(e, 'Could not change register.') }); }
+  changeRegister(): void { if (this.startingTicket()) return; this.holdActiveTicket(); this.api.releaseRegister().subscribe({ next: () => { this.newTicket(); this.load(); }, error: e => this.fail(e, 'Could not change register.') }); }
   assign(id: string): void { this.api.assignRegister(id).subscribe({ next: x => { this.setContext(x); this.newTicket(); }, error: e => this.fail(e, 'Could not select register.') }); }
   newTicket(): void {
-    if (this.startingTicket()) return;
-    const key = this.heldStorageKey();
+    this.sale.set(null);
     this.checkout.set(null);
     this.customer.set(null);
-    this.startingTicket.set(true);
-    this.api.posCreate().subscribe({
-      next: (sale) => {
-        this.startingTicket.set(false);
-        if (this.heldStorageKey() !== key) return;
-        this.sale.set(sale);
-        this.results.set([]);
-        this.focus();
-      },
-      error: (error) => {
-        this.startingTicket.set(false);
-        this.fail(error, 'Could not start ticket.');
-      },
-    });
+    this.code = '';
+    this.results.set([]);
+    this.closeCustomerSearch();
   }
   hold(): void {
-    if (!this.sale() || this.resuming()) return;
+    if (!this.sale()?.lines.length || this.resuming() || this.startingTicket()) return;
     this.parkCurrentTicket();
     this.sale.set(null);
     this.newTicket();
@@ -239,23 +229,48 @@ export class PosPage {
       this.error.set('Held tickets cannot be saved across refresh in this browser.');
     }
   }
-  scan(): void { const value = this.code.trim(); if (!value) return; if (!this.sale()) return this.newTicket(); this.api.posScan(this.sale()!.id, value).subscribe({ next: x => { this.sale.set(x); this.code = ''; this.results.set([]); this.focus(); }, error: e => this.fail(e, 'Product was not found.') }); }
-  setQuantity(line: SaleLine, input: HTMLInputElement): void {
+  scan(confirmPhysicalStock = false): void {
+    const code = this.code.trim();
+    if (!code || this.startingTicket() || this.resuming() || this.editingTicket()) return;
+    const current = this.sale();
+    const customer = this.customer();
+    this.startingTicket.set(true);
+    const scan = current
+      ? this.api.posScan(current.id, code, confirmPhysicalStock)
+      : this.api.posCreate(code, customer?.id ?? null, confirmPhysicalStock);
+    scan.pipe(finalize(() => this.startingTicket.set(false))).subscribe({
+      next: (sale) => {
+        this.sale.set(sale);
+        if (customer) this.ticketCustomers.update(items => new Map(items).set(sale.id, customer));
+        this.code = '';
+        this.results.set([]);
+        if (this.destroyRef.destroyed) this.holdActiveTicket();
+        else this.focus();
+      },
+      error: error => {
+        if (!confirmPhysicalStock && this.offerStockOverride(error, false, () => {
+          if (this.sale()?.id === current?.id && this.code.trim() === code) this.scan(true);
+        })) return;
+        this.fail(error, 'Could not add this item.');
+      },
+    });
+  }
+  setQuantity(line: SaleLine, input: HTMLInputElement, confirmPhysicalStock = false): void {
     const sale = this.sale();
     const quantity = input.valueAsNumber;
     if (!sale || this.editingTicket() || !Number.isInteger(quantity) || quantity <= 0) {
       input.value = String(line.quantity);
       return;
     }
-    if (line.availableQuantity != null && quantity > line.availableQuantity) {
-      input.value = String(line.quantity);
-      this.error.set(`Only ${line.availableQuantity} in stock at this shop.`);
-      return;
-    }
-    this.api.posSetLineQuantity(sale.id, line.id, quantity).subscribe({
+    this.api.posSetLineQuantity(sale.id, line.id, quantity, confirmPhysicalStock).subscribe({
       next: updated => { this.sale.set(updated); this.error.set(null); this.focus(); },
       error: error => {
         input.value = String(line.quantity);
+        if (!confirmPhysicalStock && this.offerStockOverride(error, false, () => {
+          if (this.sale()?.id !== sale.id || !input.isConnected) return;
+          input.value = String(quantity);
+          this.setQuantity(line, input, true);
+        })) return;
         this.fail(error, 'Could not update the quantity.');
       },
     });
@@ -327,15 +342,14 @@ export class PosPage {
     const sale = this.sale();
     const registerId = this.context()?.cashRegisterId;
     if (!registerId) return;
-    if (!sale && !customer) {
+    if (!sale) {
+      this.customer.set(customer);
       this.closeCustomerSearch();
       return;
     }
 
     this.editingTicket.set(true);
-    const request = sale
-      ? this.api.posSetCustomer(sale.id, customer?.id ?? null)
-      : this.api.posCreate(customer!.id);
+    const request = this.api.posSetCustomer(sale.id, customer?.id ?? null);
     request.pipe(finalize(() => this.editingTicket.set(false))).subscribe({
       next: (updated) => {
         if (this.context()?.cashRegisterId !== registerId || this.sale()?.id !== sale?.id) return;
@@ -362,7 +376,10 @@ export class PosPage {
     this.editingTicket.set(true);
     this.api.posRemoveLine(sale.id, lineId).pipe(finalize(() => this.editingTicket.set(false))).subscribe({
       next: (updated) => {
-        if (this.sale()?.id === sale.id) this.sale.set(updated);
+        if (this.sale()?.id === sale.id) {
+          this.sale.set(updated.lines.length ? updated : null);
+          if (!updated.lines.length) this.storeHeld(this.held().filter(ticket => ticket.id !== sale.id));
+        }
         this.focus();
       },
       error: (error) => this.fail(error, 'Could not remove the item.'),
@@ -396,14 +413,14 @@ export class PosPage {
   }
 
   openCheckout(method: 'Cash' | 'Card'): void { if (!this.editingTicket() && this.sale()?.lines.length) this.checkout.set(method); }
-  confirmPay(): void {
+  confirmPay(confirmPhysicalStock = false): void {
     const sale = this.sale(), method = this.checkout();
     if (!sale || !method || this.paying()) return;
     const wantsReceipt = this.printTicket;
     const preview = wantsReceipt ? window.open('', '_blank') : null;
     if (preview) preview.opener = null;
     this.paying.set(true);
-    this.api.posPay(sale.id, sale.balanceDue, method).pipe(finalize(() => this.paying.set(false))).subscribe({
+    this.api.posPay(sale.id, sale.balanceDue, method, confirmPhysicalStock).pipe(finalize(() => this.paying.set(false))).subscribe({
       next: ({ sale: paidSale }) => {
         this.sale.set(null);
         this.storeHeld(this.held().filter((ticket) => ticket.id !== sale.id));
@@ -413,9 +430,30 @@ export class PosPage {
       },
       error: e => {
         preview?.close();
+        if (!confirmPhysicalStock && this.offerStockOverride(e, true, () => {
+          if (this.sale()?.id === sale.id && this.checkout() === method) this.confirmPay(true);
+        })) return;
         this.fail(e, 'Payment could not be completed.');
       },
     });
+  }
+
+  private offerStockOverride(error: unknown, checkout: boolean, proceed: () => void): boolean {
+    if (!(error instanceof HttpErrorResponse) ||
+        (error.error?.error ?? error.error?.Error) !== 'InsufficientStock' ||
+        !this.session.hasPermission('stock.manage')) return false;
+
+    this.confirm.confirm({
+      title: 'Confirm physical stock',
+      message: checkout
+        ? 'Some items exceed recorded stock. Count the units before continuing. Checkout records a sale-linked adjustment for the shortfall so inventory can follow up.'
+        : 'The requested quantity exceeds recorded stock. Continue only if you have counted these units at this shop.',
+      confirmLabel: checkout ? 'Adjust stock and complete sale' : 'Confirm units are present',
+    }).subscribe(confirmed => {
+      if (confirmed) proceed();
+      else this.focus();
+    });
+    return true;
   }
 
   private openReceipt(sale: Sale, preview: Window | null): void {

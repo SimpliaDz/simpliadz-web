@@ -9,8 +9,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { describeApiError } from '../../../../core/api/api-error-message';
 import { blankToNull, numberOrNull } from '../../../../shared/forms/form-values';
 import { Location } from '../../../inventory/locations/data-access/locations-api.service';
-import { VariantOption } from '../data-access/variant-catalogue.service';
-import { StockApiService } from '../data-access/stock-api.service';
+import { matchesVariant, VariantOption } from '../data-access/variant-catalogue.service';
+import { StockApiService, StockBalance } from '../data-access/stock-api.service';
 
 export type StockMovementMode = 'receipt' | 'opening' | 'adjustment';
 
@@ -20,6 +20,7 @@ export interface StockMovementDialogData {
   readonly locations: readonly Location[];
   readonly variantId: string | null;
   readonly locationId: string | null;
+  readonly balances?: readonly StockBalance[];
 }
 
 @Component({
@@ -39,13 +40,20 @@ export interface StockMovementDialogData {
       <mat-dialog-content>
         <div class="form-grid">
           <mat-form-field appearance="outline" class="full-row">
+            <mat-label>Search products and variants</mat-label>
+            <input matInput #variantQuery (input)="variantSearch.set(variantQuery.value)"
+              placeholder="Name, attributes, SKU or barcode" />
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="full-row">
             <mat-label i18n="@@stock.field.variant">Product variant</mat-label>
             <mat-select formControlName="productVariantId">
-              @for (variant of data.variants; track variant.id) {
+              @for (variant of matchingVariants(); track variant.id) {
                 <mat-option [value]="variant.id" [disabled]="!variant.isActive">{{
                   variant.label
-                }}</mat-option>
-              }
+                }} @if (data.balances && form.controls.locationId.value) {
+                  · {{ stockAtLocation(variant.id) }} on hand
+                }</mat-option>
+              } @empty { <mat-option disabled>No matching variants</mat-option> }
             </mat-select>
             @if (form.controls.productVariantId.hasError('required')) {
               <mat-error i18n="@@validation.required">This field is required.</mat-error>
@@ -144,6 +152,14 @@ export interface StockMovementDialogData {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class StockMovementDialogComponent {
+  readonly variantSearch = signal('');
+  readonly matchingVariants = computed(() =>
+    this.data.variants.filter(variant => matchesVariant(variant, this.variantSearch())));
+
+  stockAtLocation(variantId: string): number {
+    return this.data.balances?.find(balance => balance.productVariantId === variantId
+      && balance.locationId === this.form.controls.locationId.value)?.quantityOnHand ?? 0;
+  }
   readonly data = inject<StockMovementDialogData>(MAT_DIALOG_DATA);
   private readonly dialogRef =
     inject<MatDialogRef<StockMovementDialogComponent, boolean>>(MatDialogRef);

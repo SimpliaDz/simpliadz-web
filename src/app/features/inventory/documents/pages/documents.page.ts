@@ -167,6 +167,9 @@ import {
                   >
                     <mat-icon aria-hidden="true">block</mat-icon>
                   </button>
+                } @else {
+                  <button *appHasPermission="'inventory-documents.manage'" mat-button type="button"
+                    (click)="activate(row)">Activate</button>
                 }
               </td>
             </ng-container>
@@ -234,6 +237,13 @@ export class DocumentsPage {
     });
   }
 
+  activate(template: DocumentTemplate): void {
+    this.api.activateTemplate(template.id).subscribe({
+      next: () => this.load(),
+      error: error => this.snackBar.open(describeApiError(error, 'Could not activate the template.'), undefined, { duration: 5000 }),
+    });
+  }
+
   printStockList(): void {
     if (!this.templateId || !this.locationId) {
       return;
@@ -286,7 +296,7 @@ export class DocumentsPage {
     this.confirm
       .confirm({
         title: $localize`:@@documents.deactivate.title:Deactivate template?`,
-        message: $localize`:@@documents.deactivate.message:The template can no longer be used for printing. Templates cannot be reactivated.`,
+        message: $localize`:@@documents.deactivate.message:The template can no longer be used for printing.`,
         confirmLabel: $localize`:@@common.deactivate:Deactivate`,
         destructive: true,
       })

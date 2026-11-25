@@ -34,7 +34,7 @@ export interface TransferDialogData {
             <mat-select formControlName="sourceLocationId">
               @for (location of data.locations; track location.id) {
                 <mat-option [value]="location.id" [disabled]="!location.isActive">{{
-                  location.name
+                  location.name + (location.isActive ? '' : ' — Inactive')
                 }}</mat-option>
               }
             </mat-select>
@@ -46,8 +46,8 @@ export interface TransferDialogData {
             <mat-label i18n="@@transfers.destination">To</mat-label>
             <mat-select formControlName="destinationLocationId">
               @for (location of data.locations; track location.id) {
-                <mat-option [value]="location.id" [disabled]="!location.isActive">{{
-                  location.name
+                <mat-option [value]="location.id" [disabled]="!location.isActive || location.id === form.controls.sourceLocationId.value">{{
+                  location.name + (!location.isActive ? ' — Inactive' : location.id === form.controls.sourceLocationId.value ? ' — Source location' : '')
                 }}</mat-option>
               }
             </mat-select>
@@ -62,7 +62,10 @@ export interface TransferDialogData {
       </mat-dialog-content>
       <mat-dialog-actions align="end">
         <button mat-button type="button" mat-dialog-close i18n="@@common.cancel">Cancel</button>
-        <button mat-flat-button type="submit" [disabled]="saving()">
+        @if (form.controls.sourceLocationId.value && form.controls.sourceLocationId.value === form.controls.destinationLocationId.value) {
+          <p class="form-error" role="alert">Choose two different locations.</p>
+        }
+        <button mat-flat-button type="submit" [disabled]="saving() || form.controls.sourceLocationId.value === form.controls.destinationLocationId.value">
           <span i18n="@@common.create">Create</span>
         </button>
       </mat-dialog-actions>

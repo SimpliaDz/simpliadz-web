@@ -6,6 +6,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
 import { describeApiError } from '../../../../core/api/api-error-message';
+import { MatInputModule } from '@angular/material/input';
+import { ConfirmService } from '../../../../shared/ui/confirm-dialog/confirm.service';
 import { HasPermissionDirective } from '../../../../core/auth/has-permission.directive';
 import { PageHeaderComponent } from '../../../../shared/ui/page-header/page-header.component';
 import { StatePanelComponent } from '../../../../shared/ui/state-panel/state-panel.component';
@@ -16,6 +18,7 @@ import { PriceListDialogComponent } from '../ui/price-list-dialog.component';
 @Component({
   selector: 'app-price-lists-page',
   imports: [
+    MatInputModule,
     HasPermissionDirective,
     MatButtonModule,
     MatIconModule,
@@ -78,6 +81,21 @@ import { PriceListDialogComponent } from '../ui/price-list-dialog.component';
               />
             </td>
           </ng-container>
+          <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let row">
+              @if (editing() === row.id) {
+                <input matInput #name [value]="row.name" maxlength="150" aria-label="Price list name" />
+                <button mat-button type="button" (click)="rename(row, name.value)">Save</button>
+                <button mat-button type="button" (click)="editing.set(null)">Cancel</button>
+              } @else {
+                <button *appHasPermission="'price-lists.manage'" mat-button type="button" (click)="editing.set(row.id)">Rename</button>
+                @if (row.isActive) {
+                  <button *appHasPermission="'price-lists.manage'" mat-button type="button" (click)="deactivate(row)">Deactivate</button>
+                }
+              }
+            </td>
+          </ng-container>
           <tr mat-header-row *matHeaderRowDef="columns"></tr>
           <tr mat-row *matRowDef="let row; columns: columns"></tr>
         </table>
@@ -88,6 +106,8 @@ import { PriceListDialogComponent } from '../ui/price-list-dialog.component';
 })
 export class PriceListsPage {
   private readonly api = inject(PriceListsApiService);
+  private readonly confirm = inject(ConfirmService);
+  readonly editing = signal<string | null>(null);
   private readonly dialog = inject(MatDialog);
   private readonly snackBar = inject(MatSnackBar);
 
@@ -97,7 +117,7 @@ export class PriceListsPage {
   readonly emptyMessage = $localize`:@@priceLists.empty.message:Create a price list such as Retail or Wholesale, then price your variants.`;
   readonly activeLabel = $localize`:@@common.active:Active`;
   readonly inactiveLabel = $localize`:@@common.inactive:Inactive`;
-  readonly columns = ['name', 'currency', 'type', 'status'];
+  readonly columns = ['name', 'currency', 'type', 'status', 'actions'];
 
   readonly lists = signal<PriceList[]>([]);
   readonly loading = signal(true);
@@ -142,5 +162,26 @@ export class PriceListsPage {
           this.load();
         }
       });
+  }
+
+  rename(list: PriceList, name: string): void {
+    this.api.rename(list.id, name.trim()).subscribe({
+      next: () => { this.editing.set(null); this.load(); },
+      error: error => this.snackBar.open(describeApiError(error, 'Could not rename the price list.'), undefined, { duration: 5000 }),
+    });
+  }
+
+  deactivate(list: PriceList): void {
+    this.confirm.confirm({
+      title: 'Deactivate price list?',
+      message: 'New transactions will stop using this list. Existing sales keep their recorded prices.',
+      confirmLabel: 'Deactivate',
+    }).subscribe(confirmed => {
+      if (!confirmed) return;
+      this.api.deactivate(list.id).subscribe({
+        next: () => this.load(),
+        error: error => this.snackBar.open(describeApiError(error, 'Could not deactivate the price list.'), undefined, { duration: 5000 }),
+      });
+    });
   }
 }

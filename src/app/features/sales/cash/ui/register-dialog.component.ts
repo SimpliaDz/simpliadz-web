@@ -34,7 +34,7 @@ export interface RegisterDialogData {
             <mat-select formControlName="locationId">
               @for (location of data.locations; track location.id) {
                 <mat-option [value]="location.id" [disabled]="!location.isActive">{{
-                  location.name
+                  location.name + (location.isActive ? '' : ' — Inactive')
                 }}</mat-option>
               }
             </mat-select>

@@ -49,4 +49,8 @@ export class LocationsApiService {
   deactivate(id: string): Observable<void> {
     return this.http.put<void>(this.apiUrl.path(`/locations/${id}/deactivate`), null);
   }
+
+  activate(id: string): Observable<void> {
+    return this.http.put<void>(this.apiUrl.path(`/locations/${id}/activate`), null);
+  }
 }

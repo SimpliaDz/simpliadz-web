@@ -60,6 +60,10 @@ export class DocumentsApiService {
     return this.http.put(this.apiUrl.path(`/inventory-document-templates/${id}`), request);
   }
 
+  activateTemplate(id: string): Observable<void> {
+    return this.http.put<void>(this.apiUrl.path(`/inventory-document-templates/${id}/activate`), null);
+  }
+
   deactivateTemplate(id: string): Observable<void> {
     return this.http.put<void>(
       this.apiUrl.path(`/inventory-document-templates/${id}/deactivate`),

@@ -536,7 +536,7 @@
       <trans-unit id="documents.printFailed" datatype="html"><source>The document could not be created.</source><target>تعذّر إنشاء المستند.</target></trans-unit>
       <trans-unit id="documents.saved" datatype="html"><source>Template saved.</source><target>تم حفظ القالب.</target></trans-unit>
       <trans-unit id="documents.deactivate.title" datatype="html"><source>Deactivate template?</source><target>تعطيل القالب؟</target></trans-unit>
-      <trans-unit id="documents.deactivate.message" datatype="html"><source>The template can no longer be used for printing. Templates cannot be reactivated.</source><target>لن يمكن استخدام القالب للطباعة. لا يمكن إعادة تفعيل القوالب.</target></trans-unit>
+      <trans-unit id="documents.deactivate.message" datatype="html"><source>The template can no longer be used for printing.</source><target>لن يمكن استخدام القالب للطباعة.</target></trans-unit>
       <trans-unit id="documents.deactivateFailed" datatype="html"><source>The template could not be deactivated.</source><target>تعذّر تعطيل القالب.</target></trans-unit>
       <trans-unit id="documents.type.countSheet" datatype="html"><source>Count sheet</source><target>ورقة الجرد</target></trans-unit>
       <trans-unit id="documents.type.differences" datatype="html"><source>Count differences</source><target>فروقات الجرد</target></trans-unit>
@@ -610,7 +610,7 @@
       <trans-unit id="locations.empty.message" datatype="html"><source>Add the store or warehouse where stock is kept and sold.</source><target>أضف المتجر أو المستودع الذي يُحفظ فيه المخزون ويُباع منه.</target></trans-unit>
       <trans-unit id="locations.loadFailedHint" datatype="html"><source>Try again in a moment.</source><target>أعد المحاولة بعد لحظة.</target></trans-unit>
       <trans-unit id="locations.deactivate.title" datatype="html"><source>Deactivate location?</source><target>تعطيل الموقع؟</target></trans-unit>
-      <trans-unit id="locations.deactivate.message" datatype="html"><source>Stock history is kept. The location can no longer be used for new stock or sales. Locations cannot be reactivated.</source><target>يُحتفظ بسجل المخزون. لن يمكن استخدام الموقع لمخزون أو مبيعات جديدة. لا يمكن إعادة تفعيل المواقع.</target></trans-unit>
+      <trans-unit id="locations.deactivate.message" datatype="html"><source>Stock history is kept. The location can no longer be used for new stock or sales.</source><target>يُحتفظ بسجل المخزون. لن يمكن استخدام الموقع لمخزون أو مبيعات جديدة.</target></trans-unit>
       <trans-unit id="locations.deactivated" datatype="html"><source>Location deactivated.</source><target>تم تعطيل الموقع.</target></trans-unit>
       <trans-unit id="locations.deactivateFailed" datatype="html"><source>The location could not be deactivated.</source><target>تعذّر تعطيل الموقع.</target></trans-unit>
       <trans-unit id="priceLists.subtitle" datatype="html"><source>Price lists hold the selling price of each variant. Prices are set per variant from its detail page.</source><target>تحتفظ قوائم الأسعار بسعر البيع لكل متغير. تُحدَّد الأسعار لكل متغير من صفحته.</target></trans-unit>

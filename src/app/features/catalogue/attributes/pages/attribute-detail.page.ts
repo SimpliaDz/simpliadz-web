@@ -9,6 +9,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
 import { describeApiError } from '../../../../core/api/api-error-message';
+import { ConfirmService } from '../../../../shared/ui/confirm-dialog/confirm.service';
 import { AuthSessionService } from '../../../../core/auth/auth-session.service';
 import { HasPermissionDirective } from '../../../../core/auth/has-permission.directive';
 import { PageHeaderComponent } from '../../../../shared/ui/page-header/page-header.component';
@@ -61,7 +62,22 @@ import {
           <table mat-table [dataSource]="current.values" class="data-table">
             <ng-container matColumnDef="value">
               <th mat-header-cell *matHeaderCellDef i18n="@@attributes.value.field">Value</th>
-              <td mat-cell *matCellDef="let row">{{ row.value }}</td>
+              <td mat-cell *matCellDef="let row">
+                @if (editingValue() === row.id) {
+                  <mat-form-field appearance="outline" subscriptSizing="dynamic">
+                    <mat-label>Value</mat-label>
+                    <input matInput #name [value]="row.value" maxlength="150" />
+                  </mat-form-field>
+                  <button mat-button type="button" (click)="renameValue(row.id, name.value)">Save value</button>
+                  <button mat-button type="button" (click)="editingValue.set(null)">Cancel</button>
+                } @else {
+                  {{ row.value }}
+                  @if (canManage()) {
+                    <button mat-button type="button" (click)="editingValue.set(row.id)">Edit</button>
+                    <button mat-button type="button" (click)="deleteValue(row)">Delete</button>
+                  }
+                }
+              </td>
             </ng-container>
             <ng-container matColumnDef="order">
               <th mat-header-cell *matHeaderCellDef i18n="@@attributes.displayOrder">
@@ -125,10 +141,38 @@ import {
       }
     }
   `,
+  styles: `
+    .order-field { width: 9rem; max-width: 100%; margin-block: .75rem; }
+    .mat-column-order { min-width: 10rem; }
+  `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AttributeDetailPage {
   private readonly api = inject(AttributesApiService);
+  private readonly confirm = inject(ConfirmService);
+  readonly editingValue = signal<string | null>(null);
+
+  renameValue(id: string, value: string): void {
+    this.api.renameValue(this.attributeId, id, value.trim()).subscribe({
+      next: () => { this.editingValue.set(null); this.load(); },
+      error: error => this.snackBar.open(describeApiError(error, 'Could not rename the value.'), undefined, { duration: 5000 }),
+    });
+  }
+
+  deleteValue(value: AttributeValue): void {
+    this.confirm.confirm({
+      title: 'Delete attribute value?',
+      message: `Delete “${value.value}”? Values used by variants must be replaced first.`,
+      confirmLabel: 'Delete',
+      destructive: true,
+    }).subscribe(confirmed => {
+      if (!confirmed) return;
+      this.api.deleteValue(this.attributeId, value.id).subscribe({
+        next: () => this.load(),
+        error: error => this.snackBar.open(describeApiError(error, 'Could not delete the value.'), undefined, { duration: 5000 }),
+      });
+    });
+  }
   private readonly route = inject(ActivatedRoute);
   private readonly formBuilder = inject(NonNullableFormBuilder);
   private readonly snackBar = inject(MatSnackBar);

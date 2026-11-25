@@ -8,8 +8,14 @@ export interface VariantOption {
   readonly productId: string;
   readonly productName: string;
   readonly sku: string;
+  readonly barcode?: string | null;
   readonly label: string;
   readonly isActive: boolean;
+}
+
+export function matchesVariant(variant: VariantOption, search: string): boolean {
+  const text = [variant.label, variant.barcode].filter(Boolean).join(' ').toLowerCase();
+  return search.trim().toLowerCase().split(/\s+/).every(term => text.includes(term));
 }
 
 /** Stock is held per variant. The product list carries every variant, so one call resolves names. */
@@ -28,6 +34,7 @@ export class VariantCatalogueService {
               productId: product.id,
               productName: product.name,
               sku: variant.sku,
+              barcode: variant.barcode,
               label: `${product.name}${detail ? ` (${detail})` : ''} · ${variant.sku}`,
               isActive: variant.isActive,
             };

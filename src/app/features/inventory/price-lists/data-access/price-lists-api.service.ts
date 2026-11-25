@@ -21,6 +21,13 @@ export interface CreatePriceListRequest {
 
 @Injectable({ providedIn: 'root' })
 export class PriceListsApiService {
+  rename(id: string, name: string): Observable<void> {
+    return this.http.put<void>(this.apiUrl.path(`/price-lists/${id}`), { name });
+  }
+
+  deactivate(id: string): Observable<void> {
+    return this.http.put<void>(this.apiUrl.path(`/price-lists/${id}/deactivate`), null);
+  }
   private readonly http = inject(HttpClient);
   private readonly apiUrl = inject(ApiUrlService);
 

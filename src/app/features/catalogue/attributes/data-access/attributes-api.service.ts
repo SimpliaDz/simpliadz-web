@@ -40,6 +40,14 @@ export class AttributesApiService {
     });
   }
 
+  renameValue(attributeId: string, valueId: string, value: string): Observable<void> {
+    return this.http.put<void>(this.apiUrl.path(`/attributes/${attributeId}/values/${valueId}`), { value });
+  }
+
+  deleteValue(attributeId: string, valueId: string): Observable<void> {
+    return this.http.delete<void>(this.apiUrl.path(`/attributes/${attributeId}/values/${valueId}`));
+  }
+
   reorderValue(
     attributeId: string,
     valueId: string,

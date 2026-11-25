@@ -38,6 +38,10 @@ export class LabelsApiService {
     return this.http.post(this.apiUrl.path('/barcode-label-templates'), request);
   }
 
+  activateTemplate(id: string): Observable<void> {
+    return this.http.put<void>(this.apiUrl.path(`/barcode-label-templates/${id}/activate`), null);
+  }
+
   updateTemplate(id: string, request: LabelTemplateRequest): Observable<unknown> {
     return this.http.put(this.apiUrl.path(`/barcode-label-templates/${id}`), request);
   }

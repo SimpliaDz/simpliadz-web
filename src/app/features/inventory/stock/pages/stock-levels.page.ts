@@ -1,4 +1,6 @@
-import { DatePipe } from '@angular/common';
+import { DatePipe, DecimalPipe } from '@angular/common';
+import { RouterLink } from '@angular/router';
+import { MatInputModule } from '@angular/material/input';
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
@@ -15,8 +17,8 @@ import { PageHeaderComponent } from '../../../../shared/ui/page-header/page-head
 import { StatePanelComponent } from '../../../../shared/ui/state-panel/state-panel.component';
 import { StatusChipComponent } from '../../../../shared/ui/status-chip/status-chip.component';
 import { Location, LocationsApiService } from '../../locations/data-access/locations-api.service';
-import { StockApiService, StockBalance } from '../data-access/stock-api.service';
-import { VariantCatalogueService, VariantOption } from '../data-access/variant-catalogue.service';
+import { StockApiService, StockBalance, StockOverview } from '../data-access/stock-api.service';
+import { matchesVariant, VariantCatalogueService, VariantOption } from '../data-access/variant-catalogue.service';
 import {
   StockMovementDialogComponent,
   StockMovementDialogData,
@@ -32,6 +34,9 @@ interface BalanceRow {
   selector: 'app-stock-levels-page',
   imports: [
     DatePipe,
+    DecimalPipe,
+    RouterLink,
+    MatInputModule,
     MatButtonModule,
     MatFormFieldModule,
     MatIconModule,
@@ -64,6 +69,10 @@ interface BalanceRow {
 
     <div class="toolbar">
       <mat-form-field appearance="outline">
+        <mat-label>Find a variant</mat-label>
+        <input matInput #query (input)="search.set(query.value)" placeholder="Name, attributes, SKU or barcode" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
         <mat-label i18n="@@stock.field.location">Location</mat-label>
         <mat-select [value]="locationId()" (selectionChange)="selectLocation($event.value)">
           @for (location of locations(); track location.id) {
@@ -91,7 +100,25 @@ interface BalanceRow {
           <ng-container matColumnDef="product">
             <th mat-header-cell *matHeaderCellDef i18n="@@stock.column.product">Product</th>
             <td mat-cell *matCellDef="let row">
-              {{ row.variant?.label ?? row.balance.productVariantId }}
+              @if (row.variant; as variant) {
+                <a [routerLink]="['/app/catalogue/variants', variant.id]">{{ variant.label }}</a>
+              } @else { {{ row.balance.productVariantId }} }
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="otherLocations">
+            <th mat-header-cell *matHeaderCellDef>Other locations</th>
+            <td mat-cell *matCellDef="let row">
+              @for (location of otherLocations(); track location.id) {
+                <div>{{ location.name }} · {{ onHand(row.balance.productVariantId, location.id) }}</div>
+              }
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="prices">
+            <th mat-header-cell *matHeaderCellDef>Prices</th>
+            <td mat-cell *matCellDef="let row">
+              @for (price of pricesByVariant().get(row.balance.productVariantId) ?? []; track $index) {
+                <div>{{ price.priceListName }} · {{ price.price | number:'1.2-2' }}</div>
+              } @empty { — }
             </td>
           </ng-container>
           <ng-container matColumnDef="quantity">
@@ -136,23 +163,43 @@ export class StockLevelsPage {
   readonly emptyMessage = $localize`:@@stock.empty.message:Record opening stock or receive goods to start tracking quantities at this location.`;
   readonly outLabel = $localize`:@@stock.out:Out of stock`;
   readonly inStockLabel = $localize`:@@stock.inStock:In stock`;
-  readonly columns = ['product', 'quantity', 'state', 'updated'];
+  readonly columns = ['product', 'quantity', 'otherLocations', 'prices', 'state', 'updated'];
 
   readonly canManage = computed(() => this.session.hasPermission('stock.manage'));
   readonly locations = signal<Location[]>([]);
   readonly variants = signal<VariantOption[]>([]);
   readonly locationId = signal<string | null>(null);
   readonly balances = signal<StockBalance[]>([]);
+  readonly search = signal('');
+  private readonly prices = signal<StockOverview['prices']>([]);
+  readonly pricesByVariant = computed(() => {
+    const result = new Map<string, StockOverview['prices']>();
+    for (const price of this.prices()) {
+      const items = result.get(price.productVariantId) ?? [];
+      items.push(price);
+      result.set(price.productVariantId, items);
+    }
+    return result;
+  });
+  readonly otherLocations = computed(() => this.locations().filter(location => location.id !== this.locationId()));
+  private readonly balancesByKey = computed(() => new Map(this.balances().map(balance =>
+    [`${balance.productVariantId}:${balance.locationId}`, balance])));
   readonly loading = signal(true);
   readonly loadError = signal<string | null>(null);
 
   readonly rows = computed<BalanceRow[]>(() => {
-    const byId = new Map(this.variants().map((variant) => [variant.id, variant]));
-    return this.balances().map((balance) => ({
-      balance,
-      variant: byId.get(balance.productVariantId) ?? null,
+    const locationId = this.locationId();
+    if (!locationId) return [];
+    return this.variants().filter(variant => matchesVariant(variant, this.search())).map(variant => ({
+      variant,
+      balance: this.balancesByKey().get(`${variant.id}:${locationId}`) ??
+        { productVariantId: variant.id, locationId, quantityOnHand: 0, updatedAt: '' },
     }));
   });
+
+  onHand(variantId: string, locationId: string): number {
+    return this.balancesByKey().get(`${variantId}:${locationId}`)?.quantityOnHand ?? 0;
+  }
 
   constructor() {
     this.load();
@@ -164,13 +211,20 @@ export class StockLevelsPage {
     forkJoin({
       locations: this.locationsApi.list(),
       variants: this.catalogue.options(),
+      overview: this.stock.overview(),
     }).subscribe({
-      next: ({ locations, variants }) => {
+      next: ({ locations, variants, overview }) => {
         this.locations.set(locations);
-        this.variants.set(variants);
+        const attributes = new Map(overview.attributes.map(item => [item.productVariantId, item.values]));
+        this.variants.set(variants.map(variant => {
+          const values = attributes.get(variant.id);
+          return values?.length ? { ...variant, label: `${variant.productName} (${values.join(' / ')}) · ${variant.sku}` } : variant;
+        }));
+        this.balances.set(overview.balances);
+        this.prices.set(overview.prices);
         const first = locations.find((location) => location.isActive) ?? locations[0] ?? null;
         this.locationId.set(this.locationId() ?? first?.id ?? null);
-        this.loadBalances();
+        this.loading.set(false);
       },
       error: (error: unknown) => {
         this.loading.set(false);
@@ -183,7 +237,6 @@ export class StockLevelsPage {
 
   selectLocation(id: string): void {
     this.locationId.set(id);
-    this.loadBalances();
   }
 
   openDialog(mode: StockMovementMode): void {
@@ -193,6 +246,7 @@ export class StockLevelsPage {
       locations: this.locations(),
       variantId: null,
       locationId: this.locationId(),
+      balances: this.balances(),
     };
     this.dialog
       .open(StockMovementDialogComponent, { data, width: '32rem', autoFocus: 'dialog' })
@@ -202,30 +256,9 @@ export class StockLevelsPage {
           this.snackBar.open($localize`:@@stock.saved:Stock updated.`, undefined, {
             duration: 3000,
           });
-          this.loadBalances();
+          this.load();
         }
       });
   }
 
-  private loadBalances(): void {
-    const id = this.locationId();
-    if (!id) {
-      this.balances.set([]);
-      this.loading.set(false);
-      return;
-    }
-    this.loading.set(true);
-    this.stock.balancesForLocation(id).subscribe({
-      next: (balances) => {
-        this.balances.set(balances);
-        this.loading.set(false);
-      },
-      error: (error: unknown) => {
-        this.loading.set(false);
-        this.loadError.set(
-          describeApiError(error, $localize`:@@stock.loadFailedHint:Try again in a moment.`),
-        );
-      },
-    });
-  }
 }

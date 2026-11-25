@@ -10,6 +10,12 @@ export interface StockBalance {
   readonly updatedAt: string;
 }
 
+export interface StockOverview {
+  readonly balances: StockBalance[];
+  readonly prices: { productVariantId: string; priceListName: string; currencyCode: string; price: number }[];
+  readonly attributes: { productVariantId: string; values: string[] }[];
+}
+
 export type StockMovementType =
   | 'Receipt'
   | 'Issue'
@@ -94,6 +100,9 @@ export interface PolicyRequest {
 
 @Injectable({ providedIn: 'root' })
 export class StockApiService {
+  overview(): Observable<StockOverview> {
+    return this.http.get<StockOverview>(this.apiUrl.path('/stock/overview'));
+  }
   private readonly http = inject(HttpClient);
   private readonly apiUrl = inject(ApiUrlService);
 

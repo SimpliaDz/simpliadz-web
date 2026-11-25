@@ -28,6 +28,16 @@ const actions = [
   'InventoryCountCompleted',
   'GoodsReceived',
   'SaleCancelled',
+  'SaleCreated',
+  'SaleCompleted',
+  'SaleItemAdded',
+  'SaleLineRemoved',
+  'SaleQuantityChanged',
+  'SaleCustomerChanged',
+  'SaleDiscountChanged',
+  'SaleLineDiscountChanged',
+  'SalePaymentRecorded',
+  'SaleReturned',
   'CashSessionOpened',
   'CashSessionClosed',
   'CashMoved',
@@ -83,6 +93,10 @@ const actions = [
       <mat-form-field appearance="outline">
         <mat-label i18n="@@audit.entityType">Entity type</mat-label>
         <input matInput name="entityType" [(ngModel)]="entityType" maxlength="100" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Sale or record ID</mat-label>
+        <input matInput name="entityId" [(ngModel)]="entityId" maxlength="36" />
       </mat-form-field>
       <mat-form-field appearance="outline">
         <mat-label i18n="@@expenses.from">From</mat-label>
@@ -221,12 +235,14 @@ export class AuditLogPage {
   action: string | null = null;
   userId: string | null = null;
   entityType = '';
+  entityId = '';
   from = '';
   to = '';
   private active = {
     action: null as string | null,
     userId: null as string | null,
     entityType: null as string | null,
+    entityId: null as string | null,
     from: null as string | null,
     to: null as string | null,
   };
@@ -245,6 +261,7 @@ export class AuditLogPage {
       action: this.action,
       userId: this.userId,
       entityType: this.entityType.trim() || null,
+      entityId: this.entityId.trim() || null,
       from: this.from ? new Date(this.from).toISOString() : null,
       to: this.to ? new Date(this.to).toISOString() : null,
     };
@@ -260,7 +277,7 @@ export class AuditLogPage {
   load(): void {
     this.loading.set(true);
     this.loadError.set(null);
-    this.api.entries({ ...this.active, entityId: null, page: this.page(), pageSize }).subscribe({
+    this.api.entries({ ...this.active, page: this.page(), pageSize }).subscribe({
       next: (history) => {
         this.entries.set(history.items);
         this.total.set(history.totalItems);

@@ -210,6 +210,9 @@ interface LineDraft {
                   >
                     <mat-icon aria-hidden="true">edit</mat-icon>
                   </button>
+                } @else {
+                  <button *appHasPermission="'barcode-labels.manage'" mat-button type="button"
+                    (click)="activate(row)">Activate</button>
                 }
               </td>
             </ng-container>
@@ -289,6 +292,13 @@ export class LabelsPage {
           describeApiError(error, $localize`:@@labels.loadFailedHint:Try again in a moment.`),
         );
       },
+    });
+  }
+
+  activate(template: LabelTemplate): void {
+    this.api.activateTemplate(template.id).subscribe({
+      next: () => this.load(),
+      error: error => this.snackBar.open(describeApiError(error, 'Could not activate the template.'), undefined, { duration: 5000 }),
     });
   }
 

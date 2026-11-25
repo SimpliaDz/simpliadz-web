@@ -96,6 +96,17 @@ export interface SaleFilter extends PageRequest {
   readonly search: string | null;
 }
 
+export interface SaleHistory {
+  readonly items: Sale[];
+  readonly count: number;
+  readonly total: number;
+}
+
+export interface SaleHistoryCustomer {
+  readonly id: string;
+  readonly name: string;
+}
+
 export interface NewSaleRequest {
   readonly locationId: string;
   readonly customerId: string | null;
@@ -110,6 +121,22 @@ export class SalesApiService {
   private readonly apiUrl = inject(ApiUrlService);
 
   list(filter: SaleFilter): Observable<Sale[]> {
+    return this.http.get<Sale[]>(this.apiUrl.path('/sales'), { params: this.saleParams(filter) });
+  }
+
+  history(filter: SaleFilter, from: string | null, until: string | null): Observable<SaleHistory> {
+    let params = this.saleParams(filter);
+    if (from) params = params.set('from', from);
+    if (until) params = params.set('until', until);
+    return this.http.get<SaleHistory>(this.apiUrl.path('/sales/history'), { params });
+  }
+
+  historyCustomers(search: string): Observable<SaleHistoryCustomer[]> {
+    const params = new HttpParams().set('search', search);
+    return this.http.get<SaleHistoryCustomer[]>(this.apiUrl.path('/sales/history/customers'), { params });
+  }
+
+  private saleParams(filter: SaleFilter): HttpParams {
     let params: HttpParams = pageParams(filter);
     if (filter.locationId) {
       params = params.set('locationId', filter.locationId);
@@ -123,7 +150,7 @@ export class SalesApiService {
     if (filter.search) {
       params = params.set('search', filter.search);
     }
-    return this.http.get<Sale[]>(this.apiUrl.path('/sales'), { params });
+    return params;
   }
 
   get(id: string): Observable<Sale> {
@@ -149,7 +176,9 @@ export class SalesApiService {
   posContext(): Observable<PosContext> { return this.http.get<PosContext>(this.apiUrl.path('/pos/context')); }
   assignRegister(id: string): Observable<PosContext> { return this.http.post<PosContext>(this.apiUrl.path(`/pos/registers/${id}/assign`), null); }
   releaseRegister(): Observable<void> { return this.http.delete<void>(this.apiUrl.path('/pos/register-assignment')); }
-  posCreate(customerId: string | null = null): Observable<Sale> { return this.http.post<Sale>(this.apiUrl.path('/pos/sales'), { customerId }); }
+  posCreate(code: string, customerId: string | null, confirmPhysicalStock = false): Observable<Sale> {
+    return this.http.post<Sale>(this.apiUrl.path('/pos/sales'), { code, customerId, confirmPhysicalStock });
+  }
   posDraft(id: string): Observable<Sale> { return this.http.get<Sale>(this.apiUrl.path(`/pos/sales/${id}`)); }
   posReceipt(id: string): Observable<Blob> {
     return this.http.get(this.apiUrl.path(`/pos/sales/${id}/receipt.pdf`), { responseType: 'blob' });
@@ -160,11 +189,11 @@ export class SalesApiService {
   posCancel(saleId: string): Observable<void> {
     return this.http.post<void>(this.apiUrl.path(`/pos/sales/${saleId}/cancel`), {});
   }
-  posScan(saleId: string, code: string): Observable<Sale> { return this.http.post<Sale>(this.apiUrl.path(`/pos/sales/${saleId}/scan`), { code }); }
-  posSetLineQuantity(saleId: string, lineId: string, quantity: number): Observable<Sale> { return this.http.put<Sale>(this.apiUrl.path(`/pos/sales/${saleId}/lines/${lineId}/quantity`), { quantity }); }
+  posScan(saleId: string, code: string, confirmPhysicalStock = false): Observable<Sale> { return this.http.post<Sale>(this.apiUrl.path(`/pos/sales/${saleId}/scan`), { code, confirmPhysicalStock }); }
+  posSetLineQuantity(saleId: string, lineId: string, quantity: number, confirmPhysicalStock = false): Observable<Sale> { return this.http.put<Sale>(this.apiUrl.path(`/pos/sales/${saleId}/lines/${lineId}/quantity`), { quantity, confirmPhysicalStock }); }
   posSetCustomer(saleId: string, customerId: string | null): Observable<Sale> { return this.http.put<Sale>(this.apiUrl.path(`/pos/sales/${saleId}/customer`), { customerId }); }
   posCustomers(search: string): Observable<PosCustomer[]> { return this.http.get<PosCustomer[]>(this.apiUrl.path('/pos/customers'), { params: new HttpParams().set('search', search) }); }
-  posPay(saleId: string, amount: number, method: PaymentMethod): Observable<{ sale: Sale; payment: Payment }> { return this.http.post<{ sale: Sale; payment: Payment }>(this.apiUrl.path(`/pos/sales/${saleId}/pay`), { id: crypto.randomUUID(), amount, paymentMethod: method }); }
+  posPay(saleId: string, amount: number, method: PaymentMethod, confirmPhysicalStock = false): Observable<{ sale: Sale; payment: Payment }> { return this.http.post<{ sale: Sale; payment: Payment }>(this.apiUrl.path(`/pos/sales/${saleId}/pay`), { id: crypto.randomUUID(), amount, paymentMethod: method, confirmPhysicalStock }); }
 
   /** Adds one unit line by exact SKU or barcode. Adding a discount requires the discount permission. */
   addLine(

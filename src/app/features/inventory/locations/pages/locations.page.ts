@@ -109,6 +109,9 @@ import { Location, LocationsApiService } from '../data-access/locations-api.serv
                 >
                   <mat-icon aria-hidden="true">block</mat-icon>
                 </button>
+              } @else {
+                <button *appHasPermission="'locations.edit'" mat-button type="button"
+                  (click)="activate(location)">Activate</button>
               }
             </td>
           </ng-container>
@@ -170,7 +173,7 @@ export class LocationsPage {
     this.confirm
       .confirm({
         title: $localize`:@@locations.deactivate.title:Deactivate location?`,
-        message: $localize`:@@locations.deactivate.message:Stock history is kept. The location can no longer be used for new stock or sales. Locations cannot be reactivated.`,
+        message: $localize`:@@locations.deactivate.message:Stock history is kept. The location can no longer be used for new stock or sales.`,
         confirmLabel: $localize`:@@common.deactivate:Deactivate`,
         destructive: true,
       })
@@ -198,5 +201,19 @@ export class LocationsPage {
             ),
         });
       });
+  }
+
+  activate(location: Location): void {
+    this.confirm.confirm({
+      title: 'Activate location?',
+      message: `${location.name} will be available for new stock and sales operations.`,
+      confirmLabel: 'Activate',
+    }).subscribe(confirmed => {
+      if (!confirmed) return;
+      this.api.activate(location.id).subscribe({
+        next: () => this.load(),
+        error: error => this.snackBar.open(describeApiError(error, 'Could not activate the location.'), undefined, { duration: 5000 }),
+      });
+    });
   }
 }
