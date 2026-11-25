@@ -9,6 +9,9 @@ export type DiscountType = 'FixedAmount' | 'Percentage';
 export type PaymentMethod = 'Cash' | 'Card' | 'BankTransfer' | 'Other';
 
 export interface SaleLine {
+  readonly promotionId?: string | null;
+  readonly promotionName?: string | null;
+  readonly promotionUnitDiscount?: number | null;
   readonly availableQuantity?: number | null;
   readonly productName?: string | null;
   readonly variantName?: string | null;
@@ -193,7 +196,7 @@ export class SalesApiService {
   posSetLineQuantity(saleId: string, lineId: string, quantity: number, confirmPhysicalStock = false): Observable<Sale> { return this.http.put<Sale>(this.apiUrl.path(`/pos/sales/${saleId}/lines/${lineId}/quantity`), { quantity, confirmPhysicalStock }); }
   posSetCustomer(saleId: string, customerId: string | null): Observable<Sale> { return this.http.put<Sale>(this.apiUrl.path(`/pos/sales/${saleId}/customer`), { customerId }); }
   posCustomers(search: string): Observable<PosCustomer[]> { return this.http.get<PosCustomer[]>(this.apiUrl.path('/pos/customers'), { params: new HttpParams().set('search', search) }); }
-  posPay(saleId: string, amount: number, method: PaymentMethod, confirmPhysicalStock = false): Observable<{ sale: Sale; payment: Payment }> { return this.http.post<{ sale: Sale; payment: Payment }>(this.apiUrl.path(`/pos/sales/${saleId}/pay`), { id: crypto.randomUUID(), amount, paymentMethod: method, confirmPhysicalStock }); }
+  posPay(saleId: string, amount: number, method: PaymentMethod, confirmPhysicalStock = false): Observable<{ sale: Sale; payment: Payment | null }> { return this.http.post<{ sale: Sale; payment: Payment | null }>(this.apiUrl.path(`/pos/sales/${saleId}/pay`), { id: crypto.randomUUID(), amount, paymentMethod: method, confirmPhysicalStock }); }
 
   /** Adds one unit line by exact SKU or barcode. Adding a discount requires the discount permission. */
   addLine(

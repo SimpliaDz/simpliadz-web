@@ -274,7 +274,10 @@ interface ReturnRowControl {
             </ng-container>
             <ng-container matColumnDef="discount">
               <th mat-header-cell *matHeaderCellDef i18n="@@sales.discount">Discount</th>
-              <td mat-cell *matCellDef="let line">{{ line.discountAmount | number: '1.2-2' }}</td>
+              <td mat-cell *matCellDef="let line">
+                {{ line.discountAmount | number: '1.2-2' }}
+                @if (line.promotionName) { <small> · {{ line.promotionName }}</small> }
+              </td>
             </ng-container>
             <ng-container matColumnDef="total">
               <th mat-header-cell *matHeaderCellDef i18n="@@sales.lineTotal">Line total</th>

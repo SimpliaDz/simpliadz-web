@@ -38,6 +38,8 @@ const actions = [
   'SaleLineDiscountChanged',
   'SalePaymentRecorded',
   'SaleReturned',
+  'PromotionCreated',
+  'PromotionUpdated',
   'CashSessionOpened',
   'CashSessionClosed',
   'CashMoved',

@@ -345,6 +345,13 @@ export const routes: Routes = [
           import('./features/sales/sales/pages/pos.page').then((m) => m.PosPage),
       },
       {
+        path: 'sales/promotions',
+        title: 'Promotions | SimpliaDz',
+        ...permissioned(['sales.manage', 'sales.discounts.apply']),
+        loadComponent: () =>
+          import('./features/sales/sales/pages/promotions.page').then(m => m.PromotionsPage),
+      },
+      {
         path: 'sales/sales',
         title: $localize`:@@title.sales:Sales | SimpliaDz`,
         ...permissioned(['sales.view']),

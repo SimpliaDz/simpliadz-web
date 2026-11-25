@@ -142,6 +142,12 @@ export const navigationSections: readonly NavigationSection[] = [
         permissions: ['sales.view'],
       },
       {
+        label: 'Promotions',
+        icon: 'local_offer',
+        path: '/app/sales/promotions',
+        permissions: ['sales.manage', 'sales.discounts.apply'],
+      },
+      {
         label: $localize`:@@nav.customers:Customers`,
         icon: 'groups',
         path: '/app/sales/customers',
