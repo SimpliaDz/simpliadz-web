@@ -6,6 +6,7 @@ import { ApiUrlService } from '../../../core/api/api-url.service';
 export interface AuditEntry {
   readonly id: string;
   readonly userId: string;
+  readonly actorName?: string | null;
   readonly action: string;
   readonly entityType: string;
   readonly entityId: string;

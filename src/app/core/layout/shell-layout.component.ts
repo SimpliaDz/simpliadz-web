@@ -8,6 +8,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { map } from 'rxjs';
 import { AuthSessionService } from '../auth/auth-session.service';
@@ -25,6 +26,7 @@ import { NavigationSection, navigationSections } from './navigation';
     MatMenuModule,
     MatSidenavModule,
     MatToolbarModule,
+    MatTooltipModule,
     RouterLink,
     RouterLinkActive,
     RouterOutlet,
@@ -48,6 +50,19 @@ import { NavigationSection, navigationSections } from './navigation';
         <span>SimpliaDz</span>
       </a>
       <span class="spacer"></span>
+      @if (posShortcut(); as pos) {
+        <a mat-icon-button [routerLink]="pos.path" [matTooltip]="pos.label" [attr.aria-label]="pos.label">
+          <mat-icon aria-hidden="true">{{ pos.icon }}</mat-icon>
+        </a>
+      }
+      <a
+        mat-icon-button
+        routerLink="/app/workforce/clock"
+        [matTooltip]="myTimeLabel"
+        [attr.aria-label]="myTimeLabel"
+      >
+        <mat-icon aria-hidden="true">schedule</mat-icon>
+      </a>
       <app-theme-toggle />
       <button
         mat-button
@@ -259,6 +274,7 @@ import { NavigationSection, navigationSections } from './navigation';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ShellLayoutComponent {
+  readonly myTimeLabel = $localize`:@@nav.myTime:My time`;
   private readonly session = inject(AuthSessionService);
   private readonly router = inject(Router);
   private readonly breakpoints = inject(BreakpointObserver);
@@ -280,6 +296,12 @@ export class ShellLayoutComponent {
         items: section.items.filter((item) => this.session.hasAllPermissions(item.permissions)),
       }))
       .filter((section) => section.items.length > 0),
+  );
+
+  readonly posShortcut = computed(() =>
+    this.sections()
+      .flatMap((section) => section.items)
+      .find((item) => item.path === '/app/sales/pos'),
   );
 
   onNavigate(): void {

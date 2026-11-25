@@ -14,6 +14,15 @@ export class LoyaltyApiService {
   program(): Observable<LoyaltyProgram | null> { return this.http.get<LoyaltyProgram | null>(this.apiUrl.path('/crm/loyalty/program')); }
   configureProgram(request: { name: string; spendAmountPerPoint: number; isActive: boolean }): Observable<LoyaltyProgram> { return this.http.put<LoyaltyProgram>(this.apiUrl.path('/crm/loyalty/program'), request); }
   enroll(customerId: string): Observable<LoyaltyCard> { return this.http.post<LoyaltyCard>(this.apiUrl.path('/crm/loyalty/cards'), { customerId }); }
+  downloadCard(customerId: string): Observable<Blob> {
+    return this.http.get(this.apiUrl.path(`/crm/loyalty/customers/${customerId}/card/pdf`), { responseType: 'blob' });
+  }
+  previewCard(customerId: string): Observable<Blob> {
+    return this.http.get(this.apiUrl.path(`/crm/loyalty/customers/${customerId}/card/svg`), { responseType: 'blob' });
+  }
+  emailCard(customerId: string): Observable<void> {
+    return this.http.post<void>(this.apiUrl.path(`/crm/loyalty/customers/${customerId}/card/email`), {});
+  }
   cardForCustomer(customerId: string): Observable<LoyaltyCard> { return this.http.get<LoyaltyCard>(this.apiUrl.path(`/crm/loyalty/customers/${customerId}/card`)); }
   cardByNumber(cardNumber: string): Observable<LoyaltyCard> { return this.http.get<LoyaltyCard>(this.apiUrl.path(`/crm/loyalty/cards/by-number/${encodeURIComponent(cardNumber)}`)); }
   setCardActive(cardId: string, isActive: boolean): Observable<LoyaltyCard> { return this.http.put<LoyaltyCard>(this.apiUrl.path(`/crm/loyalty/cards/${cardId}/active`), { isActive }); }

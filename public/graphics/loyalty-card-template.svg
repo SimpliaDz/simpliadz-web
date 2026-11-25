@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 460" role="img" aria-labelledby="title">
+  <title id="title">SimpliaDz digital loyalty card design</title>
+  <rect width="680" height="460" rx="28" fill="#101d33"/>
+  <g font-family="Arial, sans-serif">
+    <text x="44" y="66" fill="#6ee7c5" font-size="20" font-weight="700" letter-spacing="3">SIMPLIADZ / FIDÉLITÉ</text>
+    <text x="44" y="121" fill="#ffffff" font-size="32" font-weight="700">Nom du client</text>
+    <rect x="44" y="174" width="592" height="150" rx="10" fill="#ffffff"/>
+    <rect x="68" y="198" width="544" height="102" rx="5" fill="none" stroke="#8b9baa" stroke-dasharray="8 6"/>
+    <text x="340" y="255" fill="#3d4f62" font-size="20" text-anchor="middle">Emplacement du code-barres</text>
+    <text x="340" y="361" fill="#ffffff" font-size="19" text-anchor="middle">Numéro de carte</text>
+    <text x="340" y="402" fill="#d2dcea" font-size="18" text-anchor="middle">Présentez cette carte en caisse.</text>
+  </g>
+</svg>

@@ -32,6 +32,10 @@ const actions = [
   'CashSessionClosed',
   'CashMoved',
   'WorkSessionCorrected',
+  'WorkSessionClockedIn',
+  'WorkSessionClockedOut',
+  'CashRegisterSelected',
+  'CashRegisterReleased',
 ] as const;
 
 @Component({
@@ -61,7 +65,7 @@ const actions = [
         <mat-select name="action" [(ngModel)]="action">
           <mat-option [value]="null" i18n="@@common.all">All</mat-option>
           @for (item of actionOptions; track item) {
-            <mat-option [value]="item">{{ item }}</mat-option>
+            <mat-option [value]="item">{{ actionLabel(item) }}</mat-option>
           }
         </mat-select>
       </mat-form-field>
@@ -113,7 +117,7 @@ const actions = [
           </ng-container>
           <ng-container matColumnDef="action">
             <th mat-header-cell *matHeaderCellDef i18n="@@audit.action">Action</th>
-            <td mat-cell *matCellDef="let row">{{ row.action }}</td>
+            <td mat-cell *matCellDef="let row">{{ actionDescription(row) }}</td>
           </ng-container>
           <ng-container matColumnDef="entity">
             <th mat-header-cell *matHeaderCellDef i18n="@@audit.entity">Entity</th>
@@ -123,7 +127,7 @@ const actions = [
           </ng-container>
           <ng-container matColumnDef="who">
             <th mat-header-cell *matHeaderCellDef i18n="@@time.person">Person</th>
-            <td mat-cell *matCellDef="let row">{{ personName(row.userId) }}</td>
+            <td mat-cell *matCellDef="let row">{{ row.actorName ?? personName(row.userId) }}</td>
           </ng-container>
           <ng-container matColumnDef="changes">
             <th mat-header-cell *matHeaderCellDef i18n="@@audit.changes">Changes</th>
@@ -201,7 +205,7 @@ export class AuditLogPage {
   readonly emptyMessage = $localize`:@@audit.empty.message:Try a wider date range or a different action.`;
   readonly showLabel = $localize`:@@audit.show:Show`;
   readonly hideLabel = $localize`:@@audit.hide:Hide`;
-  readonly columns = ['when', 'action', 'entity', 'who', 'changes'];
+  readonly columns = ['when', 'who', 'action', 'changes'];
   readonly actionOptions = actions;
 
   readonly canViewUsers = computed(() => this.session.hasPermission('users.view'));
@@ -290,7 +294,32 @@ export class AuditLogPage {
   changesText(row: AuditEntry): string {
     const before = row.oldValues ? `Before:\n${pretty(row.oldValues)}` : '';
     const after = row.newValues ? `After:\n${pretty(row.newValues)}` : '';
-    return [before, after].filter(Boolean).join('\n\n') || '—';
+    return [`${row.entityType} · ${row.entityId}`, before, after].filter(Boolean).join('\n\n');
+  }
+
+  actionLabel(action: string): string {
+    switch (action) {
+      case 'WorkSessionClockedIn': return 'Clocked in';
+      case 'WorkSessionClockedOut': return 'Clocked out';
+      case 'CashRegisterSelected': return 'Selected register';
+      case 'CashRegisterReleased': return 'Released register';
+      default: return action.replace(/([a-z0-9])([A-Z])/g, '$1 $2');
+    }
+  }
+
+  actionDescription(row: AuditEntry): string {
+    const label = this.actionLabel(row.action);
+    if (!row.newValues || !['CashRegisterSelected', 'CashRegisterReleased'].includes(row.action)) {
+      return label;
+    }
+    try {
+      const values = JSON.parse(row.newValues);
+      const register = [values?.registerCode, values?.registerName]
+        .filter((value): value is string => typeof value === 'string' && value.length > 0);
+      return [label, [...new Set(register)].join(' · ')].filter(Boolean).join(' ');
+    } catch {
+      return label;
+    }
   }
 
   personName(userId: string): string {

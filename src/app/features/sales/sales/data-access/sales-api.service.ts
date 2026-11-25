@@ -9,6 +9,10 @@ export type DiscountType = 'FixedAmount' | 'Percentage';
 export type PaymentMethod = 'Cash' | 'Card' | 'BankTransfer' | 'Other';
 
 export interface SaleLine {
+  readonly availableQuantity?: number | null;
+  readonly productName?: string | null;
+  readonly variantName?: string | null;
+  readonly sku?: string | null;
   readonly id: string;
   readonly productVariantId: string;
   readonly quantity: number;
@@ -97,7 +101,7 @@ export interface NewSaleRequest {
   readonly customerId: string | null;
   readonly priceListId: string;
 }
-export interface PosContext { readonly isClockedIn: boolean; readonly cashRegisterId: string | null; readonly cashRegisterCode: string | null; readonly cashRegisterName: string | null; readonly cashSessionId: string | null; readonly defaultPriceListId: string | null; readonly currencyCode: string | null; readonly registers: readonly { id: string; code: string; name: string; cashSessionId: string | null; occupiedByUserId: string | null; isAvailable: boolean }[]; }
+export interface PosContext { readonly isClockedIn: boolean; readonly cashRegisterId: string | null; readonly cashRegisterCode: string | null; readonly cashRegisterName: string | null; readonly cashSessionId: string | null; readonly defaultPriceListId: string | null; readonly currencyCode: string | null; readonly registers: readonly { id: string; locationId: string; code: string; name: string; cashSessionId: string | null; occupiedByUserId: string | null; isAvailable: boolean }[]; }
 export interface PosCustomer { readonly id: string; readonly name: string; readonly phone: string | null; readonly email: string | null; }
 
 @Injectable({ providedIn: 'root' })
@@ -146,6 +150,16 @@ export class SalesApiService {
   assignRegister(id: string): Observable<PosContext> { return this.http.post<PosContext>(this.apiUrl.path(`/pos/registers/${id}/assign`), null); }
   releaseRegister(): Observable<void> { return this.http.delete<void>(this.apiUrl.path('/pos/register-assignment')); }
   posCreate(customerId: string | null = null): Observable<Sale> { return this.http.post<Sale>(this.apiUrl.path('/pos/sales'), { customerId }); }
+  posDraft(id: string): Observable<Sale> { return this.http.get<Sale>(this.apiUrl.path(`/pos/sales/${id}`)); }
+  posReceipt(id: string): Observable<Blob> {
+    return this.http.get(this.apiUrl.path(`/pos/sales/${id}/receipt.pdf`), { responseType: 'blob' });
+  }
+  posRemoveLine(saleId: string, lineId: string): Observable<Sale> {
+    return this.http.delete<Sale>(this.apiUrl.path(`/pos/sales/${saleId}/lines/${lineId}`));
+  }
+  posCancel(saleId: string): Observable<void> {
+    return this.http.post<void>(this.apiUrl.path(`/pos/sales/${saleId}/cancel`), {});
+  }
   posScan(saleId: string, code: string): Observable<Sale> { return this.http.post<Sale>(this.apiUrl.path(`/pos/sales/${saleId}/scan`), { code }); }
   posSetLineQuantity(saleId: string, lineId: string, quantity: number): Observable<Sale> { return this.http.put<Sale>(this.apiUrl.path(`/pos/sales/${saleId}/lines/${lineId}/quantity`), { quantity }); }
   posSetCustomer(saleId: string, customerId: string | null): Observable<Sale> { return this.http.put<Sale>(this.apiUrl.path(`/pos/sales/${saleId}/customer`), { customerId }); }

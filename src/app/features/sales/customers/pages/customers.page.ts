@@ -18,7 +18,8 @@ import { PageHeaderComponent } from '../../../../shared/ui/page-header/page-head
 import { StatePanelComponent } from '../../../../shared/ui/state-panel/state-panel.component';
 import { StatusChipComponent } from '../../../../shared/ui/status-chip/status-chip.component';
 import { Customer, CustomersApiService, CustomerType } from '../data-access/customers-api.service';
-import { CustomerDialogComponent, CustomerDialogData } from '../ui/customer-dialog.component';
+import { CustomerDialogComponent, CustomerDialogData, CustomerDialogResult } from '../ui/customer-dialog.component';
+import { DigitalCardDialogComponent } from '../../../crm/pages/digital-card-dialog.component';
 
 const pageSize = 50;
 
@@ -124,6 +125,10 @@ const pageSize = 50;
               <span class="visually-hidden" i18n="@@common.actions">Actions</span>
             </th>
             <td mat-cell *matCellDef="let row" class="actions-cell">
+              <button *appHasPermission="'crm.manage'" mat-icon-button type="button"
+                title="Digital loyalty card" aria-label="Digital loyalty card" (click)="openLoyaltyCard(row)">
+                <mat-icon aria-hidden="true">loyalty</mat-icon>
+              </button>
               <button
                 *appHasPermission="'customers.manage'"
                 mat-icon-button
@@ -229,7 +234,8 @@ export class CustomersPage {
   openDialog(customer: Customer | null): void {
     const data: CustomerDialogData = { customer };
     this.dialog
-      .open(CustomerDialogComponent, { data, width: '36rem', autoFocus: 'dialog' })
+      .open<CustomerDialogComponent, CustomerDialogData, CustomerDialogResult>(
+        CustomerDialogComponent, { data, width: '36rem', autoFocus: 'dialog' })
       .afterClosed()
       .subscribe((saved) => {
         if (saved) {
@@ -237,8 +243,13 @@ export class CustomersPage {
             duration: 3000,
           });
           this.load();
+          if (saved.openLoyaltyCard) this.openLoyaltyCard(saved.customer);
         }
       });
+  }
+
+  openLoyaltyCard(customer: Customer): void {
+    this.dialog.open(DigitalCardDialogComponent, { data: customer, width: '30rem' });
   }
 
   deactivate(customer: Customer): void {

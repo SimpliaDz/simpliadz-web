@@ -220,7 +220,7 @@ interface ReturnRowControl {
               <ng-container matColumnDef="price">
                 <th mat-header-cell *matHeaderCellDef i18n="@@sales.price">Price</th>
                 <td mat-cell *matCellDef="let row">
-                  {{ row.price | number: '1.2-2' }} {{ row.currencyCode }}
+                  {{ row.price | number: '1.2-2' }}
                 </td>
               </ng-container>
               <ng-container matColumnDef="stock">

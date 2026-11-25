@@ -117,7 +117,9 @@ const statuses: SaleStatus[] = ['Draft', 'Completed', 'PartiallyReturned', 'Retu
           <ng-container matColumnDef="documents">
             <th mat-header-cell *matHeaderCellDef>Documents</th>
             <td mat-cell *matCellDef="let row">
-              <button mat-button type="button" (click)="downloadProForma(row)">Pro-forma</button>
+              @if (row.status === 'Completed') {
+                <button mat-button type="button" (click)="downloadProForma(row)">Pro-forma</button>
+              }
               @if (row.status === 'Completed' || row.status === 'PartiallyReturned' || row.status === 'Returned') {
                 <button mat-button type="button" (click)="downloadReceipt(row)">Receipt</button>
               }
