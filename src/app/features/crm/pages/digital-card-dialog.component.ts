@@ -70,7 +70,7 @@ export class DigitalCardDialogComponent {
     this.card.set(card);
     this.api.previewCard(this.customer.id).pipe(takeUntilDestroyed(this.destroyRef)).subscribe({
       next: blob => this.preview.set(URL.createObjectURL(blob)),
-      error: () => {},
+      error: () => this.preview.set(null),
     });
   }
   download(): void {
