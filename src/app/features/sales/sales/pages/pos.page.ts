@@ -30,24 +30,24 @@ interface HeldTicket {
   imports: [DecimalPipe, FormsModule, MatButtonModule, MatCardModule, MatFormFieldModule, MatIconModule, MatInputModule, MatTooltipModule, PageHeaderComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-<app-page-header title="Point of Sale" subtitle="Fast checkout for the active cash register.">
-  @if (context()?.cashRegisterCode) {<span class="chip"><mat-icon>point_of_sale</mat-icon>{{ context()?.cashRegisterCode }} · {{ cashierName() }}</span><button mat-stroked-button type="button" (click)="changeRegister()"><mat-icon>swap_horiz</mat-icon>Change register</button>}
+<app-page-header title="Point of Sale" i18n-title="@@pos.title" subtitle="Fast checkout for the active cash register." i18n-subtitle="@@pos.subtitle">
+  @if (context()?.cashRegisterCode) {<span class="chip"><mat-icon>point_of_sale</mat-icon>{{ context()?.cashRegisterCode }} · {{ cashierName() }}</span><button mat-stroked-button type="button" (click)="changeRegister()"><mat-icon>swap_horiz</mat-icon><span i18n="@@pos.register.change">Change register</span></button>}
 </app-page-header>
 @if (context(); as ctx) {
-  @if (!ctx.isClockedIn) {<mat-card appearance="outlined"><mat-card-content><h2>Clock in to start selling</h2><p class="muted">Clock in from My time, then return here.</p></mat-card-content></mat-card>}
-  @else if (!ctx.cashRegisterId) {<mat-card appearance="outlined"><mat-card-content><h2>Select a cash register</h2><div class="registers">@for (r of ctx.registers; track r.id) {<button mat-stroked-button [disabled]="!r.isAvailable || !r.cashSessionId" (click)="assign(r.id)"><strong>{{ r.code }}</strong> · {{ r.name }} — {{ r.cashSessionId ? (r.isAvailable ? 'Ready' : 'In use') : 'Session closed' }}</button>}</div></mat-card-content></mat-card>}
+  @if (!ctx.isClockedIn) {<mat-card appearance="outlined"><mat-card-content><h2 i18n="@@pos.clock">Clock in to start selling</h2><p class="muted" i18n="@@pos.clock.hint">Clock in from My time, then return here.</p></mat-card-content></mat-card>}
+  @else if (!ctx.cashRegisterId) {<mat-card appearance="outlined"><mat-card-content><h2 i18n="@@pos.register.select">Select a cash register</h2><div class="registers">@for (r of ctx.registers; track r.id) {<button mat-stroked-button [disabled]="!r.isAvailable || !r.cashSessionId" (click)="assign(r.id)"><strong>{{ r.code }}</strong> · {{ r.name }} — {{ r.cashSessionId ? (r.isAvailable ? 'Ready' : 'In use') : 'Session closed' }}</button>}</div></mat-card-content></mat-card>}
   @else {<div class="pos-grid">
     <mat-card appearance="outlined"><mat-card-content>
-      <mat-form-field appearance="outline" class="scanner"><mat-label>Scan barcode or SKU</mat-label><input #scanner matInput [(ngModel)]="code" (keydown.enter)="scanOnEnter($event)" autocomplete="off"/><button mat-icon-button matSuffix (click)="scan()"><mat-icon>add</mat-icon></button></mat-form-field>
-      <mat-form-field appearance="outline" class="search"><mat-label>Find product by name</mat-label><input matInput [(ngModel)]="search" (ngModelChange)="searchChanged()" autocomplete="off"/></mat-form-field>
+      <mat-form-field appearance="outline" class="scanner"><mat-label i18n="@@pos.scan">Scan barcode or SKU</mat-label><input #scanner matInput [(ngModel)]="code" (keydown.enter)="scanOnEnter($event)" autocomplete="off"/><button mat-icon-button matSuffix (click)="scan()"><mat-icon>add</mat-icon></button></mat-form-field>
+      <mat-form-field appearance="outline" class="search"><mat-label i18n="@@pos.search">Find product by name</mat-label><input matInput [(ngModel)]="search" (ngModelChange)="searchChanged()" autocomplete="off"/></mat-form-field>
       @for (item of results(); track item.variantId) {<button class="result" (click)="add(item)"><span>{{ item.productName }} · {{ item.sku }}</span><strong>{{ item.price | number:'1.2-2' }}</strong></button>}
-      @if (sale(); as s) {<div class="lines">@for (line of s.lines; track line.id) {<div><span class="line-item"><input #quantity class="quantity" type="number" min="1" [value]="line.quantity" [attr.max]="line.availableQuantity" (change)="setQuantity(line, quantity)" [attr.aria-label]="'Quantity for ' + (lineName(line))"/>× {{ lineName(line) }} @if (line.quantity > (line.availableQuantity ?? line.quantity)) { <small [style.color]="'var(--mat-sys-error)'">Stock discrepancy · {{ line.availableQuantity }} recorded</small> }</span>@if (line.promotionName) { <small><b>{{ line.promotionName }}</b> · <s>{{ line.unitPrice | number:'1.2-2' }}</s> → {{ (line.unitPrice - (line.promotionUnitDiscount ?? 0)) | number:'1.2-2' }} per unit</small> }<strong>{{ line.lineTotal | number:'1.2-2' }}</strong><button mat-icon-button type="button" [disabled]="editingTicket()" matTooltip="Remove item" [attr.aria-label]="'Remove ' + lineName(line)" (click)="removeLine(line.id)"><mat-icon aria-hidden="true">delete_outline</mat-icon></button></div>}</div>} @else {<p class="muted">Scan an item to begin.</p>}
+      @if (sale(); as s) {<div class="lines">@for (line of s.lines; track line.id) {<div><span class="line-item"><input #quantity class="quantity" type="number" min="1" [value]="line.quantity" [attr.max]="line.availableQuantity" (change)="setQuantity(line, quantity)" [attr.aria-label]="'Quantity for ' + (lineName(line))"/>× {{ lineName(line) }} @if (line.quantity > (line.availableQuantity ?? line.quantity)) { <small [style.color]="'var(--mat-sys-error)'">Stock discrepancy · {{ line.availableQuantity }} recorded</small> }</span>@if (line.promotionName) { <small><b>{{ line.promotionName }}</b> · <s>{{ line.unitPrice | number:'1.2-2' }}</s> → {{ (line.unitPrice - (line.promotionUnitDiscount ?? 0)) | number:'1.2-2' }} per unit</small> }<strong>{{ line.lineTotal | number:'1.2-2' }}</strong><button mat-icon-button type="button" [disabled]="editingTicket()" matTooltip="Remove item" [attr.aria-label]="'Remove ' + lineName(line)" (click)="removeLine(line.id)"><mat-icon aria-hidden="true">delete_outline</mat-icon></button></div>}</div>} @else {<p class="muted" i18n="@@pos.begin">Scan an item to begin.</p>}
     </mat-card-content></mat-card>
     <mat-card appearance="outlined" class="summary"><mat-card-content>
       <div class="customer-title">
-        <div><span class="muted">Customer</span><strong>{{ customer()?.name ?? 'Walk-in customer' }}</strong>@if (customer()?.phone) {<small>{{ customer()?.phone }}</small>}</div>
+        <div><span class="muted" i18n="@@pos.customer">Customer</span><strong>{{ customer()?.name ?? 'Walk-in customer' }}</strong>@if (customer()?.phone) {<small>{{ customer()?.phone }}</small>}</div>
         <span class="customer-actions">
-          <button mat-icon-button type="button" aria-label="Find customer" matTooltip="Find customer" (click)="toggleCustomerSearch()">
+          <button mat-icon-button type="button" aria-label="Find customer" i18n-aria-label="@@pos.customer.find" matTooltip="Find customer" i18n-matTooltip="@@pos.customer.find" (click)="toggleCustomerSearch()">
             <mat-icon aria-hidden="true">person_search</mat-icon>
           </button>
           @if (canCreateCustomer()) {
@@ -57,13 +57,13 @@ interface HeldTicket {
           }
         </span>
       </div>
-      @if (showCustomerSearch()) {<div class="customer-search"><mat-form-field appearance="outline"><mat-label>Name, phone or loyalty card</mat-label><input #customerInput matInput [(ngModel)]="customerSearch" (ngModelChange)="customerSearchChanged()" (keydown.enter)="submitCustomerSearch()" autocomplete="off"/></mat-form-field><button mat-button type="button" [disabled]="editingTicket() || startingTicket() || resuming()" (click)="setCustomer(null)">Use Walk-in</button>@for (item of customerResults(); track item.id) {<button class="customer-result" type="button" [disabled]="editingTicket() || startingTicket() || resuming()" (click)="setCustomer(item)"><strong>{{ item.name }}</strong><span>{{ item.phone ?? item.email ?? 'Customer' }}</span></button>}</div>}
+      @if (showCustomerSearch()) {<div class="customer-search"><mat-form-field appearance="outline"><mat-label i18n="@@pos.customer.search">Name, phone or loyalty card</mat-label><input #customerInput matInput [(ngModel)]="customerSearch" (ngModelChange)="customerSearchChanged()" (keydown.enter)="submitCustomerSearch()" autocomplete="off"/></mat-form-field><button mat-button type="button" [disabled]="editingTicket() || startingTicket() || resuming()" (click)="setCustomer(null)" i18n="@@pos.customer.walkIn">Use Walk-in</button>@for (item of customerResults(); track item.id) {<button class="customer-result" type="button" [disabled]="editingTicket() || startingTicket() || resuming()" (click)="setCustomer(item)"><strong>{{ item.name }}</strong><span>{{ item.phone ?? item.email ?? 'Customer' }}</span></button>}</div>}
       <h1>{{ (sale()?.total ?? 0) | number:'1.2-2' }}</h1>
-      @if (sale(); as s) {<div class="discount"><select [(ngModel)]="discountType" aria-label="Discount type"><option value="Percentage">%</option><option value="FixedAmount">Amount</option></select><input type="number" min="0" [(ngModel)]="discountValue" placeholder="Discount" aria-label="Discount value"/><button mat-stroked-button type="button" (click)="applyDiscount()">Apply discount</button></div>@if (s.discountAmount) {<p class="muted">Discount: −{{ s.discountAmount | number:'1.2-2' }}</p>}}
-      <p class="shortcut">Press Alt + Enter to review cash payment.</p><button mat-flat-button [disabled]="!sale()" (click)="openCheckout('Cash')">Cash</button><button mat-stroked-button [disabled]="!sale()" (click)="openCheckout('Card')">Card</button><button mat-stroked-button [disabled]="editingTicket() || !sale()" (click)="hold()">Hold ticket</button>
-      <button mat-button type="button" [disabled]="editingTicket() || !sale()" (click)="cancelTicket()">Cancel ticket</button>
+      @if (sale(); as s) {<div class="discount"><select [(ngModel)]="discountType" aria-label="Discount type"><option value="Percentage">%</option><option value="FixedAmount">Amount</option></select><input type="number" min="0" [(ngModel)]="discountValue" placeholder="Discount" aria-label="Discount value"/><button mat-stroked-button type="button" (click)="applyDiscount()" i18n="@@pos.discount.apply">Apply discount</button></div>@if (s.discountAmount) {<p class="muted">Discount: −{{ s.discountAmount | number:'1.2-2' }}</p>}}
+      <p class="shortcut" i18n="@@pos.shortcut">Press Alt + Enter to review cash payment.</p><button mat-flat-button [disabled]="!sale()" (click)="openCheckout('Cash')" i18n="@@sales.method.cash">Cash</button><button mat-stroked-button [disabled]="!sale()" (click)="openCheckout('Card')" i18n="@@sales.method.card">Card</button><button mat-stroked-button [disabled]="editingTicket() || !sale()" (click)="hold()" i18n="@@pos.hold">Hold ticket</button>
+      <button mat-button type="button" [disabled]="editingTicket() || !sale()" (click)="cancelTicket()" i18n="@@pos.cancel">Cancel ticket</button>
       @if (held().length) {
-        <h2>Held tickets</h2>
+        <h2 i18n="@@pos.held">Held tickets</h2>
         @for (ticket of held(); track ticket.id) {
           <button mat-button type="button" [disabled]="resuming() || startingTicket()" (click)="resume(ticket)">
             {{ ticket.customer?.name || 'Ticket ' + ticket.number }}
@@ -75,9 +75,21 @@ interface HeldTicket {
   </div>}
   @if (error(); as e) {<p class="form-error">{{ e }}</p>}
 }
-@if (checkout(); as method) {<div class="checkout-backdrop" role="presentation"><mat-card class="checkout-dialog" role="dialog" aria-modal="true" aria-label="Confirm payment"><mat-card-content><h2>Confirm {{ method }} payment</h2><p>Close this sale for <strong>{{ (sale()?.balanceDue ?? 0) | number:'1.2-2' }}</strong>?</p><label class="print-option"><input type="checkbox" [(ngModel)]="printTicket"/> Open receipt for printing after payment</label><button #confirmButton mat-flat-button [disabled]="paying()" (click)="confirmPay()">Confirm payment <kbd>Enter</kbd></button><button mat-button (click)="closeCheckout()">Back</button></mat-card-content></mat-card></div>}
+@if (checkout()) {<div class="checkout-backdrop" role="presentation"><mat-card class="checkout-dialog" role="dialog" aria-modal="true" aria-label="Confirm payment" i18n-aria-label="@@pos.checkout.confirm"><mat-card-content><h2 i18n="@@pos.checkout.review">Review checkout</h2>
+<p><span i18n="@@orders.total">Total</span> <strong>{{ (sale()?.total ?? 0) | number:'1.2-4' }}</strong></p>
+<mat-form-field appearance="outline"><mat-label i18n="@@pos.checkout.cash">Cash received</mat-label>
+<input matInput type="number" min="0" step="0.0001" [(ngModel)]="cashAmount" /></mat-form-field>
+<mat-form-field appearance="outline"><mat-label i18n="@@pos.checkout.card">Card received</mat-label>
+<input matInput type="number" min="0" step="0.0001" [(ngModel)]="cardAmount" /></mat-form-field>
+<p><span i18n="@@pos.checkout.paid">Paid now</span> <strong>{{ paidNow() | number:'1.2-4' }}</strong></p>
+<p><span i18n="@@pos.checkout.due">Remaining balance</span> <strong>{{ remainingDue() | number:'1.2-4' }}</strong></p>
+@if (remainingDue() > 0 && !sale()?.customerId) {
+  <p role="alert" i18n="@@pos.checkout.customerRequired">Go back and select a customer to complete a credit sale.</p>
+} @else if (remainingDue() > 0) {
+  <p i18n="@@pos.checkout.credit">The remaining balance will be recorded as customer credit.</p>
+}<label class="print-option"><input type="checkbox" [(ngModel)]="printTicket"/> <span i18n="@@pos.checkout.print">Open receipt for printing after payment</span></label><button #confirmButton mat-flat-button [disabled]="paying() || !validTender()" (click)="confirmPay()"><span i18n="@@pos.checkout.confirm">Confirm payment</span> <kbd>Enter</kbd></button><button mat-button (click)="closeCheckout()" i18n="@@pos.checkout.back">Back</button></mat-card-content></mat-card></div>}
 `,
-  styles: `.chip{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .7rem;border-radius:999px;background:var(--app-soft-primary);color:var(--mat-sys-primary)}.registers{display:flex;flex-wrap:wrap;gap:.75rem}.pos-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(19rem,24rem);gap:1.25rem}.scanner,.search{width:100%}.result,.customer-result{display:flex;justify-content:space-between;gap:1rem;width:100%;margin-block:.25rem;padding:.65rem;border:1px solid var(--mat-sys-outline-variant);border-radius:.5rem;background:transparent;text-align:start}.customer-result{flex-direction:column;gap:.15rem}.lines div{display:flex;justify-content:space-between;align-items:center;padding:.9rem 0;border-block-end:1px solid var(--mat-sys-outline-variant)}.line-item{display:flex;align-items:center;gap:.45rem}.quantity{width:4rem;padding:.35rem;border:1px solid var(--mat-sys-outline);border-radius:.35rem;background:transparent;color:inherit;font:inherit}.summary h1{font:var(--mat-sys-display-small);font-weight:700;margin:.2rem 0 1rem}.summary>mat-card-content>button{width:100%;margin-block:.25rem}.customer-title{display:flex;justify-content:space-between;align-items:start}.customer-title div{display:grid;gap:.15rem}.customer-title small{color:var(--mat-sys-on-surface-variant)}.customer-search{margin:1rem 0}.customer-search mat-form-field{width:100%}.discount{display:grid;grid-template-columns:5rem minmax(0,1fr);gap:.5rem;margin-block:1rem}.discount button{grid-column:span 2}.discount select,.discount input{min-width:0;padding:.6rem;border:1px solid var(--mat-sys-outline);border-radius:.3rem;background:transparent;color:inherit}.shortcut{font-size:.8rem}.checkout-backdrop{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:1rem;background:rgba(0,0,0,.52)}.checkout-dialog{width:min(100%,28rem)}.checkout-dialog button{width:100%;margin-block:.3rem}.print-option{display:block;margin:1rem 0}kbd{padding:.1rem .35rem;border:1px solid var(--mat-sys-outline);border-radius:.25rem}@media(max-width:899px){.pos-grid{grid-template-columns:1fr}.summary{order:-1}}`,
+  styles: `.chip{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .7rem;border-radius:999px;background:var(--app-soft-primary);color:var(--mat-sys-primary)}.registers{display:flex;flex-wrap:wrap;gap:.75rem}.pos-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(19rem,24rem);gap:1.25rem}.scanner,.search{width:100%}.result,.customer-result{display:flex;justify-content:space-between;gap:1rem;width:100%;margin-block:.25rem;padding:.65rem;border:1px solid var(--mat-sys-outline-variant);border-radius:.5rem;background:transparent;text-align:start}.customer-result{flex-direction:column;gap:.15rem}.lines div{display:flex;justify-content:space-between;align-items:center;padding:.9rem 0;border-block-end:1px solid var(--mat-sys-outline-variant)}.line-item{display:flex;align-items:center;gap:.45rem}.quantity{width:4rem;padding:.35rem;border:1px solid var(--mat-sys-outline);border-radius:.35rem;background:transparent;color:inherit;font:inherit}.summary h1{font:var(--mat-sys-display-small);font-weight:700;margin:.2rem 0 1rem}.summary>mat-card-content>button{width:100%;margin-block:.25rem}.customer-title{display:flex;justify-content:space-between;align-items:start}.customer-title div{display:grid;gap:.15rem}.customer-title small{color:var(--mat-sys-on-surface-variant)}.customer-search{margin:1rem 0}.customer-search mat-form-field{width:100%}.discount{display:grid;grid-template-columns:5rem minmax(0,1fr);gap:.5rem;margin-block:1rem}.discount button{grid-column:span 2}.discount select,.discount input{min-width:0;padding:.6rem;border:1px solid var(--mat-sys-outline);border-radius:.3rem;background:transparent;color:inherit}.shortcut{font-size:.8rem}.checkout-backdrop{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:1rem;background:rgba(0,0,0,.52)}.checkout-dialog{width:min(100%,28rem);max-height:calc(100dvh - 2rem);overflow:auto}.checkout-dialog mat-form-field{width:100%}.checkout-dialog button{width:100%;margin-block:.3rem}.print-option{display:block;margin:1rem 0}kbd{padding:.1rem .35rem;border:1px solid var(--mat-sys-outline);border-radius:.25rem}@media(max-width:899px){.pos-grid{grid-template-columns:1fr}.summary{order:-1}}`,
 })
 export class PosPage {
   readonly newCustomerLabel = $localize`:@@customers.create:New customer`;
@@ -98,8 +110,10 @@ export class PosPage {
     this.scanner = input;
     if (input) this.focus();
   }
-  @ViewChild('confirmButton') set checkoutConfirm(button: ElementRef<HTMLButtonElement> | undefined) {
-    if (button) setTimeout(() => button.nativeElement.focus());
+  @ViewChild('confirmButton', { read: ElementRef }) set checkoutConfirm(button: ElementRef<HTMLButtonElement> | undefined) {
+    if (button) setTimeout(() => {
+      if (button.nativeElement.isConnected) button.nativeElement.focus();
+    });
   }
   @ViewChild('customerInput') customerInput?: ElementRef<HTMLInputElement>;
   readonly context = signal<PosContext | null>(null); readonly sale = signal<Sale | null>(null); readonly results = signal<readonly PosVariant[]>([]); readonly held = signal<readonly HeldTicket[]>([]); readonly labels = signal<ReadonlyMap<string, string>>(new Map()); readonly checkout = signal<'Cash' | 'Card' | null>(null); readonly customer = signal<PosCustomer | null>(null); readonly ticketCustomers = signal<ReadonlyMap<string, PosCustomer | null>>(new Map()); readonly showCustomerSearch = signal(false); readonly customerResults = signal<readonly PosCustomer[]>([]); readonly error = signal<string | null>(null);
@@ -128,7 +142,7 @@ export class PosPage {
   shortcut(event: KeyboardEvent): void {
     if (event.defaultPrevented || event.isComposing || this.dialog.openDialogs.length) return;
     if (this.checkout()) {
-      if (event.key === 'Escape') {
+      if (!this.paying() && event.key === 'Escape') {
         event.preventDefault();
         this.closeCheckout();
       }
@@ -152,9 +166,9 @@ export class PosPage {
     event.preventDefault();
     this.scan();
   }
-  load(): void { this.api.posContext().subscribe({ next: x => this.setContext(x), error: e => this.fail(e, 'Could not load POS.') }); }
-  changeRegister(): void { if (this.startingTicket()) return; this.holdActiveTicket(); this.api.releaseRegister().subscribe({ next: () => { this.newTicket(); this.load(); }, error: e => this.fail(e, 'Could not change register.') }); }
-  assign(id: string): void { this.api.assignRegister(id).subscribe({ next: x => { this.setContext(x); this.newTicket(); }, error: e => this.fail(e, 'Could not select register.') }); }
+  load(): void { this.api.posContext().subscribe({ next: x => this.setContext(x), error: e => this.fail(e, $localize`:@@pos.message.load:Could not load POS.`) }); }
+  changeRegister(): void { if (this.startingTicket()) return; this.holdActiveTicket(); this.api.releaseRegister().subscribe({ next: () => { this.newTicket(); this.load(); }, error: e => this.fail(e, $localize`:@@pos.message.registerChange:Could not change register.`) }); }
+  assign(id: string): void { this.api.assignRegister(id).subscribe({ next: x => { this.setContext(x); this.newTicket(); }, error: e => this.fail(e, $localize`:@@pos.message.registerSelect:Could not select register.`) }); }
   newTicket(): void {
     this.sale.set(null);
     this.checkout.set(null);
@@ -188,7 +202,7 @@ export class PosPage {
         this.resuming.set(false);
         if (this.heldStorageKey() !== key) return;
         if (error?.status === 404) this.storeHeld(this.held().filter((item) => item.id !== ticket.id));
-        this.fail(error, 'Could not resume this ticket.');
+        this.fail(error, $localize`:@@pos.message.resume:Could not resume this ticket.`);
       },
     });
   }
@@ -226,7 +240,7 @@ export class PosPage {
     try {
       sessionStorage.setItem(key, JSON.stringify(tickets));
     } catch {
-      this.error.set('Held tickets cannot be saved across refresh in this browser.');
+      this.error.set($localize`:@@pos.message.storage:Held tickets cannot be saved across refresh in this browser.`);
     }
   }
   scan(confirmPhysicalStock = false): void {
@@ -251,7 +265,7 @@ export class PosPage {
         if (!confirmPhysicalStock && this.offerStockOverride(error, false, () => {
           if (this.sale()?.id === current?.id && this.code.trim() === code) this.scan(true);
         })) return;
-        this.fail(error, 'Could not add this item.');
+        this.fail(error, $localize`:@@pos.message.add:Could not add this item.`);
       },
     });
   }
@@ -271,7 +285,7 @@ export class PosPage {
           input.value = String(quantity);
           this.setQuantity(line, input, true);
         })) return;
-        this.fail(error, 'Could not update the quantity.');
+        this.fail(error, $localize`:@@pos.message.quantity:Could not update the quantity.`);
       },
     });
   }
@@ -287,7 +301,7 @@ export class PosPage {
           this.results.set(results.filter(item => (item.quantityOnHand ?? 0) > 0));
         }
       },
-      error: error => this.fail(error, 'Could not find products.'),
+      error: error => this.fail(error, $localize`:@@pos.message.products:Could not find products.`),
     });
   }
   add(item: PosVariant): void { this.labels.update(m => new Map(m).set(item.variantId, `${item.productName} · ${item.sku}`)); this.code = item.sku; this.scan(); }
@@ -333,10 +347,10 @@ export class PosPage {
         this.customerResults.set(matches);
         if (matches.length === 1) this.setCustomer(matches[0]);
       },
-      error: (error) => this.fail(error, 'Could not find customers.'),
+      error: (error) => this.fail(error, $localize`:@@pos.message.customers:Could not find customers.`),
     });
   }
-  findCustomers(query: string): void { this.api.posCustomers(query).subscribe({ next: x => this.customerResults.set(x), error: e => this.fail(e, 'Could not find customers.') }); }
+  findCustomers(query: string): void { this.api.posCustomers(query).subscribe({ next: x => this.customerResults.set(x), error: e => this.fail(e, $localize`:@@pos.message.customers:Could not find customers.`) }); }
   setCustomer(customer: PosCustomer | null): void {
     if (this.editingTicket() || this.startingTicket() || this.resuming()) return;
     const sale = this.sale();
@@ -358,7 +372,7 @@ export class PosPage {
         this.ticketCustomers.update(items => new Map(items).set(updated.id, customer));
         this.closeCustomerSearch();
       },
-      error: (error) => this.fail(error, 'Could not select the customer.'),
+      error: (error) => this.fail(error, $localize`:@@pos.message.customerSelect:Could not select the customer.`),
     });
   }
 
@@ -369,7 +383,7 @@ export class PosPage {
     this.customerResults.set([]);
     this.focus();
   }
-  applyDiscount(): void { const sale = this.sale(), value = this.discountValue; if (!sale || value === null || value < 0) return; this.api.setSaleDiscount(sale.id, this.discountType, value).subscribe({ next: x => { this.sale.set(x); this.discountValue = null; this.focus(); }, error: e => this.fail(e, 'Could not apply the discount.') }); }
+  applyDiscount(): void { const sale = this.sale(), value = this.discountValue; if (!sale || value === null || value < 0) return; this.api.setSaleDiscount(sale.id, this.discountType, value).subscribe({ next: x => { this.sale.set(x); this.discountValue = null; this.focus(); }, error: e => this.fail(e, $localize`:@@pos.message.discount:Could not apply the discount.`) }); }
   removeLine(lineId: string): void {
     const sale = this.sale();
     if (!sale || this.editingTicket()) return;
@@ -382,7 +396,7 @@ export class PosPage {
         }
         this.focus();
       },
-      error: (error) => this.fail(error, 'Could not remove the item.'),
+      error: (error) => this.fail(error, $localize`:@@pos.message.remove:Could not remove the item.`),
     });
   }
 
@@ -390,8 +404,8 @@ export class PosPage {
     const sale = this.sale();
     if (!sale || this.editingTicket()) return;
     this.confirm.confirm({
-      title: 'Cancel this ticket?',
-      message: 'This draft will be cancelled and can no longer be resumed.',
+      title: $localize`:@@pos.message.cancelTitle:Cancel this ticket?`,
+      message: $localize`:@@pos.message.cancelBody:This draft will be cancelled and can no longer be resumed.`,
       confirmLabel: 'Cancel ticket',
     }).subscribe((confirmed) => {
       if (!confirmed || this.sale()?.id !== sale.id || this.editingTicket()) {
@@ -407,21 +421,52 @@ export class PosPage {
           this.code = '';
           this.newTicket();
         },
-        error: (error) => this.fail(error, 'Could not cancel the ticket.'),
+        error: (error) => this.fail(error, $localize`:@@pos.message.cancel:Could not cancel the ticket.`),
       });
     });
   }
 
-  openCheckout(method: 'Cash' | 'Card'): void { if (!this.editingTicket() && this.sale()?.lines.length) this.checkout.set(method); }
+  cashAmount: number | null = 0;
+  cardAmount: number | null = 0;
+  private checkoutAttempt: { key: string; tenders: { id: string; amount: number; method: 'Cash' | 'Card' }[] } | null = null;
+
+  openCheckout(method: 'Cash' | 'Card'): void {
+    const sale = this.sale();
+    if (this.editingTicket() || !sale?.lines.length) return;
+    this.cashAmount = method === 'Cash' ? sale.balanceDue : 0;
+    this.cardAmount = method === 'Card' ? sale.balanceDue : 0;
+    this.checkout.set(method);
+  }
+
+  paidNow(): number {
+    return Math.round(((this.cashAmount ?? 0) + (this.cardAmount ?? 0)) * 10000) / 10000;
+  }
+
+  remainingDue(): number {
+    return Math.round(((this.sale()?.total ?? 0) - this.paidNow()) * 10000) / 10000;
+  }
+
+  validTender(): boolean {
+    return (this.cashAmount ?? 0) >= 0 && (this.cardAmount ?? 0) >= 0 &&
+      this.remainingDue() >= 0 && (this.remainingDue() === 0 || !!this.sale()?.customerId);
+  }
   confirmPay(confirmPhysicalStock = false): void {
     const sale = this.sale(), method = this.checkout();
-    if (!sale || !method || this.paying()) return;
+    if (!sale || !method || this.paying() || !this.validTender()) return;
+    const key = JSON.stringify([sale.id, sale.total, this.cashAmount, this.cardAmount]);
+    if (this.checkoutAttempt?.key !== key) {
+      const tenders = [];
+      if (this.cashAmount) tenders.push({ id: crypto.randomUUID(), amount: this.cashAmount, method: 'Cash' as const });
+      if (this.cardAmount) tenders.push({ id: crypto.randomUUID(), amount: this.cardAmount, method: 'Card' as const });
+      this.checkoutAttempt = { key, tenders };
+    }
     const wantsReceipt = this.printTicket;
     const preview = wantsReceipt ? window.open('', '_blank') : null;
     if (preview) preview.opener = null;
     this.paying.set(true);
-    this.api.posPay(sale.id, sale.balanceDue, method, confirmPhysicalStock).pipe(finalize(() => this.paying.set(false))).subscribe({
+    this.api.posPay(sale.id, sale.total, this.checkoutAttempt.tenders, confirmPhysicalStock).pipe(finalize(() => this.paying.set(false))).subscribe({
       next: ({ sale: paidSale }) => {
+        this.checkoutAttempt = null;
         this.sale.set(null);
         this.storeHeld(this.held().filter((ticket) => ticket.id !== sale.id));
         if (wantsReceipt) this.openReceipt(paidSale, preview);
@@ -433,7 +478,7 @@ export class PosPage {
         if (!confirmPhysicalStock && this.offerStockOverride(e, true, () => {
           if (this.sale()?.id === sale.id && this.checkout() === method) this.confirmPay(true);
         })) return;
-        this.fail(e, 'Payment could not be completed.');
+        this.fail(e, $localize`:@@pos.message.payment:Payment could not be completed.`);
       },
     });
   }
@@ -444,7 +489,7 @@ export class PosPage {
         !this.session.hasPermission('stock.manage')) return false;
 
     this.confirm.confirm({
-      title: 'Confirm physical stock',
+      title: $localize`:@@pos.message.stock:Confirm physical stock`,
       message: checkout
         ? 'Some items exceed recorded stock. Count the units before continuing. Checkout records a sale-linked adjustment for the shortfall so inventory can follow up.'
         : 'The requested quantity exceeds recorded stock. Continue only if you have counted these units at this shop.',
@@ -477,7 +522,7 @@ export class PosPage {
       },
       error: (error) => {
         preview?.close();
-        this.fail(error, 'Payment recorded. The receipt could not be opened.');
+        this.fail(error, $localize`:@@pos.message.receipt:Payment recorded. The receipt could not be opened.`);
       },
     });
   }

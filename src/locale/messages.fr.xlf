@@ -788,6 +788,94 @@
       <trans-unit id="orders.addLine.action" datatype="html"><source> Add line </source><target>Ajouter la ligne</target></trans-unit>
       <trans-unit id="orders.receive" datatype="html"><source>Receive goods</source><target>Réception de marchandises</target></trans-unit>
       <trans-unit id="orders.outstanding" datatype="html"><source>Still expected</source><target>Reste attendu</target></trans-unit>
+      <trans-unit id="supplierPayments.title" datatype="html"><source>Supplier payments</source><target>Paiements fournisseur</target></trans-unit>
+      <trans-unit id="supplierPayments.paid" datatype="html"><source>Total paid</source><target>Total payé</target></trans-unit>
+      <trans-unit id="supplierPayments.outstanding" datatype="html"><source>Outstanding balance</source><target>Solde restant</target></trans-unit>
+      <trans-unit id="supplierPayments.amount" datatype="html"><source>Amount</source><target>Montant</target></trans-unit>
+      <trans-unit id="supplierPayments.method" datatype="html"><source>Payment method</source><target>Mode de paiement</target></trans-unit>
+      <trans-unit id="supplierPayments.date" datatype="html"><source>Payment date</source><target>Date de paiement</target></trans-unit>
+      <trans-unit id="supplierPayments.reference" datatype="html"><source>Payment reference</source><target>Référence du paiement</target></trans-unit>
+      <trans-unit id="supplierPayments.record" datatype="html"><source>Record supplier payment</source><target>Enregistrer le paiement fournisseur</target></trans-unit>
+      <trans-unit id="supplierPayments.notPayable" datatype="html"><source>Not payable</source><target>Non exigible</target></trans-unit>
+      <trans-unit id="supplierPayments.unpaid" datatype="html"><source>Unpaid</source><target>Impayé</target></trans-unit>
+      <trans-unit id="supplierPayments.partial" datatype="html"><source>Partially paid</source><target>Partiellement payé</target></trans-unit>
+      <trans-unit id="supplierPayments.settled" datatype="html"><source>Paid</source><target>Payé</target></trans-unit>
+      <trans-unit id="supplierPayments.cash" datatype="html"><source>Cash</source><target>Espèces</target></trans-unit>
+      <trans-unit id="supplierPayments.card" datatype="html"><source>Card</source><target>Carte</target></trans-unit>
+      <trans-unit id="supplierPayments.transfer" datatype="html"><source>Bank transfer</source><target>Virement bancaire</target></trans-unit>
+      <trans-unit id="supplierPayments.cheque" datatype="html"><source>Cheque</source><target>Chèque</target></trans-unit>
+      <trans-unit id="supplierPayments.other" datatype="html"><source>Other</source><target>Autre</target></trans-unit>
+      <trans-unit id="supplierPayments.error" datatype="html"><source>The supplier payment could not be recorded.</source><target>Le paiement fournisseur n&apos;a pas pu être enregistré.</target></trans-unit>
+      <trans-unit id="supplierStatement.title" datatype="html"><source>Supplier account statement</source><target>Relevé de compte fournisseur</target></trans-unit>
+      <trans-unit id="supplierStatement.failed" datatype="html"><source>The supplier statement could not be loaded.</source><target>Impossible de charger le relevé du fournisseur.</target></trans-unit>
+      <trans-unit id="supplierStatement.debt" datatype="html"><source>Total supplier debt</source><target>Dette fournisseur totale</target></trans-unit>
+      <trans-unit id="supplierStatement.from" datatype="html"><source>From date</source><target>Date de début</target></trans-unit>
+      <trans-unit id="supplierStatement.to" datatype="html"><source>To date</source><target>Date de fin</target></trans-unit>
+      <trans-unit id="supplierStatement.paymentStatus" datatype="html"><source>Payment status</source><target>Statut du paiement</target></trans-unit>
+      <trans-unit id="supplierStatement.entry" datatype="html"><source>Entry</source><target>Écriture</target></trans-unit>
+      <trans-unit id="supplierStatement.running" datatype="html"><source>Running balance</source><target>Solde cumulé</target></trans-unit>
+      <trans-unit id="supplierStatement.payment" datatype="html"><source>Payment</source><target>Paiement</target></trans-unit>
+      <trans-unit id="supplierStatement.order" datatype="html"><source>Purchase order</source><target>Bon de commande</target></trans-unit>
+      <trans-unit id="pos.checkout.review" datatype="html"><source>Review checkout</source><target>Vérifier le paiement</target></trans-unit>
+      <trans-unit id="pos.checkout.cash" datatype="html"><source>Cash received</source><target>Espèces reçues</target></trans-unit>
+      <trans-unit id="pos.checkout.card" datatype="html"><source>Card received</source><target>Paiement par carte reçu</target></trans-unit>
+      <trans-unit id="pos.checkout.paid" datatype="html"><source>Paid now</source><target>Payé maintenant</target></trans-unit>
+      <trans-unit id="pos.checkout.due" datatype="html"><source>Remaining balance</source><target>Solde restant</target></trans-unit>
+      <trans-unit id="pos.checkout.customerRequired" datatype="html"><source>Go back and select a customer to complete a credit sale.</source><target>Revenez en arrière et sélectionnez un client pour conclure la vente à crédit.</target></trans-unit>
+      <trans-unit id="pos.checkout.credit" datatype="html"><source>The remaining balance will be recorded as customer credit.</source><target>Le solde restant sera enregistré comme créance client.</target></trans-unit>
+      <trans-unit id="pos.checkout.print" datatype="html"><source>Open receipt for printing after payment</source><target>Ouvrir le ticket pour impression après le paiement</target></trans-unit>
+      <trans-unit id="pos.checkout.confirm" datatype="html"><source>Confirm payment</source><target>Confirmer le paiement</target></trans-unit>
+      <trans-unit id="pos.checkout.back" datatype="html"><source>Back</source><target>Retour</target></trans-unit>
+      <trans-unit id="supplierStatement.print" datatype="html"><source>Print statement</source><target>Imprimer le relevé</target></trans-unit>
+      <trans-unit id="customerStatement.title" datatype="html"><source>Customer account statement</source><target>Relevé de compte client</target></trans-unit>
+      <trans-unit id="customerStatement.failed" datatype="html"><source>The customer statement could not be loaded.</source><target>Impossible de charger le relevé du client.</target></trans-unit>
+      <trans-unit id="customerStatement.open" datatype="html"><source>Open sales</source><target>Ventes avec un solde</target></trans-unit>
+      <trans-unit id="customerStatement.none" datatype="html"><source>No open balances.</source><target>Aucun solde restant.</target></trans-unit>
+      <trans-unit id="customerStatement.sale" datatype="html"><source>Sale</source><target>Vente</target></trans-unit>
+      <trans-unit id="pos.title" datatype="html"><source>Point of Sale</source><target>Point de vente</target></trans-unit>
+      <trans-unit id="pos.subtitle" datatype="html"><source>Fast checkout for the active cash register.</source><target>Encaissement rapide sur la caisse active.</target></trans-unit>
+      <trans-unit id="pos.register.change" datatype="html"><source>Change register</source><target>Changer de caisse</target></trans-unit>
+      <trans-unit id="pos.clock" datatype="html"><source>Clock in to start selling</source><target>Pointez pour commencer à vendre</target></trans-unit>
+      <trans-unit id="pos.clock.hint" datatype="html"><source>Clock in from My time, then return here.</source><target>Pointez depuis Mon temps, puis revenez ici.</target></trans-unit>
+      <trans-unit id="pos.register.select" datatype="html"><source>Select a cash register</source><target>Sélectionner une caisse</target></trans-unit>
+      <trans-unit id="pos.scan" datatype="html"><source>Scan barcode or SKU</source><target>Scanner le code-barres ou le SKU</target></trans-unit>
+      <trans-unit id="pos.search" datatype="html"><source>Find product by name</source><target>Rechercher un produit par nom</target></trans-unit>
+      <trans-unit id="pos.begin" datatype="html"><source>Scan an item to begin.</source><target>Scannez un article pour commencer.</target></trans-unit>
+      <trans-unit id="pos.customer" datatype="html"><source>Customer</source><target>Client</target></trans-unit>
+      <trans-unit id="pos.customer.find" datatype="html"><source>Find customer</source><target>Rechercher un client</target></trans-unit>
+      <trans-unit id="pos.customer.search" datatype="html"><source>Name, phone or loyalty card</source><target>Nom, téléphone ou carte de fidélité</target></trans-unit>
+      <trans-unit id="pos.customer.walkIn" datatype="html"><source>Use Walk-in</source><target>Utiliser le client de passage</target></trans-unit>
+      <trans-unit id="pos.discount.apply" datatype="html"><source>Apply discount</source><target>Appliquer la remise</target></trans-unit>
+      <trans-unit id="pos.shortcut" datatype="html"><source>Press Alt + Enter to review cash payment.</source><target>Appuyez sur Alt + Entrée pour vérifier le paiement en espèces.</target></trans-unit>
+      <trans-unit id="pos.hold" datatype="html"><source>Hold ticket</source><target>Mettre le ticket en attente</target></trans-unit>
+      <trans-unit id="pos.cancel" datatype="html"><source>Cancel ticket</source><target>Annuler le ticket</target></trans-unit>
+      <trans-unit id="pos.held" datatype="html"><source>Held tickets</source><target>Tickets en attente</target></trans-unit>
+      <trans-unit id="orders.openCatalogue" datatype="html"><source>Open product catalogue</source><target>Ouvrir le catalogue de produits</target></trans-unit>
+      <trans-unit id="orders.refreshVariants" datatype="html"><source>Refresh variants</source><target>Actualiser les variantes</target></trans-unit>
+      <trans-unit id="orders.variantsFailed" datatype="html"><source>The variants could not be refreshed.</source><target>Impossible d&apos;actualiser les variantes.</target></trans-unit>
+      <trans-unit id="orders.saveDraft" datatype="html"><source>Save draft</source><target>Enregistrer le brouillon</target></trans-unit>
+      <trans-unit id="pos.message.load" datatype="html"><source>Could not load POS.</source><target>Impossible de charger le point de vente.</target></trans-unit>
+      <trans-unit id="pos.message.registerChange" datatype="html"><source>Could not change register.</source><target>Impossible de changer de caisse.</target></trans-unit>
+      <trans-unit id="pos.message.registerSelect" datatype="html"><source>Could not select register.</source><target>Impossible de sélectionner la caisse.</target></trans-unit>
+      <trans-unit id="pos.message.resume" datatype="html"><source>Could not resume this ticket.</source><target>Impossible de reprendre ce ticket.</target></trans-unit>
+      <trans-unit id="pos.message.storage" datatype="html"><source>Held tickets cannot be saved across refresh in this browser.</source><target>Ce navigateur ne conserve pas les tickets en attente après actualisation.</target></trans-unit>
+      <trans-unit id="pos.message.add" datatype="html"><source>Could not add this item.</source><target>Impossible d&apos;ajouter cet article.</target></trans-unit>
+      <trans-unit id="pos.message.quantity" datatype="html"><source>Could not update the quantity.</source><target>Impossible de modifier la quantité.</target></trans-unit>
+      <trans-unit id="pos.message.products" datatype="html"><source>Could not find products.</source><target>Impossible de trouver les produits.</target></trans-unit>
+      <trans-unit id="pos.message.customers" datatype="html"><source>Could not find customers.</source><target>Impossible de trouver les clients.</target></trans-unit>
+      <trans-unit id="pos.message.customerSelect" datatype="html"><source>Could not select the customer.</source><target>Impossible de sélectionner le client.</target></trans-unit>
+      <trans-unit id="pos.message.discount" datatype="html"><source>Could not apply the discount.</source><target>Impossible d&apos;appliquer la remise.</target></trans-unit>
+      <trans-unit id="pos.message.remove" datatype="html"><source>Could not remove the item.</source><target>Impossible de retirer cet article.</target></trans-unit>
+      <trans-unit id="pos.message.cancelTitle" datatype="html"><source>Cancel this ticket?</source><target>Annuler ce ticket ?</target></trans-unit>
+      <trans-unit id="pos.message.cancelBody" datatype="html"><source>This draft will be cancelled and can no longer be resumed.</source><target>Ce brouillon sera annulé et ne pourra plus être repris.</target></trans-unit>
+      <trans-unit id="pos.message.cancel" datatype="html"><source>Could not cancel the ticket.</source><target>Impossible d&apos;annuler le ticket.</target></trans-unit>
+      <trans-unit id="pos.message.payment" datatype="html"><source>Payment could not be completed.</source><target>Impossible de terminer le paiement.</target></trans-unit>
+      <trans-unit id="pos.message.stock" datatype="html"><source>Confirm physical stock</source><target>Confirmer le stock physique</target></trans-unit>
+      <trans-unit id="pos.message.receipt" datatype="html"><source>Payment recorded. The receipt could not be opened.</source><target>Paiement enregistré. Impossible d&apos;ouvrir le ticket.</target></trans-unit>
+      <trans-unit id="orders.saveNotes" datatype="html"><source>Save notes</source><target>Enregistrer les notes</target></trans-unit>
+      <trans-unit id="orders.notesFailed" datatype="html"><source>The notes could not be saved.</source><target>Impossible d&apos;enregistrer les notes.</target></trans-unit>
+      <trans-unit id="orders.deliveryReference" datatype="html"><source>Delivery reference or note</source><target>Référence ou note de livraison</target></trans-unit>
+      <trans-unit id="labels.showPrice" datatype="html"><source>Show price on label</source><target>Afficher le prix sur l&apos;étiquette</target></trans-unit>
       <trans-unit id="orders.receiveNow" datatype="html"><source>Receive now</source><target>Recevoir maintenant</target></trans-unit>
       <trans-unit id="orders.fullyReceived" datatype="html"><source>Complete</source><target>Complet</target></trans-unit>
       <trans-unit id="orders.receive.action" datatype="html"><source> Record receipt </source><target>Enregistrer la réception</target></trans-unit>

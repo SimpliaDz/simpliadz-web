@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, LOCALE_ID, computed, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSelectModule } from '@angular/material/select';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
 import { forkJoin } from 'rxjs';
@@ -47,6 +48,7 @@ interface LineDraft {
     MatInputModule,
     MatProgressBarModule,
     MatSelectModule,
+    MatSlideToggleModule,
     MatTableModule,
     PageHeaderComponent,
     StatePanelComponent,
@@ -142,6 +144,9 @@ interface LineDraft {
             </ul>
           }
 
+          <mat-slide-toggle [(ngModel)]="showPrice" name="showPrice" i18n="@@labels.showPrice">
+            Show price on label
+          </mat-slide-toggle>
           <div class="form-actions">
             <button
               mat-flat-button
@@ -255,6 +260,9 @@ export class LabelsPage {
   readonly editLabel = $localize`:@@common.edit:Edit`;
   readonly columns = ['name', 'size', 'page', 'status', 'actions'];
 
+  private readonly locale = inject(LOCALE_ID);
+  showPrice = false;
+
   readonly canPrint = computed(() => this.session.hasPermission('barcode-labels.print'));
   readonly templates = signal<LabelTemplate[]>([]);
   readonly variants = signal<VariantOption[]>([]);
@@ -332,7 +340,7 @@ export class LabelsPage {
     }));
     const win = openDocumentWindow();
     this.busy.set(true);
-    this.api.printHtml(this.templateId, payload).subscribe({
+    this.api.printHtml(this.templateId, payload, this.showPrice, this.locale.split('-')[0]).subscribe({
       next: (html) => {
         this.busy.set(false);
         if (!writeDocumentWindow(win, html)) {

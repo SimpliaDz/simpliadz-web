@@ -788,6 +788,94 @@
       <trans-unit id="orders.addLine.action" datatype="html"><source> Add line </source><target>إضافة البند</target></trans-unit>
       <trans-unit id="orders.receive" datatype="html"><source>Receive goods</source><target>استلام البضاعة</target></trans-unit>
       <trans-unit id="orders.outstanding" datatype="html"><source>Still expected</source><target>المتبقي</target></trans-unit>
+      <trans-unit id="supplierPayments.title" datatype="html"><source>Supplier payments</source><target>مدفوعات المورد</target></trans-unit>
+      <trans-unit id="supplierPayments.paid" datatype="html"><source>Total paid</source><target>إجمالي المدفوع</target></trans-unit>
+      <trans-unit id="supplierPayments.outstanding" datatype="html"><source>Outstanding balance</source><target>الرصيد المستحق</target></trans-unit>
+      <trans-unit id="supplierPayments.amount" datatype="html"><source>Amount</source><target>المبلغ</target></trans-unit>
+      <trans-unit id="supplierPayments.method" datatype="html"><source>Payment method</source><target>طريقة الدفع</target></trans-unit>
+      <trans-unit id="supplierPayments.date" datatype="html"><source>Payment date</source><target>تاريخ الدفع</target></trans-unit>
+      <trans-unit id="supplierPayments.reference" datatype="html"><source>Payment reference</source><target>مرجع الدفع</target></trans-unit>
+      <trans-unit id="supplierPayments.record" datatype="html"><source>Record supplier payment</source><target>تسجيل دفعة للمورد</target></trans-unit>
+      <trans-unit id="supplierPayments.notPayable" datatype="html"><source>Not payable</source><target>غير مستحق</target></trans-unit>
+      <trans-unit id="supplierPayments.unpaid" datatype="html"><source>Unpaid</source><target>غير مدفوع</target></trans-unit>
+      <trans-unit id="supplierPayments.partial" datatype="html"><source>Partially paid</source><target>مدفوع جزئيا</target></trans-unit>
+      <trans-unit id="supplierPayments.settled" datatype="html"><source>Paid</source><target>مدفوع</target></trans-unit>
+      <trans-unit id="supplierPayments.cash" datatype="html"><source>Cash</source><target>نقدا</target></trans-unit>
+      <trans-unit id="supplierPayments.card" datatype="html"><source>Card</source><target>بطاقة</target></trans-unit>
+      <trans-unit id="supplierPayments.transfer" datatype="html"><source>Bank transfer</source><target>تحويل بنكي</target></trans-unit>
+      <trans-unit id="supplierPayments.cheque" datatype="html"><source>Cheque</source><target>شيك</target></trans-unit>
+      <trans-unit id="supplierPayments.other" datatype="html"><source>Other</source><target>أخرى</target></trans-unit>
+      <trans-unit id="supplierPayments.error" datatype="html"><source>The supplier payment could not be recorded.</source><target>تعذر تسجيل دفعة المورد.</target></trans-unit>
+      <trans-unit id="supplierStatement.title" datatype="html"><source>Supplier account statement</source><target>كشف حساب المورد</target></trans-unit>
+      <trans-unit id="supplierStatement.failed" datatype="html"><source>The supplier statement could not be loaded.</source><target>تعذر تحميل كشف حساب المورد.</target></trans-unit>
+      <trans-unit id="supplierStatement.debt" datatype="html"><source>Total supplier debt</source><target>إجمالي دين المورد</target></trans-unit>
+      <trans-unit id="supplierStatement.from" datatype="html"><source>From date</source><target>من تاريخ</target></trans-unit>
+      <trans-unit id="supplierStatement.to" datatype="html"><source>To date</source><target>إلى تاريخ</target></trans-unit>
+      <trans-unit id="supplierStatement.paymentStatus" datatype="html"><source>Payment status</source><target>حالة الدفع</target></trans-unit>
+      <trans-unit id="supplierStatement.entry" datatype="html"><source>Entry</source><target>القيد</target></trans-unit>
+      <trans-unit id="supplierStatement.running" datatype="html"><source>Running balance</source><target>الرصيد التراكمي</target></trans-unit>
+      <trans-unit id="supplierStatement.payment" datatype="html"><source>Payment</source><target>دفعة</target></trans-unit>
+      <trans-unit id="supplierStatement.order" datatype="html"><source>Purchase order</source><target>أمر شراء</target></trans-unit>
+      <trans-unit id="pos.checkout.review" datatype="html"><source>Review checkout</source><target>مراجعة الدفع</target></trans-unit>
+      <trans-unit id="pos.checkout.cash" datatype="html"><source>Cash received</source><target>النقد المستلم</target></trans-unit>
+      <trans-unit id="pos.checkout.card" datatype="html"><source>Card received</source><target>المبلغ المدفوع بالبطاقة</target></trans-unit>
+      <trans-unit id="pos.checkout.paid" datatype="html"><source>Paid now</source><target>المدفوع الآن</target></trans-unit>
+      <trans-unit id="pos.checkout.due" datatype="html"><source>Remaining balance</source><target>الرصيد المتبقي</target></trans-unit>
+      <trans-unit id="pos.checkout.customerRequired" datatype="html"><source>Go back and select a customer to complete a credit sale.</source><target>ارجع واختر عميلا لإتمام البيع الآجل.</target></trans-unit>
+      <trans-unit id="pos.checkout.credit" datatype="html"><source>The remaining balance will be recorded as customer credit.</source><target>سيتم تسجيل الرصيد المتبقي كدين على العميل.</target></trans-unit>
+      <trans-unit id="pos.checkout.print" datatype="html"><source>Open receipt for printing after payment</source><target>فتح الإيصال للطباعة بعد الدفع</target></trans-unit>
+      <trans-unit id="pos.checkout.confirm" datatype="html"><source>Confirm payment</source><target>تأكيد الدفع</target></trans-unit>
+      <trans-unit id="pos.checkout.back" datatype="html"><source>Back</source><target>رجوع</target></trans-unit>
+      <trans-unit id="supplierStatement.print" datatype="html"><source>Print statement</source><target>طباعة الكشف</target></trans-unit>
+      <trans-unit id="customerStatement.title" datatype="html"><source>Customer account statement</source><target>كشف حساب العميل</target></trans-unit>
+      <trans-unit id="customerStatement.failed" datatype="html"><source>The customer statement could not be loaded.</source><target>تعذر تحميل كشف حساب العميل.</target></trans-unit>
+      <trans-unit id="customerStatement.open" datatype="html"><source>Open sales</source><target>مبيعات غير مسددة</target></trans-unit>
+      <trans-unit id="customerStatement.none" datatype="html"><source>No open balances.</source><target>لا توجد أرصدة مستحقة.</target></trans-unit>
+      <trans-unit id="customerStatement.sale" datatype="html"><source>Sale</source><target>بيع</target></trans-unit>
+      <trans-unit id="pos.title" datatype="html"><source>Point of Sale</source><target>نقطة البيع</target></trans-unit>
+      <trans-unit id="pos.subtitle" datatype="html"><source>Fast checkout for the active cash register.</source><target>دفع سريع على الصندوق النشط.</target></trans-unit>
+      <trans-unit id="pos.register.change" datatype="html"><source>Change register</source><target>تغيير الصندوق</target></trans-unit>
+      <trans-unit id="pos.clock" datatype="html"><source>Clock in to start selling</source><target>سجل الحضور لبدء البيع</target></trans-unit>
+      <trans-unit id="pos.clock.hint" datatype="html"><source>Clock in from My time, then return here.</source><target>سجل الحضور من صفحة وقتي ثم عد إلى هنا.</target></trans-unit>
+      <trans-unit id="pos.register.select" datatype="html"><source>Select a cash register</source><target>اختر صندوقا</target></trans-unit>
+      <trans-unit id="pos.scan" datatype="html"><source>Scan barcode or SKU</source><target>امسح الباركود أو رمز الصنف</target></trans-unit>
+      <trans-unit id="pos.search" datatype="html"><source>Find product by name</source><target>ابحث عن منتج بالاسم</target></trans-unit>
+      <trans-unit id="pos.begin" datatype="html"><source>Scan an item to begin.</source><target>امسح صنفا للبدء.</target></trans-unit>
+      <trans-unit id="pos.customer" datatype="html"><source>Customer</source><target>العميل</target></trans-unit>
+      <trans-unit id="pos.customer.find" datatype="html"><source>Find customer</source><target>ابحث عن عميل</target></trans-unit>
+      <trans-unit id="pos.customer.search" datatype="html"><source>Name, phone or loyalty card</source><target>الاسم أو الهاتف أو بطاقة الولاء</target></trans-unit>
+      <trans-unit id="pos.customer.walkIn" datatype="html"><source>Use Walk-in</source><target>استخدم عميلا عابرا</target></trans-unit>
+      <trans-unit id="pos.discount.apply" datatype="html"><source>Apply discount</source><target>تطبيق الخصم</target></trans-unit>
+      <trans-unit id="pos.shortcut" datatype="html"><source>Press Alt + Enter to review cash payment.</source><target>اضغط Alt + Enter لمراجعة الدفع نقدا.</target></trans-unit>
+      <trans-unit id="pos.hold" datatype="html"><source>Hold ticket</source><target>تعليق التذكرة</target></trans-unit>
+      <trans-unit id="pos.cancel" datatype="html"><source>Cancel ticket</source><target>إلغاء التذكرة</target></trans-unit>
+      <trans-unit id="pos.held" datatype="html"><source>Held tickets</source><target>التذاكر المعلقة</target></trans-unit>
+      <trans-unit id="orders.openCatalogue" datatype="html"><source>Open product catalogue</source><target>فتح كتالوج المنتجات</target></trans-unit>
+      <trans-unit id="orders.refreshVariants" datatype="html"><source>Refresh variants</source><target>تحديث المتغيرات</target></trans-unit>
+      <trans-unit id="orders.variantsFailed" datatype="html"><source>The variants could not be refreshed.</source><target>تعذر تحديث المتغيرات.</target></trans-unit>
+      <trans-unit id="orders.saveDraft" datatype="html"><source>Save draft</source><target>حفظ المسودة</target></trans-unit>
+      <trans-unit id="pos.message.load" datatype="html"><source>Could not load POS.</source><target>تعذر تحميل نقطة البيع.</target></trans-unit>
+      <trans-unit id="pos.message.registerChange" datatype="html"><source>Could not change register.</source><target>تعذر تغيير الصندوق.</target></trans-unit>
+      <trans-unit id="pos.message.registerSelect" datatype="html"><source>Could not select register.</source><target>تعذر اختيار الصندوق.</target></trans-unit>
+      <trans-unit id="pos.message.resume" datatype="html"><source>Could not resume this ticket.</source><target>تعذر استئناف التذكرة.</target></trans-unit>
+      <trans-unit id="pos.message.storage" datatype="html"><source>Held tickets cannot be saved across refresh in this browser.</source><target>لا يحتفظ هذا المتصفح بالتذاكر المعلقة بعد التحديث.</target></trans-unit>
+      <trans-unit id="pos.message.add" datatype="html"><source>Could not add this item.</source><target>تعذرت إضافة الصنف.</target></trans-unit>
+      <trans-unit id="pos.message.quantity" datatype="html"><source>Could not update the quantity.</source><target>تعذر تحديث الكمية.</target></trans-unit>
+      <trans-unit id="pos.message.products" datatype="html"><source>Could not find products.</source><target>تعذر العثور على المنتجات.</target></trans-unit>
+      <trans-unit id="pos.message.customers" datatype="html"><source>Could not find customers.</source><target>تعذر العثور على العملاء.</target></trans-unit>
+      <trans-unit id="pos.message.customerSelect" datatype="html"><source>Could not select the customer.</source><target>تعذر اختيار العميل.</target></trans-unit>
+      <trans-unit id="pos.message.discount" datatype="html"><source>Could not apply the discount.</source><target>تعذر تطبيق الخصم.</target></trans-unit>
+      <trans-unit id="pos.message.remove" datatype="html"><source>Could not remove the item.</source><target>تعذرت إزالة الصنف.</target></trans-unit>
+      <trans-unit id="pos.message.cancelTitle" datatype="html"><source>Cancel this ticket?</source><target>إلغاء هذه التذكرة؟</target></trans-unit>
+      <trans-unit id="pos.message.cancelBody" datatype="html"><source>This draft will be cancelled and can no longer be resumed.</source><target>ستلغي هذه العملية المسودة ولن يمكن استئنافها.</target></trans-unit>
+      <trans-unit id="pos.message.cancel" datatype="html"><source>Could not cancel the ticket.</source><target>تعذر إلغاء التذكرة.</target></trans-unit>
+      <trans-unit id="pos.message.payment" datatype="html"><source>Payment could not be completed.</source><target>تعذر إتمام الدفع.</target></trans-unit>
+      <trans-unit id="pos.message.stock" datatype="html"><source>Confirm physical stock</source><target>تأكيد المخزون الفعلي</target></trans-unit>
+      <trans-unit id="pos.message.receipt" datatype="html"><source>Payment recorded. The receipt could not be opened.</source><target>تم تسجيل الدفع وتعذر فتح الإيصال.</target></trans-unit>
+      <trans-unit id="orders.saveNotes" datatype="html"><source>Save notes</source><target>حفظ الملاحظات</target></trans-unit>
+      <trans-unit id="orders.notesFailed" datatype="html"><source>The notes could not be saved.</source><target>تعذر حفظ الملاحظات.</target></trans-unit>
+      <trans-unit id="orders.deliveryReference" datatype="html"><source>Delivery reference or note</source><target>مرجع التسليم أو ملاحظة</target></trans-unit>
+      <trans-unit id="labels.showPrice" datatype="html"><source>Show price on label</source><target>إظهار السعر على الملصق</target></trans-unit>
       <trans-unit id="orders.receiveNow" datatype="html"><source>Receive now</source><target>استلام الآن</target></trans-unit>
       <trans-unit id="orders.fullyReceived" datatype="html"><source>Complete</source><target>مكتمل</target></trans-unit>
       <trans-unit id="orders.receive.action" datatype="html"><source> Record receipt </source><target>تسجيل الاستلام</target></trans-unit>

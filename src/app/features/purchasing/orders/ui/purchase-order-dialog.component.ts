@@ -70,7 +70,7 @@ export interface PurchaseOrderDialogData {
       <mat-dialog-actions align="end">
         <button mat-button type="button" mat-dialog-close i18n="@@common.cancel">Cancel</button>
         <button mat-flat-button type="submit" [disabled]="saving()">
-          <span i18n="@@common.create">Create</span>
+          <span i18n="@@orders.saveDraft">Save draft</span>
         </button>
       </mat-dialog-actions>
     </form>

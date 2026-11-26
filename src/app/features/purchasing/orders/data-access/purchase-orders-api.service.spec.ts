@@ -23,7 +23,7 @@ describe('PurchaseOrdersApiService', () => {
     const receiptId = '3f2c9a1e-0000-4000-8000-000000000001';
 
     api
-      .receive(receiptId, 'po-1', [{ purchaseOrderLineId: 'line-1', quantityReceived: 4 }])
+      .receive(receiptId, 'po-1', [{ purchaseOrderLineId: 'line-1', quantityReceived: 4 }], 'Delivery #70')
       .subscribe();
 
     const request = http.expectOne('/api/goods-receipts');
@@ -32,6 +32,7 @@ describe('PurchaseOrdersApiService', () => {
       id: receiptId,
       purchaseOrderId: 'po-1',
       lines: [{ purchaseOrderLineId: 'line-1', quantityReceived: 4 }],
+      deliveryReference: 'Delivery #70',
     });
     request.flush({});
   });

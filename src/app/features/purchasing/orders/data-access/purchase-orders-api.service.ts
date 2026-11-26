@@ -34,6 +34,31 @@ export interface PurchaseOrderFilter extends PageRequest {
   readonly status: PurchaseOrderStatus | null;
 }
 
+export interface SupplierPayment {
+  readonly id: string;
+  readonly amount: number;
+  readonly method: string;
+  readonly paymentDate: string;
+  readonly reference: string | null;
+  readonly notes: string | null;
+}
+
+export interface SupplierPaymentBalance {
+  readonly orderTotal: number;
+  readonly totalPaid: number;
+  readonly outstanding: number;
+  readonly status: 'NotPayable' | 'Unpaid' | 'PartiallyPaid' | 'Paid';
+  readonly payments: SupplierPayment[];
+}
+
+export interface SupplierStatement {
+  readonly outstanding: number;
+  readonly orders: { orderId: string; orderNumber: string; orderStatus: PurchaseOrderStatus;
+    orderDate: string; balance: SupplierPaymentBalance }[];
+  readonly entries: { orderId: string; orderNumber: string; date: string;
+    paymentId: string | null; change: number; reference: string | null; running: number }[];
+}
+
 export interface GoodsReceiptLine {
   readonly id: string;
   readonly purchaseOrderLineId: string;
@@ -48,6 +73,7 @@ export interface GoodsReceipt {
   readonly locationId: string;
   readonly receivedAt: string;
   readonly receivedBy: string;
+  readonly deliveryReference: string | null;
   readonly lines: GoodsReceiptLine[];
 }
 
@@ -65,6 +91,18 @@ export class PurchaseOrdersApiService {
       params = params.set('status', filter.status);
     }
     return this.http.get<PurchaseOrder[]>(this.apiUrl.path('/purchase-orders'), { params });
+  }
+
+  supplierStatement(supplierId: string): Observable<SupplierStatement> {
+    return this.http.get<SupplierStatement>(this.apiUrl.path(`/purchase-orders/supplier-statement/${supplierId}`));
+  }
+
+  supplierPayments(id: string): Observable<SupplierPaymentBalance> {
+    return this.http.get<SupplierPaymentBalance>(this.apiUrl.path(`/purchase-orders/${id}/payments`));
+  }
+
+  recordSupplierPayment(id: string, payment: SupplierPayment): Observable<SupplierPaymentBalance> {
+    return this.http.post<SupplierPaymentBalance>(this.apiUrl.path(`/purchase-orders/${id}/payments`), payment);
   }
 
   get(id: string): Observable<PurchaseOrder> {
@@ -124,11 +162,13 @@ export class PurchaseOrdersApiService {
     id: string,
     purchaseOrderId: string,
     lines: { purchaseOrderLineId: string; quantityReceived: number }[],
+    deliveryReference?: string,
   ): Observable<GoodsReceipt> {
     return this.http.post<GoodsReceipt>(this.apiUrl.path('/goods-receipts'), {
       id,
       purchaseOrderId,
       lines,
+      ...(deliveryReference ? { deliveryReference } : {}),
     });
   }
 }

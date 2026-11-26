@@ -33,6 +33,8 @@ import {
   PurchaseOrderDialogData,
 } from '../ui/purchase-order-dialog.component';
 
+import { SupplierStatementComponent } from '../ui/supplier-statement.component';
+
 const pageSize = 50;
 
 @Component({
@@ -52,6 +54,7 @@ const pageSize = 50;
     RouterLink,
     StatePanelComponent,
     StatusChipComponent,
+    SupplierStatementComponent,
   ],
   template: `
     <app-page-header
@@ -90,6 +93,10 @@ const pageSize = 50;
         </mat-select>
       </mat-form-field>
     </div>
+
+    @if (supplierId(); as selectedSupplier) {
+      <app-supplier-statement [supplierId]="selectedSupplier" [orderStatus]="status()" />
+    }
 
     @if (loading()) {
       <mat-progress-bar mode="indeterminate" class="loading-bar" />

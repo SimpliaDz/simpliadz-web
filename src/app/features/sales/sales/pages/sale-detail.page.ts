@@ -307,6 +307,9 @@ interface ReturnRowControl {
       }
 
       <h2 class="section-title" i18n="@@sales.payments">Payments</h2>
+      @if (current.status === 'Completed') {
+        <app-status-chip [label]="paymentStatusLabel(current)" [tone]="current.balanceDue === 0 ? 'success' : 'neutral'" />
+      }
       @if (payments().length === 0) {
         <p class="muted" i18n="@@sales.noPayments">No payments recorded.</p>
       } @else {
@@ -314,7 +317,8 @@ interface ReturnRowControl {
           @for (payment of payments(); track payment.id) {
             <li>
               <span>{{ payment.paidAt | date: 'medium' }}</span>
-              <span>{{ payment.paymentMethod }}</span>
+              <span>{{ paymentMethodLabel(payment.paymentMethod) }}</span>
+              @if (payment.reference) { <span>{{ payment.reference }}</span> }
               <span
                 ><strong>{{ payment.amount | number: '1.2-2' }}</strong></span
               >
@@ -322,7 +326,7 @@ interface ReturnRowControl {
           }
         </ul>
       }
-      @if (canPay() && current.status === 'Completed') {
+      @if (canPay() && current.status === 'Completed' && current.balanceDue > 0) {
         <form class="form-surface" [formGroup]="paymentForm" (ngSubmit)="pay(current)" novalidate>
           <div class="form-grid">
             <mat-form-field appearance="outline">
@@ -345,6 +349,10 @@ interface ReturnRowControl {
                 >
                 <mat-option value="Other" i18n="@@sales.method.other">Other</mat-option>
               </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label i18n="@@supplierPayments.reference">Payment reference</mat-label>
+              <input matInput maxlength="100" formControlName="reference" />
             </mat-form-field>
             @if (openSessions().length) {
               <mat-form-field appearance="outline">
@@ -516,7 +524,7 @@ export class SaleDetailPage {
 
   readonly canManage = computed(() => this.session.hasPermission('sales.manage'));
   readonly canDiscount = computed(() => this.session.hasPermission('sales.discounts.apply'));
-  readonly canPay = computed(() => this.session.hasPermission('sales.payments.manage'));
+  readonly canPay = computed(() => this.session.hasAllPermissions(['sales.manage', 'sales.payments.manage']));
   readonly canReturn = computed(() => this.session.hasPermission('sales.returns.manage'));
 
   readonly sale = signal<Sale | null>(null);
@@ -546,6 +554,7 @@ export class SaleDetailPage {
   readonly paymentForm = this.formBuilder.group({
     amount: this.formBuilder.control<number | null>(null, [Validators.required, Validators.min(0)]),
     paymentMethod: this.formBuilder.control<PaymentMethod>('Cash'),
+    reference: [''],
     cashSessionId: [''],
   });
   readonly returnForm = this.formBuilder.group({
@@ -837,6 +846,21 @@ export class SaleDetailPage {
       });
   }
 
+  paymentStatusLabel(sale: Sale): string {
+    if (sale.balanceDue <= 0) return $localize`:@@supplierPayments.settled:Paid`;
+    if (sale.paidAmount > 0) return $localize`:@@supplierPayments.partial:Partially paid`;
+    return $localize`:@@supplierPayments.unpaid:Unpaid`;
+  }
+
+  paymentMethodLabel(method: PaymentMethod): string {
+    switch (method) {
+      case 'Cash': return $localize`:@@sales.method.cash:Cash`;
+      case 'Card': return $localize`:@@sales.method.card:Card`;
+      case 'BankTransfer': return $localize`:@@sales.method.transfer:Bank transfer`;
+      default: return $localize`:@@sales.method.other:Other`;
+    }
+  }
+
   // ---- Payments -----------------------------------------------------------
 
   pay(current: Sale): void {
@@ -853,6 +877,7 @@ export class SaleDetailPage {
         id: crypto.randomUUID(),
         amount,
         paymentMethod: value.paymentMethod,
+        reference: blankToNull(value.reference),
         cashSessionId: blankToNull(value.cashSessionId),
       })
       .subscribe({

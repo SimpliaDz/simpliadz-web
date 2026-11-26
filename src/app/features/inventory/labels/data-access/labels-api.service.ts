@@ -51,10 +51,10 @@ export class LabelsApiService {
   }
 
   /** Returns printable HTML (SVG Code 128). Fails with 409 when a variant has no barcode. */
-  printHtml(templateId: string, lines: LabelPrintLine[]): Observable<string> {
+  printHtml(templateId: string, lines: LabelPrintLine[], showPrice: boolean, locale: string): Observable<string> {
     return this.http.post(
       this.apiUrl.path('/barcode-labels/print-document'),
-      { templateId, lines },
+      { templateId, lines, showPrice, locale },
       { responseType: 'text' },
     );
   }

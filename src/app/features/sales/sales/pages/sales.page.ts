@@ -2,6 +2,7 @@ import { DatePipe, DecimalPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, DestroyRef, inject, signal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormsModule } from '@angular/forms';
+import { CustomerStatementComponent } from './customer-statement.component';
 import { RouterLink } from '@angular/router';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonModule } from '@angular/material/button';
@@ -44,6 +45,7 @@ const statuses: SaleStatus[] = ['Draft', 'Completed', 'PartiallyReturned', 'Retu
     PageHeaderComponent,
     PagerComponent,
     RouterLink,
+    CustomerStatementComponent,
     StatePanelComponent,
     StatusChipComponent,
   ],
@@ -102,6 +104,10 @@ const statuses: SaleStatus[] = ['Draft', 'Completed', 'PartiallyReturned', 'Retu
     </form>
     @if (rangeInvalid()) { <p role="alert">Choose an end date on or after the start date.</p> }
     @if (customerSelectionPending()) { <p>Select a customer from the suggestions or clear the field.</p> }
+
+    @if (statementCustomerId(); as customerId) {
+      <app-customer-statement [customerId]="customerId" />
+    }
 
     @if (loading()) {
       <mat-progress-bar mode="indeterminate" class="loading-bar" />
@@ -230,6 +236,10 @@ export class SalesPage {
         );
       },
     });
+  }
+
+  statementCustomerId(): string | null {
+    return typeof this.customer === 'object' ? this.customer?.id ?? null : null;
   }
 
   readonly customerName = (customer: SaleHistoryCustomer | string | null) =>

@@ -47,12 +47,20 @@ export interface Sale {
   readonly balanceDue: number;
 }
 
+export interface CustomerStatement {
+  readonly outstanding: number;
+  readonly openSales: { id: string; number: string | null; date: string; total: number; paid: number }[];
+  readonly entries: { saleId: string; number: string | null; date: string;
+    paymentId: string | null; change: number; reference: string | null; runningBalance: number }[];
+}
+
 export interface Payment {
   readonly id: string;
   readonly saleId: string;
   readonly amount: number;
   readonly paymentMethod: PaymentMethod;
   readonly paidAt: string;
+  readonly reference?: string | null;
   readonly receivedBy: string;
   readonly cashSessionId: string | null;
 }
@@ -196,7 +204,11 @@ export class SalesApiService {
   posSetLineQuantity(saleId: string, lineId: string, quantity: number, confirmPhysicalStock = false): Observable<Sale> { return this.http.put<Sale>(this.apiUrl.path(`/pos/sales/${saleId}/lines/${lineId}/quantity`), { quantity, confirmPhysicalStock }); }
   posSetCustomer(saleId: string, customerId: string | null): Observable<Sale> { return this.http.put<Sale>(this.apiUrl.path(`/pos/sales/${saleId}/customer`), { customerId }); }
   posCustomers(search: string): Observable<PosCustomer[]> { return this.http.get<PosCustomer[]>(this.apiUrl.path('/pos/customers'), { params: new HttpParams().set('search', search) }); }
-  posPay(saleId: string, amount: number, method: PaymentMethod, confirmPhysicalStock = false): Observable<{ sale: Sale; payment: Payment | null }> { return this.http.post<{ sale: Sale; payment: Payment | null }>(this.apiUrl.path(`/pos/sales/${saleId}/pay`), { id: crypto.randomUUID(), amount, paymentMethod: method, confirmPhysicalStock }); }
+  posPay(saleId: string, expectedTotal: number, tenders: readonly { id: string; amount: number; method: PaymentMethod }[], confirmPhysicalStock = false): Observable<{ sale: Sale; payment: Payment | null }> {
+    return this.http.post<{ sale: Sale; payment: Payment | null }>(this.apiUrl.path(`/pos/sales/${saleId}/pay`), {
+      id: tenders[0]?.id ?? saleId, expectedTotal, tenders, confirmPhysicalStock,
+    });
+  }
 
   /** Adds one unit line by exact SKU or barcode. Adding a discount requires the discount permission. */
   addLine(
@@ -237,6 +249,10 @@ export class SalesApiService {
     return this.http.get<Payment[]>(this.apiUrl.path(`/sales/${saleId}/payments`));
   }
 
+  customerStatement(customerId: string): Observable<CustomerStatement> {
+    return this.http.get<CustomerStatement>(this.apiUrl.path(`/sales/customers/${customerId}/statement`));
+  }
+
   /** The client-generated id is an idempotency key; a retried request cannot pay twice. */
   recordPayment(
     saleId: string,
@@ -245,6 +261,7 @@ export class SalesApiService {
       amount: number;
       paymentMethod: PaymentMethod;
       cashSessionId: string | null;
+      reference?: string | null;
     },
   ): Observable<Payment> {
     return this.http.post<Payment>(this.apiUrl.path(`/sales/${saleId}/payments`), request);

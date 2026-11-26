@@ -1,7 +1,7 @@
-import { DatePipe, DecimalPipe } from '@angular/common';
+import { DatePipe, DecimalPipe, formatDate } from '@angular/common';
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { NonNullableFormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -10,10 +10,10 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
-import { forkJoin } from 'rxjs';
+import { forkJoin, of } from 'rxjs';
 import { describeApiError } from '../../../../core/api/api-error-message';
 import { AuthSessionService } from '../../../../core/auth/auth-session.service';
-import { numberOrNull } from '../../../../shared/forms/form-values';
+import { blankToNull, numberOrNull } from '../../../../shared/forms/form-values';
 import { ConfirmService } from '../../../../shared/ui/confirm-dialog/confirm.service';
 import { PageHeaderComponent } from '../../../../shared/ui/page-header/page-header.component';
 import { StatePanelComponent } from '../../../../shared/ui/state-panel/state-panel.component';
@@ -31,6 +31,7 @@ import {
   GoodsReceipt,
   PurchaseOrder,
   PurchaseOrdersApiService,
+  SupplierPaymentBalance,
 } from '../data-access/purchase-orders-api.service';
 
 @Component({
@@ -47,6 +48,7 @@ import {
     MatTableModule,
     PageHeaderComponent,
     ReactiveFormsModule,
+    RouterLink,
     StatePanelComponent,
     StatusChipComponent,
   ],
@@ -157,6 +159,10 @@ import {
             </mat-form-field>
           </div>
           <div class="form-actions">
+            @if (canOpenCatalogue()) {
+              <a mat-button routerLink="/app/catalogue/products" target="_blank" rel="noopener" i18n="@@orders.openCatalogue">Open product catalogue</a>
+            }
+            <button mat-button type="button" (click)="refreshVariants()" i18n="@@orders.refreshVariants">Refresh variants</button>
             <button
               mat-stroked-button
               type="submit"
@@ -178,6 +184,14 @@ import {
             <ng-container matColumnDef="product">
               <th mat-header-cell *matHeaderCellDef i18n="@@stock.column.product">Product</th>
               <td mat-cell *matCellDef="let line">{{ variantLabel(line.productVariantId) }}</td>
+            </ng-container>
+            <ng-container matColumnDef="ordered">
+              <th mat-header-cell *matHeaderCellDef i18n="@@orders.orderedQty">Quantity</th>
+              <td mat-cell *matCellDef="let line">{{ line.orderedQuantity }}</td>
+            </ng-container>
+            <ng-container matColumnDef="received">
+              <th mat-header-cell *matHeaderCellDef i18n="@@orders.received">Received</th>
+              <td mat-cell *matCellDef="let line">{{ line.receivedQuantity }}</td>
             </ng-container>
             <ng-container matColumnDef="outstanding">
               <th mat-header-cell *matHeaderCellDef i18n="@@orders.outstanding">Still expected</th>
@@ -212,6 +226,10 @@ import {
             <tr mat-row *matRowDef="let row; columns: receiveColumns"></tr>
           </table>
         </div>
+        <mat-form-field appearance="outline" class="full-row">
+          <mat-label i18n="@@orders.deliveryReference">Delivery reference or note</mat-label>
+          <input matInput maxlength="500" [formControl]="deliveryReference" />
+        </mat-form-field>
         <div class="form-actions">
           <button
             mat-flat-button
@@ -232,6 +250,7 @@ import {
         <p class="muted" i18n="@@orders.receiveClosed">Nothing is outstanding on this order.</p>
       }
 
+      @if (canViewReceipts()) {
       <h2 class="section-title" i18n="@@orders.receipts">Receipts</h2>
       @if (receipts().length === 0) {
         <p class="muted" i18n="@@orders.noReceipts">No goods have been received yet.</p>
@@ -242,11 +261,61 @@ import {
               <span>{{ receipt.receivedAt | date: 'medium' }}</span>
               <span class="muted">{{ receipt.receivedBy }}</span>
               <span>{{ receiptSummary(receipt) }}</span>
+              @if (receipt.deliveryReference) {
+                <span>{{ receipt.deliveryReference }}</span>
+              }
             </li>
           }
         </ul>
       }
 
+      }
+      @if (supplierBalance(); as balance) {
+        <h2 class="section-title" i18n="@@supplierPayments.title">Supplier payments</h2>
+        <dl class="detail-list">
+          <dt i18n="@@supplierPayments.paid">Total paid</dt><dd>{{ balance.totalPaid | number: '1.2-4' }}</dd>
+          <dt i18n="@@supplierPayments.outstanding">Outstanding balance</dt><dd>{{ balance.outstanding | number: '1.2-4' }}</dd>
+          <dt i18n="@@common.status">Status</dt><dd>{{ paymentStatuses[balance.status] }}</dd>
+        </dl>
+        @for (payment of balance.payments; track payment.id) {
+          <p>{{ payment.paymentDate | date: 'mediumDate' }} · {{ paymentMethods[payment.method] }} ·
+            {{ payment.amount | number: '1.2-4' }}
+            @if (payment.reference) { · {{ payment.reference }} }
+            @if (payment.notes) { · {{ payment.notes }} }
+          </p>
+        }
+        @if (canManage() && balance.outstanding > 0) {
+          <form class="form-surface" [formGroup]="paymentForm" (ngSubmit)="recordSupplierPayment(balance)">
+            <div class="form-grid">
+              <mat-form-field appearance="outline">
+                <mat-label i18n="@@supplierPayments.amount">Amount</mat-label>
+                <input matInput type="number" min="0.0001" [max]="balance.outstanding" step="0.0001" formControlName="amount" required />
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label i18n="@@supplierPayments.method">Payment method</mat-label>
+                <mat-select formControlName="method">
+                  @for (method of paymentMethodOptions; track method) {
+                    <mat-option [value]="method">{{ paymentMethods[method] }}</mat-option>
+                  }
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label i18n="@@supplierPayments.date">Payment date</mat-label>
+                <input matInput type="date" formControlName="paymentDate" required />
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label i18n="@@supplierPayments.reference">Payment reference</mat-label>
+                <input matInput maxlength="100" formControlName="reference" />
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label i18n="@@orders.field.notes">Notes</mat-label>
+                <input matInput maxlength="500" formControlName="notes" />
+              </mat-form-field>
+            </div>
+            <button mat-flat-button type="submit" [disabled]="busy() || paymentForm.invalid" i18n="@@supplierPayments.record">Record supplier payment</button>
+          </form>
+        }
+      }
       <h2 class="section-title" i18n="@@orders.details">Details</h2>
       <dl class="detail-list">
         <dt i18n="@@orders.date">Date</dt>
@@ -258,6 +327,15 @@ import {
         <dt i18n="@@orders.field.notes">Notes</dt>
         <dd>{{ current.notes ?? '—' }}</dd>
       </dl>
+      @if (canManage() && current.status === 'Draft') {
+        <div class="form-surface">
+          <mat-form-field appearance="outline" class="full-row">
+            <mat-label i18n="@@orders.field.notes">Notes</mat-label>
+            <textarea matInput [formControl]="draftNotes" maxlength="2000" rows="3"></textarea>
+          </mat-form-field>
+          <button mat-stroked-button type="button" (click)="saveDraftNotes(current)" [disabled]="busy() || draftNotes.pristine" i18n="@@orders.saveNotes">Save notes</button>
+        </div>
+      }
     }
   `,
   styles: `
@@ -301,15 +379,42 @@ export class PurchaseOrderDetailPage {
     path: '/app/purchasing/orders',
   };
   readonly lineColumns = ['product', 'ordered', 'received', 'cost', 'total'];
-  readonly receiveColumns = ['product', 'outstanding', 'now'];
+  readonly receiveColumns = ['product', 'ordered', 'received', 'outstanding', 'now'];
 
   readonly canManage = computed(() => this.session.hasPermission('purchase-orders.manage'));
+  readonly canOpenCatalogue = computed(() => this.session.hasPermission('products.view'));
+  readonly canViewReceipts = computed(() => this.session.hasPermission('goods-receipts.view'));
   readonly canReceive = computed(() => this.session.hasPermission('goods-receipts.manage'));
   readonly order = signal<PurchaseOrder | null>(null);
   readonly suppliers = signal<Supplier[]>([]);
   readonly locations = signal<Location[]>([]);
   readonly variants = signal<VariantOption[]>([]);
   readonly receipts = signal<GoodsReceipt[]>([]);
+  readonly supplierBalance = signal<SupplierPaymentBalance | null>(null);
+  readonly paymentStatuses = {
+    NotPayable: $localize`:@@supplierPayments.notPayable:Not payable`,
+    Unpaid: $localize`:@@supplierPayments.unpaid:Unpaid`,
+    PartiallyPaid: $localize`:@@supplierPayments.partial:Partially paid`,
+    Paid: $localize`:@@supplierPayments.settled:Paid`,
+  };
+  readonly paymentMethods: Record<string, string> = {
+    Cash: $localize`:@@supplierPayments.cash:Cash`,
+    Card: $localize`:@@supplierPayments.card:Card`,
+    BankTransfer: $localize`:@@supplierPayments.transfer:Bank transfer`,
+    Cheque: $localize`:@@supplierPayments.cheque:Cheque`,
+    Other: $localize`:@@supplierPayments.other:Other`,
+  };
+  readonly paymentMethodOptions = Object.keys(this.paymentMethods);
+  readonly paymentForm = this.formBuilder.group({
+    amount: this.formBuilder.control<number | null>(null, [Validators.required]),
+    method: 'Cash',
+    paymentDate: formatDate(new Date(), 'yyyy-MM-dd', 'en-US'),
+    reference: '',
+    notes: '',
+  });
+  private pendingPayment: { fingerprint: string; id: string } | null = null;
+  readonly draftNotes = this.formBuilder.control('');
+  readonly deliveryReference = this.formBuilder.control('');
   readonly receiveDrafts = signal<Record<string, number>>({});
   readonly loading = signal(true);
   readonly loadError = signal<string | null>(null);
@@ -337,13 +442,16 @@ export class PurchaseOrderDetailPage {
     this.loadError.set(null);
     forkJoin({
       order: this.api.get(this.orderId),
-      receipts: this.api.receipts(this.orderId),
+      supplierBalance: this.api.supplierPayments(this.orderId),
+      receipts: this.canViewReceipts() ? this.api.receipts(this.orderId) : of([]),
       suppliers: this.suppliersApi.list({ search: null, isActive: null, page: 1, pageSize: 100 }),
       locations: this.locationsApi.list(),
       variants: this.catalogue.options(),
     }).subscribe({
-      next: ({ order, receipts, suppliers, locations, variants }) => {
+      next: ({ order, receipts, suppliers, locations, variants, supplierBalance }) => {
+        this.supplierBalance.set(supplierBalance);
         this.order.set(order);
+        this.draftNotes.reset(order.notes ?? '');
         this.receipts.set(receipts);
         this.suppliers.set(suppliers);
         this.locations.set(locations);
@@ -361,6 +469,30 @@ export class PurchaseOrderDetailPage {
           ),
         );
       },
+    });
+  }
+
+  saveDraftNotes(order: PurchaseOrder): void {
+    if (this.busy() || order.status !== 'Draft') return;
+    this.busy.set(true);
+    this.actionError.set(null);
+    this.api.saveNotes(order.id, blankToNull(this.draftNotes.value)).subscribe({
+      next: () => { this.busy.set(false); this.load(); },
+      error: (error: unknown) => {
+        this.busy.set(false);
+        this.actionError.set(describeApiError(error, $localize`:@@orders.notesFailed:The notes could not be saved.`));
+      },
+    });
+  }
+
+  refreshVariants(): void {
+    this.catalogue.options().subscribe({
+      next: (variants) => {
+        this.variants.set(variants);
+        this.variantNames = new Map(variants.map((variant) => [variant.id, variant.label]));
+      },
+      error: (error: unknown) => this.actionError.set(describeApiError(error,
+        $localize`:@@orders.variantsFailed:The variants could not be refreshed.`)),
     });
   }
 
@@ -497,10 +629,12 @@ export class PurchaseOrderDetailPage {
           purchaseOrderLineId,
           quantityReceived,
         })),
+        this.deliveryReference.value.trim(),
       )
       .subscribe({
         next: () => {
           this.receiptKey = null;
+          this.deliveryReference.reset();
           this.busy.set(false);
           this.snackBar.open(
             $localize`:@@orders.receivedDone:Goods received. Stock updated.`,
@@ -519,6 +653,32 @@ export class PurchaseOrderDetailPage {
           );
         },
       });
+  }
+
+  recordSupplierPayment(balance: SupplierPaymentBalance): void {
+    const value = this.paymentForm.getRawValue();
+    const amount = value.amount;
+    if (this.busy() || amount === null || amount <= 0 || amount > balance.outstanding || !value.paymentDate) return;
+    const fingerprint = JSON.stringify(value);
+    if (this.pendingPayment?.fingerprint !== fingerprint) {
+      this.pendingPayment = { fingerprint, id: crypto.randomUUID() };
+    }
+    this.busy.set(true);
+    this.actionError.set(null);
+    this.api.recordSupplierPayment(this.orderId, { ...value, amount, id: this.pendingPayment.id }).subscribe({
+      next: (updated) => {
+        this.supplierBalance.set(updated);
+        this.paymentForm.controls.amount.reset();
+        this.paymentForm.controls.reference.reset();
+        this.paymentForm.controls.notes.reset();
+        this.pendingPayment = null;
+        this.busy.set(false);
+      },
+      error: (error: unknown) => {
+        this.busy.set(false);
+        this.actionError.set(describeApiError(error, $localize`:@@supplierPayments.error:The supplier payment could not be recorded.`));
+      },
+    });
   }
 
   supplierName(): string {

@@ -47,6 +47,41 @@ test('redirects anonymous visitors from the app to sign in with a return URL', a
   await expect(page).toHaveURL(/\/login\?returnUrl=%2Fapp%2Faccount%2Fsecurity$/);
 });
 
+test('shows the remaining credit and sends split POS payments', async ({ page }) => {
+  await page.route('**/api/auth/me', route => route.fulfill({
+    json: { ...user, permissions: ['sales.manage'] },
+  }));
+  await page.route('**/api/pos/context', route => route.fulfill({
+    json: { isClockedIn: true, cashRegisterId: 'register-1', cashRegisterCode: 'R1', registers: [] },
+  }));
+  const sale = {
+    id: 'sale-1', customerId: 'customer-1', status: 'Draft', total: 1500, balanceDue: 1500,
+    discountAmount: 0, lines: [{ id: 'line-1', productVariantId: 'variant-1', productName: 'Shirt',
+      quantity: 1, unitPrice: 1500, lineTotal: 1500 }],
+  };
+  await page.route('**/api/pos/sales', route => route.fulfill({ json: sale }));
+  await page.route('**/api/pos/sales/sale-1/pay', route => route.fulfill({
+    json: { sale: { ...sale, status: 'Completed', balanceDue: 500, paidAmount: 1000 } },
+  }));
+
+  await signIn(page);
+  await page.goto('/app/sales/pos');
+  const scanner = page.getByLabel('Scan barcode or SKU');
+  await scanner.fill('SHIRT');
+  await scanner.press('Enter');
+  await page.getByRole('button', { name: 'Cash', exact: true }).click();
+  await page.getByLabel('Cash received').fill('600');
+  await page.getByLabel('Card received').fill('400');
+  const dialog = page.getByRole('dialog', { name: 'Confirm payment' });
+  await expect(dialog.getByText('500.00', { exact: true })).toBeVisible();
+  const posted = page.waitForRequest('**/api/pos/sales/sale-1/pay');
+  await dialog.getByRole('button', { name: /Confirm payment/ }).click();
+  expect((await posted).postDataJSON()).toMatchObject({
+    expectedTotal: 1500,
+    tenders: [{ amount: 600, method: 'Cash' }, { amount: 400, method: 'Card' }],
+  });
+});
+
 test('shows the dashboard and only permitted navigation after sign in', async ({ page }) => {
   await signIn(page);
 
