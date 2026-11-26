@@ -1,6 +1,6 @@
-# Simplia API capability matrix (frontend view)
+# SimpliaWear API capability matrix (frontend view)
 
-Status: **Phase 1 draft**. Verified against `simpliadz-platform` source (endpoints, contracts,
+Status: **Phase 1 draft**. Verified against `simplia-wear-api` source (endpoints, contracts,
 validators, services) on 2026-11-20. Where backend docs and source disagree, **source wins**; see
 [Backend doc discrepancies](#backend-doc-discrepancies).
 

@@ -22,7 +22,7 @@ import { CurrentUser, LoginRequest, LoginResponse } from './auth.models';
  * The access token stays in memory only. sessionStorage is still readable by script
  * running in the page; see docs/TECHNICAL_GUIDE.md for the trade-off.
  */
-const refreshTokenStorageKey = 'simpliadz.refreshToken';
+const refreshTokenStorageKey = 'simplia.refreshToken';
 
 @Injectable({ providedIn: 'root' })
 export class AuthSessionService {

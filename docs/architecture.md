@@ -1,6 +1,6 @@
 # Frontend architecture
 
-Simplia Web is a standalone Angular application organized by business feature.
+SimpliaWear Web is a standalone Angular application organized by business feature.
 
 ## Structure
 

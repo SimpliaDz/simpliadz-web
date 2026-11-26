@@ -2,8 +2,8 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en-US" target-language="fr" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="title.loyalty" datatype="html"><source>Customer loyalty | Simplia</source><target>Fidélité client | Simplia</target></trans-unit>
-      <trans-unit id="title.pos" datatype="html"><source>Point of Sale | Simplia</source><target>Point de vente | Simplia</target></trans-unit>
+      <trans-unit id="title.loyalty" datatype="html"><source>Customer loyalty | SimpliaWear</source><target>Fidélité client | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.pos" datatype="html"><source>Point of Sale | SimpliaWear</source><target>Point de vente | SimpliaWear</target></trans-unit>
       <trans-unit id="brands.activated" datatype="html"><source>Brand activated.</source><target>Marque activée.</target></trans-unit>
       <trans-unit id="brands.activateFailed" datatype="html"><source>The brand could not be activated.</source><target>La marque n’a pas pu être activée.</target></trans-unit>
       <trans-unit id="products.activated" datatype="html"><source>Product activated.</source><target>Produit activé.</target></trans-unit>
@@ -15,62 +15,62 @@
       <trans-unit id="nav.financialDashboard" datatype="html"><source>Financial dashboard</source><target>Tableau de bord financier</target></trans-unit>
       <trans-unit id="nav.pos" datatype="html"><source>Point of Sale</source><target>Point de vente</target></trans-unit>
       <trans-unit id="nav.loyalty" datatype="html"><source>Customer loyalty</source><target>Fidélité client</target></trans-unit>
-      <trans-unit id="title.signIn" datatype="html"><source>Sign in | Simplia</source><target>Connexion | Simplia</target></trans-unit>
-      <trans-unit id="title.forgotPassword" datatype="html"><source>Reset password | Simplia</source><target>Réinitialiser le mot de passe | Simplia</target></trans-unit>
-      <trans-unit id="title.resetPassword" datatype="html"><source>Choose a password | Simplia</source><target>Choisir un mot de passe | Simplia</target></trans-unit>
-      <trans-unit id="title.dashboard" datatype="html"><source>Dashboard | Simplia</source><target>Tableau de bord | Simplia</target></trans-unit>
-      <trans-unit id="title.organization" datatype="html"><source>Organization | Simplia</source><target>Organisation | Simplia</target></trans-unit>
-      <trans-unit id="title.brands" datatype="html"><source>Brands | Simplia</source><target>Marques | Simplia</target></trans-unit>
-      <trans-unit id="title.categories" datatype="html"><source>Categories | Simplia</source><target>Catégories | Simplia</target></trans-unit>
-      <trans-unit id="title.attributes" datatype="html"><source>Attributes | Simplia</source><target>Attributs | Simplia</target></trans-unit>
-      <trans-unit id="title.attribute" datatype="html"><source>Attribute | Simplia</source><target>Attribut | Simplia</target></trans-unit>
-      <trans-unit id="title.products" datatype="html"><source>Products | Simplia</source><target>Produits | Simplia</target></trans-unit>
-      <trans-unit id="title.newProduct" datatype="html"><source>New product | Simplia</source><target>Nouveau produit | Simplia</target></trans-unit>
-      <trans-unit id="title.product" datatype="html"><source>Product | Simplia</source><target>Produit | Simplia</target></trans-unit>
-      <trans-unit id="title.editProduct" datatype="html"><source>Edit product | Simplia</source><target>Modifier le produit | Simplia</target></trans-unit>
-      <trans-unit id="title.newVariant" datatype="html"><source>New variant | Simplia</source><target>Nouvelle variante | Simplia</target></trans-unit>
-      <trans-unit id="title.variant" datatype="html"><source>Variant | Simplia</source><target>Variante | Simplia</target></trans-unit>
-      <trans-unit id="title.locations" datatype="html"><source>Locations | Simplia</source><target>Emplacements | Simplia</target></trans-unit>
-      <trans-unit id="title.newLocation" datatype="html"><source>New location | Simplia</source><target>Nouvel emplacement | Simplia</target></trans-unit>
-      <trans-unit id="title.editLocation" datatype="html"><source>Edit location | Simplia</source><target>Modifier l’emplacement | Simplia</target></trans-unit>
-      <trans-unit id="title.priceLists" datatype="html"><source>Price lists | Simplia</source><target>Listes de prix | Simplia</target></trans-unit>
-      <trans-unit id="title.stock" datatype="html"><source>Stock levels | Simplia</source><target>Niveaux de stock | Simplia</target></trans-unit>
-      <trans-unit id="title.movements" datatype="html"><source>Stock movements | Simplia</source><target>Mouvements de stock | Simplia</target></trans-unit>
-      <trans-unit id="title.policies" datatype="html"><source>Reorder policies | Simplia</source><target>Seuils de réapprovisionnement | Simplia</target></trans-unit>
-      <trans-unit id="title.transfers" datatype="html"><source>Stock transfers | Simplia</source><target>Transferts de stock | Simplia</target></trans-unit>
-      <trans-unit id="title.transfer" datatype="html"><source>Transfer | Simplia</source><target>Transfert | Simplia</target></trans-unit>
-      <trans-unit id="title.counts" datatype="html"><source>Stock counts | Simplia</source><target>Inventaires | Simplia</target></trans-unit>
-      <trans-unit id="title.count" datatype="html"><source>Stock count | Simplia</source><target>Inventaire | Simplia</target></trans-unit>
-      <trans-unit id="title.warnings" datatype="html"><source>Inventory warnings | Simplia</source><target>Alertes de stock | Simplia</target></trans-unit>
-      <trans-unit id="title.suppliers" datatype="html"><source>Suppliers | Simplia</source><target>Fournisseurs | Simplia</target></trans-unit>
-      <trans-unit id="title.orders" datatype="html"><source>Purchase orders | Simplia</source><target>Commandes d’achat | Simplia</target></trans-unit>
-      <trans-unit id="title.order" datatype="html"><source>Purchase order | Simplia</source><target>Commande d’achat | Simplia</target></trans-unit>
-      <trans-unit id="title.customers" datatype="html"><source>Customers | Simplia</source><target>Clients | Simplia</target></trans-unit>
-      <trans-unit id="title.cashRegisters" datatype="html"><source>Cash Registers | Simplia</source><target>Caisses | Simplia</target></trans-unit>
-      <trans-unit id="title.cashSessions" datatype="html"><source>Cash Sessions | Simplia</source><target>Sessions de caisse | Simplia</target></trans-unit>
-      <trans-unit id="title.cashSession" datatype="html"><source>Cash Session | Simplia</source><target>Session de caisse | Simplia</target></trans-unit>
-      <trans-unit id="title.sales" datatype="html"><source>Sales | Simplia</source><target>Ventes | Simplia</target></trans-unit>
-      <trans-unit id="title.sale" datatype="html"><source>Sale | Simplia</source><target>Vente | Simplia</target></trans-unit>
-      <trans-unit id="title.expenses" datatype="html"><source>Expenses | Simplia</source><target>Dépenses | Simplia</target></trans-unit>
-      <trans-unit id="title.expenseCategories" datatype="html"><source>Expense Categories | Simplia</source><target>Catégories de dépenses | Simplia</target></trans-unit>
-      <trans-unit id="title.myTime" datatype="html"><source>My Time | Simplia</source><target>Mes heures | Simplia</target></trans-unit>
-      <trans-unit id="title.workSessions" datatype="html"><source>Work Sessions | Simplia</source><target>Sessions de travail | Simplia</target></trans-unit>
-      <trans-unit id="title.hoursReport" datatype="html"><source>Hours Report | Simplia</source><target>Rapport d’heures | Simplia</target></trans-unit>
-      <trans-unit id="title.documents" datatype="html"><source>Inventory documents | Simplia</source><target>Documents d’inventaire | Simplia</target></trans-unit>
-      <trans-unit id="title.labels" datatype="html"><source>Barcode labels | Simplia</source><target>Étiquettes code-barres | Simplia</target></trans-unit>
-      <trans-unit id="title.report.sales" datatype="html"><source>Sales summary | Simplia</source><target>Synthèse des ventes | Simplia</target></trans-unit>
-      <trans-unit id="title.report.products" datatype="html"><source>Product performance | Simplia</source><target>Performance des produits | Simplia</target></trans-unit>
-      <trans-unit id="title.report.inventory" datatype="html"><source>Inventory report | Simplia</source><target>Rapport de stock | Simplia</target></trans-unit>
-      <trans-unit id="title.report.lowStock" datatype="html"><source>Low stock | Simplia</source><target>Stock bas | Simplia</target></trans-unit>
-      <trans-unit id="title.audit" datatype="html"><source>Audit log | Simplia</source><target>Journal d’audit | Simplia</target></trans-unit>
-      <trans-unit id="title.users" datatype="html"><source>Users | Simplia</source><target>Utilisateurs | Simplia</target></trans-unit>
-      <trans-unit id="title.newUser" datatype="html"><source>New user | Simplia</source><target>Nouvel utilisateur | Simplia</target></trans-unit>
-      <trans-unit id="title.user" datatype="html"><source>User | Simplia</source><target>Utilisateur | Simplia</target></trans-unit>
-      <trans-unit id="title.roles" datatype="html"><source>Roles | Simplia</source><target>Rôles | Simplia</target></trans-unit>
-      <trans-unit id="title.role" datatype="html"><source>Role | Simplia</source><target>Rôle | Simplia</target></trans-unit>
-      <trans-unit id="title.accountSecurity" datatype="html"><source>Security | Simplia</source><target>Sécurité | Simplia</target></trans-unit>
-      <trans-unit id="title.forbidden" datatype="html"><source>Access denied | Simplia</source><target>Accès refusé | Simplia</target></trans-unit>
-      <trans-unit id="title.notFound" datatype="html"><source>Page not found | Simplia</source><target>Page introuvable | Simplia</target></trans-unit>
+      <trans-unit id="title.signIn" datatype="html"><source>Sign in | SimpliaWear</source><target>Connexion | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.forgotPassword" datatype="html"><source>Reset password | SimpliaWear</source><target>Réinitialiser le mot de passe | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.resetPassword" datatype="html"><source>Choose a password | SimpliaWear</source><target>Choisir un mot de passe | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.dashboard" datatype="html"><source>Dashboard | SimpliaWear</source><target>Tableau de bord | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.organization" datatype="html"><source>Organization | SimpliaWear</source><target>Organisation | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.brands" datatype="html"><source>Brands | SimpliaWear</source><target>Marques | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.categories" datatype="html"><source>Categories | SimpliaWear</source><target>Catégories | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.attributes" datatype="html"><source>Attributes | SimpliaWear</source><target>Attributs | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.attribute" datatype="html"><source>Attribute | SimpliaWear</source><target>Attribut | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.products" datatype="html"><source>Products | SimpliaWear</source><target>Produits | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.newProduct" datatype="html"><source>New product | SimpliaWear</source><target>Nouveau produit | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.product" datatype="html"><source>Product | SimpliaWear</source><target>Produit | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.editProduct" datatype="html"><source>Edit product | SimpliaWear</source><target>Modifier le produit | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.newVariant" datatype="html"><source>New variant | SimpliaWear</source><target>Nouvelle variante | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.variant" datatype="html"><source>Variant | SimpliaWear</source><target>Variante | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.locations" datatype="html"><source>Locations | SimpliaWear</source><target>Emplacements | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.newLocation" datatype="html"><source>New location | SimpliaWear</source><target>Nouvel emplacement | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.editLocation" datatype="html"><source>Edit location | SimpliaWear</source><target>Modifier l’emplacement | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.priceLists" datatype="html"><source>Price lists | SimpliaWear</source><target>Listes de prix | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.stock" datatype="html"><source>Stock levels | SimpliaWear</source><target>Niveaux de stock | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.movements" datatype="html"><source>Stock movements | SimpliaWear</source><target>Mouvements de stock | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.policies" datatype="html"><source>Reorder policies | SimpliaWear</source><target>Seuils de réapprovisionnement | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.transfers" datatype="html"><source>Stock transfers | SimpliaWear</source><target>Transferts de stock | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.transfer" datatype="html"><source>Transfer | SimpliaWear</source><target>Transfert | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.counts" datatype="html"><source>Stock counts | SimpliaWear</source><target>Inventaires | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.count" datatype="html"><source>Stock count | SimpliaWear</source><target>Inventaire | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.warnings" datatype="html"><source>Inventory warnings | SimpliaWear</source><target>Alertes de stock | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.suppliers" datatype="html"><source>Suppliers | SimpliaWear</source><target>Fournisseurs | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.orders" datatype="html"><source>Purchase orders | SimpliaWear</source><target>Commandes d’achat | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.order" datatype="html"><source>Purchase order | SimpliaWear</source><target>Commande d’achat | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.customers" datatype="html"><source>Customers | SimpliaWear</source><target>Clients | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.cashRegisters" datatype="html"><source>Cash Registers | SimpliaWear</source><target>Caisses | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.cashSessions" datatype="html"><source>Cash Sessions | SimpliaWear</source><target>Sessions de caisse | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.cashSession" datatype="html"><source>Cash Session | SimpliaWear</source><target>Session de caisse | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.sales" datatype="html"><source>Sales | SimpliaWear</source><target>Ventes | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.sale" datatype="html"><source>Sale | SimpliaWear</source><target>Vente | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.expenses" datatype="html"><source>Expenses | SimpliaWear</source><target>Dépenses | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.expenseCategories" datatype="html"><source>Expense Categories | SimpliaWear</source><target>Catégories de dépenses | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.myTime" datatype="html"><source>My Time | SimpliaWear</source><target>Mes heures | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.workSessions" datatype="html"><source>Work Sessions | SimpliaWear</source><target>Sessions de travail | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.hoursReport" datatype="html"><source>Hours Report | SimpliaWear</source><target>Rapport d’heures | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.documents" datatype="html"><source>Inventory documents | SimpliaWear</source><target>Documents d’inventaire | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.labels" datatype="html"><source>Barcode labels | SimpliaWear</source><target>Étiquettes code-barres | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.report.sales" datatype="html"><source>Sales summary | SimpliaWear</source><target>Synthèse des ventes | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.report.products" datatype="html"><source>Product performance | SimpliaWear</source><target>Performance des produits | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.report.inventory" datatype="html"><source>Inventory report | SimpliaWear</source><target>Rapport de stock | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.report.lowStock" datatype="html"><source>Low stock | SimpliaWear</source><target>Stock bas | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.audit" datatype="html"><source>Audit log | SimpliaWear</source><target>Journal d’audit | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.users" datatype="html"><source>Users | SimpliaWear</source><target>Utilisateurs | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.newUser" datatype="html"><source>New user | SimpliaWear</source><target>Nouvel utilisateur | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.user" datatype="html"><source>User | SimpliaWear</source><target>Utilisateur | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.roles" datatype="html"><source>Roles | SimpliaWear</source><target>Rôles | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.role" datatype="html"><source>Role | SimpliaWear</source><target>Rôle | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.accountSecurity" datatype="html"><source>Security | SimpliaWear</source><target>Sécurité | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.forbidden" datatype="html"><source>Access denied | SimpliaWear</source><target>Accès refusé | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.notFound" datatype="html"><source>Page not found | SimpliaWear</source><target>Page introuvable | SimpliaWear</target></trans-unit>
       <trans-unit id="error.network" datatype="html"><source>We could not reach the server. Check your connection and try again.</source><target>Impossible de joindre le serveur. Vérifiez votre connexion et réessayez.</target></trans-unit>
       <trans-unit id="error.sessionExpired" datatype="html"><source>Your session has ended. Sign in again to continue.</source><target>Votre session a pris fin. Reconnectez-vous pour continuer.</target></trans-unit>
       <trans-unit id="error.forbidden" datatype="html"><source>You do not have permission to do this.</source><target>Vous n’avez pas l’autorisation de faire cela.</target></trans-unit>
@@ -275,7 +275,7 @@
       <trans-unit id="auth.forgot.submit" datatype="html"><source>Send reset request</source><target>Envoyer la demande</target></trans-unit>
       <trans-unit id="auth.forgot.back" datatype="html"><source>Back to sign in</source><target>Retour à la connexion</target></trans-unit>
       <trans-unit id="auth.forgot.failed" datatype="html"><source>We could not process the reset request. Try again later.</source><target>La demande de réinitialisation n’a pas pu être traitée. Réessayez plus tard.</target></trans-unit>
-      <trans-unit id="auth.login.heading" datatype="html"><source>Sign in to Simplia</source><target>Connexion à Simplia</target></trans-unit>
+      <trans-unit id="auth.login.heading" datatype="html"><source>Sign in to SimpliaWear</source><target>Connexion à SimpliaWear</target></trans-unit>
       <trans-unit id="auth.login.subtitle" datatype="html"><source>Use your organization account to continue.</source><target>Utilisez le compte de votre organisation pour continuer.</target></trans-unit>
       <trans-unit id="auth.login.passwordChanged" datatype="html"><source> Your password was changed. Sign in again to continue. </source><target>Votre mot de passe a été modifié. Reconnectez-vous pour continuer.</target></trans-unit>
       <trans-unit id="auth.error.emailRequired" datatype="html"><source>Email is required.</source><target>L’adresse e-mail est obligatoire.</target></trans-unit>
@@ -1187,12 +1187,12 @@
       <trans-unit id="time.correct.failed" datatype="html"><source>The session could not be corrected.</source><target>La session n’a pas pu être corrigée.</target></trans-unit>
       <trans-unit id="theme.switchToLight" datatype="html"><source>Switch to light theme</source><target>Passer au thème clair</target></trans-unit>
       <trans-unit id="theme.switchToDark" datatype="html"><source>Switch to dark theme</source><target>Passer au thème sombre</target></trans-unit>
-      <trans-unit id="title.accountProfile" datatype="html"><source>Profile | Simplia</source><target>Profil | Simplia</target></trans-unit>
+      <trans-unit id="title.accountProfile" datatype="html"><source>Profile | SimpliaWear</source><target>Profil | SimpliaWear</target></trans-unit>
       <trans-unit id="nav.accountProfile" datatype="html"><source>Profile</source><target>Profil</target></trans-unit>
       <trans-unit id="account.profile.heading" datatype="html"><source>Profile</source><target>Profil</target></trans-unit>
       <trans-unit id="account.profile.subtitle" datatype="html"><source> Manage your personal application preferences. </source><target>Gérez vos préférences personnelles dans l’application.</target></trans-unit>
       <trans-unit id="account.profile.language.title" datatype="html"><source>Display language</source><target>Langue d’affichage</target></trans-unit>
-      <trans-unit id="account.profile.language.help" datatype="html"><source>Choose the language used throughout SimpliaDz.</source><target>Choisissez la langue utilisée dans SimpliaDz.</target></trans-unit>
+      <trans-unit id="account.profile.language.help" datatype="html"><source>Choose the language used throughout SimpliaWear.</source><target>Choisissez la langue utilisée dans SimpliaWear.</target></trans-unit>
       <trans-unit id="account.profile.language.label" datatype="html"><source>Language</source><target>Langue</target></trans-unit>
       <trans-unit id="language.english" datatype="html"><source>English</source><target>Anglais</target></trans-unit>
       <trans-unit id="language.french" datatype="html"><source>French</source><target>Français</target></trans-unit>

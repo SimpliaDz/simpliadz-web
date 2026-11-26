@@ -4907,9 +4907,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"simpliadz-web@workspace:.":
+"simplia-web@workspace:.":
   version: 0.0.0-use.local
-  resolution: "simpliadz-web@workspace:."
+  resolution: "simplia-web@workspace:."
   dependencies:
     "@angular-eslint/builder": "npm:22.6.0"
     "@angular/animations": "npm:^22.2.0"

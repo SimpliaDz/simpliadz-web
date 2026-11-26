@@ -41,7 +41,7 @@ import { AuthApiService } from '../../auth/data-access/auth-api.service';
         <mat-icon mat-card-avatar aria-hidden="true">language</mat-icon>
         <mat-card-title i18n="@@account.profile.language.title">Display language</mat-card-title>
         <mat-card-subtitle i18n="@@account.profile.language.help"
-          >Choose the language used throughout SimpliaDz.</mat-card-subtitle
+          >Choose the language used throughout SimpliaWear.</mat-card-subtitle
         >
       </mat-card-header>
       <mat-card-content>

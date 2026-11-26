@@ -46,8 +46,8 @@ import { NavigationSection, navigationSections } from './navigation';
         <mat-icon aria-hidden="true">menu</mat-icon>
       </button>
       <a class="brand" routerLink="/app/dashboard">
-        <img class="brand-mark" src="graphics/brand/simpliadz-mark.svg" alt="" />
-        <span>Simplia</span>
+        <img class="brand-mark" src="graphics/brand/simplia-wear-mark.svg" alt="" />
+        <span>SimpliaWear</span>
       </a>
       <span class="spacer"></span>
       @if (posShortcut(); as pos) {

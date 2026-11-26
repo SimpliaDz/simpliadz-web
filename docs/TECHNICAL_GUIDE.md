@@ -1,8 +1,8 @@
-# Simplia Web — Technical Guide
+# SimpliaWear Web — Technical Guide
 
 ## 1. Purpose and current scope
 
-Simplia Web is the separate Angular frontend for the Simplia platform. It is intentionally independent from the .NET backend repository: it has its own Git history, dependency lockfile, build pipeline, and deployment configuration.
+SimpliaWear Web is the separate Angular frontend for the SimpliaWear platform. It is intentionally independent from the .NET backend repository: it has its own Git history, dependency lockfile, build pipeline, and deployment configuration.
 
 The project currently establishes a production-minded frontend foundation. It has an application shell, configuration bootstrap, routing, localization, quality tooling, smoke tests, and public authentication pages. Permission-aware navigation beyond the authenticated-route guard, Organization management, and Inventory workflows remain future feature slices.
 
@@ -214,7 +214,7 @@ Functional interceptors are registered in `app.config.ts` as `withInterceptors([
 The implemented authentication flow is:
 
 1. Login calls the backend’s public login endpoint. If loading `/auth/me` then fails, the half-established session is cleared.
-2. The access token stays in memory. The refresh token is kept in `sessionStorage` under `simpliadz.refreshToken`, so a reload can restore the session.
+2. The access token stays in memory. The refresh token is kept in `sessionStorage` under `simplia.refreshToken`, so a reload can restore the session.
 3. `authGuard` calls `restore()`, which refreshes once from the stored refresh token when no access token is in memory. A failed restore signs the user out.
 4. Add the access token only to requests that target the configured API origin.
 5. Coordinate a single refresh request when an eligible protected request receives a 401; concurrent requests share that refresh.
@@ -248,7 +248,7 @@ English (`en-US`) is the source locale. The source catalogue is `src/locale/mess
 Angular produces separate optimized outputs for:
 
 ```text
-dist/simpliadz-web/browser/
+dist/simplia-web/browser/
 ├── en-US/
 ├── fr/
 └── ar/
@@ -283,7 +283,7 @@ Credentials and other machine-readable identifiers are an exception: email addre
 
 ## 9. Light and dark theme
 
-Angular Material provides the color tokens used by both the application shell and Material controls. `ThemeService` selects a `light` or `dark` color scheme by setting `data-theme` on the root HTML element; the global CSS changes `color-scheme` accordingly. A header icon button toggles the theme and stores the user choice in local storage under `simpliadz.theme`.
+Angular Material provides the color tokens used by both the application shell and Material controls. `ThemeService` selects a `light` or `dark` color scheme by setting `data-theme` on the root HTML element; the global CSS changes `color-scheme` accordingly. A header icon button toggles the theme and stores the user choice in local storage under `simplia.theme`.
 
 Use Material system tokens such as `--mat-sys-surface`, `--mat-sys-on-surface`, and `--mat-sys-outline-variant` for application-level colors. Do not add per-component `.dark` selectors or hard-coded light colors unless a visual exception is intentionally documented. This keeps custom UI aligned with Material controls in both themes.
 

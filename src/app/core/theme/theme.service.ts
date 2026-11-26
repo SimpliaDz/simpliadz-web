@@ -3,7 +3,7 @@ import { Injectable, computed, inject, provideAppInitializer, signal } from '@an
 
 export type Theme = 'light' | 'dark';
 
-const storageKey = 'simpliadz.theme';
+const storageKey = 'simplia.theme';
 
 @Injectable({ providedIn: 'root' })
 export class ThemeService {

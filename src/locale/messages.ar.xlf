@@ -2,8 +2,8 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en-US" target-language="ar" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="title.loyalty" datatype="html"><source>Customer loyalty | Simplia</source><target>ولاء العملاء | Simplia</target></trans-unit>
-      <trans-unit id="title.pos" datatype="html"><source>Point of Sale | Simplia</source><target>نقطة البيع | Simplia</target></trans-unit>
+      <trans-unit id="title.loyalty" datatype="html"><source>Customer loyalty | SimpliaWear</source><target>ولاء العملاء | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.pos" datatype="html"><source>Point of Sale | SimpliaWear</source><target>نقطة البيع | SimpliaWear</target></trans-unit>
       <trans-unit id="brands.activated" datatype="html"><source>Brand activated.</source><target>تم تفعيل العلامة التجارية.</target></trans-unit>
       <trans-unit id="brands.activateFailed" datatype="html"><source>The brand could not be activated.</source><target>تعذر تفعيل العلامة التجارية.</target></trans-unit>
       <trans-unit id="products.activated" datatype="html"><source>Product activated.</source><target>تم تفعيل المنتج.</target></trans-unit>
@@ -15,62 +15,62 @@
       <trans-unit id="nav.financialDashboard" datatype="html"><source>Financial dashboard</source><target>لوحة المعلومات المالية</target></trans-unit>
       <trans-unit id="nav.pos" datatype="html"><source>Point of Sale</source><target>نقطة البيع</target></trans-unit>
       <trans-unit id="nav.loyalty" datatype="html"><source>Customer loyalty</source><target>ولاء العملاء</target></trans-unit>
-      <trans-unit id="title.signIn" datatype="html"><source>Sign in | Simplia</source><target>تسجيل الدخول | Simplia</target></trans-unit>
-      <trans-unit id="title.forgotPassword" datatype="html"><source>Reset password | Simplia</source><target>إعادة تعيين كلمة المرور | Simplia</target></trans-unit>
-      <trans-unit id="title.resetPassword" datatype="html"><source>Choose a password | Simplia</source><target>اختيار كلمة مرور | Simplia</target></trans-unit>
-      <trans-unit id="title.dashboard" datatype="html"><source>Dashboard | Simplia</source><target>لوحة التحكم | Simplia</target></trans-unit>
-      <trans-unit id="title.organization" datatype="html"><source>Organization | Simplia</source><target>المؤسسة | Simplia</target></trans-unit>
-      <trans-unit id="title.brands" datatype="html"><source>Brands | Simplia</source><target>العلامات التجارية | Simplia</target></trans-unit>
-      <trans-unit id="title.categories" datatype="html"><source>Categories | Simplia</source><target>الفئات | Simplia</target></trans-unit>
-      <trans-unit id="title.attributes" datatype="html"><source>Attributes | Simplia</source><target>الخصائص | Simplia</target></trans-unit>
-      <trans-unit id="title.attribute" datatype="html"><source>Attribute | Simplia</source><target>الخاصية | Simplia</target></trans-unit>
-      <trans-unit id="title.products" datatype="html"><source>Products | Simplia</source><target>المنتجات | Simplia</target></trans-unit>
-      <trans-unit id="title.newProduct" datatype="html"><source>New product | Simplia</source><target>منتج جديد | Simplia</target></trans-unit>
-      <trans-unit id="title.product" datatype="html"><source>Product | Simplia</source><target>المنتج | Simplia</target></trans-unit>
-      <trans-unit id="title.editProduct" datatype="html"><source>Edit product | Simplia</source><target>تعديل المنتج | Simplia</target></trans-unit>
-      <trans-unit id="title.newVariant" datatype="html"><source>New variant | Simplia</source><target>متغير جديد | Simplia</target></trans-unit>
-      <trans-unit id="title.variant" datatype="html"><source>Variant | Simplia</source><target>المتغير | Simplia</target></trans-unit>
-      <trans-unit id="title.locations" datatype="html"><source>Locations | Simplia</source><target>المواقع | Simplia</target></trans-unit>
-      <trans-unit id="title.newLocation" datatype="html"><source>New location | Simplia</source><target>موقع جديد | Simplia</target></trans-unit>
-      <trans-unit id="title.editLocation" datatype="html"><source>Edit location | Simplia</source><target>تعديل الموقع | Simplia</target></trans-unit>
-      <trans-unit id="title.priceLists" datatype="html"><source>Price lists | Simplia</source><target>قوائم الأسعار | Simplia</target></trans-unit>
-      <trans-unit id="title.stock" datatype="html"><source>Stock levels | Simplia</source><target>مستويات المخزون | Simplia</target></trans-unit>
-      <trans-unit id="title.movements" datatype="html"><source>Stock movements | Simplia</source><target>حركات المخزون | Simplia</target></trans-unit>
-      <trans-unit id="title.policies" datatype="html"><source>Reorder policies | Simplia</source><target>حدود إعادة الطلب | Simplia</target></trans-unit>
-      <trans-unit id="title.transfers" datatype="html"><source>Stock transfers | Simplia</source><target>تحويلات المخزون | Simplia</target></trans-unit>
-      <trans-unit id="title.transfer" datatype="html"><source>Transfer | Simplia</source><target>التحويل | Simplia</target></trans-unit>
-      <trans-unit id="title.counts" datatype="html"><source>Stock counts | Simplia</source><target>جرد المخزون | Simplia</target></trans-unit>
-      <trans-unit id="title.count" datatype="html"><source>Stock count | Simplia</source><target>جرد | Simplia</target></trans-unit>
-      <trans-unit id="title.warnings" datatype="html"><source>Inventory warnings | Simplia</source><target>تنبيهات المخزون | Simplia</target></trans-unit>
-      <trans-unit id="title.suppliers" datatype="html"><source>Suppliers | Simplia</source><target>الموردون | Simplia</target></trans-unit>
-      <trans-unit id="title.orders" datatype="html"><source>Purchase orders | Simplia</source><target>أوامر الشراء | Simplia</target></trans-unit>
-      <trans-unit id="title.order" datatype="html"><source>Purchase order | Simplia</source><target>أمر الشراء | Simplia</target></trans-unit>
-      <trans-unit id="title.customers" datatype="html"><source>Customers | Simplia</source><target>العملاء | Simplia</target></trans-unit>
-      <trans-unit id="title.cashRegisters" datatype="html"><source>Cash Registers | Simplia</source><target>الصناديق | Simplia</target></trans-unit>
-      <trans-unit id="title.cashSessions" datatype="html"><source>Cash Sessions | Simplia</source><target>جلسات الصندوق | Simplia</target></trans-unit>
-      <trans-unit id="title.cashSession" datatype="html"><source>Cash Session | Simplia</source><target>جلسة الصندوق | Simplia</target></trans-unit>
-      <trans-unit id="title.sales" datatype="html"><source>Sales | Simplia</source><target>المبيعات | Simplia</target></trans-unit>
-      <trans-unit id="title.sale" datatype="html"><source>Sale | Simplia</source><target>عملية البيع | Simplia</target></trans-unit>
-      <trans-unit id="title.expenses" datatype="html"><source>Expenses | Simplia</source><target>المصروفات | Simplia</target></trans-unit>
-      <trans-unit id="title.expenseCategories" datatype="html"><source>Expense Categories | Simplia</source><target>فئات المصروفات | Simplia</target></trans-unit>
-      <trans-unit id="title.myTime" datatype="html"><source>My Time | Simplia</source><target>وقتي | Simplia</target></trans-unit>
-      <trans-unit id="title.workSessions" datatype="html"><source>Work Sessions | Simplia</source><target>جلسات العمل | Simplia</target></trans-unit>
-      <trans-unit id="title.hoursReport" datatype="html"><source>Hours Report | Simplia</source><target>تقرير الساعات | Simplia</target></trans-unit>
-      <trans-unit id="title.documents" datatype="html"><source>Inventory documents | Simplia</source><target>مستندات المخزون | Simplia</target></trans-unit>
-      <trans-unit id="title.labels" datatype="html"><source>Barcode labels | Simplia</source><target>ملصقات الباركود | Simplia</target></trans-unit>
-      <trans-unit id="title.report.sales" datatype="html"><source>Sales summary | Simplia</source><target>ملخص المبيعات | Simplia</target></trans-unit>
-      <trans-unit id="title.report.products" datatype="html"><source>Product performance | Simplia</source><target>أداء المنتجات | Simplia</target></trans-unit>
-      <trans-unit id="title.report.inventory" datatype="html"><source>Inventory report | Simplia</source><target>تقرير المخزون | Simplia</target></trans-unit>
-      <trans-unit id="title.report.lowStock" datatype="html"><source>Low stock | Simplia</source><target>مخزون منخفض | Simplia</target></trans-unit>
-      <trans-unit id="title.audit" datatype="html"><source>Audit log | Simplia</source><target>سجل التدقيق | Simplia</target></trans-unit>
-      <trans-unit id="title.users" datatype="html"><source>Users | Simplia</source><target>المستخدمون | Simplia</target></trans-unit>
-      <trans-unit id="title.newUser" datatype="html"><source>New user | Simplia</source><target>مستخدم جديد | Simplia</target></trans-unit>
-      <trans-unit id="title.user" datatype="html"><source>User | Simplia</source><target>المستخدم | Simplia</target></trans-unit>
-      <trans-unit id="title.roles" datatype="html"><source>Roles | Simplia</source><target>الأدوار | Simplia</target></trans-unit>
-      <trans-unit id="title.role" datatype="html"><source>Role | Simplia</source><target>الدور | Simplia</target></trans-unit>
-      <trans-unit id="title.accountSecurity" datatype="html"><source>Security | Simplia</source><target>الأمان | Simplia</target></trans-unit>
-      <trans-unit id="title.forbidden" datatype="html"><source>Access denied | Simplia</source><target>الوصول مرفوض | Simplia</target></trans-unit>
-      <trans-unit id="title.notFound" datatype="html"><source>Page not found | Simplia</source><target>الصفحة غير موجودة | Simplia</target></trans-unit>
+      <trans-unit id="title.signIn" datatype="html"><source>Sign in | SimpliaWear</source><target>تسجيل الدخول | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.forgotPassword" datatype="html"><source>Reset password | SimpliaWear</source><target>إعادة تعيين كلمة المرور | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.resetPassword" datatype="html"><source>Choose a password | SimpliaWear</source><target>اختيار كلمة مرور | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.dashboard" datatype="html"><source>Dashboard | SimpliaWear</source><target>لوحة التحكم | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.organization" datatype="html"><source>Organization | SimpliaWear</source><target>المؤسسة | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.brands" datatype="html"><source>Brands | SimpliaWear</source><target>العلامات التجارية | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.categories" datatype="html"><source>Categories | SimpliaWear</source><target>الفئات | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.attributes" datatype="html"><source>Attributes | SimpliaWear</source><target>الخصائص | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.attribute" datatype="html"><source>Attribute | SimpliaWear</source><target>الخاصية | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.products" datatype="html"><source>Products | SimpliaWear</source><target>المنتجات | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.newProduct" datatype="html"><source>New product | SimpliaWear</source><target>منتج جديد | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.product" datatype="html"><source>Product | SimpliaWear</source><target>المنتج | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.editProduct" datatype="html"><source>Edit product | SimpliaWear</source><target>تعديل المنتج | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.newVariant" datatype="html"><source>New variant | SimpliaWear</source><target>متغير جديد | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.variant" datatype="html"><source>Variant | SimpliaWear</source><target>المتغير | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.locations" datatype="html"><source>Locations | SimpliaWear</source><target>المواقع | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.newLocation" datatype="html"><source>New location | SimpliaWear</source><target>موقع جديد | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.editLocation" datatype="html"><source>Edit location | SimpliaWear</source><target>تعديل الموقع | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.priceLists" datatype="html"><source>Price lists | SimpliaWear</source><target>قوائم الأسعار | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.stock" datatype="html"><source>Stock levels | SimpliaWear</source><target>مستويات المخزون | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.movements" datatype="html"><source>Stock movements | SimpliaWear</source><target>حركات المخزون | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.policies" datatype="html"><source>Reorder policies | SimpliaWear</source><target>حدود إعادة الطلب | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.transfers" datatype="html"><source>Stock transfers | SimpliaWear</source><target>تحويلات المخزون | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.transfer" datatype="html"><source>Transfer | SimpliaWear</source><target>التحويل | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.counts" datatype="html"><source>Stock counts | SimpliaWear</source><target>جرد المخزون | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.count" datatype="html"><source>Stock count | SimpliaWear</source><target>جرد | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.warnings" datatype="html"><source>Inventory warnings | SimpliaWear</source><target>تنبيهات المخزون | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.suppliers" datatype="html"><source>Suppliers | SimpliaWear</source><target>الموردون | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.orders" datatype="html"><source>Purchase orders | SimpliaWear</source><target>أوامر الشراء | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.order" datatype="html"><source>Purchase order | SimpliaWear</source><target>أمر الشراء | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.customers" datatype="html"><source>Customers | SimpliaWear</source><target>العملاء | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.cashRegisters" datatype="html"><source>Cash Registers | SimpliaWear</source><target>الصناديق | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.cashSessions" datatype="html"><source>Cash Sessions | SimpliaWear</source><target>جلسات الصندوق | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.cashSession" datatype="html"><source>Cash Session | SimpliaWear</source><target>جلسة الصندوق | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.sales" datatype="html"><source>Sales | SimpliaWear</source><target>المبيعات | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.sale" datatype="html"><source>Sale | SimpliaWear</source><target>عملية البيع | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.expenses" datatype="html"><source>Expenses | SimpliaWear</source><target>المصروفات | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.expenseCategories" datatype="html"><source>Expense Categories | SimpliaWear</source><target>فئات المصروفات | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.myTime" datatype="html"><source>My Time | SimpliaWear</source><target>وقتي | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.workSessions" datatype="html"><source>Work Sessions | SimpliaWear</source><target>جلسات العمل | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.hoursReport" datatype="html"><source>Hours Report | SimpliaWear</source><target>تقرير الساعات | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.documents" datatype="html"><source>Inventory documents | SimpliaWear</source><target>مستندات المخزون | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.labels" datatype="html"><source>Barcode labels | SimpliaWear</source><target>ملصقات الباركود | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.report.sales" datatype="html"><source>Sales summary | SimpliaWear</source><target>ملخص المبيعات | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.report.products" datatype="html"><source>Product performance | SimpliaWear</source><target>أداء المنتجات | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.report.inventory" datatype="html"><source>Inventory report | SimpliaWear</source><target>تقرير المخزون | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.report.lowStock" datatype="html"><source>Low stock | SimpliaWear</source><target>مخزون منخفض | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.audit" datatype="html"><source>Audit log | SimpliaWear</source><target>سجل التدقيق | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.users" datatype="html"><source>Users | SimpliaWear</source><target>المستخدمون | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.newUser" datatype="html"><source>New user | SimpliaWear</source><target>مستخدم جديد | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.user" datatype="html"><source>User | SimpliaWear</source><target>المستخدم | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.roles" datatype="html"><source>Roles | SimpliaWear</source><target>الأدوار | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.role" datatype="html"><source>Role | SimpliaWear</source><target>الدور | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.accountSecurity" datatype="html"><source>Security | SimpliaWear</source><target>الأمان | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.forbidden" datatype="html"><source>Access denied | SimpliaWear</source><target>الوصول مرفوض | SimpliaWear</target></trans-unit>
+      <trans-unit id="title.notFound" datatype="html"><source>Page not found | SimpliaWear</source><target>الصفحة غير موجودة | SimpliaWear</target></trans-unit>
       <trans-unit id="error.network" datatype="html"><source>We could not reach the server. Check your connection and try again.</source><target>تعذّر الوصول إلى الخادم. تحقّق من اتصالك وأعد المحاولة.</target></trans-unit>
       <trans-unit id="error.sessionExpired" datatype="html"><source>Your session has ended. Sign in again to continue.</source><target>انتهت جلستك. سجّل الدخول مجددًا للمتابعة.</target></trans-unit>
       <trans-unit id="error.forbidden" datatype="html"><source>You do not have permission to do this.</source><target>ليست لديك صلاحية للقيام بهذا.</target></trans-unit>
@@ -275,7 +275,7 @@
       <trans-unit id="auth.forgot.submit" datatype="html"><source>Send reset request</source><target>إرسال طلب الإعادة</target></trans-unit>
       <trans-unit id="auth.forgot.back" datatype="html"><source>Back to sign in</source><target>العودة إلى تسجيل الدخول</target></trans-unit>
       <trans-unit id="auth.forgot.failed" datatype="html"><source>We could not process the reset request. Try again later.</source><target>تعذّر معالجة طلب إعادة التعيين. أعد المحاولة لاحقًا.</target></trans-unit>
-      <trans-unit id="auth.login.heading" datatype="html"><source>Sign in to Simplia</source><target>تسجيل الدخول إلى Simplia</target></trans-unit>
+      <trans-unit id="auth.login.heading" datatype="html"><source>Sign in to SimpliaWear</source><target>تسجيل الدخول إلى SimpliaWear</target></trans-unit>
       <trans-unit id="auth.login.subtitle" datatype="html"><source>Use your organization account to continue.</source><target>استخدم حساب مؤسستك للمتابعة.</target></trans-unit>
       <trans-unit id="auth.login.passwordChanged" datatype="html"><source> Your password was changed. Sign in again to continue. </source><target>تم تغيير كلمة المرور. سجّل الدخول مجددًا للمتابعة.</target></trans-unit>
       <trans-unit id="auth.error.emailRequired" datatype="html"><source>Email is required.</source><target>البريد الإلكتروني مطلوب.</target></trans-unit>
@@ -1187,12 +1187,12 @@
       <trans-unit id="time.correct.failed" datatype="html"><source>The session could not be corrected.</source><target>تعذّر تصحيح الجلسة.</target></trans-unit>
       <trans-unit id="theme.switchToLight" datatype="html"><source>Switch to light theme</source><target>التبديل إلى السمة الفاتحة</target></trans-unit>
       <trans-unit id="theme.switchToDark" datatype="html"><source>Switch to dark theme</source><target>التبديل إلى السمة الداكنة</target></trans-unit>
-      <trans-unit id="title.accountProfile" datatype="html"><source>Profile | Simplia</source><target>الملف الشخصي | Simplia</target></trans-unit>
+      <trans-unit id="title.accountProfile" datatype="html"><source>Profile | SimpliaWear</source><target>الملف الشخصي | SimpliaWear</target></trans-unit>
       <trans-unit id="nav.accountProfile" datatype="html"><source>Profile</source><target>الملف الشخصي</target></trans-unit>
       <trans-unit id="account.profile.heading" datatype="html"><source>Profile</source><target>الملف الشخصي</target></trans-unit>
       <trans-unit id="account.profile.subtitle" datatype="html"><source> Manage your personal application preferences. </source><target>أدر تفضيلاتك الشخصية في التطبيق.</target></trans-unit>
       <trans-unit id="account.profile.language.title" datatype="html"><source>Display language</source><target>لغة العرض</target></trans-unit>
-      <trans-unit id="account.profile.language.help" datatype="html"><source>Choose the language used throughout SimpliaDz.</source><target>اختر اللغة المستخدمة في SimpliaDz.</target></trans-unit>
+      <trans-unit id="account.profile.language.help" datatype="html"><source>Choose the language used throughout SimpliaWear.</source><target>اختر اللغة المستخدمة في SimpliaWear.</target></trans-unit>
       <trans-unit id="account.profile.language.label" datatype="html"><source>Language</source><target>اللغة</target></trans-unit>
       <trans-unit id="language.english" datatype="html"><source>English</source><target>الإنجليزية</target></trans-unit>
       <trans-unit id="language.french" datatype="html"><source>French</source><target>الفرنسية</target></trans-unit>

@@ -4,7 +4,7 @@ import { TestBed } from '@angular/core/testing';
 import { AppConfigService } from '../config/app-config.service';
 import { AuthSessionService } from './auth-session.service';
 
-const storageKey = 'simpliadz.refreshToken';
+const storageKey = 'simplia.refreshToken';
 
 const loginResponse = {
   accessToken: 'access-1',

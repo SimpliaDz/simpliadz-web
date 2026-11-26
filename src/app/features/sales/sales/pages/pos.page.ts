@@ -220,7 +220,7 @@ export class PosPage {
   private heldStorageKey(): string | null {
     const cashier = this.session.user()?.userId;
     const cashSession = this.context()?.cashSessionId;
-    return cashier && cashSession ? `simpliadz.pos.held.${cashier}.${cashSession}` : null;
+    return cashier && cashSession ? `simplia.pos.held.${cashier}.${cashSession}` : null;
   }
 
   private setContext(context: PosContext): void {

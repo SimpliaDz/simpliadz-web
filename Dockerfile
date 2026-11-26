@@ -9,5 +9,5 @@ RUN yarn build
 
 FROM nginx:1.29-alpine
 COPY docker/default.conf /etc/nginx/templates/default.conf.template
-COPY --from=build /app/dist/simpliadz-web/browser /usr/share/nginx/html
+COPY --from=build /app/dist/simplia-web/browser /usr/share/nginx/html
 EXPOSE 8080

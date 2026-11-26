@@ -6,7 +6,7 @@
 export function openDocumentWindow(): Window | null {
   const win = window.open('', '_blank');
   if (win) {
-    win.document.title = 'Simplia';
+    win.document.title = 'SimpliaWear';
   }
   return win;
 }

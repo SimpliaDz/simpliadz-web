@@ -1,7 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 
 /**
- * Normalizes the two error shapes the Simplia API returns:
+ * Normalizes the two error shapes the SimpliaWear API returns:
  *  - global handler: `{ error, message, errors?: [{ propertyName, errorMessage }] }`
  *  - inline/problem: `{ title, status, errors: { key: [message] } }`
  * Field keys are returned lower-camel-cased so they match Reactive Form control names.
